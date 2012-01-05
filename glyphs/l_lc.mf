@@ -1,0 +1,28 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Travellion v1.6 – a MetaFlop-Font                       %%%
+%%% © 2012 by Simon Egli, Marco Müller, Teofilo Furtado     %%%
+%%% www.metaflop.com                                        %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% box dimension definition %%%
+beginadjichar("l",.2,asc#,0);
+
+%%% sidebearings %%%
+numeric l,r;
+normal_adjust_fit(0.9u#,0.9u#);
+
+%%% construction %%%
+x1=x2=leftstemloc;
+y1=0;
+y2=h;
+
+%%% penpositions %%%
+penpos1(cont*px,0);
+penpos2(cont*px,0);
+
+%%% draw %%%
+penstroke z1e..z2e;
+
+% penlabels(range 1 thru 30);
+
+endchar;

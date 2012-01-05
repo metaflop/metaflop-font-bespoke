@@ -1,0 +1,42 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Travellion v1.6 Ð a MetaFlop-Font                       %%%
+%%% © 2012 by Simon Egli, Marco MŸller, Teofilo Furtado     %%%
+%%% www.metaflop.com                                        %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% box dimension definition %%%
+beginadjchar("A",5.5,cap#,0);		
+
+%%% sidebearings %%%
+numeric l,r;
+normal_adjust_fit(0.3u#,0.3u#);
+
+%%% construction %%%
+x3l=leftstemloc-cont*px/2;		% position of the bottom left x cordinate, position of the leftstemloc 
+x2r=w-x3l;						% position of the bottom right x cordinate
+(x4l+x1r)/2=.5w;				% center of the tip 
+x1r-x4l=corner;					% top corner
+y1=y4=h;						% capital height
+y2=y3=0;						% baseline
+alpha:=diag_ratio(1,cont*px,h,x2r-x1r);	% diagonal definition from computer modern, see volume E, (to have optical correction turn 1 into new variable)
+
+%%% penpositions %%%
+penpos1(alpha*cont*px,0);
+penpos2(alpha*cont*px,0);
+penpos3(alpha*px,0);
+penpos4(alpha*px,0);
+penpos5(px,90);					% correct to the proper angle
+penpos6(px,90);					% correct to the proper angle
+
+%%% inner top corner %%%
+z0=whatever[z3r,z4r]=whatever[z1l,z2l];	% get inner corner point
+y5=y6=bar*y0;							% relation between barheight and inner corner
+z5=whatever[z3,z4]; z6=whatever[z1,z2];	% correct to the proper angle
+
+%%% draw %%%
+fill z3l--z4l--z1r--z2r--z2l--z0--z3r--cycle;	% Here we use fill instead of penstroke
+penstroke z5e..z6e;				% here we were lazy so we used penstroke
+
+%penlabels(range 0 thru 30);	% labeling of pen positions including l and r, on greyfont outputs
+
+endchar;

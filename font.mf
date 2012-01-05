@@ -47,5 +47,5 @@ superness:=0.72; % superness					$ 0 / 2
 corner#:=0.3pt#; % corner   standartwert = px			$ 0pt / 10pt
 
 
-input adjglyphs;
+input glyphs;
 bye;

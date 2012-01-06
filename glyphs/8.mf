@@ -20,7 +20,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% box dimension definition %%%
-beginadjchar("8",5,cap#,0);
+beginadjchar(oct"070",5,cap#,0);
 
 %%% sidebearings %%%
 numeric l,r;
@@ -105,3 +105,5 @@ penstroke super_qr(12e,13e)---super_ql(14e,15e)---super_qr(16e,9e)---super_ql(10
  penlabels(range 1 thru 16);
 
 endchar;
+
+

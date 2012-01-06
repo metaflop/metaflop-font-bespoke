@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%                                                                         %%%
-%%% Transit v1.6 Ð a Metaflop-Font                                          %%%
-%%% © 2012 by Simon Egli, Marco MŸller, Teofilo Furtado                     %%%
+%%% Bespoke v1.6 a Metaflop-Font                                            %%%
+%%% © 2012 by Simon Egli, Marco Müller, Teofilo Furtado                     %%%
 %%% www.metaflop.com                                                        %%%
 %%%                                                                         %%%
 %%% This program is free software: you can redistribute it and/or modify    %%%
@@ -228,7 +228,8 @@ ligtable "A":
 % ligtable "L": "O" =: oct"014";   % USE THIS FOR LIGATURES OR SPECIAL CHARACTERS
 % ligtable "o": "b": "p": "e" kern .5u#, "o" kern .5u#, "x" kern-.5u#, % page 316 MetaFontBook
 %font_identifier:="FRAN" if slant<>0: & "SL" fi;
-%font_coding_scheme:="ABCDEFGHIJKLMNOPQRSTUVWXYZ only";
+
+font_coding_scheme:="ot1";
 
 if known ps_output:
 

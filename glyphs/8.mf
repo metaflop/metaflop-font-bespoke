@@ -20,7 +20,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% box dimension definition %%%
-beginadjchar(oct"070",5,cap#,0);
+beginadjchar("8",5,cap#,0);
 
 %%% sidebearings %%%
 numeric l,r;

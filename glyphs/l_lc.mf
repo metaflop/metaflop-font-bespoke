@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%                                                                         %%%
-%%% Transit v1.6 – a Metaflop-Font                                          %%%
+%%% Bespoke v1.6 – a Metaflop-Font                                          %%%
 %%% © 2012 by Simon Egli, Marco Müller, Teofilo Furtado                     %%%
 %%% www.metaflop.com                                                        %%%
 %%%                                                                         %%%

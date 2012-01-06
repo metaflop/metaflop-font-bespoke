@@ -202,6 +202,8 @@ input glyphs/w_lc
 input glyphs/x_lc
 input glyphs/y_lc
 input glyphs/z_lc
+input glyphs/8
+
 % input glyphs/cifrao
 input glyphs/comma
 input glyphs/dot

@@ -33,9 +33,15 @@ shrink_fit:=.0u#;  % amount of shrink fit
  w := r-hround(right_adjustment*hppp)-letter_fit#; enddef;
 %
 
-% mode=luxo;
+def endchar =
+ scantokens extra_endchar;
+ chardx:=w;
+ shipit;
+ endgroup enddef;	
 
-mode=localfont;
+mode=luxo;
+
+% mode=localfont;
 
 % def makebox(text r) = 
 

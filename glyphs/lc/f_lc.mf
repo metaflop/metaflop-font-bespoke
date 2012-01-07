@@ -32,9 +32,7 @@ top y11=h +o; % overshoot up
 y12r=y11r=h-px +o;  % overshoot up
 
 %%% construction %%%
-if (incx<=.5): 
-	incf:=.51; 
-else: incf:=incx; fi 
+incf:=incx;
 x9r= if (incf>.5): x12r+((w-(leftstemloc-.5(px*cont)+.5px))-x12r) else: w-(leftstemloc-.5(cont*px)+px) fi;
 x12r=if (incf>.5):x14r+incf*(w-(leftstemloc-.5(cont*px)+px)-x14r)else: x14r+.5*(x9r-x14r) fi;
 if (h>w):
@@ -83,7 +81,7 @@ if (incf>.5):
 	fill ss---m---cycle;
 else:
 	path tl; tl = z9l---super_ql(10l,11l);
-	path ap; ap = (0,y15r-appert*(y15r-y12r))---(w,y15r-appert*(y15r-y12r));
+	path ap; ap = (0,y15r-appert*2(y15r-y12r))---(w,y15r-appert*2(y15r-y12r));
 	path v; v = z9r---super_ql(10r,11r);
 	z100=ap intersectionpoint tl;
 	path x; numeric t,u; (t,u)=ap intersectiontimes tl;
@@ -95,6 +93,6 @@ else:
 	ss = subpath (infinity,u) of tl;
 	fill ss---m---cycle;fi
 
-% penlabels(range 1 thru 80);
+ penlabels(range 1 thru 80);
 
 endchar;

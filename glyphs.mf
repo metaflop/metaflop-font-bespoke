@@ -39,7 +39,22 @@ def endchar =
  shipit;
  endgroup enddef;	
 
-mode=luxo;
+mode_def flop =
+proofing:=1;
+fontmaking:=1;
+pixels_per_inch:=2000;
+tracingtitles:=1;
+title:=1;
+titlefont:=1;
+enddef;
+
+mode=flop;
+
+
+% special "labelfont"; numspecial 20
+
+
+%special "labelfontat"; numspecial 20
 
 % mode=localfont;
 
@@ -55,7 +70,7 @@ mode=luxo;
 % if charic<>0: r((w+charic*hppp,h.o_),(w+charic*hppp,.5h.o_)); fi 
 % enddef;
 
-mode_setup;
+% mode_setup;
 
 %pixel conversions
 % metafont needs these pixel definitions to calculate the final dimensions of the parameter values
@@ -157,72 +172,72 @@ def super_quarterli(suffix i,j,k) =
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Glyph inputs:
-input glyphs/A
-input glyphs/B
-input glyphs/C
-input glyphs/D
-input glyphs/E
-input glyphs/F
-input glyphs/G
-input glyphs/H
-input glyphs/I 
-input glyphs/J
-input glyphs/K
-input glyphs/L
-input glyphs/M
-input glyphs/N
-input glyphs/O
-input glyphs/P
-input glyphs/Q
-input glyphs/R
-input glyphs/S
-input glyphs/T
-input glyphs/U
-input glyphs/V
-input glyphs/W
-input glyphs/X
-input glyphs/Y
-input glyphs/Z
-input glyphs/a_lc
-input glyphs/b_lc
-input glyphs/c_lc
-input glyphs/d_lc
-input glyphs/e_lc
-input glyphs/f_lc
-input glyphs/g_lc
-input glyphs/h_lc
-input glyphs/i_lc
-input glyphs/j_lc
-input glyphs/k_lc
-input glyphs/l_lc
-input glyphs/m_lc
-input glyphs/n_lc
-input glyphs/o_lc
-input glyphs/p_lc
-input glyphs/q_lc
-input glyphs/r_lc
-input glyphs/s_lc
-input glyphs/t_lc
-input glyphs/u_lc
-input glyphs/v_lc
-input glyphs/w_lc
-input glyphs/x_lc
-input glyphs/y_lc
-input glyphs/z_lc
-input glyphs/0
-input glyphs/1
-input glyphs/2
-input glyphs/3
-input glyphs/4
-input glyphs/5
-input glyphs/6
-input glyphs/7
-input glyphs/8
-input glyphs/9
-% input glyphs/cifrao
-input glyphs/comma
-input glyphs/dot
-input glyphs/excl
+input glyphs/uc/A
+input glyphs/uc/B
+input glyphs/uc/C
+input glyphs/uc/D
+input glyphs/uc/E
+input glyphs/uc/F
+input glyphs/uc/G
+input glyphs/uc/H
+input glyphs/uc/I 
+input glyphs/uc/J
+input glyphs/uc/K
+input glyphs/uc/L
+input glyphs/uc/M
+input glyphs/uc/N
+input glyphs/uc/O
+input glyphs/uc/P
+input glyphs/uc/Q
+input glyphs/uc/R
+input glyphs/uc/S
+input glyphs/uc/T
+input glyphs/uc/U
+input glyphs/uc/V
+input glyphs/uc/W
+input glyphs/uc/X
+input glyphs/uc/Y
+input glyphs/uc/Z
+input glyphs/lc/a_lc
+input glyphs/lc/b_lc
+input glyphs/lc/c_lc
+input glyphs/lc/d_lc
+input glyphs/lc/e_lc
+input glyphs/lc/f_lc
+input glyphs/lc/g_lc
+input glyphs/lc/h_lc
+input glyphs/lc/i_lc
+input glyphs/lc/j_lc
+input glyphs/lc/k_lc
+input glyphs/lc/l_lc
+input glyphs/lc/m_lc
+input glyphs/lc/n_lc
+input glyphs/lc/o_lc
+input glyphs/lc/p_lc
+input glyphs/lc/q_lc
+input glyphs/lc/r_lc
+input glyphs/lc/s_lc
+input glyphs/lc/t_lc
+input glyphs/lc/u_lc
+input glyphs/lc/v_lc
+input glyphs/lc/w_lc
+input glyphs/lc/x_lc
+input glyphs/lc/y_lc
+input glyphs/lc/z_lc
+input glyphs/num/0
+input glyphs/num/1
+input glyphs/num/2
+input glyphs/num/3
+input glyphs/num/4
+input glyphs/num/5
+input glyphs/num/6
+input glyphs/num/7
+input glyphs/num/8
+input glyphs/num/9
+input glyphs/punct/comma
+input glyphs/punct/period
+input glyphs/punct/exclam
+input glyphs/punct/space
 
 font_quad:=10u#+0s#;
 font_normal_space:=4u#+.2s#;
@@ -246,20 +261,20 @@ ligtable "A":
 
 font_coding_scheme:="OT1";
 
-if known ps_output:
+% if known ps_output:  % presets for mf2pt1
 
-font_coding_scheme	"ot1";
-font_comment	"Copyright (C) 2012 MetaFlop";
-font_family	"Fontname";	
-font_fixed_pitch	false;
-font_identifier	"Fontname Light Oblique";
-font_name			"Fontname-LightOblique";
-font_size			10pt;
+% font_coding_scheme	"ot1";
+% font_comment	"Copyright (C) 2012 MetaFlop";
+% font_family	"Fontname";	
+% font_fixed_pitch	false;
+% font_identifier	"Fontname Light Oblique";
+% font_name			"Fontname-LightOblique";
+% font_size			10pt;
 %font_slant		1/6;
-font_underline_position	-1pt#;
-font_underline_thickness	1/2pt#;
+% font_underline_position	-1pt#;
+% font_underline_thickness	1/2pt#;
 %font_unique_id		"4112233";
-font_version		"002.005";
-font_weight		"Light";
+% font_version		"002.005";
+% font_weight		"Light";
 
-fi
+% fi

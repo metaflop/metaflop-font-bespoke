@@ -19,33 +19,33 @@
 %%%                                                                         %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%% DIMENSION %%%%%%
+beginadjichar("!",0.2, cap#, 0);
 
-font_size:=10pt#;  % font size  / nicht verstellbar  		
-ht#:=10pt#;      % box height / nicht verstellbar		
-u#:=1.5pt#;      % unit widht 					$ 0.3pt / 5pt
-s#:=0.15u#;             % unsichtbar machen / nicht verstellbar
-o#:=0pt#;	        % overshoot                             $ 0pt / 2pt	
-px#:=0.3pt#;     % pen width 					$ 0.1pt / 2pt 
-py#:=px#;		% unsichtbar machen / nicht verstellbar
-
-%%%%% PROPORTION %%%%%%
-
-cap#:=0.9ht#;   % cap heigt					$ 0.05ht / 1ht	
-mean#:=0.65ht#;   % mean height					$ 0.05ht / 1ht	
-bar:=0.53;       % bar height					$ 0.05ht / 1ht
-asc#:=0.97ht#;    % ascender height				$ 0.05ht / 1ht	
-des#:=0.35ht#;    % descender heigt				$ 0.05ht / 1ht	
-
-%%%%% SHAPE %%%%%
-
-incx:=0.50;       % horizontal increase				$ 0 / 1	
-incy:=0.50;       % vertical increase				$ 0 / 1
-appert:=0.5;     % apperture 					$ 0.1 / 1
-cont:=1.0;       % contrast					$ 1 / 10
-superness:=0.72; % superness					$ 0 / 0.999
-corner#:=0.3pt#; % corner   standartwert = px			$ 0pt / 10pt
+%%% sidebearings %%%
+numeric l,r;
+normal_adjust_fit(1.2u#,1.2u#);
 
 
-input glyphs;
-bye;
+x4=x3=leftstemloc;
+y4-y3=1.2*cont*px;
+y3=0;
+y5=y6=.5(y4+y3);
+x5-x6=1.2*cont*px;
+.5[x5,x6]=leftstemloc;
+
+x1=x2=leftstemloc;
+
+y1=y4+1/7h;
+y2=h;
+
+
+penpos1(cont*px,0);
+penpos2(cont*px,0);
+
+
+penstroke z1e..z2e;
+fill super_qr(4,5)---super_ql(5,3)---super_qr(3,6)---super_ql(6,4)---cycle;
+
+penlabels(range 1 thru 30);
+
+endchar;

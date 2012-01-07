@@ -39,11 +39,11 @@ des#:=0.35ht#;    % descender heigt				$ 0ht / 1ht
 
 %%%%% SHAPE %%%%%
 
-incx:=0.5;       % horizontal increase				$ 0 / 1	
-incy:=0.5;       % vertical increase				$ 0 / 1
+incx:=0.45;       % horizontal increase				$ 0 / 1	
+incy:=0.45;       % vertical increase				$ 0 / 1
 appert:=0.5;     % apperture 					$ 0 / 1
 cont:=1.0;       % contrast					$ 1 / 10
-superness:=0.72; % superness					$ 0 / 2	
+superness:=0.50; % superness					$ 0 / 2	
 corner#:=0.3pt#; % corner   standartwert = px			$ 0pt / 10pt
 
 

@@ -81,10 +81,10 @@ ang:=angle(z11r-z10r);
 penpos1(whatever,if (superness=.5): -(ang-90)/2 else: 0 fi);
 penpos2(whatever,if (superness=.5): ((ang-90)/2) else: 0 fi);
 penpos3(whatever,if (superness=.5): -(180-ang)/2 else: -90 fi);
-penpos4(whatever,if (superness=.5): -(180-ang)/2 else: -90 fi);
+penpos4(whatever,if (superness=.5): (180-ang)/2 else: -90 fi);
 penpos5(whatever,if (superness=.5): (ang-90)/2 else: 0 fi);
 penpos6(whatever,if (superness=.5): (ang-90)/2 else: 180 fi);
-penpos25(whatever,if (superness=.5): (ang-90)/2 else: 180 fi);
+penpos25(whatever,if (superness=.5): -(ang-90)/2 else: 180 fi);
 penpos7(whatever,if (superness=.5): -(180-ang)/2 else: 90 fi);
 penpos8(whatever,if (superness=.5): (180-ang)/2 else: 90 fi);
 penstroke super_ql(6e,7e)---super_qr(8e,1e)---super_ql(2e,3e)---super_qr(4e,25e)---z6e;  % new bowl

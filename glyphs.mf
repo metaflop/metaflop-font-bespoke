@@ -33,20 +33,21 @@ shrink_fit:=.0u#;  % amount of shrink fit
  w := r-hround(right_adjustment*hppp)-letter_fit#; enddef;
 %
 
-mode=luxo;
+% mode=luxo;
 
- def makebox(text r) = 
+mode=localfont;
 
- % for y=0,h.o_,-d.o_: r((-(.5*539-.5w); endfor % horizontals 
+% def makebox(text r) = 
+
+% for y=0,h.o_,-d.o_: r((-(.5*539-.5w); endfor % horizontals 
  
-for y=0,h.o_,-d.o_: r((-(.5*539-.5w),y),(w+(.5*539-.5w),y)); endfor % horizontals 
+% for y=0,h.o_,-d.o_: r((-(.5*539-.5w),y),(w+(.5*539-.5w),y)); endfor % horizontals 
  
 % working lines horizontal base and top for y=0,h.o_,-d.o_: r((-(.5*539-.5w),-y),(w+(.5*539-.5w),y)); endfor % horizontals 
 
-  
- % for x=0,w:	r((x,-d.o_),(x,h.o_)); endfor % verticals 
+% for x=0,w:	r((x,-d.o_),(x,h.o_)); endfor % verticals 
 % if charic<>0: r((w+charic*hppp,h.o_),(w+charic*hppp,.5h.o_)); fi 
- enddef;
+% enddef;
 
 mode_setup;
 
@@ -202,8 +203,16 @@ input glyphs/w_lc
 input glyphs/x_lc
 input glyphs/y_lc
 input glyphs/z_lc
+input glyphs/0
+input glyphs/1
 input glyphs/2
+input glyphs/3
+input glyphs/4
+input glyphs/5
+input glyphs/6
+input glyphs/7
 input glyphs/8
+input glyphs/9
 % input glyphs/cifrao
 input glyphs/comma
 input glyphs/dot
@@ -229,7 +238,7 @@ ligtable "A":
 % ligtable "o": "b": "p": "e" kern .5u#, "o" kern .5u#, "x" kern-.5u#, % page 316 MetaFontBook
 %font_identifier:="FRAN" if slant<>0: & "SL" fi;
 
-font_coding_scheme:="ot1";
+font_coding_scheme:="OT1";
 
 if known ps_output:
 

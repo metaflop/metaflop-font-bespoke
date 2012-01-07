@@ -5,12 +5,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% box dimension definition %%%
-beginadjchar("8",4.6,cap#,0);
+beginadjchar("6",4.6,cap#,0);
 
 %%% sidebearings %%%
 numeric l,r;
 normal_adjust_fit(0.7u#,0.7u#);
-eight:=.03h;
+eight:=.07h;
 %%% overshoot %%%
 y4r=y3r=y3-.5px; % overshoot up
 y8r=y7r=px -o; % overshoot down
@@ -57,33 +57,33 @@ y16=.5h+eight; % overshoot down
 y15=.5h+eight; % overshoot down
 
 %%% construction %%%
-x16r=if (incx>.5): .5w else: x9r+incx*(x14r-x9r) fi;
-x15r=if (incx>.5): .5w else: x14r-incx*(x14r-x9r) fi;
-y9r=if (incy>.5): y16r-.5(y16r-y11r) else: y16r-incy*(y16r-y11r) fi;
-y10r=if (incy>.5): y11r+.5(y16r-y11r) else: y11r+incy*(y16r-y11r) fi;
+x16r=if (incx>.5): x9r+.5(x14r-x9r) else: x9r+incx*(x14r-x9r) fi;
+x15r=if (incx>.5): x14r-.5(x14r-x9r) else: x14r-incx*(x14r-x9r) fi;
+y14r=if (incy>.5): y16r-.5(y16r-y11r) else: y16r-incy*(y16r-y11r) fi;
+y13r=if (incy>.5): y11r+.5(y16r-y11r) else: y11r+incy*(y16r-y11r) fi;
 x16r=x11r; x15r=x12r;
-x9=leftstemloc+eight;
-x14=w-x9;
+x9=leftstemloc;
+x14=(w-(x9+.04h))+.5(cont*px)-.5px;
 x14=x13;
-y10r=y13r;
-y14r=y9r;
+if (cont>1.2): y10r=if (incx>.5): y3l; else: y13r; fi else: y10r=y3l; fi
+if (cont>1.2): y9r=if (incx>.5): y3l; else: y14r; fi else: y9r=y3l; fi
 x10=x9;
 x9r=x10r=x9+(cont*px/2);
-x14r=x13r=x14-(cont*px/2);
+x14r=x13r=x14-(px/2);
 ang:=angle(z14r-z15r);
 
 %%% penpositions %%%
 penpos9(whatever,if (superness=.5): -(ang-90)/2 else: 0 fi);
-penpos10(whatever,if (superness=.5): ((ang-90)/2) else: 0 fi);
-penpos11(whatever,if (superness=.5): -(180-ang)/2 else: -90 fi);
+penpos10(whatever,if (superness=.5): ((angle(z11r-z10r)-90)/2) else: 0 fi);
+penpos11(whatever,if (superness=.5): -(180-angle(z11r-z10r))/2 else: -90 fi);
 penpos12(whatever,if (superness=.5): (180-ang)/2 else: -90 fi);
 penpos13(whatever,if (superness=.5): -(ang-90)/2 else: 180 fi);
-penpos14(whatever,if (superness=.5): (ang-90)/2 else: 180 fi);
+penpos14(whatever,180);
 penpos15(whatever,if (superness=.5): -(180-ang)/2 else: 90 fi);
 penpos16(whatever,if (superness=.5): (180-ang)/2 else: 90 fi);
 
 %%% draw %%%
-penstroke super_qr(12e,13e)---super_ql(14e,15e)---super_qr(16e,9e)---super_ql(10e,11e)---cycle;
+penstroke z2e---super_ql(10e,11e)---super_qr(12e,13e)---z14e;
 
 
 

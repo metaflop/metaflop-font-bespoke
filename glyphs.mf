@@ -51,27 +51,6 @@ enddef;
 mode=flop;
 
 
-% special "labelfont"; numspecial 20
-
-
-%special "labelfontat"; numspecial 20
-
-% mode=localfont;
-
-% def makebox(text r) = 
-
-% for y=0,h.o_,-d.o_: r((-(.5*539-.5w); endfor % horizontals 
- 
-% for y=0,h.o_,-d.o_: r((-(.5*539-.5w),y),(w+(.5*539-.5w),y)); endfor % horizontals 
- 
-% working lines horizontal base and top for y=0,h.o_,-d.o_: r((-(.5*539-.5w),-y),(w+(.5*539-.5w),y)); endfor % horizontals 
-
-% for x=0,w:	r((x,-d.o_),(x,h.o_)); endfor % verticals 
-% if charic<>0: r((w+charic*hppp,h.o_),(w+charic*hppp,.5h.o_)); fi 
-% enddef;
-
-% mode_setup;
-
 %pixel conversions
 % metafont needs these pixel definitions to calculate the final dimensions of the parameter values
 define_pixels(s,u);
@@ -235,9 +214,10 @@ input glyphs/num/7
 input glyphs/num/8
 input glyphs/num/9
 input glyphs/punct/comma
+input glyphs/punct/colon
 input glyphs/punct/period
 input glyphs/punct/exclam
-input glyphs/punct/space
+% input glyphs/punct/space
 
 font_quad:=10u#+0s#;
 font_normal_space:=4u#+.2s#;

@@ -48,10 +48,10 @@ x4=.5[x8,x7]; x5=x3;
 top y4=mean;
 y4=y5;
 x11=x10=x3;
-y11-y10=1.2*cont*px;
+y11-y10=1.2*cont*px+o; % i punkt
 y11=h;
 x10=.5(x12+x13);
-x12-x13=1.2*cont*px;
+x12-x13=1.2*cont*px+o; % i punkt
 y12=y13=.5(y11+y10);
 ang:=angle(z6r-z7r);
 
@@ -89,7 +89,6 @@ else:
 	ss = subpath (0,u) of (super_qr(8l,1l)---z2l);
 	fill ss---r---z7r---z7l---cycle;fi
 
-%penlabels(1,2,3,4,5,6,7,8);
-%labels (range 1 thru 200);
+% penlabels (range 1 thru 200);
 
 endchar;

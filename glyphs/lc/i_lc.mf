@@ -30,10 +30,10 @@ normal_adjust_fit(0.9u#,0.9u#);
 x1=x2=x3=x4=leftstemloc;
 y1=0;
 y2=mean;
-y4-y3=1.2*cont*px;
+y4-y3=1.2*cont*px+o;
 y4=h;
 x3=.5(x5+x6);
-x6-x5=1.2*cont*px;
+x6-x5=1.2*cont*px+o;
 y5=y6=.5(y4+y3);
 
 %%% penpositions %%%

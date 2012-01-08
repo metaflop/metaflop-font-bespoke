@@ -25,8 +25,8 @@ font_size:=10pt#;  % font size  / nicht verstellbar
 ht#:=10pt#;      % box height / nicht verstellbar		
 u#:=1.5pt#;      % unit widht 					$ 0.3pt / 5pt
 s#:=0.15u#;             % unsichtbar machen / nicht verstellbar
-o#:=0pt#;	        % overshoot                             $ 0pt / 2pt	
-px#:=0.3pt#;     % pen width 					$ 0.1pt / 2pt 
+o#:=0.8pt#;	        % overshoot                             $ 0pt / 2pt	
+px#:=1.3pt#;     % pen width 					$ 0.1pt / 2pt 
 py#:=px#;		% unsichtbar machen / nicht verstellbar
 
 %%%%% PROPORTION %%%%%%

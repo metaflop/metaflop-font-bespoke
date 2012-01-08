@@ -27,10 +27,10 @@ normal_adjust_fit(0.5u#,0.5u#);
 
 
 x4=x3=leftstemloc;
-y4-y3=1.2*cont*px;
+y4-y3=1.2*cont*px+o;
 y3=0;
 y5=y6=.5(y4+y3);
-x5-x6=1.2*cont*px;
+x5-x6=1.2*cont*px+o;
 .5[x5,x6]=leftstemloc;
 
 x7=leftstemloc; y7=y6;

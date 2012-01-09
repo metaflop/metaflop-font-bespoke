@@ -136,6 +136,8 @@ z.j{x.k-x.j,0}
 ...(superness[x.j,x.k],superness[y.k,y.j]){z.k-z.j}
 ...z.k{0,y.k-y.j} enddef;
 
+
+
 %%Right interior curves (superness)
 def super_quarterri(suffix i,j,k) =
 z.j{x.k-x.i,0}

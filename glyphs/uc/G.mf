@@ -92,7 +92,15 @@ if (incx > .5):
 	aal = subpath (infinity,u) of dl;
 	path stem; numeric k,l; (k,l)=(steml intersectiontimes dl);
 	stem = subpath (l,u) of dl;
-	fill stem---z10r---z10l---cycle;
+	if (superness<.89):
+
+		fill stem---z10r---z10l---cycle;
+
+	else:
+
+		penstroke z9e---z10e;
+	fi
+
 	fill aal---aar---cycle;
 	z99=(((w-x1l,-1)--(w-x1l,h+infinity)) intersectionpoint (z3l---super_qr(4l,5l)));
 if (y99>y12r):
@@ -141,6 +149,6 @@ fill a---z3l---z3r---b---cycle;
 fi
 
 %penlabels(range 1 thru 80);
-%labels(range 1 thru 200);
+%labels(range 90 thru 200);
 
 endchar;

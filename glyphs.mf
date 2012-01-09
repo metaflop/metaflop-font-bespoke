@@ -39,17 +39,20 @@ def endchar =
  shipit;
  endgroup enddef;	
 
-mode_def flop =
-proofing:=1;
-fontmaking:=1;
-pixels_per_inch:=2000;
-tracingtitles:=1;
-title:=1;
-titlefont:=1;
-enddef;
+mode=luxo;
 
-mode=flop;
+%mode_def flop =
+%proofing:=1;
+%fontmaking:=1;
+%pixels_per_inch:=2000;
+%tracingtitles:=1;
+%title:=1;
+%titlefont:=1;
+%enddef;
 
+%mode=flop;
+
+mode_setup;
 
 %pixel conversions
 % metafont needs these pixel definitions to calculate the final dimensions of the parameter values

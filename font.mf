@@ -31,7 +31,7 @@ py#:=px#;		% unsichtbar machen / nicht verstellbar
 
 %%%%% PROPORTION %%%%%%
 
-cap#:=0.9ht#;   % cap heigt					$ 0.05ht / 1ht	
+cap#:=0.9ht#;   % cap heigt						$ 0.05ht / 1ht	
 mean#:=0.65ht#;   % mean height					$ 0.05ht / 1ht	
 bar:=0.53;       % bar height					$ 0.05ht / 1ht
 asc#:=0.97ht#;    % ascender height				$ 0.05ht / 1ht	
@@ -42,7 +42,7 @@ des#:=0.35ht#;    % descender heigt				$ 0.05ht / 1ht
 incx:=0.45;       % horizontal increase				$ 0 / 1	
 incy:=0.40;       % vertical increase				$ 0 / 1
 appert:=0.5;     % apperture 					$ 0.1 / 1
-cont:=1.0;       % contrast					$ 1 / 10
+cont:=1.0;       % contrast					$ 1 / 8
 superness:=0.71; % superness					$ 0 / 0.999
 corner#:=0.3pt#; % corner   standartwert = px			$ 0pt / 10pt
 

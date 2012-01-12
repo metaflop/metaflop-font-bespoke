@@ -35,6 +35,7 @@ x5-x6=1.2*cont*px+o;
 
 x7=leftstemloc; y7=y6;
 
+% switch off round form here
 
 .5[x6,x7]=x8=x9;
 y8=-y4;

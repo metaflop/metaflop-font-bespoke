@@ -19,21 +19,31 @@
 %%%                                                                         %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-beginadjichar(".",0.2, mean#, 0);
+beginadjichar(";",0.2, mean#, des#);
 
 %%% sidebearings %%%
 numeric l,r;
 normal_adjust_fit(0.5u#,0.5u#);
 
+x1=x2=x10=x11=leftstemloc;
 
-x4=x3=leftstemloc;
-y4-y3=1.2*cont*px;
-y3=0;
-y5=y6=.5(y4+y3);
-x5-x6=1.2*cont*px;
-.5[x5,x6]=leftstemloc;
+y11-y10=1.2*cont*px+o;
+y12=y13=.5(y11+y10);
+x12-x13=1.2*cont*px+o;
+.5[x12,x13]=leftstemloc;
 
-fill super_qr(4,5)---super_ql(5,3)---super_qr(3,6)---super_ql(6,4)---cycle;
+y11=mean;
+
+y1=.1mean+px;
+y2=-.4des;
+
+penpos1(px,0);
+penpos2(px,0);
+
+penstroke z1e..z2e;
+
+fill super_qr(11,12)---super_ql(12,10)---super_qr(10,13)---super_ql(13,11)---cycle;
+
 
 penlabels(range 1 thru 30);
 

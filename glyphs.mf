@@ -220,6 +220,7 @@ input glyphs/lc/z_lc
 %input glyphs/num/9
 input glyphs/punct/comma
 input glyphs/punct/colon
+input glyphs/punct/semicolon
 input glyphs/punct/period
 input glyphs/punct/exclam
 % input glyphs/punct/space

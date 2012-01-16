@@ -22,7 +22,7 @@
 % contrast limit
 
 if (cont > 1.2):
-  px#:=0.2pt#;
+px#:=0.2pt#;
 fi
 
 py#:=px#;

@@ -19,7 +19,7 @@
 %%%                                                                         %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-beginadjichar(",",0.2, mean#, 0);
+beginadjichar(",",0.2, mean#, des#);
 
 
 %%% sidebearings %%%
@@ -32,8 +32,8 @@ normal_adjust_fit(0.5u#,0.5u#);
 fi
 
 x1=x2=leftstemloc;
-y1=1/2h;
-y2=1/2des;
+y1=.1h+px;
+y2=-.4des;
 
 penpos1(px,0);
 penpos2(px,0);
@@ -43,3 +43,4 @@ penstroke z1e..z2e;
 penlabels(range 1 thru 2);
 
 endchar;
+

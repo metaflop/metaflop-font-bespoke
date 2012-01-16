@@ -19,6 +19,15 @@
 %%%                                                                         %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% contrast limit
+
+if (cont > 1.2):
+  px#:=0.2pt#;
+fi
+
+py#:=px#;
+
+
 % Aditional parameters / hidden parameter list
 barheight#:=bar*cap#;	% Cross Bar (Upper)
 leftstemloc#:=0.2u#+s#+((cont*px#)/2);	% position of left stem

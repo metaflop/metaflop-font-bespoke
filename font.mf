@@ -26,12 +26,11 @@ ht#:=10pt#;      % box height / nicht verstellbar
 u#:=1.5pt#;      % unit widht 					$ 0.3pt / 5pt
 s#:=0.15u#;             % unsichtbar machen / nicht verstellbar
 o#:=0.1pt#;	        % overshoot                             $ 0pt / 2pt	
-px#:=0.8pt#;     % pen width 					$ 0.1pt / 2pt 
-py#:=px#;		% unsichtbar machen / nicht verstellbar
+px#:=0.8pt#;     % pen width 					$ 0.15pt / 2pt 
 
 %%%%% PROPORTION %%%%%%
 
-cap#:=0.9ht#;   % cap heigt						$ 0.05ht / 1ht	
+cap#:=0.9ht#;   % cap heigt					$ 0.05ht / 1ht	
 mean#:=0.65ht#;   % mean height					$ 0.05ht / 1ht	
 bar:=0.53;       % bar height					$ 0.05ht / 1ht
 asc#:=0.97ht#;    % ascender height				$ 0.05ht / 1ht	

@@ -22,9 +22,15 @@
 %%% box dimension definition %%%
 beginadjchar("Z",5,cap#,0);
 
+
 %%% sidebearings %%%
+
+if (sidebearing=1):
+
 numeric l,r;
 normal_adjust_fit(0.1u#,0.1u#);
+
+fi
 
 %%% construction %%%
 if (corner < 0):

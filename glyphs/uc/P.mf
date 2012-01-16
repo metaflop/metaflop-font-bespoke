@@ -23,8 +23,13 @@
 beginadjchar("P",corr*4.5,cap#,0);
 
 %%% sidebearings %%%
+
+if (sidebearing=1):
+
 numeric l,r;
 normal_adjust_fit(1.1u#,0.4u#);
+
+fi
 
 %%% construction %%%
 x11=x22=leftstemloc;

@@ -23,8 +23,13 @@
 beginadjchar("T",5,cap#,0);
 
 %%% sidebearings %%%
+
+if (sidebearing=1):
+
 numeric l,r;
 normal_adjust_fit(0.2u#,0.2u#);
+
+fi
 
 %%% construction %%%
 x5=leftstemloc-(cont*px)/2;

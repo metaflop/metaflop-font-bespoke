@@ -22,9 +22,15 @@
 %%% box dimension definition %%%
 beginadjchar("f",3.25,asc#,0);
 
+
 %%% sidebearings %%%
+
+if (sidebearing=1):
+
 numeric l,r;
 normal_adjust_fit(0.1u#,0.15u#);
+
+fi
 
 %%% overshoot %%%
 top y12=h +o; % overshoot up

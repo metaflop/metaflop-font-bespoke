@@ -23,8 +23,14 @@
 beginadjchar("b",4.4,asc#,0);
 
 %%% sidebearings %%%
+
+if (sidebearing=1):
+
 numeric l,r;
 normal_adjust_fit(0.9u#,0.5u#);
+
+fi
+
 
 %%% overshoot %%%
 y4r=y3r=mean-px +o;  % overshoot up

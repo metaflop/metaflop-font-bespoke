@@ -22,9 +22,15 @@
 %%% box dimension definition %%%
 beginadjchar("v",4.16,mean#,0);
 
+
 %%% sidebearings %%%
+
+if (sidebearing=1):
+
 numeric l,r;
-normal_adjust_fit(0u#,0u#);
+normal_adjust_fit(0.0u#,0.0u#);
+
+fi
 
 %%% construction %%%
 x3l=leftstemloc-cont*px/2;

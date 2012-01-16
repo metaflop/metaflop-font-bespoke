@@ -21,9 +21,15 @@
 
 beginadjichar("!",0.2, cap#, 0);
 
+
 %%% sidebearings %%%
+
+if (sidebearing=1):
+
 numeric l,r;
 normal_adjust_fit(1.2u#,1.2u#);
+
+fi
 
 
 x4=x3=leftstemloc;

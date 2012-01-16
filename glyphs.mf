@@ -27,6 +27,13 @@ fi
 
 py#:=px#;
 
+% sidebearings on / off
+
+%if (sidebearing=true):
+% space:=1;
+%else: 
+% space:=0;
+%fi
 
 % Aditional parameters / hidden parameter list
 barheight#:=bar*cap#;	% Cross Bar (Upper)
@@ -35,12 +42,17 @@ letter_fit#:=0.0u#; % amount of letter fit
 shrink_fit:=.0u#;  % amount of shrink fit
 
 % definition of left and right-side bearings. To use in glyph after beginchar: normal_adjust_fit(-1.5u#,-1.5u#);
+
+if (sidebearing=1):
+
  def normal_adjust_fit(expr left_adjustment,right_adjustment) = 
  l := -hround(left_adjustment*hppp)-letter_fit#; 
  interim xoffset := -l; charwd := charwd+2letter_fit#+left_adjustment+right_adjustment; 
  r := l+hround(charwd*hppp)-shrink_fit;
  w := r-hround(right_adjustment*hppp)-letter_fit#; enddef;
-%
+
+fi
+
 
 def endchar =
  scantokens extra_endchar;
@@ -165,74 +177,10 @@ def super_quarterli(suffix i,j,k) =
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Glyph inputs:
-input glyphs/uc/A
-input glyphs/uc/B
-input glyphs/uc/C
-input glyphs/uc/D
-input glyphs/uc/E
-input glyphs/uc/F
-input glyphs/uc/G
-input glyphs/uc/H
-input glyphs/uc/I 
-input glyphs/uc/J
-input glyphs/uc/K
-input glyphs/uc/L
-input glyphs/uc/M
-input glyphs/uc/N
-input glyphs/uc/O
-input glyphs/uc/P
-input glyphs/uc/Q
-input glyphs/uc/R
-input glyphs/uc/S
-input glyphs/uc/T
-input glyphs/uc/U
-input glyphs/uc/V
-input glyphs/uc/W
-input glyphs/uc/X
-input glyphs/uc/Y
-input glyphs/uc/Z
+
 input glyphs/lc/a_lc
 input glyphs/lc/b_lc
 input glyphs/lc/c_lc
-input glyphs/lc/d_lc
-input glyphs/lc/e_lc
-input glyphs/lc/f_lc
-input glyphs/lc/g_lc
-input glyphs/lc/h_lc
-input glyphs/lc/i_lc
-input glyphs/lc/j_lc
-input glyphs/lc/k_lc
-input glyphs/lc/l_lc
-input glyphs/lc/m_lc
-input glyphs/lc/n_lc
-input glyphs/lc/o_lc
-input glyphs/lc/p_lc
-input glyphs/lc/q_lc
-input glyphs/lc/r_lc
-input glyphs/lc/s_lc
-input glyphs/lc/t_lc
-input glyphs/lc/u_lc
-input glyphs/lc/v_lc
-input glyphs/lc/w_lc
-input glyphs/lc/x_lc
-input glyphs/lc/y_lc
-input glyphs/lc/z_lc
-%input glyphs/num/0
-%input glyphs/num/1
-%input glyphs/num/2
-%input glyphs/num/3
-%input glyphs/num/4
-%input glyphs/num/5
-%input glyphs/num/6
-%input glyphs/num/7
-%input glyphs/num/8
-%input glyphs/num/9
-input glyphs/punct/comma
-input glyphs/punct/colon
-input glyphs/punct/semicolon
-input glyphs/punct/period
-input glyphs/punct/exclam
-% input glyphs/punct/space
 
 font_quad:=10u#+0s#;
 font_normal_space:=4u#+.2s#;
@@ -247,6 +195,8 @@ ligtable "A":
 "o" kern -0.2u#, "q" kern -0.2u#,
 "s" kern -0.1u#, "t" kern -0.5u#, "u" kern -0.1u#, 
 "v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#;
+
+
 % ligtable "O": "Q": "D": 
 % "V" kern -0.3u#, "W" kern -0.3u#, "X" kern -0.3u#, "Y" kern -0.3u#, "Z" kern -0.3u#;
 

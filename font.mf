@@ -23,27 +23,27 @@
 
 font_size:=10pt#;  % font size  / nicht verstellbar  		
 ht#:=10pt#;      % box height / nicht verstellbar		
-u#:=1.5pt#;      % unit widht 					$ 0.8pt / 2pt
+u#:=1.45pt#;      % unit widht 					$ 0.8 / 2
 s#:=0.15u#;             % unsichtbar machen / nicht verstellbar
-o#:=0.1pt#;	        % overshoot                             $ 0pt / 1pt	
-px#:=0.8pt#;     % pen width 					$ 0.15pt / 1.8pt 
+o#:=0.1pt#;	        % overshoot                             $ 0 / 1	
+px#:=0.9pt#;     % pen width 					$ 0.15 / 1.8 
 
 %%%%% PROPORTION %%%%%%
 
-cap#:=0.9ht#;   % cap heigt					$ 0.75ht / 1ht	
-mean#:=0.65cap#;   % mean height				$ 0.6 / 1	
-bar:=0.53;       % bar height					$ 0.3 / 0.8
-asc#:=1.05ht#;    % ascender height				$ 0.8 / 1.1ht	
+cap#:=0.9ht#;   % cap heigt					$ 0.75 / 1	
+mean#:=0.72cap#;   % mean height				$ 0.6 / 1	
+bar:=0.5;       % bar height					$ 0.3 / 0.8
+asc#:=0.97ht#;    % ascender height				$ 0.8 / 1.1	
 des#:=0.35ht#;    % descender heigt				$ 0.2 / 0.6	
 
 %%%%% SHAPE %%%%%
 
-incx:=0.45;       % horizontal increase				$ 0.01 / 0.6	
-incy:=0.40;       % vertical increase				$ 0.01 / 0.6
+incx:=0.55;       % horizontal increase				$ 0.01 / 0.6	
+incy:=0.50;       % vertical increase				$ 0.01 / 0.6
 appert:=0.5;     % apperture 					$ 0.1 / 0.7
-cont:=1.0;       % contrast					$ 1 / 8
-superness:=0.71; % superness					$ 0.3 / 0.999
-corner#:=0.8pt#; % corner   standartwert = px			$ 0pt / 2
+cont:=1.1;       % contrast					$ 1 / 8
+superness:=0.72; % superness					$ 0.3 / 0.999
+corner#:=0.8pt#; % corner   standartwert = px			$ 0 / 2
 
 %%%%% export %%%%%
 

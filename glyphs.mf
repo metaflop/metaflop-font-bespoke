@@ -247,7 +247,7 @@ input glyphs/punct/exclam
 
 
 font_quad:=10u#+0s#;
-font_normal_space:=1u#+0s#;
+font_normal_space:=3u#+0s#;
 font_normal_stretch:=0u#;
 font_normal_shrink:=0u#;
 

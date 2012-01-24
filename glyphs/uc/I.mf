@@ -28,7 +28,7 @@ beginadjichar("I",0.2,cap#,0);
 if (sidebearing=1):
 
 numeric l,r;
-normal_adjust_fit(1.2u#,1.2u#);
+normal_adjust_fit(space*1.2u#,space*1.2u#);
 
 fi
 %%% construction %%%

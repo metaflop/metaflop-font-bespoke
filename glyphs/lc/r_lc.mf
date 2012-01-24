@@ -28,7 +28,7 @@ beginadjchar("r",corr*3.5,mean#,0);
 if (sidebearing=1):
 
 numeric l,r;
-normal_adjust_fit(0.7u#,-0.2u#);
+normal_adjust_fit(space*0.7u#,space*-0.2u#);
 
 fi
 

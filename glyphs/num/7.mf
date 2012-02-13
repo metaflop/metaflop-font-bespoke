@@ -9,7 +9,7 @@ beginadjchar("7",4.7,cap#,0);
 
 %%% sidebearings %%%
 numeric l,r;
-normal_adjust_fit(space*0.1u#,space*0.1u#);
+normal_adjust_fit(space+0.1u#,space+0.1u#);
 
 %%% construction %%%
 x3l=leftstemloc-cont*px/2;
@@ -20,8 +20,6 @@ x1=x3l;
 x2=x4r;
 top y1=h;
 y1=y2;
-
-
 alphaset=diag_ratio(1,cont*px,y4-y3,x4r-x3l);
 
 %%% penpositions %%%
@@ -29,7 +27,6 @@ penpos3(alphaset*cont*px,0);
 penpos4(alphaset*cont*px,0);
 penpos1(px,90);
 penpos2(px,90);
-
 
 %%% draw %%%
 penstroke z1e---z2e;

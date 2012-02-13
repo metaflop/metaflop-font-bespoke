@@ -9,10 +9,9 @@ beginadjchar("4",4.5,cap#,0);
 
 %%% sidebearings %%%
 numeric l,r;
-normal_adjust_fit(space*0.1u#,space*0.1u#);
+normal_adjust_fit(space+0.1u#,space+0.1u#);
 
 %%% construction %%%
-
 x3=leftstemloc-.5cont*px;
 x4=w-x3;
 y3=y4=.4h;
@@ -20,7 +19,6 @@ y3=y4=.4h;
 penpos3(px,90);
 penpos4(px,90);
 penstroke z3e---z4e;
-
 
 x33l=leftstemloc-cont*px/2;
 x44r=(w-leftstemloc)-.5cont*px;

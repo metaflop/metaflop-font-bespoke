@@ -9,8 +9,9 @@ beginadjchar("5",4.8,cap#,0);
 
 %%% sidebearings %%%
 numeric l,r;
-normal_adjust_fit(space*0.7u#,space*0.7u#);
+normal_adjust_fit(space+0.7u#,space+0.7u#);
 eight:=.08h;
+
 %%% overshoot %%%
 y4r=y3r=y3-.5px; % overshoot up
 y8r=y7r=px -o; % overshoot down

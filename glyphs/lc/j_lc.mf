@@ -22,14 +22,10 @@
 %%% box dimension definition %%%
 beginadjchar("j",corr*2.5,asc#,des#);
 
-
 %%% sidebearings %%%
-
 if (sidebearing=1):
-
 numeric l,r;
-normal_adjust_fit(space*-0.6u#,space*0.7u#);
-
+normal_adjust_fit(space-0.6u#,space+0.7u#);
 fi
 
 %%% overshoot %%%

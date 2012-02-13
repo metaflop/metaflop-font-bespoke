@@ -22,15 +22,12 @@
 %%% box dimension definition %%%
 beginadjchar("H",5,cap#,0);
 
-
 %%% sidebearings %%%
-
 if (sidebearing=1):
-
 numeric l,r;
-normal_adjust_fit(space*1.1u#,space*1.1u#);
-
+normal_adjust_fit(space+1.1u#,space+1.1u#);
 fi
+
 %%% construction %%%
 x1=x2=x5=leftstemloc;
 x3=x4=x6=w-x1;

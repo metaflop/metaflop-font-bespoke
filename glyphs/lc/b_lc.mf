@@ -23,12 +23,9 @@
 beginadjchar("b",4.4,asc#,0);
 
 %%% sidebearings %%%
-
 if (sidebearing=1):
-
 numeric l,r;
-normal_adjust_fit(space*0.9u#,space*0.5u#);
-
+normal_adjust_fit(space+0.9u#,space+0.5u#);
 fi
 
 

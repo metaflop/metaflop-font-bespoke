@@ -9,8 +9,9 @@ beginadjchar("9",4.35,cap#,0);
 
 %%% sidebearings %%%
 numeric l,r;
-normal_adjust_fit(space*0.7u#,space*0.7u#);
+normal_adjust_fit(space+0.7u#,space+0.7u#);
 eight:=0*h;
+
 %%% overshoot %%%
 y4r=y3r=y3-.5px; % overshoot up
 y8r=y7r=px -o; % overshoot down
@@ -44,8 +45,6 @@ penpos5(whatever,if (superness=.5): -(ang-90)/2 else: 180 fi);
 penpos6(whatever,if (superness=.5): (ang-90)/2 else: 180 fi);
 penpos7(whatever,if (superness=.5): -(180-ang)/2 else: 90 fi);
 penpos8(whatever,if (superness=.5): (180-ang)/2 else: 90 fi);
-
-
 
 %%% overshoot %%%
 y12r=y11r=h-px +o; % overshoot up
@@ -83,8 +82,6 @@ penpos16(whatever,if (superness=.5): (180-ang)/2 else: 90 fi);
 
 %%% draw %%%
 penstroke super_qr(12e,13e)---super_ql(14e,15e)---super_qr(16e,9e)---super_ql(10e,11e)---cycle;
-
-%%% draw %%%
 penstroke z14e---super_ql(6e,7e)---super_qr(8e,1e)---z2e;
 
 % penlabels(range 1 thru 16);

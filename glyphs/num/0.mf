@@ -9,7 +9,7 @@ beginadjchar("0",5,cap#,0);
 
 %%% sidebearings %%%
 numeric l,r;
-normal_adjust_fit(space*0.7u#,space*0.7u#);
+normal_adjust_fit(space+0.7u#,space+0.7u#);
 
 %%% overshoot %%%
 y4r=y3r=h-px +o; % overshoot up

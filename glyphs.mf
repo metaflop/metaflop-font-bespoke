@@ -20,11 +20,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % contrast limit
-
 if (cont > 1.2):
 px#:=0.2pt#;
 fi
-
 py#:=px#;
 
 % Aditional parameters / hidden parameter list
@@ -33,7 +31,7 @@ leftstemloc#:=0.2u#+s#+((cont*px#)/2);	% position of left stem
 letter_fit#:=0.0u#; % amount of letter fit
 shrink_fit:=.0u#;  % amount of shrink fit
 
-space:=0.5; % letterspacing (0 = compress)
+space:=-0.4; % letterspacing (0 = compress)
 
 % sidebearings on / off
 % definition of left and right-side bearings. To use in glyph after beginchar: normal_adjust_fit(-1.5u#,-1.5u#);
@@ -171,8 +169,7 @@ def super_quarterli(suffix i,j,k) =
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Glyph inputs:
-
+%%% glyph input %%%
 input glyphs/uc/A
 input glyphs/uc/B
 input glyphs/uc/C
@@ -226,6 +223,7 @@ input glyphs/lc/w_lc
 input glyphs/lc/x_lc
 input glyphs/lc/y_lc
 input glyphs/lc/z_lc
+
 %input glyphs/num/0
 %input glyphs/num/1
 %input glyphs/num/2
@@ -236,15 +234,13 @@ input glyphs/lc/z_lc
 %input glyphs/num/7
 %input glyphs/num/8
 %input glyphs/num/9
+
 input glyphs/punct/comma
-
 %input glyphs/punct/colon
-
 input glyphs/punct/semicolon
 input glyphs/punct/period
 input glyphs/punct/exclam
 % input glyphs/punct/space
-
 
 font_quad:=10u#+0s#;
 font_normal_space:=3u#+0s#;
@@ -259,11 +255,12 @@ ligtable "A":
 "o" kern -0.2u#, "q" kern -0.2u#,
 "s" kern -0.1u#, "t" kern -0.5u#, "u" kern -0.1u#, 
 "v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#;
-
+ligtable "B":
+"V" kern -0.3u#, "W" kern -0.3u#, "Y" kern -0.3u#;
 
 % ligtable "O": "Q": "D": 
 % "V" kern -0.3u#, "W" kern -0.3u#, "X" kern -0.3u#, "Y" kern -0.3u#, "Z" kern -0.3u#;
-
+% kerning pairs Learn FONTLAB Fast p. 99
 % ligtable "L": "O" =: oct"014";   % USE THIS FOR LIGATURES OR SPECIAL CHARACTERS
 % ligtable "o": "b": "p": "e" kern .5u#, "o" kern .5u#, "x" kern-.5u#, % page 316 MetaFontBook
 %font_identifier:="FRAN" if slant<>0: & "SL" fi;

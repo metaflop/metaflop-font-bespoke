@@ -31,7 +31,7 @@ leftstemloc#:=0.2u#+s#+((cont*px#)/2);	% position of left stem
 letter_fit#:=0.0u#; % amount of letter fit
 shrink_fit:=.0u#;  % amount of shrink fit
 
-space:=2.4; % letterspacing (0 = compress)
+space:=0.0; % letterspacing (0 = compress)
 
 % sidebearings on / off
 % definition of left and right-side bearings. To use in glyph after beginchar: normal_adjust_fit(-1.5u#,-1.5u#);

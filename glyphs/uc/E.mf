@@ -25,7 +25,7 @@ beginadjchar("E",4.5,cap#,0);
 %%% sidebearings %%%
 if (sidebearing=1):
 numeric l,r;
-normal_adjust_fit(space+1.1u#,space+0.55u#);
+normal_adjust_fit(space+0.6u#,space+0.05u#);
 fi
 
 %%% construction %%%

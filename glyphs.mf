@@ -31,21 +31,18 @@ leftstemloc#:=0.2u#+s#+((cont*px#)/2);	% position of left stem
 letter_fit#:=0.0u#; % amount of letter fit
 shrink_fit:=.0u#;  % amount of shrink fit
 
-space:=-0.4; % letterspacing (0 = compress)
+space:=2.4; % letterspacing (0 = compress)
 
 % sidebearings on / off
 % definition of left and right-side bearings. To use in glyph after beginchar: normal_adjust_fit(-1.5u#,-1.5u#);
 
 if (sidebearing=1):
-
  def normal_adjust_fit(expr left_adjustment,right_adjustment) = 
  l := -hround(left_adjustment*hppp)-letter_fit#; 
  interim xoffset := -l; charwd := charwd+2letter_fit#+left_adjustment+right_adjustment; 
  r := l+hround(charwd*hppp)-shrink_fit;
  w := r-hround(right_adjustment*hppp)-letter_fit#; enddef;
-
 fi
-
 
 def endchar =
  scantokens extra_endchar;
@@ -63,7 +60,6 @@ mode=luxo;
 %title:=1;
 %titlefont:=1;
 %enddef;
-
 %mode=flop;
 
 mode_setup;
@@ -126,7 +122,6 @@ arcsin ((1/(sind 90)*sind 56)/(incx/((incx/sind 90)*sind 56))) enddef;
 vardef diag_ratio(expr a,b,y,c) =
 numeric aa_, bb_, cc_; bb_=b/y; cc_=c/y; aa_=a*a-bb_*bb_;
 (a*(cc_++sqrt aa_)-bb_*cc_)/aa_ enddef;
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 % Superness macros
@@ -136,7 +131,7 @@ def super_quarterl(suffix i,j,k) =
 ...(superness[x.j,x.i],superness[y.i,y.j]){z.j-z.i}
 ...z.j{x.k-x.i,0} enddef;
 
-%%Right curves (superness)
+%% Right curves (superness)
 def super_quarterr(suffix i,j,k) =
 z.j{x.k-x.i,0}
 ...(superness[x.j,x.k],superness[y.k,y.j]){z.k-z.j}
@@ -147,27 +142,23 @@ def super_ql(suffix i,j) =
  z.i{0,y.j-y.i}
 ...(superness[x.j,x.i],superness[y.i,y.j]){z.j-z.i}...z.j{x.j-x.i,0} enddef;
 
-%%Right curves (superness)
+%% Right curves (superness)
 def super_qr(suffix j,k) =
 z.j{x.k-x.j,0}
 ...(superness[x.j,x.k],superness[y.k,y.j]){z.k-z.j}
 ...z.k{0,y.k-y.j} enddef;
 
-
-
-%%Right interior curves (superness)
+%% Right interior curves (superness)
 def super_quarterri(suffix i,j,k) =
 z.j{x.k-x.i,0}
 ...(supernessi[x.j,x.k],supernessi[y.k,y.j]){z.k-z.j}
 ...z.k{0,y.k-y.j} enddef;
 
-%%Left interior curves (superness)
+%% Left interior curves (superness)
 def super_quarterli(suffix i,j,k) =
  z.i{0,y.j-y.i}
 ...(supernessi[x.j,x.i],supernessi[y.i,y.j]){z.j-z.i}
 ...z.j{x.k-x.i,0} enddef;
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% glyph input %%%
 input glyphs/uc/A
@@ -247,28 +238,138 @@ font_normal_space:=3u#+0s#;
 font_normal_stretch:=0u#;
 font_normal_shrink:=0u#;
 
+%%% ligtable upper case %%%
+% kerning pairs Learn FONTLAB Fast p. 99 / page 316 MetaFontBook
 ligtable "A": 
 "C" kern -0.3u#, "G" kern -0.3u#, "O" kern -0.3u#, "Q" kern -0.3u#, 
 "S" kern -0.2u#, "T" kern -0.7u#, "U" kern -0.1u#, 
 "V" kern -0.5u#, "W" kern -0.5u#, "Y" kern -0.5u#,
-"c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, 
-"o" kern -0.2u#, "q" kern -0.2u#,
+"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
 "s" kern -0.1u#, "t" kern -0.5u#, "u" kern -0.1u#, 
 "v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#;
 ligtable "B":
 "V" kern -0.3u#, "W" kern -0.3u#, "Y" kern -0.3u#;
+ligtable "C":
+"T" kern -0.3u#, 
+"V" kern -0.3u#, "W" kern -0.3u#, "Y" kern -0.3u#;
+ligtable "D":
+"A" kern -0.3u#, "J" kern -0.3u#, 
+"V" kern -0.3u#, "W" kern -0.3u#, "Y" kern -0.3u#;
+ligtable "F":
+"A" kern -0.3u#, "J" kern -0.3u#, "T" kern -0.3u#, 
+"C" kern -0.3u#, "G" kern -0.3u#, "O" kern -0.3u#, "Q" kern -0.3u#,
+"V" kern -0.3u#, "W" kern -0.3u#, "Y" kern -0.3u#,
+"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
+"r" kern -0.1u#, "s" kern -0.1u#, "t" kern -0.5u#, "u" kern -0.1u#, 
+"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#;
+ligtable "G":
+"V" kern -0.3u#, "W" kern -0.3u#, "Y" kern -0.3u#;
+ligtable "K":
+"C" kern -0.3u#, "G" kern -0.3u#, "O" kern -0.3u#, "Q" kern -0.3u#, 
+"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
+"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#;
+ligtable "L":
+"T" kern -0.3u#, 
+"C" kern -0.3u#, "G" kern -0.3u#, "O" kern -0.3u#, "Q" kern -0.3u#,
+"V" kern -0.3u#, "W" kern -0.3u#, "Y" kern -0.3u#,
+"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
+"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#;
+ligtable "O":
+"A" kern -0.3u#, "T" kern -0.3u#,
+"V" kern -0.3u#, "W" kern -0.3u#, "Y" kern -0.3u#;
+ligtable "P":
+"A" kern -0.3u#, "J" kern -0.3u#, "T" kern -0.3u#, 
+"V" kern -0.3u#, "W" kern -0.3u#, "Y" kern -0.3u#,
+"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
+"s" kern -0.1u#,
+"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#;
+ligtable "Q":
+"A" kern -0.3u#, "T" kern -0.3u#,
+"V" kern -0.3u#, "W" kern -0.3u#, "Y" kern -0.3u#;
+ligtable "R":
+"A" kern -0.3u#, "T" kern -0.3u#, 
+"V" kern -0.3u#, "W" kern -0.3u#, "Y" kern -0.3u#,
+"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
+"s" kern -0.1u#,
+"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#;
+ligtable "S":
+"T" kern -0.3u#, 
+"V" kern -0.3u#, "W" kern -0.3u#, "Y" kern -0.3u#,
+"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#;
+ligtable "T":
+"A" kern -0.3u#, 
+"C" kern -0.3u#, "G" kern -0.3u#, "O" kern -0.3u#, "Q" kern -0.3u#,
+"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
+"n" kern -0.2u#, "m" kern -0.2u#, "p" kern -0.2u#,
+"r" kern -0.1u#, "s" kern -0.1u#, "u" kern -0.1u#,
+"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#, "z" kern -0.5u#;
+ligtable "V":
+"A" kern -0.3u#, 
+"C" kern -0.3u#, "G" kern -0.3u#, "O" kern -0.3u#, "Q" kern -0.3u#,
+"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
+"n" kern -0.2u#, "m" kern -0.2u#, "p" kern -0.2u#,
+"r" kern -0.1u#, "s" kern -0.1u#, "u" kern -0.1u#,
+"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#, "z" kern -0.5u#;
+ligtable "W":
+"A" kern -0.3u#, 
+"C" kern -0.3u#, "G" kern -0.3u#, "O" kern -0.3u#, "Q" kern -0.3u#,
+"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
+"n" kern -0.2u#, "m" kern -0.2u#, "p" kern -0.2u#,
+"r" kern -0.1u#, "s" kern -0.1u#, "u" kern -0.1u#,
+"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#, "z" kern -0.5u#;
+ligtable "Y":
+"A" kern -0.3u#, 
+"C" kern -0.3u#, "G" kern -0.3u#, "O" kern -0.3u#, "Q" kern -0.3u#,
+"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
+"n" kern -0.2u#, "m" kern -0.2u#, "p" kern -0.2u#,
+"r" kern -0.1u#, "s" kern -0.1u#, "u" kern -0.1u#,
+"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#, "z" kern -0.5u#;
+ligtable "X":
+"C" kern -0.3u#, "G" kern -0.3u#, "O" kern -0.3u#, "Q" kern -0.3u#,
+"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#;
 
-% ligtable "O": "Q": "D": 
-% "V" kern -0.3u#, "W" kern -0.3u#, "X" kern -0.3u#, "Y" kern -0.3u#, "Z" kern -0.3u#;
-% kerning pairs Learn FONTLAB Fast p. 99
+%%% ligtable lower case %%%
+ligtable "e":
+"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#, "z" kern -0.5u#,
+"f" kern -0.2u#, "t" kern -0.2u#;
+ligtable "o":
+"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#, "z" kern -0.5u#,
+"f" kern -0.2u#, "t" kern -0.2u#;
+ligtable "p":
+"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#, "z" kern -0.5u#,
+"f" kern -0.2u#, "t" kern -0.2u#;
+ligtable "c":
+"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#, "z" kern -0.5u#,
+"f" kern -0.2u#, "t" kern -0.2u#;
+ligtable "b":
+"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#, "z" kern -0.5u#,
+"f" kern -0.2u#, "t" kern -0.2u#;
+ligtable "f":
+"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
+"j" kern -0.2u#, "f" kern -0.2u#, "t" kern -0.2u#,
+"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#, "z" kern -0.5u#;
+ligtable "i":
+"j" kern -0.2u#;
+ligtable "r":
+"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
+"j" kern -0.2u#, "f" kern -0.2u#, "t" kern -0.2u#,
+"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#, "z" kern -0.5u#;
+ligtable "v":
+"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#;
+ligtable "w":
+"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#;
+ligtable "y":
+"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#;
+ligtable "x":
+"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#;
+
+
 % ligtable "L": "O" =: oct"014";   % USE THIS FOR LIGATURES OR SPECIAL CHARACTERS
-% ligtable "o": "b": "p": "e" kern .5u#, "o" kern .5u#, "x" kern-.5u#, % page 316 MetaFontBook
 %font_identifier:="FRAN" if slant<>0: & "SL" fi;
 
 font_coding_scheme:="OT1";
 
 % if known ps_output:  % presets for mf2pt1
-
 % font_coding_scheme	"ot1";
 % font_comment	"Copyright (C) 2012 MetaFlop";
 % font_family	"Fontname";	
@@ -282,5 +383,4 @@ font_coding_scheme:="OT1";
 %font_unique_id		"4112233";
 % font_version		"002.005";
 % font_weight		"Light";
-
 % fi

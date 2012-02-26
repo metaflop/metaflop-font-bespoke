@@ -25,7 +25,7 @@ beginadjchar("m",6.75,mean#,0);
 %%% sidebearings %%%
 if (sidebearing=1):
 numeric l,r;
-normal_adjust_fit(space+0.2u#,space+0.15u#);
+normal_adjust_fit(space+0.4u#,space+0.35u#);
 fi
 
 %%% overshoot %%%

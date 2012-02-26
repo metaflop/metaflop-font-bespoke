@@ -240,128 +240,129 @@ font_normal_shrink:=0u#;
 
 %%% ligtable upper case %%%
 % kerning pairs Learn FONTLAB Fast p. 99 / page 316 MetaFontBook
+
 ligtable "A": 
-"C" kern -0.3u#, "G" kern -0.3u#, "O" kern -0.3u#, "Q" kern -0.3u#, 
-"S" kern -0.2u#, "T" kern -0.7u#, "U" kern -0.1u#, 
-"V" kern -0.5u#, "W" kern -0.5u#, "Y" kern -0.5u#,
-"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
-"s" kern -0.1u#, "t" kern -0.5u#, "u" kern -0.1u#, 
-"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#;
+"C" kern +0.0u#, "G" kern +0.0u#, "O" kern +0.0u#, "Q" kern +0.0u#, 
+"S" kern +0.0u#, "T" kern -0.4u#, "U" kern +0.0u#, 
+"V" kern -0.1u#, "W" kern -0.1u#, "Y" kern -0.1u#,
+"a" kern +0.1u#, "c" kern +0.1u#, "d" kern +0.1u#, "e" kern +0.1u#, "g" kern +0.1u#, "o" kern +0.1u#, "q" kern +0.1u#,
+"s" kern +0.1u#, "t" kern -0.0u#, "u" kern -0.0u#, 
+"v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#;
 ligtable "B":
-"V" kern -0.3u#, "W" kern -0.3u#, "Y" kern -0.3u#;
+"V" kern +0.0u#, "W" kern +0.0u#, "Y" kern +0.0u#;
 ligtable "C":
-"T" kern -0.3u#, 
-"V" kern -0.3u#, "W" kern -0.3u#, "Y" kern -0.3u#;
+"T" kern +0.0u#, 
+"V" kern +0.2u#, "W" kern +0.2u#, "Y" kern +0.2u#;
 ligtable "D":
-"A" kern -0.3u#, "J" kern -0.3u#, 
-"V" kern -0.3u#, "W" kern -0.3u#, "Y" kern -0.3u#;
+"A" kern +0.0u#, "J" kern -0.1u#, 
+"V" kern +0.0u#, "W" kern +0.0u#, "Y" kern +0.0u#;
 ligtable "F":
-"A" kern -0.3u#, "J" kern -0.3u#, "T" kern -0.3u#, 
-"C" kern -0.3u#, "G" kern -0.3u#, "O" kern -0.3u#, "Q" kern -0.3u#,
-"V" kern -0.3u#, "W" kern -0.3u#, "Y" kern -0.3u#,
-"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
-"r" kern -0.1u#, "s" kern -0.1u#, "t" kern -0.5u#, "u" kern -0.1u#, 
-"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#;
+"A" kern -0.3u#, "J" kern -0.6u#, "T" kern +0.2u#, 
+"C" kern -0.1u#, "G" kern -0.1u#, "O" kern -0.1u#, "Q" kern -0.1u#,
+"V" kern +0.2u#, "W" kern +0.2u#, "Y" kern +0.2u#,
+"a" kern -0.1u#, "c" kern -0.0u#, "d" kern -0.0u#, "e" kern -0.0u#, "g" kern -0.0u#, "o" kern -0.0u#, "q" kern -0.0u#,
+"r" kern -0.0u#, "s" kern -0.0u#, "t" kern -0.0u#, "u" kern -0.0u#, 
+"v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#;
 ligtable "G":
-"V" kern -0.3u#, "W" kern -0.3u#, "Y" kern -0.3u#;
+"V" kern +0.0u#, "W" kern +0.0u#, "Y" kern +0.0u#;
 ligtable "K":
-"C" kern -0.3u#, "G" kern -0.3u#, "O" kern -0.3u#, "Q" kern -0.3u#, 
-"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
-"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#;
+"C" kern -0.2u#, "G" kern -0.2u#, "O" kern -0.2u#, "Q" kern -0.2u#, 
+"a" kern -0.1u#, "c" kern -0.1u#, "d" kern -0.1u#, "e" kern -0.1u#, "g" kern -0.1u#, "o" kern -0.1u#, "q" kern -0.1u#,
+"v" kern -0.1u#, "w" kern -0.1u#, "y" kern -0.1u#;
 ligtable "L":
-"T" kern -0.3u#, 
-"C" kern -0.3u#, "G" kern -0.3u#, "O" kern -0.3u#, "Q" kern -0.3u#,
-"V" kern -0.3u#, "W" kern -0.3u#, "Y" kern -0.3u#,
-"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
-"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#;
+"T" kern -0.6u#, 
+"C" kern -0.2u#, "G" kern -0.2u#, "O" kern -0.2u#, "Q" kern -0.2u#,
+"V" kern -0.5u#, "W" kern -0.5u#, "Y" kern -0.5u#,
+"a" kern -0.0u#, "c" kern -0.0u#, "d" kern -0.0u#, "e" kern -0.0u#, "g" kern -0.0u#, "o" kern -0.0u#, "q" kern -0.0u#,
+"v" kern -0.1u#, "w" kern -0.1u#, "y" kern -0.1u#;
 ligtable "O":
-"A" kern -0.3u#, "T" kern -0.3u#,
-"V" kern -0.3u#, "W" kern -0.3u#, "Y" kern -0.3u#;
+"A" kern +0.0u#, "T" kern -0.1u#,
+"V" kern +0.0u#, "W" kern +0.0u#, "Y" kern -0.1u#;
 ligtable "P":
-"A" kern -0.3u#, "J" kern -0.3u#, "T" kern -0.3u#, 
-"V" kern -0.3u#, "W" kern -0.3u#, "Y" kern -0.3u#,
-"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
-"s" kern -0.1u#,
-"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#;
+"A" kern -0.3u#, "J" kern -0.8u#, "T" kern -0.1u#, 
+"V" kern +0.0u#, "W" kern +0.0u#, "Y" kern +0.0u#,
+"a" kern -0.1u#, "c" kern -0.1u#, "d" kern -0.1u#, "e" kern -0.1u#, "g" kern -0.1u#, "o" kern -0.1u#, "q" kern -0.1u#,
+"s" kern -0.0u#,
+"v" kern +0.1u#, "w" kern +0.1u#, "y" kern +0.1u#;
 ligtable "Q":
-"A" kern -0.3u#, "T" kern -0.3u#,
-"V" kern -0.3u#, "W" kern -0.3u#, "Y" kern -0.3u#;
+"A" kern +0.0u#, "T" kern -0.1u#,
+"V" kern +0.0u#, "W" kern +0.0u#, "Y" kern -0.1u#;
 ligtable "R":
-"A" kern -0.3u#, "T" kern -0.3u#, 
-"V" kern -0.3u#, "W" kern -0.3u#, "Y" kern -0.3u#,
-"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
-"s" kern -0.1u#,
-"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#;
+"A" kern -0.1u#, "T" kern -0.1u#, 
+"V" kern +0.0u#, "W" kern +0.0u#, "Y" kern +0.0u#,
+"a" kern -0.0u#, "c" kern -0.0u#, "d" kern -0.0u#, "e" kern -0.0u#, "g" kern -0.0u#, "o" kern -0.0u#, "q" kern -0.0u#,
+"s" kern -0.0u#,
+"v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#;
 ligtable "S":
-"T" kern -0.3u#, 
-"V" kern -0.3u#, "W" kern -0.3u#, "Y" kern -0.3u#,
-"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#;
+"T" kern +0.0u#, 
+"V" kern +0.0u#, "W" kern +0.0u#, "Y" kern +0.0u#,
+"v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#;
 ligtable "T":
-"A" kern -0.3u#, 
-"C" kern -0.3u#, "G" kern -0.3u#, "O" kern -0.3u#, "Q" kern -0.3u#,
-"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
-"n" kern -0.2u#, "m" kern -0.2u#, "p" kern -0.2u#,
-"r" kern -0.1u#, "s" kern -0.1u#, "u" kern -0.1u#,
-"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#, "z" kern -0.5u#;
+"A" kern -0.4u#, "F" kern +0.0u#, "T" kern +0.2u#, 
+"C" kern -0.1u#, "G" kern -0.1u#, "O" kern -0.1u#, "Q" kern -0.1u#,
+"a" kern -0.3u#, "c" kern -0.3u#, "d" kern -0.3u#, "e" kern -0.3u#, "g" kern -0.3u#, "o" kern -0.3u#, "q" kern -0.3u#,
+"n" kern -0.3u#, "m" kern -0.3u#, "p" kern -0.3u#,
+"r" kern -0.3u#, "s" kern -0.3u#, "u" kern -0.3u#, "x" kern -0.3u#,
+"v" kern -0.3u#, "w" kern -0.3u#, "y" kern -0.3u#, "z" kern -0.3u#;
 ligtable "V":
-"A" kern -0.3u#, 
-"C" kern -0.3u#, "G" kern -0.3u#, "O" kern -0.3u#, "Q" kern -0.3u#,
-"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
-"n" kern -0.2u#, "m" kern -0.2u#, "p" kern -0.2u#,
-"r" kern -0.1u#, "s" kern -0.1u#, "u" kern -0.1u#,
-"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#, "z" kern -0.5u#;
+"A" kern -0.1u#, 
+"C" kern +0.0u#, "G" kern +0.0u#, "O" kern +0.0u#, "Q" kern +0.0u#,
+"a" kern -0.2u#, "c" kern -0.1u#, "d" kern -0.1u#, "e" kern -0.1u#, "g" kern -0.1u#, "o" kern -0.1u#, "q" kern -0.1u#,
+"n" kern -0.1u#, "m" kern -0.1u#, "p" kern -0.1u#,
+"r" kern -0.1u#, "s" kern -0.1u#, "u" kern -0.1u#, "x" kern -0.1u#,
+"v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#, "z" kern -0.0u#;
 ligtable "W":
-"A" kern -0.3u#, 
-"C" kern -0.3u#, "G" kern -0.3u#, "O" kern -0.3u#, "Q" kern -0.3u#,
-"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
+"A" kern -0.1u#, 
+"C" kern +0.0u#, "G" kern +0.0u#, "O" kern +0.0u#, "Q" kern +0.0u#,
+"a" kern -0.3u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
 "n" kern -0.2u#, "m" kern -0.2u#, "p" kern -0.2u#,
-"r" kern -0.1u#, "s" kern -0.1u#, "u" kern -0.1u#,
-"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#, "z" kern -0.5u#;
+"r" kern -0.2u#, "s" kern -0.2u#, "u" kern -0.2u#, "x" kern -0.2u#,
+"v" kern -0.1u#, "w" kern -0.1u#, "y" kern -0.1u#, "z" kern -0.2u#;
 ligtable "Y":
-"A" kern -0.3u#, 
-"C" kern -0.3u#, "G" kern -0.3u#, "O" kern -0.3u#, "Q" kern -0.3u#,
-"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
-"n" kern -0.2u#, "m" kern -0.2u#, "p" kern -0.2u#,
-"r" kern -0.1u#, "s" kern -0.1u#, "u" kern -0.1u#,
-"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#, "z" kern -0.5u#;
+"A" kern -0.1u#, 
+"C" kern -0.1u#, "G" kern -0.1u#, "O" kern -0.1u#, "Q" kern -0.1u#,
+"a" kern -0.4u#, "c" kern -0.3u#, "d" kern -0.3u#, "e" kern -0.3u#, "g" kern -0.3u#, "o" kern -0.3u#, "q" kern -0.3u#,
+"n" kern -0.3u#, "m" kern -0.3u#, "p" kern -0.3u#,
+"r" kern -0.3u#, "s" kern -0.3u#, "u" kern -0.3u#, "x" kern -0.3u#,
+"v" kern -0.2u#, "w" kern -0.2u#, "y" kern -0.2u#, "z" kern -0.3u#;
 ligtable "X":
-"C" kern -0.3u#, "G" kern -0.3u#, "O" kern -0.3u#, "Q" kern -0.3u#,
-"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#;
+"C" kern +0.0u#, "G" kern +0.0u#, "O" kern +0.0u#, "Q" kern +0.0u#,
+"a" kern -0.0u#, "c" kern -0.0u#, "d" kern -0.0u#, "e" kern -0.0u#, "g" kern -0.0u#, "o" kern -0.0u#, "q" kern -0.0u#;
 
 %%% ligtable lower case %%%
 ligtable "e":
-"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#, "z" kern -0.5u#,
-"f" kern -0.2u#, "t" kern -0.2u#;
+"v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#, "z" kern -0.0u#,
+"f" kern -0.0u#, "t" kern -0.0u#;
 ligtable "o":
-"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#, "z" kern -0.5u#,
-"f" kern -0.2u#, "t" kern -0.2u#;
+"v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#, "z" kern -0.0u#,
+"f" kern -0.0u#, "t" kern -0.0u#;
 ligtable "p":
-"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#, "z" kern -0.5u#,
-"f" kern -0.2u#, "t" kern -0.2u#;
+"v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#, "z" kern -0.0u#,
+"f" kern -0.0u#, "t" kern -0.0u#;
 ligtable "c":
-"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#, "z" kern -0.5u#,
-"f" kern -0.2u#, "t" kern -0.2u#;
+"v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#, "z" kern -0.0u#,
+"f" kern -0.0u#, "t" kern -0.0u#;
 ligtable "b":
-"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#, "z" kern -0.5u#,
-"f" kern -0.2u#, "t" kern -0.2u#;
+"v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#, "z" kern -0.0u#,
+"f" kern -0.0u#, "t" kern -0.0u#;
 ligtable "f":
-"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
-"j" kern -0.2u#, "f" kern -0.2u#, "t" kern -0.2u#,
-"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#, "z" kern -0.5u#;
+"a" kern -0.0u#, "c" kern -0.0u#, "d" kern -0.0u#, "e" kern -0.0u#, "g" kern -0.0u#, "o" kern -0.0u#, "q" kern -0.0u#,
+"j" kern -0.0u#, "f" kern -0.0u#, "t" kern -0.0u#,
+"v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#, "z" kern -0.0u#;
 ligtable "i":
-"j" kern -0.2u#;
+"j" kern -0.0u#;
 ligtable "r":
-"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
-"j" kern -0.2u#, "f" kern -0.2u#, "t" kern -0.2u#,
-"v" kern -0.5u#, "w" kern -0.5u#, "y" kern -0.5u#, "z" kern -0.5u#;
+"a" kern -0.0u#, "c" kern -0.0u#, "d" kern -0.0u#, "e" kern -0.0u#, "g" kern -0.0u#, "o" kern -0.0u#, "q" kern -0.0u#,
+"j" kern -0.0u#, "f" kern -0.0u#, "t" kern -0.0u#,
+"v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#, "z" kern -0.0u#;
 ligtable "v":
-"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#;
+"a" kern -0.0u#, "c" kern -0.0u#, "d" kern -0.0u#, "e" kern -0.0u#, "g" kern -0.0u#, "o" kern -0.0u#, "q" kern -0.0u#;
 ligtable "w":
-"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#;
+"a" kern -0.0u#, "c" kern -0.0u#, "d" kern -0.0u#, "e" kern -0.0u#, "g" kern -0.0u#, "o" kern -0.0u#, "q" kern -0.0u#;
 ligtable "y":
-"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#;
+"a" kern -0.0u#, "c" kern -0.0u#, "d" kern -0.0u#, "e" kern -0.0u#, "g" kern -0.0u#, "o" kern -0.0u#, "q" kern -0.0u#;
 ligtable "x":
-"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#;
+"a" kern -0.0u#, "c" kern -0.0u#, "d" kern -0.0u#, "e" kern -0.0u#, "g" kern -0.0u#, "o" kern -0.0u#, "q" kern -0.0u#;
 
 
 % ligtable "L": "O" =: oct"014";   % USE THIS FOR LIGATURES OR SPECIAL CHARACTERS

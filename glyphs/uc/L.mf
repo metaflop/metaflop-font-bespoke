@@ -20,7 +20,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% box dimension definition %%%
-beginadjchar("L",5,cap#,0);
+beginadjchar("L",4,cap#,0);
 
 %%% sidebearings %%%
 if (sidebearing=1):

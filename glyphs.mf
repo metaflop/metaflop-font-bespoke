@@ -243,7 +243,7 @@ font_normal_shrink:=0u#;
 
 ligtable "A": 
 "C" kern +0.0u#, "G" kern +0.0u#, "O" kern +0.0u#, "Q" kern +0.0u#, 
-"S" kern +0.0u#, "T" kern -0.4u#, "U" kern +0.0u#, 
+"S" kern +0.0u#, "T" kern -0.4u#, "U" kern +0.0u#, "Z" kern +0.2u#, 
 "V" kern -0.1u#, "W" kern -0.1u#, "Y" kern -0.1u#,
 "a" kern +0.1u#, "c" kern +0.1u#, "d" kern +0.1u#, "e" kern +0.1u#, "g" kern +0.1u#, "o" kern +0.1u#, "q" kern +0.1u#,
 "s" kern +0.1u#, "t" kern -0.0u#, "u" kern -0.0u#, 
@@ -270,7 +270,7 @@ ligtable "K":
 "a" kern -0.1u#, "c" kern -0.1u#, "d" kern -0.1u#, "e" kern -0.1u#, "g" kern -0.1u#, "o" kern -0.1u#, "q" kern -0.1u#,
 "v" kern -0.1u#, "w" kern -0.1u#, "y" kern -0.1u#;
 ligtable "L":
-"T" kern -0.6u#, 
+"A" kern +0.2u#, "T" kern -0.6u#, 
 "C" kern -0.2u#, "G" kern -0.2u#, "O" kern -0.2u#, "Q" kern -0.2u#,
 "V" kern -0.5u#, "W" kern -0.5u#, "Y" kern -0.5u#,
 "a" kern -0.0u#, "c" kern -0.0u#, "d" kern -0.0u#, "e" kern -0.0u#, "g" kern -0.0u#, "o" kern -0.0u#, "q" kern -0.0u#,
@@ -320,41 +320,48 @@ ligtable "W":
 "v" kern -0.1u#, "w" kern -0.1u#, "y" kern -0.1u#, "z" kern -0.2u#;
 ligtable "Y":
 "A" kern -0.1u#, 
-"C" kern -0.1u#, "G" kern -0.1u#, "O" kern -0.1u#, "Q" kern -0.1u#,
+"C" kern -0.1u#, "G" kern -0.1u#, "O" kern -0.1u#, "Q" kern -0.1u#, "Z" kern +0.2u#,
 "a" kern -0.4u#, "c" kern -0.3u#, "d" kern -0.3u#, "e" kern -0.3u#, "g" kern -0.3u#, "o" kern -0.3u#, "q" kern -0.3u#,
 "n" kern -0.3u#, "m" kern -0.3u#, "p" kern -0.3u#,
 "r" kern -0.3u#, "s" kern -0.3u#, "u" kern -0.3u#, "x" kern -0.3u#,
 "v" kern -0.2u#, "w" kern -0.2u#, "y" kern -0.2u#, "z" kern -0.3u#;
 ligtable "X":
 "C" kern +0.0u#, "G" kern +0.0u#, "O" kern +0.0u#, "Q" kern +0.0u#,
-"a" kern -0.0u#, "c" kern -0.0u#, "d" kern -0.0u#, "e" kern -0.0u#, "g" kern -0.0u#, "o" kern -0.0u#, "q" kern -0.0u#;
+"a" kern -0.4u#, "c" kern -0.3u#, "d" kern -0.3u#, "e" kern -0.3u#, "g" kern -0.3u#, "o" kern -0.3u#, "q" kern -0.3u#;
+ligtable "Z":
+"A" kern +0.2u#, "Y" kern +0.2u#;
+
 
 %%% ligtable lower case %%%
 ligtable "e":
 "v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#, "z" kern -0.0u#,
-"f" kern -0.0u#, "t" kern -0.0u#;
+"f" kern -0.2u#, "t" kern -0.2u#;
 ligtable "o":
 "v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#, "z" kern -0.0u#,
-"f" kern -0.0u#, "t" kern -0.0u#;
+"f" kern -0.2u#, "t" kern -0.2u#;
 ligtable "p":
 "v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#, "z" kern -0.0u#,
-"f" kern -0.0u#, "t" kern -0.0u#;
+"f" kern -0.2u#, "t" kern -0.2u#;
 ligtable "c":
 "v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#, "z" kern -0.0u#,
-"f" kern -0.0u#, "t" kern -0.0u#;
+"f" kern -0.1u#, "t" kern -0.1u#;
 ligtable "b":
 "v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#, "z" kern -0.0u#,
-"f" kern -0.0u#, "t" kern -0.0u#;
+"f" kern -0.2u#, "t" kern -0.2u#;
 ligtable "f":
-"a" kern -0.0u#, "c" kern -0.0u#, "d" kern -0.0u#, "e" kern -0.0u#, "g" kern -0.0u#, "o" kern -0.0u#, "q" kern -0.0u#,
-"j" kern -0.0u#, "f" kern -0.0u#, "t" kern -0.0u#,
-"v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#, "z" kern -0.0u#;
+"a" kern -0.3u#, "c" kern -0.3u#, "d" kern -0.3u#, "e" kern -0.3u#, "g" kern -0.3u#, "o" kern -0.3u#, "q" kern -0.3u#,
+"j" kern -0.4u#, "f" kern -0.3u#, "t" kern -0.3u#,
+"v" kern -0.1u#, "w" kern -0.1u#, "y" kern -0.1u#, "z" kern -0.1u#;
 ligtable "i":
-"j" kern -0.0u#;
+"j" kern -0.3u#;
 ligtable "r":
-"a" kern -0.0u#, "c" kern -0.0u#, "d" kern -0.0u#, "e" kern -0.0u#, "g" kern -0.0u#, "o" kern -0.0u#, "q" kern -0.0u#,
-"j" kern -0.0u#, "f" kern -0.0u#, "t" kern -0.0u#,
+"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
+"j" kern -0.4u#, "f" kern -0.1u#, "t" kern -0.1u#,
 "v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#, "z" kern -0.0u#;
+ligtable "t":
+"a" kern -0.3u#, "c" kern -0.3u#, "d" kern -0.3u#, "e" kern -0.3u#, "g" kern -0.3u#, "o" kern -0.3u#, "q" kern -0.3u#,
+"j" kern -0.4u#, "f" kern +0.1u#, "t" kern +0.1u#,
+"v" kern -0.1u#, "w" kern -0.1u#, "y" kern -0.1u#, "z" kern -0.1u#;
 ligtable "v":
 "a" kern -0.0u#, "c" kern -0.0u#, "d" kern -0.0u#, "e" kern -0.0u#, "g" kern -0.0u#, "o" kern -0.0u#, "q" kern -0.0u#;
 ligtable "w":

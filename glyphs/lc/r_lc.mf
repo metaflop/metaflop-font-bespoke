@@ -41,7 +41,7 @@ if (h>w):
 else: 
 	y10r=y11r+incy*(px-y11r) fi;
 if (y10r<h-(.5w-(leftstemloc-.5(cont*px)))): 
-	y10r:=5/8h; fi;
+	y10r:=4/8h; fi;
 x12r=x14r+incx*((w-(leftstemloc+.5(cont*px)))-x14r);
 x14=leftstemloc;
 x13=x13r-.5px;

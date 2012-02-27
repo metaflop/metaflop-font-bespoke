@@ -42,7 +42,7 @@ x1=if (incx>.5): x7r-((w-(leftstemloc-.5(px*cont)+.5px))-x7r) else: leftstemloc-
 y2=y3=mean;
 x2=x1=x2l+.5px;
 x3=x6=x3l-.5(cont*px);
-x6=w-0.75*leftstemloc; % left point of curve?
+x6=w-leftstemloc;
 y6r=y1r;
 x1r=x1+(px/2);
 x6r=x6-(cont*px/2);

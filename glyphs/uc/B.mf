@@ -34,12 +34,12 @@ x11r=x22r=x11+(cont*px/2);
 x7r=x6r-incx*(x6r-x11r);
 y5r=y4r+incy*(y7r-(h-px));
 y6r=y7r-incy*(y7r-(h-px));
-y4r=bar*h-.5px=y2r;
+y4r=1.05*bar*h-.5px=y2r;
 y7r=y1r=px;
 if (y5r<y4r+.5(y7r-y4r)): y5r:=y4r+.5(y7r-y4r); fi
 if (y6r>y4r+.5(y7r-y4r)): y6r:=y7r-.5(y7r-y4r); fi
 x7r=x4r;
-y4=bar*h;
+y4=1.05*bar*h;
 bot y7=0;
 y7=y1;
 y2=y4;

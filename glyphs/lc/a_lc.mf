@@ -30,10 +30,10 @@ fi
 
 %%% overshoot %%%
 y8r=y7r=px -o;  % overhoot down
-bot y8=0 -o; % overshoot down
-bot y7=0 -o; % overshoot down
-top y11=h +o; % overshoot up
-top y12=h +o; % overshoot up
+bot y8=0 -o;    % overshoot down
+bot y7=0 -o;    % overshoot down
+top y11=h +o;   % overshoot up
+top y12=h +o;   % overshoot up
 
 %%% construction %%%
 
@@ -41,9 +41,9 @@ top y12=h +o; % overshoot up
 x8r=if (incx>.5): .5w else: x1r+incx*(x6r-x1r) fi;
 x7r=if (incx>.5): .5w else: x6r-incx*(x6r-x1r) fi;
 x8r=x3r; x7r=x4r;
-y4r=y3r=1.1bar*h-px;  % extra 1.1 for bar
-top y3=1.1bar*h;   % extra 1.1 for bar
-top y4=1.1bar*h;   % extra 1.1 for bar
+y4r=y3r=1.3*bar*h-px;  % extra 1.3 for bar
+top y3=1.3*bar*h;      % extra 1.3 for bar
+top y4=1.3*bar*h;      % extra 1.3 for bar
 x1=leftstemloc;
 x6=w-(leftstemloc+.5(cont*px)-.5px);
 x6=x5=x25;  % x25 added

@@ -36,9 +36,9 @@ y12r=y11r=h-px +o;  % overshoot up
 %%% construction %%%
 incf:=incx;
 x9r= if (incf>.5): x12r+((w-(leftstemloc-.5(px*cont)+.5px))-x12r) else: w-(leftstemloc-.5(cont*px)+px) fi;
-x12r=if (incf>.5):x14r+incf*(w-(leftstemloc-.5(cont*px)+px)-x14r)else: x14r+.5*(x9r-x14r) fi;
+x12r=if (incf>.5):x14r+incf*(w-(leftstemloc-.75(cont*px)+px)-x14r)else: x14r+.75*(x9r-x14r) fi; % position of top point
 if (h>w):
-	y10r=y12r-(incy*((w-leftstemloc+.5(cont*px)-px)-(.5w))) 
+	y10r=y12r-(incy*((w-0.25*leftstemloc+.5(cont*px)-px)-(.5w)))   % 0.5*leftstemloc -> position tangent point of stem 
 else: 
 	y10r=y12r+incy*(px-y12r) fi;
 x14=(.5w);

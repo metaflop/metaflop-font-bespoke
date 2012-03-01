@@ -37,17 +37,15 @@ bot y7=-d -o; % overshoot down
 x7r=if (incx>.5): w-incx*(w) else: x6r-incx*((x6r-(w-x6r))) fi;
 x8r=if (incx>.5): x7r else: (w-x6r)+incx*(x6r-(w-x6r)) fi;
 y1r=(-d+px)+incy*((mean-px)-px);
-if (y1r>(-d+px)+2/8((mean-px)-px)): y1r:=(-d+px)+2/8((mean-px)-px); fi
+if (y1r>(-d+px)+1.5/8((mean-px)-px)): y1r:=(-d+px)+1.5/8((mean-px)-px); fi %+x/8 mean -> position tangent point of stem
 x1=if (incx>.5): x7r-((w-(leftstemloc-.5(px*cont)+.5px))-x7r) else: leftstemloc-.5(px*cont)+.5px fi;
 y2=y3=mean;
 x2=x1=x2l+.5px;
 x3=x6=x3l-.5(cont*px);
-x6=w-0.75*leftstemloc; % left point of curve?
+x6=w-0.75*leftstemloc; % width of curve
 y6r=y1r;
 x1r=x1+(px/2);
 x6r=x6-(cont*px/2);
-x4=.5[x8,x7]; x5=x3;
-top y4=mean;
 y4=y5;
 x11=x10=x3;
 y11-y10=1.2*cont*px+o; % i punkt

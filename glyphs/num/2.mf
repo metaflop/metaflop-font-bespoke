@@ -1,11 +1,26 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Travellion v1.6 – a MetaFlop-Font                       %%%
-%%% © 2012 by Simon Egli, Marco Müller, Teofilo Furtado     %%%
-%%% www.metaflop.com                                        %%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                                                         %%%
+%%% Bespoke v1.6 – a Metaflop-Font                                          %%%
+%%% © 2012 by Simon Egli, Marco Müller, Teofilo Furtado                     %%%
+%%% www.metaflop.com                                                        %%%
+%%%                                                                         %%%
+%%% This program is free software: you can redistribute it and/or modify    %%%
+%%% it under the terms of the GNU General Public License as published by    %%%
+%%% the Free Software Foundation, either version 3 of the License, or       %%%
+%%% (at your option) any later version.                                     %%%
+%%%                                                                         %%%
+%%% This program is distributed in the hope that it will be useful,         %%%
+%%% but WITHOUT ANY WARRANTY; without even the implied warranty of          %%% 
+%%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            %%% 
+%%% GNU General Public License for more details.                            %%%
+%%%                                                                         %%%
+%%% You should have received a copy of the GNU General Public License       %%%
+%%% along with this program. If not, see <http://www.gnu.org/licenses/>.    %%%
+%%%                                                                         %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% box dimension definition %%%
-beginadjchar("2",4.8,cap#,0);
+beginadjchar("2",4.5,cap#,0);
 
 %%% sidebearings %%%
 numeric l,r;
@@ -19,57 +34,40 @@ top y11=h +o; % overshoot up
 top y12=h +o; % overshoot up
 y16=.45h; % overshoot down
 y15=.45h; % overshoot down
-
-%%% construction %%%
-x16r=if (incx>.5): x9r+.5(x14r-x9r) else: x9r+incx*(x14r-x9r) fi;
-x15r=if (incx>.5): x14r-.5(x14r-x9r) else: x14r-incx*(x14r-x9r) fi;
-y9r=if (incy>.5): y16r-.5(y16r-y11r) else: y16r-incy*(y16r-y11r) fi;
-y10r=if (incy>.5): y11r+.5(y16r-y11r) else: y11r+incy*(y16r-y11r) fi;
-x16r=x11r; x15r=x12r;
-x9=(leftstemloc+eight)-.5(cont*px)+.5px;
-x14=w-(leftstemloc+eight);
-x14=x13;
-y10r=y13r;
-y14r=y9r;
-x10=x9;
-x9r=x10r=x9+(px/2);
-x14r=x13r=x14-(cont*px/2);
-ang:=angle(z14r-z15r);
-
-%%% penpositions %%%
-penpos9(whatever,0);
-penpos10(whatever,if (superness=.5): ((ang-90)/2) else: 0 fi);
-penpos11(whatever,if (superness=.5): -(180-ang)/2 else: -90 fi);
-penpos12(whatever,if (superness=.5): (180-ang)/2 else: -90 fi);
-penpos13(whatever,if (superness=.5): -(ang-90)/2 else: 180 fi);
-penpos14(whatever,if (superness=.5): (ang-90)/2 else: 180 fi);
-penpos15(whatever,if (superness=.5): -(180-ang)/2 else: 90 fi);
-penpos16(whatever,if (superness=.5): (180-ang)/2 else: 90 fi);
-
-
-
-%%% overshoot %%%
 y4r=y3r=y3-.5px; % overshoot up
 y8r=y7r=px -o; % overshoot down
-y3=.45h; % overshoot up
-y4=.45h; % overshoot up
+
+%%% construction upper curve %%%
+x16r=if (incx>.5): (leftstemloc-.5(cont*px))+incx*((w-(leftstemloc-.5(cont*px)))-(leftstemloc-.5(cont*px))) else: x9r+incx*((w-x9r)-x9r) fi;
+x15r=if (incx>.5): x16r else: (w-x9r)-incx*((w-x9r)-x9r) fi;
+y9r=if (incy>.5): .5h else: y16r-incy*(y16r-y11r) fi;
+y10r=if (incy>.5): .5h else: y11r+incy*(y16r-y11r) fi;
+x16r=x11r; x15r=x12r;
+x9=leftstemloc;
+x14l=if (incx>.5): x16r+(x16r-x10l) else: w-leftstemloc+.5(cont*px) fi;
+x14l=x13l;
+y10l=y13l;
+y14l=y9l;
+x10=x9;
+x9r=x10r=x9+(cont*px/2);
+x14=x13=x14r+(px/2);
+ang:=angle(z11r-z10r);
+
+%%% construction lower curve %%%
 bot y8=0 -o; % overshoot down
 bot y7=0 -o; % overshoot down
-
-%%% construction %%%
+y3=.45h;
+y4=.45h;
 x3r=x11r;
 x4r=x15r;
-y6r=if (incy>.5): .5h else: y8r-incy*(y8r-y3r) fi;
 y2r=y8r;
-x7r=x1; x8r=w-(x7r-.5px);
+x7r=x1l; 
+x8r=1.05*w-(x7r-.5px); % right ending of horizontal stroke line 
 x1=(leftstemloc)-.5(cont*px)+.5px;
-x6=w-x1;
-x6=x5;
 y2r=y5r;
 y1=0;
 x2=x1;
 x1r=x2r=x1+.5px;
-x6r=x5r=x6-(cont*px/2);
 ang:=angle(z3r-z2r);
 
 %%% penpositions %%%
@@ -78,18 +76,48 @@ penpos2(whatever,if (superness=.5): ((ang-90)/2) else: 0 fi);
 penpos3(whatever,if (superness=.5): -(180-ang)/2 else: -90 fi);
 penpos4(whatever,if (superness=.5): (180-ang)/2 else: -90 fi);
 penpos5(whatever,if (superness=.5): -(ang-90)/2 else: 180 fi);
-penpos6(whatever,if (superness=.5): (ang-90)/2 else: 180 fi);
 penpos7(whatever,90);
 penpos8(whatever,90);
+penpos9(whatever,if (superness=.5): -(ang-90)/2 else: 0 fi);
+penpos10(whatever,if (superness=.5): ((ang-90)/2) else: 0 fi);
+penpos11(whatever,if (superness=.5): -(180-ang)/2 else: -90 fi);
+penpos12(whatever,if (superness=.5): (180-ang)/2 else: -90 fi);
+penpos13(whatever,if (superness=.5): -(ang-90)/2 else: 180 fi);
+penpos14(whatever,if (superness=.5): (ang-90)/2 else: 180 fi);
+penpos15(whatever,if (superness=.5): -(180-ang)/2 else: 90 fi);
+penpos16(whatever,if (superness=.5): (180-ang)/2 else: 90 fi);
 
 %%% draw %%%
 penstroke z1e---super_ql(2e,3e)---z4e;
 penstroke z8e---z7e;
-
-%%% draw %%%
-penstroke z9e---super_ql(10e,11e)---super_qr(12e,13e)---super_ql(14e,15e);
-fill z3r---z15l---z15r---cycle;
-
+penstroke super_qr(15e,13e)&z13e---z14e&super_ql(14e,12e);
+if (incx>.5):
+	path tl; tl = z9l---super_ql(10l,11l);
+	path ap; ap = (leftstemloc-.5(cont*px)+.5px,infinity)---(leftstemloc-.5(cont*px)+.5px,-infinity);
+	path v; v = z9r---super_ql(10r,11r);
+	z100=ap intersectionpoint tl;
+	numeric t,u; (t,u)=ap intersectiontimes tl;
+if (x4l>(w-x2l)): 
+	x101=x100; else: z101=z100+whatever*(dir(angle(direction u of tl)+90));fi
+	y101=0;
+	path r; numeric t,u; (t,u)=((z100--z101) intersectiontimes (v));
+	r = subpath (u,infinity) of (v);
+	path ss; numeric t,u; (t,u)=(ap intersectiontimes tl);
+	ss = subpath (infinity,u) of tl;
+	fill ss---r---cycle;
+else:
+	path tl; tl = z9l---super_ql(10l,11l);
+	path ap; ap = (0,y3l-appert*(y3l-y11r))---(w,y3l-appert*(y3l-y11r));
+	path v; v = z9r---super_ql(10r,11r);
+	z100=ap intersectionpoint tl;
+	path x; numeric t,u; (t,u)=ap intersectiontimes tl;
+	z101=z100+whatever*(dir(angle(direction u of tl)+90));
+	x101=w;
+	path r; numeric t,u; (t,u)=((z100--z101) intersectiontimes v);
+	r = subpath (u,infinity) of v;
+	path ss; numeric t,u; (t,u)=(ap intersectiontimes tl);
+	ss = subpath (infinity,u) of tl;
+	fill ss---r---cycle;fi
 
 % penlabels(range 1 thru 16);
 

@@ -1,44 +1,52 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Travellion v1.6 – a MetaFlop-Font                       %%%
-%%% © 2012 by Simon Egli, Marco Müller, Teofilo Furtado     %%%
-%%% www.metaflop.com                                        %%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                                                         %%%
+%%% Bespoke v1.6 – a Metaflop-Font                                          %%%
+%%% © 2012 by Simon Egli, Marco Müller, Teofilo Furtado                     %%%
+%%% www.metaflop.com                                                        %%%
+%%%                                                                         %%%
+%%% This program is free software: you can redistribute it and/or modify    %%%
+%%% it under the terms of the GNU General Public License as published by    %%%
+%%% the Free Software Foundation, either version 3 of the License, or       %%%
+%%% (at your option) any later version.                                     %%%
+%%%                                                                         %%%
+%%% This program is distributed in the hope that it will be useful,         %%%
+%%% but WITHOUT ANY WARRANTY; without even the implied warranty of          %%% 
+%%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            %%% 
+%%% GNU General Public License for more details.                            %%%
+%%%                                                                         %%%
+%%% You should have received a copy of the GNU General Public License       %%%
+%%% along with this program. If not, see <http://www.gnu.org/licenses/>.    %%%
+%%%                                                                         %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% box dimension definition %%%
-beginadjchar("1",3,cap#,0);
+beginadjchar("1",4,cap#,0);
 
 %%% sidebearings %%%
 numeric l,r;
 normal_adjust_fit(space+0.1u#,space+0.1u#);
 
 %%% construction %%%
-x3=leftstemloc-.5cont*px;
-x4=w-x3;
-bot y4=0;
-y3=y4;
-penpos3(px,90);
-penpos4(px,90);
-penstroke z3e---z4e;
-
 x1=x2=.5w;
 y1l=0=y2l-h;
 
 penpos1(cont*px,0);
 penpos2(cont*px,0);
 
-penstroke z1e---z2e;
-
-x33l=leftstemloc-cont*px/2;
-x44r=x2r;
-y44=h;
-y33=.75h;
-
-alphaone:=diag_ratio(1,px,y44-y33,x44r-x33l);
+x3l=leftstemloc-cont*px/2;
+x4r=x2r;
+y4=h;
+y3=.65h;
+alphaone:=diag_ratio(1,px,y4-y3,x4r-x3l);
 
 %%% penpositions %%%
-penpos33(alphaone*px,0);
-penpos44(alphaone*px,0);
-penstroke z33e---z44e;
+penpos3(alphaone*px,0);
+penpos4(alphaone*px,0);
+
+%%% draw %%%
+penstroke z1e---z2e;
+penstroke z3e---z4e;
+
 % penlabels(range 1 thru 64);
 
 endchar;

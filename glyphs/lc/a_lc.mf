@@ -99,7 +99,6 @@ penpos14(whatever,180);
 
 %%% draw %%%
 penstroke z11e---super_qr(12e,13e)---z14e;
-% penstroke z4e---z15e;  % old straight bowl top
 if (incx>.5):
 	path tl; tl = z9l---super_ql(10l,11l);
 	path ap; ap = (leftstemloc-.5(cont*px)+.5px,infinity)---(leftstemloc-.5(cont*px)+.5px,-infinity);

@@ -68,23 +68,27 @@ if (incx > .5):
 	z100=(((w-x1l,-infinity)--(w-x1l,h+infinity)) intersectionpoint (super_ql(6l,7l)--z8l));
 	numeric t,u; (t,u)=(((w-x1l,-infinity)--(w-x1l,h+infinity)) intersectiontimes (super_ql(6l,7l)));
 if (x4l>(w-x2l)): 
-	x101=x100; else: z101=z100+whatever*(dir(angle(direction u of (super_ql(6l,7l)))+90));fi
-	y101=h;
-	path r; numeric t,u; (t,u)=((z100--z101) intersectiontimes (super_ql(6r,7r)));
-	r = subpath (u,infinity) of (super_ql(6r,7r));
-	path ss; numeric t,u; (t,u)=(((w-x1l,-infinity)--(w-x1l,h+infinity)) intersectiontimes (super_ql(6l,7l)--z8l));
-	ss = subpath (infinity,u) of (super_ql(6l,7l)--z8l);
-	fill ss---r---cycle;
-	z99=(((w-x1l,-1)--(w-x1l,h+infinity)) intersectionpoint (z3l---super_qr(4l,5l)));
-	numeric t,u; (t,u)=(((w-x1l,-infinity)--(w-x1l,h+infinity)) intersectiontimes (z3l---super_qr(4l,5l)---z5r));
+	x101=x100; 
+else: 
+	z101=z100+whatever*(dir(angle(direction u of (super_ql(6l,7l)))+90));fi
+y101=h;
+path r; numeric t,u; (t,u)=((z100--z101) intersectiontimes (super_ql(6r,7r)));
+r = subpath (u,infinity) of (super_ql(6r,7r));
+path ss; numeric t,u; (t,u)=(((w-x1l,-infinity)--(w-x1l,h+infinity)) intersectiontimes (super_ql(6l,7l)--z8l));
+ss = subpath (infinity,u) of (super_ql(6l,7l)--z8l);
+fill ss---r---cycle;
+z99=(((w-x1l,-1)--(w-x1l,h+infinity)) intersectionpoint (z3l---super_qr(4l,5l)));
+numeric t,u; (t,u)=(((w-x1l,-infinity)--(w-x1l,h+infinity)) intersectiontimes (z3l---super_qr(4l,5l)---z5r));
 if (x4l>(w-x2l)): 
-	x98=x99; else: z98=z99+whatever*(dir(angle(direction u of (z3l---super_qr(4l,5l)---z5r))+90));fi
-	y98=0;
-	path a; numeric t,u; (t,u)=((z99--z98) intersectiontimes (z3r---super_qr(4r,5r)---z5r---z5l));
-	a = subpath (0,u) of (z3r---super_qr(4r,5r)---z5r---z5l);
-	path b; numeric t,u; (t,u)=(((w-x1l,-infinity)--(w-x1l,h+infinity)) intersectiontimes (z3l---super_qr(4l,5l)---z5r));
-	b = subpath (u,0) of (z3l---super_qr(4l,5l)---z5r);
-	fill b---z3l---z3r---a---cycle;
+	x98=x99;
+else: 
+	z98=z99+whatever*(dir(angle(direction u of (z3l---super_qr(4l,5l)---z5r))+90));fi
+y98=0;
+path a; numeric t,u; (t,u)=((z99--z98) intersectiontimes (z3r---super_qr(4r,5r)---z5r---z5l));
+a = subpath (0,u) of (z3r---super_qr(4r,5r)---z5r---z5l);
+path b; numeric t,u; (t,u)=(((w-x1l,-infinity)--(w-x1l,h+infinity)) intersectiontimes (z3l---super_qr(4l,5l)---z5r));
+b = subpath (u,0) of (z3l---super_qr(4l,5l)---z5r);
+fill b---z3l---z3r---a---cycle;
 else:
 	z100=((0,(h/2-appert*(h/2-y7)))--(infinity,(h/2-appert*(h/2-y7)))) intersectionpoint (z5l---super_ql(6l,7l)--z8l);
 	path x; numeric t,u; (t,u)=((((0,(h/2-appert*(h/2-y7)))--(infinity,(h/2-appert*(h/2-y7))))) intersectiontimes (z5l---super_ql(6l,7l)--z8l));
@@ -95,16 +99,16 @@ else:
 	path ss; numeric t,u; (t,u)=(((0,(h/2-appert*(h/2-y7)))--(infinity,(h/2-appert*(h/2-y7)))) intersectiontimes (z5l---super_ql(6l,7l)--z8l));
 	ss = subpath (infinity,u) of (z5l---super_ql(6l,7l)--z8l);
 	fill z8r---z8l---ss---r---cycle;
-z99=((0,(h/2+appert*(h/2-y7)))--(infinity,(h/2+appert*(h/2-y7)))) intersectionpoint (z3l---super_qr(4l,5l)---z6l);
-path x; numeric t,u; (t,u)=((((0,(h/2+appert*(h/2-y7)))--(infinity,(h/2+appert*(h/2-y7))))) intersectiontimes (z3l---super_qr(4l,5l)---z6l));
-z98=z99+whatever*(dir(angle(direction u of (z3l---super_qr(4l,5l)---z6l))+90));
-x98=0;
-path b; numeric t,u; (t,u)=((z99--z98) intersectiontimes (z3r---super_qr(4r,5r)---z6r));
-b = subpath (0,u) of (z3r---super_qr(4r,5r)---z6r);
-path a; numeric t,u; (t,u)=((((0,(h/2+appert*(h/2-y7)))--(infinity,(h/2+appert*(h/2-y7))))) intersectiontimes (z3l---super_qr(4l,5l)---z6l));
-a = subpath (u,0) of (z3l---super_qr(4l,5l)---z6l);
-fill a---z3l---z3r---b---cycle;
-w:=x100+(leftstemloc-.5(cont*px));fi
+	z99=((0,(h/2+appert*(h/2-y7)))--(infinity,(h/2+appert*(h/2-y7)))) intersectionpoint (z3l---super_qr(4l,5l)---z6l);
+	path x; numeric t,u; (t,u)=((((0,(h/2+appert*(h/2-y7)))--(infinity,(h/2+appert*(h/2-y7))))) intersectiontimes (z3l---super_qr(4l,5l)---z6l));
+	z98=z99+whatever*(dir(angle(direction u of (z3l---super_qr(4l,5l)---z6l))+90));
+	x98=0;
+	path b; numeric t,u; (t,u)=((z99--z98) intersectiontimes (z3r---super_qr(4r,5r)---z6r));
+	b = subpath (0,u) of (z3r---super_qr(4r,5r)---z6r);
+	path a; numeric t,u; (t,u)=((((0,(h/2+appert*(h/2-y7)))--(infinity,(h/2+appert*(h/2-y7))))) intersectiontimes (z3l---super_qr(4l,5l)---z6l));
+	a = subpath (u,0) of (z3l---super_qr(4l,5l)---z6l);
+	fill a---z3l---z3r---b---cycle;
+	w:=x100+(leftstemloc-.5(cont*px));fi
 
 % penlabels(range 1 thru 8);
 

@@ -1,11 +1,26 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Travellion v1.6 – a MetaFlop-Font                       %%%
-%%% © 2012 by Simon Egli, Marco Müller, Teofilo Furtado     %%%
-%%% www.metaflop.com                                        %%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                                                         %%%
+%%% Bespoke v1.6 – a Metaflop-Font                                          %%%
+%%% © 2012 by Simon Egli, Marco Müller, Teofilo Furtado                     %%%
+%%% www.metaflop.com                                                        %%%
+%%%                                                                         %%%
+%%% This program is free software: you can redistribute it and/or modify    %%%
+%%% it under the terms of the GNU General Public License as published by    %%%
+%%% the Free Software Foundation, either version 3 of the License, or       %%%
+%%% (at your option) any later version.                                     %%%
+%%%                                                                         %%%
+%%% This program is distributed in the hope that it will be useful,         %%%
+%%% but WITHOUT ANY WARRANTY; without even the implied warranty of          %%% 
+%%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            %%% 
+%%% GNU General Public License for more details.                            %%%
+%%%                                                                         %%%
+%%% You should have received a copy of the GNU General Public License       %%%
+%%% along with this program. If not, see <http://www.gnu.org/licenses/>.    %%%
+%%%                                                                         %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% box dimension definition %%%
-beginadjchar("8",4.6,cap#,0);
+beginadjchar("8",4.5,cap#,0);
 
 %%% sidebearings %%%
 numeric l,r;
@@ -85,8 +100,6 @@ penpos16(whatever,if (superness=.5): (180-ang)/2 else: 90 fi);
 
 %%% draw %%%
 penstroke super_qr(12e,13e)---super_ql(14e,15e)---super_qr(16e,9e)---super_ql(10e,11e)---cycle;
-
-
 
 % penlabels(range 1 thru 16);
 

@@ -29,46 +29,54 @@ normal_adjust_fit(space+0.4u#,space-0.1u#);
 fi
 
 %%% overshoot %%%
-y12r=y11r=h-px +o; % overshoot up
-top y11=h +o; % overshoot up
-top y12=h +o; % overshoot up
+y5r=y4r=h-px +o; % overshoot up
+top y4=h +o; % overshoot up
+top y5=h +o; % overshoot up
 
 %%% construction %%%
-x9r= if (incx>.5): x12r+(x12r-x13r) else: w-(leftstemloc+.5(cont*px)) fi;
-x11r=if (incx>.5): x12r else: ((w-(leftstemloc+.5(cont*px))))-incx*((w-(leftstemloc+.5(cont*px)))-x14r) fi;
-if (h>w):
-	y10r=y11r-(incy*(w-(leftstemloc-.5(cont*px)))) 
+x7r= 
+if (incx>.5): 
+	x5r+(x5r-x3r) 
 else: 
-	y10r=y11r+incy*(px-y11r) fi;
-if (y10r<h-(.5w-(leftstemloc-.5(cont*px)))): 
-	y10r:=5/8h; fi;
-x12r=x14r+incx*((w-(leftstemloc+.5(cont*px)))-x14r);
-x14=leftstemloc;
-x13=x13r-.5px;
-y10r=y13r;
-x10=x9;
-x9r=x10r=x9-((cont*px)/2);
-y14r=y9r=0;
-x14r=x13r=x14+(cont*px/2);
-x15=x14; y15=h;
-ang:=(angle(z12r-z13r));
+	w-(leftstemloc+.5(cont*px)) fi;
+x4r=
+if (incx>.5): 
+	x5r
+else: 
+	((w-(leftstemloc+.5(cont*px))))-incx*((w-(leftstemloc+.5(cont*px)))-x2r) fi;
+if (h>w):
+	y6r=y4r-(incy*(w-(leftstemloc-.5(cont*px)))) 
+else: 
+	y6r=y4r+incy*(px-y4r) fi;
+if (y6r<h-(.5w-(leftstemloc-.5(cont*px)))): 
+	y6r:=5/8h; fi;
+x5r=x2r+incx*((w-(leftstemloc+.5(cont*px)))-x2r);
+x2=leftstemloc;
+x3=x3r-.5px;
+y6r=y3r;
+x6=x7;
+x7r=x6r=x7-((cont*px)/2);
+y2r=y7r=0;
+x2r=x3r=x2+(cont*px/2);
+x1=x2; y1=h;
+ang:=(angle(z5r-z3r));
 
 %%% penpositions %%%
-penpos9(whatever,0);
-penpos10(whatever,if (superness=.5): -((ang-90)/2) else: 0 fi);
-penpos11(whatever,if (superness=.5): (180-ang)/2 else: -90 fi);
-penpos12(whatever,if (superness=.5): -(180-ang)/2 else: -90 fi);
-penpos13(whatever,if (superness=.5): (ang-90)/2 else: 180 fi);
-penpos14(whatever,0);
-penpos15(cont*px,0);
+penpos7(whatever,0);
+penpos6(whatever,if (superness=.5): -((ang-90)/2) else: 0 fi);
+penpos4(whatever,if (superness=.5): (180-ang)/2 else: -90 fi);
+penpos5(whatever,if (superness=.5): -(180-ang)/2 else: -90 fi);
+penpos3(whatever,if (superness=.5): (ang-90)/2 else: 180 fi);
+penpos2(whatever,0);
+penpos1(cont*px,0);
 
 %%% draw %%%
-penstroke z11e---super_qr(12e,13e)---z14e;
-penstroke z15e---z14e;
+penstroke z4e---super_qr(5e,3e)---z2e;
+penstroke z1e---z2e;
 if (incx>.5):
-	path tl; tl = z9l---super_ql(10l,11l);
+	path tl; tl = z7l---super_ql(6l,4l);
 	path ap; ap = (w-(leftstemloc-.5(cont*px)),infinity)---(w-(leftstemloc-.5(cont*px)),-infinity);
-	path v; v = z9r---super_ql(10r,11r);
+	path v; v = z7r---super_ql(6r,4r);
 	z100=ap intersectionpoint tl;
 	numeric t,u; (t,u)=ap intersectiontimes tl;
 	z101=z100+whatever*(dir(angle(direction u of tl)+90));
@@ -79,9 +87,9 @@ if (incx>.5):
 	ss = subpath (infinity,u) of tl;
 	fill ss---r---cycle;
 else:
-	path tl; tl = z9l---super_ql(10l,11l);
-	path ap; ap = (0,.5h-appert*(.4h-y11r))---(w,.5h-appert*(.4h-y11r));   % .4h for amount of cutting up upper curve (change to multiplication)
-	path v; v = z9r---super_ql(10r,11r);
+	path tl; tl = z7l---super_ql(6l,4l);
+	path ap; ap = (0,.5h-appert*(.4h-y4r))---(w,.5h-appert*(.4h-y4r));   % .4h for amount of cutting up upper curve (change to multiplication)
+	path v; v = z7r---super_ql(6r,4r);
 	z100=ap intersectionpoint tl;
 	path x; numeric t,u; (t,u)=ap intersectiontimes tl;
 	z101=z100+whatever*(dir(angle(direction u of tl)+90));

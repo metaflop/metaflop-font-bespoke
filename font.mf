@@ -23,7 +23,7 @@
 
 font_size:=10pt#;  % font size  / nicht verstellbar  		
 ht#:=10pt#;      % box height / nicht verstellbar		
-u#:=0.95pt#;      % unit widht 					$ 0.8 / 2
+u#:=1.95pt#;      % unit widht 					$ 0.8 / 2
 s#:=0.15u#;             % unsichtbar machen / nicht verstellbar
 o#:=0.1pt#;	        % overshoot                             $ 0 / 1	
 px#:=0.6pt#;     % pen width 					$ 0.15 / 1.8 
@@ -38,11 +38,11 @@ des#:=0.35ht#;    % descender heigt				$ 0.2 / 0.6
 
 %%%%% SHAPE %%%%%
 
-incx:=0.51;       % horizontal increase				$ 0.01 / 0.6	
-incy:=0.56;       % vertical increase				$ 0.01 / 0.6
+incx:=0.11;       % horizontal increase				$ 0.01 / 0.6	
+incy:=0.16;       % vertical increase				$ 0.01 / 0.6
 appert:=0.6;     % apperture 					$ 0.1 / 0.7
 cont:=1.1;       % contrast					$ 1 / 8
-superness:=0.72; % superness					$ 0.3 / 0.999
+superness:=0.5; % superness					$ 0.3 / 0.999
 corner#:=0.8pt#; % corner   standartwert = px			$ 0 / 2
 
 %%%%% export %%%%%

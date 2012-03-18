@@ -20,7 +20,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% box dimension definition %%%
-beginadjchar("f",3.25,asc#,0);
+beginadjchar("f",2.25,asc#,0);
 
 %%% sidebearings %%%
 if (sidebearing=1):
@@ -68,7 +68,7 @@ penstroke z15e---z16e;
 %%% draw %%%
 if (superness=.5): 
 	penstroke z11e---super_qr(12e,13e)---z14e; else: penstroke super_qr(12e,13e)---z14e; fi
-if (incf>.3):
+if (incf>.5):
 	path tl; tl = z9l---super_ql(10l,11l);
 	path ap; ap = (w-(leftstemloc-.5(cont*px)),infinity)---(w-(leftstemloc-.5(cont*px)),-infinity);
 	path v; v = z9r---super_ql(10r,11r);
@@ -81,21 +81,21 @@ if (incf>.3):
 	path ss; numeric t,u; (t,u)=(ap intersectiontimes tl);
 	ss = subpath (infinity,u) of tl;
 	fill ss---m---cycle;
-fi
+%fi
 
-%else:
-%	path tl; tl = z9l---super_ql(10l,11l);
-%	path ap; ap = (0,y15r-appert*2(y15r-y12r))---(w,y15r-appert*2(y15r-y12r));
-%	path v; v = z9r---super_ql(10r,11r);
-%	z100=ap intersectionpoint tl;
-%	path x; numeric t,u; (t,u)=ap intersectiontimes tl;
-%	z101=z100+whatever*(dir(angle(direction u of tl)+90));
-%	x101=0;
-%	path m; numeric t,u; (t,u)=((z100--z101) intersectiontimes v);
-%	m = subpath (u,infinity) of v;
-%	path ss; numeric t,u; (t,u)=(ap intersectiontimes tl);
-%	ss = subpath (infinity,u) of tl;
-%	fill ss---m---cycle;fi
+else:
+	path tl; tl = z9l---super_ql(10l,11l);
+	path ap; ap = (0,y15r-appert*1.5(y15r-y12r))---(w,y15r-appert*1.5(y15r-y12r));
+	path v; v = z9r---super_ql(10r,11r);
+	z100=ap intersectionpoint tl;
+	path x; numeric t,u; (t,u)=ap intersectiontimes tl;
+	z101=z100+whatever*(dir(angle(direction u of tl)+90));
+	x101=0;
+	path m; numeric t,u; (t,u)=((z100--z101) intersectiontimes v);
+	m = subpath (u,infinity) of v;
+	path ss; numeric t,u; (t,u)=(ap intersectiontimes tl);
+	ss = subpath (infinity,u) of tl;
+	fill ss---m---cycle;fi
 
 % penlabels(range 1 thru 20);
 

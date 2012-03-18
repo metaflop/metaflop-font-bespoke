@@ -226,15 +226,12 @@ input glyphs/num/7
 input glyphs/num/8
 input glyphs/num/9
 
-% input glyphs/punct/parenleft
-% input glyphs/punct/parenright
-% input glyphs/punct/hyphen
-
 input glyphs/punct/comma
-input glyphs/punct/colon
+%input glyphs/punct/colon
 input glyphs/punct/semicolon
 input glyphs/punct/period
 input glyphs/punct/exclam
+% input glyphs/punct/space
 
 font_quad:=10u#+0s#;
 font_normal_space:=3u#+0s#;

@@ -33,7 +33,8 @@ x5l=x6l=leftstemloc-cont*px/2;
 x2r=w-x6l;
 x1l=0;
 x4r=x2r;
-if (incx>.5): y1=mean-incx*(.52*mean);x3l=x5r; else: y1=mean; x3l=0; fi;
+x3l=x5r;
+y1=mean-incx*(.52*mean); 
 y5=h;
 y4r=mean;
 y2=y6=0;
@@ -53,11 +54,11 @@ penpos2(alphak1*cont*px,0);
 z12l=whatever[z3,z4]=whatever[z1l,z2l];
 z12r=whatever[z3,z4]=whatever[z1r,z2r];
 z34l=z4l+whatever*dir angle(z4r-z3r)=whatever[z5,z6];
-z34r=z4r+whatever*dir angle(z4r-z3r)=whatever[z5,z6];
+z34r=z4r+whatever*dir angle(z4r-z3r)=whatever[z5r,z6r];
 fill z4l---z4r---z34r---z34l---cycle;
 penstroke z5e..z6e;
 fill z2l---z2r---z12r---z12l---cycle;
 
-% penlabels(range 1 thru 30);
+ penlabels(range 1 thru 40);
 
 endchar;

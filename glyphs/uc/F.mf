@@ -1,59 +1,60 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%                                                                         %%%
-%%% Bespoke v1.6 – a Metaflop-Font                                          %%%
-%%% © 2012 by Simon Egli, Marco Müller, Teofilo Furtado                     %%%
-%%% www.metaflop.com                                                        %%%
-%%%                                                                         %%%
-%%% This program is free software: you can redistribute it and/or modify    %%%
-%%% it under the terms of the GNU General Public License as published by    %%%
-%%% the Free Software Foundation, either version 3 of the License, or       %%%
-%%% (at your option) any later version.                                     %%%
-%%%                                                                         %%%
-%%% This program is distributed in the hope that it will be useful,         %%%
-%%% but WITHOUT ANY WARRANTY; without even the implied warranty of          %%% 
-%%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            %%% 
-%%% GNU General Public License for more details.                            %%%
-%%%                                                                         %%%
-%%% You should have received a copy of the GNU General Public License       %%%
-%%% along with this program. If not, see <http://www.gnu.org/licenses/>.    %%%
-%%%                                                                         %%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                         %
+% Bespoke v1.7                                                            %
+% a Metaflop-font © 2012 by Simon Egli, Marco Müller                      %
+% thanks to Teofilo Furtado                                               %
+% www.metaflop.com                                                        %
+%                                                                         %
+% This program is free software: you can redistribute it and/or modify    %
+% it under the terms of the GNU General Public License as published by    %
+% the Free Software Foundation, either version 3 of the License, or       %
+% (at your option) any later version.                                     %
+%                                                                         %
+% This program is distributed in the hope that it will be useful,         %
+% but WITHOUT ANY WARRANTY; without even the implied warranty of          % 
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            % 
+% GNU General Public License for more details.                            %
+%                                                                         %
+% You should have received a copy of the GNU General Public License       %
+% along with this program. If not, see <http://www.gnu.org/licenses/>.    %
+%                                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%% box dimension definition %%%
+
+% box dimension definition %
 beginadjchar("F",4.5,cap#,0);
 
-%%% sidebearings %%%
+% sidebearings %
 if (sidebearing=1):
 numeric l,r;
 normal_adjust_fit(space+0.5u#,space-0.1u#);
 fi
 
-%%% construction %%%
-x1=x2=leftstemloc;
-x1r=x2r=x1+(cont*px/2);
-x1=x3=x7;
+% construction %
+x1=x2=x3=x5=leftstemloc;
+x1l=x2l=x1-(cont*px/2);
 x4=w-x1l;
-x8=w-x3;
+x6=w-x1;
 y1=0;
+y2=h;
 top y3=h;
 top y4=h;
-y2=h;
+y5=y6=bar*h;
 y3l=y4l=y3-px/2;
-y7=y8=bar*h;
-y7l=y8l=y7-px/2;
+y5l=y6l=y5-px/2;
 
-%%% penpositions %%%
+% penpositions %
 penpos1(whatever,0);
 penpos2(whatever,0);
 penpos3(whatever,90);
 penpos4(whatever,90);
-penpos7(whatever,90);
-penpos8(whatever,90);
+penpos5(whatever,90);
+penpos6(whatever,90);
 
-%%% draw %%%
+% draw %
 penstroke z1e..z2e;
 penstroke z3e..z4e;
-penstroke z7e..z8e;
+penstroke z5e..z6e;
 
 % penlabels(range 1 thru 30);
 

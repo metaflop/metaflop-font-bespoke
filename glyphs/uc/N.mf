@@ -1,58 +1,60 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%                                                                         %%%
-%%% Bespoke v1.6 – a Metaflop-Font                                          %%%
-%%% © 2012 by Simon Egli, Marco Müller, Teofilo Furtado                     %%%
-%%% www.metaflop.com                                                        %%%
-%%%                                                                         %%%
-%%% This program is free software: you can redistribute it and/or modify    %%%
-%%% it under the terms of the GNU General Public License as published by    %%%
-%%% the Free Software Foundation, either version 3 of the License, or       %%%
-%%% (at your option) any later version.                                     %%%
-%%%                                                                         %%%
-%%% This program is distributed in the hope that it will be useful,         %%%
-%%% but WITHOUT ANY WARRANTY; without even the implied warranty of          %%% 
-%%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            %%% 
-%%% GNU General Public License for more details.                            %%%
-%%%                                                                         %%%
-%%% You should have received a copy of the GNU General Public License       %%%
-%%% along with this program. If not, see <http://www.gnu.org/licenses/>.    %%%
-%%%                                                                         %%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                         %
+% Bespoke v1.7                                                            %
+% a Metaflop-font © 2012 by Simon Egli, Marco Müller                      %
+% thanks to Teofilo Furtado                                               %
+% www.metaflop.com                                                        %
+%                                                                         %
+% This program is free software: you can redistribute it and/or modify    %
+% it under the terms of the GNU General Public License as published by    %
+% the Free Software Foundation, either version 3 of the License, or       %
+% (at your option) any later version.                                     %
+%                                                                         %
+% This program is distributed in the hope that it will be useful,         %
+% but WITHOUT ANY WARRANTY; without even the implied warranty of          % 
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            % 
+% GNU General Public License for more details.                            %
+%                                                                         %
+% You should have received a copy of the GNU General Public License       %
+% along with this program. If not, see <http://www.gnu.org/licenses/>.    %
+%                                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%% box dimension definition %%%
+
+% box dimension definition %
 beginadjchar("N",5,cap#,0);
 
-%%% sidebearings %%%
+% sidebearings %
 if (sidebearing=1):
 numeric l,r;
 normal_adjust_fit(space+0.5u#,space+0.5u#);
 fi
 
-%%% construction %%%
-x1l=leftstemloc-cont*px/2;
-x2l=(w-x1l)-corner;
-y1=h;
-y2=0;
-x5l=x6l=x1l;
-x3=x4=w-x5;
-x5r=x6r=x5+(px/2);
-x3r=x4r=w-x5r;
-y5=y3=0;
-y6=y4=h;
-alpha3=diag_ratio(1,cont*px,h,x2l-x1l);
+% construction %
+x1=x2=leftstemloc;
+x1l=x2l=x1-(px/2);
+x3=x4=w-x1;
+x3r=x4r=w-x1r;
+x5r=x2+corner;
+x6l=x3-corner;
+y5=h;
+y6=0;
+y1=y3=0;
+y2=y4=h;
 
-%%% penpositions %%%
-penpos1(alpha3*cont*px,0);
-penpos2(alpha3*cont*px,0);
-penpos5(whatever,0);
-penpos6(whatever,0);
+% penpositions %
+alphan=diag_ratio(1,cont*px,h,x6l-x5r);
+penpos1(whatever,0);
+penpos2(whatever,0);
 penpos3(whatever,0);
 penpos4(whatever,0);
+penpos5(alphan*cont*px,0);
+penpos6(alphan*cont*px,0);
 
-%%% draw %%%
-penstroke z5e..z6e;
-z0=whatever[z3r,z4r]=whatever[z1r,z2r];
-fill z1l--z1r--z0--z4r--z4l--z3l--z2l--cycle;
+% draw %
+z10=whatever[z2r,z1r]=whatever[z6l,z5l];
+z11=whatever[z3r,z4r]=whatever[z5r,z6r];
+fill z1l--z2l--z5r--z11--z4r--z4l--z3l--z6l--z10--z1r--cycle;
 
 % penlabels(range 0 thru 30);
 

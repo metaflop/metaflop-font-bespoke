@@ -84,6 +84,6 @@ path a; numeric t,u; (t,u)=(((0,0.5h+appert*0.5h)--(infinity,0.5h+appert*0.5h)) 
 a = subpath (u,0) of (z3l---super_qr(4l,5l)---z6l);
 fill a---z3l---z3r---b---cycle;
 
-penlabels(range 1 thru 150);
+% penlabels(range 1 thru 150);
 
 endchar;

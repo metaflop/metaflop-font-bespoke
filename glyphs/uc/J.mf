@@ -43,7 +43,7 @@ x5r=x6r=x6-(cont*px/2);
 x4r=x7r=x1r+0.5*(x6r-x1r)+0.5*incx*(x6r-x1r);
 x3r=x8r=x1r+0.5*(x6r-x1r)-0.5*incx*(x6r-x1r);
 y5=y2=h;
-y1r=y6r=(0.5*h)-(0.5*incy*h);
+y1r=y6r=(0.5*h)-(0.5*incy*h)-px;;
 ang:=angle(z6r-z7r);
 
 % penpositions %

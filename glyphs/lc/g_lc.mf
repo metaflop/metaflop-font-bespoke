@@ -51,7 +51,7 @@ y17r=y16r=px;
 y2=y3=h;
 y10r=y15r=y16r+0.5*(y13r-y16r)-0.5*incy*(y13r-y16r);
 y11r=y14r=y16r+0.5*(y13r-y16r)+0.5*incy*(y13r-y16r);
-y1r=y6r=y16r-0.5*(y16l-y7r)-incy*(y16l-y7r);
+y1r=y6r=(-d+px)+4/8((mean-px)-px)-0.5*incy*(y13r-y16r);
 ang:=angle(z15r-z16r);
 
 % penpositions %
@@ -84,6 +84,6 @@ path ss; numeric t,u; (t,u)=(((0,((-d+h/2)-appert*((-d+h/2)-y7)))--(infinity,((-
 ss = subpath (0,u) of (super_qr(8l,1l)---z2l);
 fill ss---r---z7r---z7l---cycle;
 
-penlabels (range 1 thru 200);
+% penlabels (range 1 thru 200);
 
 endchar;

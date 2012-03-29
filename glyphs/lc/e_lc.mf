@@ -79,5 +79,5 @@ path ss; numeric t,u; (t,u)=(((0,0.5mean-appert*0.5mean)--(infinity,0.5mean-appe
 ss = subpath (infinity,u) of (z5l---super_ql(6l,7l)--z8l);
 fill z8r---z8l---ss---r---cycle;
 
-penlabels(range 1 thru 150);
+% penlabels(range 1 thru 150);
 endchar;

@@ -52,7 +52,7 @@ x9r=x6l+0.5(x12r-x8r)-0.5*incx*(x12r-x8r);
 x10r=x6l+0.5(x12r-x8r)+0.5*incx*(x12r-x8r);
 y1=y6=y8=y12=0;
 y13=mean;
-y2r=y5r=y7l=y11r=(0.5*mean)+(0.5*incy*mean)-(px/2);
+y2r=y5r=y7l=y11r=(0.5*mean)+(0.5*incy*mean)+(px/2);
 ang:=angle(z4r-z5r);
 
 % penpositions %

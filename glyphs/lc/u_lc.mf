@@ -42,7 +42,7 @@ x5=x6=x7=w-x1;
 x5r=x6r=x7r=x5-(cont*px/2);
 x3r=x2r+0.5*(x5r-x2r)-0.5*incx*(x5r-x2r);
 x4r=x2r+0.5*(x5r-x2r)+0.5*incx*(x5r-x2r);
-y2r=y5r=(0.5*mean)-(0.5*incy*mean);
+y2r=y5r=(0.5*mean)-(0.5*incy*mean)-(px/2);
 y1=y6=mean;
 y7=0;
 ang:=angle(z5r-z4r);

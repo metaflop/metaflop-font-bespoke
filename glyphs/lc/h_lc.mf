@@ -44,7 +44,7 @@ x4r=x1r+0.5*(x6r-x1r)+0.5*incx*(x6r-x1r);
 x3r=x1r+0.5*(x6r-x1r)-0.5*incx*(x6r-x1r);
 y1=y6=0;
 y10=h;
-y2r=y5r=(0.5*mean)+(0.5*incy*mean)-(px/2);
+y2r=y5r=(0.5*mean)+(0.5*incy*mean)+(px/2);
 ang:=angle(z4r-z5r);
 
 % penpositions %

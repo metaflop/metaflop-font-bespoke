@@ -35,7 +35,7 @@ x1=x2=x3=x8=leftstemloc;
 x1r=x2r=x1+(cont*px/2);
 x5=x6=w-x1;
 x5r=x6r=x6-(cont*px/2);
-x4r=x7r=x1r+incx*w;
+x4r=x7r=x1r+incx*w+px;;
 x9r=w-x1l;
 y1=0;
 y2=h;

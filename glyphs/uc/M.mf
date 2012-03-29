@@ -60,6 +60,6 @@ z11=whatever[z6l,z5l]=whatever[z1r,z2r];
 z12=whatever[z7r,z8r];
 fill z1l--z2l--z5r--z10--z8l--z4r--z3r--z3l--z12--z7r--z6l--z11--z1r--cycle;
 
-%penlabels(range 0 thru 30);
+% penlabels(range 0 thru 30);
 
 endchar;

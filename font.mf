@@ -33,7 +33,7 @@ px#:=0.9pt#;       % pen width 					$ 0.1 / 1
 cap#:=0.9ht#;      % cap heigt					$ 0.75 / 1	
 mean#:=0.72cap#;   % mean height				$ 0.5 / 1	
 bar:=0.5;          % bar height					$ 0.25 / 0.75
-asc#:=0.97ht#;     % ascender height		    $ 0.75 / 1.25	
+asc#:=0.95ht#;     % ascender height		    $ 0.75 / 1.25	
 des#:=0.35ht#;     % descender heigt		    $ 0.25 / 0.75	
 
 % shape %

@@ -22,7 +22,7 @@
 
 
 % box dimension definition %
-beginadjchar("S",corr*4.75,cap#,0);
+beginadjchar("S",4.75,cap#,0);
 
 % sidebearings %
 if (sidebearing=1):
@@ -45,14 +45,12 @@ x10r=x12r=x10+(cont*px/2);
 x1r=x2r=x1+(cont*px/2);
 x5=x6=x15=x16=w-x1;
 x5r=x6r=x15r=x16r=x6-(cont*px/2);
-x8r=(0.5*w)-(0.5*incx*w);
-%x3r=x13r=x18r=(0.5*w)-(0.5*incx*w)+0.5*x1;
+x8r=x10r+0.5*(x16r-x10r)-0.5*incx*(x16r-x10r);
 x3r=x13r=x18r=
-	if (incx<0.1): (0.5*w)-(0.5*incx*w) 
-	else: (0.5*w)-(0.5*incx*w)+0.5*x1 fi;
-x4r=x7r=x14r=x17r=(0.5*w)+(0.5*incx*w);
-y3=y18=(.52h);
-y4=y17=(.52h);
+	if (incx<0.1): x10r+0.5*(x16r-x10r)-0.5*incx*(x16r-x10r) 
+	else: x10r+0.5*(x16r-x10r)-0.5*incx*(x16r-x10r)+0.25*x1 fi;
+x4r=x7r=x14r=x17r=x10r+0.5*(x16r-x10r)+0.5*incx*(x16r-x10r);
+y3=y4=y17=y18=(.52h);
 y4r=y3r=(.52h)-.5px;
 y17r=y18r=(.52h)+.5px;
 y1r=y6r=y8r+0.5*(y3r-y8r)-0.5*incy*(y3r-y8r);
@@ -81,7 +79,6 @@ penpos18(whatever,90);
 
 % draw %
 penstroke z3e---super_qr(4e,5e)---super_ql(6e,7e)---z8e;
-
 z100=((-infinity,y8r+0.5*(y3r-y8r)-appert*0.5*(y3r-y8r))--(infinity,y8r+0.5*(y3r-y8r)-appert*0.5*(y3r-y8r))) intersectionpoint (super_qr(8l,1l)---z2l);
 path x; numeric t,u; (t,u)=((-infinity,y8r+0.5*(y3r-y8r)-appert*0.5*(y3r-y8r))--(infinity,y8r+0.5*(y3r-y8r)-appert*0.5*(y3r-y8r))) intersectiontimes (super_qr(8l,1l)---z2l);
 z101=z100+whatever*(dir(angle(direction u of (super_qr(8l,1l)---z2l))+90));
@@ -104,6 +101,6 @@ path a; numeric t,u; (t,u)=(((0,y18r+0.5*(y13r-y18r)+appert*0.5*(y13r-y18r))--(i
 a = subpath (u,0) of (z13l---super_qr(14l,15l)---z16l);
 fill a---z13l---z13r---b---cycle;
 
-% penlabels(range 1 thru 150);
+%penlabels(range 1 thru 150);
 
 endchar;

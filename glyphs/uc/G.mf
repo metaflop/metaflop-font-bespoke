@@ -22,7 +22,7 @@
 
 
 % box dimension definition %
-beginadjchar("G",corr*6,cap#,0);
+beginadjchar("G",6,cap#,0);
 
 % sidebearings %
 if (sidebearing=1):
@@ -44,14 +44,15 @@ x1=x2=leftstemloc;
 x1r=x2r=x1+(cont*px/2);
 x5=x6=x9=x10=x11=w-x1;
 x5r=x6r=x9r=x10r=x6-(cont*px/2);
-x4r=x7r=(0.5*w)+(0.5*incx*w);
-x3r=x8r=(0.5*w)-(0.5*incx*w);
+x4r=x7r=x1r+0.5*(x6r-x1r)+0.5*incx*(x6r-x1r);
+x3r=x8r=x1r+0.5*(x6r-x1r)-0.5*incx*(x6r-x1r);
 x12=.6w;
-y1r=y6r=(0.5*h)-(0.5*incy*h);
-y2r=y5r=(0.5*h)+(0.5*incy*h);
 y9=0;
 y10=y11r=y12r=bar*h;
 y12=y11=y12r-px/2;
+y1r=y8r+0.5*(y3r-y8r)-0.5*incy*(y3r-y8r);
+y6r=y8r+0.5*(y3r-y8r)-0.5*incy*(y3r-y8r);
+y2r=y5r=y8r+0.5*(y3r-y8r)+0.5*incy*(y3r-y8r);
 ang:=angle(z6r-z7r);
 
 % penpositions %
@@ -82,8 +83,7 @@ b = subpath (0,u) of (z3r---super_qr(4r,5r)---z6r);
 path a; numeric t,u; (t,u)=(((0,0.5h+appert*0.5h)--(infinity,0.5h+appert*0.5h)) intersectiontimes (z3l---super_qr(4l,5l)---z6l));
 a = subpath (u,0) of (z3l---super_qr(4l,5l)---z6l);
 fill a---z3l---z3r---b---cycle;
-w:=x99+(leftstemloc-.5(cont*px));
 
-% penlabels(range 1 thru 150);
+penlabels(range 1 thru 150);
 
 endchar;

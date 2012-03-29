@@ -1,41 +1,41 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%                                                                         %%%
-%%% Bespoke v1.6 a Metaflop-Font                                            %%%
-%%% © 2012 by Simon Egli, Marco Müller, Teofilo Furtado                     %%%
-%%% www.metaflop.com                                                        %%%
-%%%                                                                         %%%
-%%% This program is free software: you can redistribute it and/or modify    %%%
-%%% it under the terms of the GNU General Public License as published by    %%%
-%%% the Free Software Foundation, either version 3 of the License, or       %%%
-%%% (at your option) any later version.                                     %%%
-%%%                                                                         %%%
-%%% This program is distributed in the hope that it will be useful,         %%%
-%%% but WITHOUT ANY WARRANTY; without even the implied warranty of          %%% 
-%%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            %%% 
-%%% GNU General Public License for more details.                            %%%
-%%%                                                                         %%%
-%%% You should have received a copy of the GNU General Public License       %%%
-%%% along with this program. If not, see <http://www.gnu.org/licenses/>.    %%%
-%%%                                                                         %%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                         %
+% Bespoke v1.7                                                            %
+% a Metaflop-font © 2012 by Simon Egli, Marco MŸller                      %
+% thanks to Teofilo Furtado                                               %
+% www.metaflop.com                                                        %
+%                                                                         %
+% This program is free software: you can redistribute it and/or modify    %
+% it under the terms of the GNU General Public License as published by    %
+% the Free Software Foundation, either version 3 of the License, or       %
+% (at your option) any later version.                                     %
+%                                                                         %
+% This program is distributed in the hope that it will be useful,         %
+% but WITHOUT ANY WARRANTY; without even the implied warranty of          % 
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            % 
+% GNU General Public License for more details.                            %
+%                                                                         %
+% You should have received a copy of the GNU General Public License       %
+% along with this program. If not, see <http://www.gnu.org/licenses/>.    %
+%                                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% contrast limit
-if (cont > 1.2):
-px#:=0.2pt#;
-fi
+
+% contrast limit %
+%if (cont > 1.5):
+%px#:=0.2pt#;
+%fi
 py#:=px#;
 
-% Aditional parameters / hidden parameter list
-barheight#:=bar*cap#;	% Cross Bar (Upper)
-leftstemloc#:=0.2u#+s#+((cont*px#)/2);	% position of left stem
-letter_fit#:=0.0u#; % amount of letter fit
-shrink_fit:=.0u#;  % amount of shrink fit
+% additional parameters / hidden parameter list %
+barheight#:=bar*cap#;                   % upper cross bar
+leftstemloc#:=0.2u#+s#+((cont*px#)/2);  % position of left stem
+letter_fit#:=0.0u#;                     % amount of letter fit
+shrink_fit:=.0u#;                       % amount of shrink fit
+space:=0.0;                             % letterspacing (0 = compress)
 
-space:=0.0; % letterspacing (0 = compress)
-
-% sidebearings on / off
+% sidebearings on/off %
 % definition of left and right-side bearings. To use in glyph after beginchar: normal_adjust_fit(-1.5u#,-1.5u#);
-
 if (sidebearing=1):
  def normal_adjust_fit(expr left_adjustment,right_adjustment) = 
  l := -hround(left_adjustment*hppp)-letter_fit#; 
@@ -51,20 +51,9 @@ def endchar =
  endgroup enddef;	
 
 mode=luxo;
-
-%mode_def flop =
-%proofing:=1;
-%fontmaking:=1;
-%pixels_per_inch:=2000;
-%tracingtitles:=1;
-%title:=1;
-%titlefont:=1;
-%enddef;
-%mode=flop;
-
 mode_setup;
 
-%pixel conversions
+% pixel conversions %
 % metafont needs these pixel definitions to calculate the final dimensions of the parameter values
 define_pixels(s,u);
 define_blacker_pixels(px,py);
@@ -76,31 +65,22 @@ define_good_y_pixels(mean);
 define_good_y_pixels(corner);
 define_corrected_pixels(o);
 
-% Begin Charater macro
+% begin charater macros %
 def beginadjchar(expr code, unit_width, h, d) =
- beginchar(code,unit_width*u#+s#,h,d);
+beginchar(code,unit_width*u#+s#,h,d);
 pickup adj_pen;
 enddef;
 
 def beginadjichar(expr code, unit_width, h, d) =
- beginchar(code,2(unit_width*u#+s#+(cont*px#)/2),h,d);
+beginchar(code,2(unit_width*u#+s#+(cont*px#)/2),h,d);
 pickup adj_pen;
 enddef;
 
-% Box correction above incx .5
-
-if (incx > .5):
-corr:=(1-incx)+.5;
-else: corr:=1;
-fi
-
-%Fixed pen settings
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% fixed pen settings %
 pickup pencircle xscaled px yscaled py rotated 15;
 adj_pen:=savepen;
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Pen angle macros
+% pen angle macros %
 def angledpen(expr a,b)=
 -(90-((180-(angle(a-b)))/2))   enddef; 
 
@@ -120,47 +100,20 @@ def angb =
 arcsin ((1/(sind 90)*sind 56)/(incx/((incx/sind 90)*sind 56))) enddef;
 
 vardef diag_ratio(expr a,b,y,c) =
-numeric aa_, bb_, cc_; bb_=b/y; cc_=c/y; aa_=a*a-bb_*bb_;
+numeric aa_, bb_, cc_; bb_=b/y; cc_=c/y; aa_=a-(b/y)*(b/y);
 (a*(cc_++sqrt aa_)-bb_*cc_)/aa_ enddef;
 
+% superness macros %
 
-% Superness macros
-%%Left curves (superness)
-def super_quarterl(suffix i,j,k) =
- z.i{0,y.j-y.i}
-...(superness[x.j,x.i],superness[y.i,y.j]){z.j-z.i}
-...z.j{x.k-x.i,0} enddef;
-
-%% Right curves (superness)
-def super_quarterr(suffix i,j,k) =
-z.j{x.k-x.i,0}
-...(superness[x.j,x.k],superness[y.k,y.j]){z.k-z.j}
-...z.k{0,y.k-y.j} enddef;
-
-
+% left curves (superness) %
 def super_ql(suffix i,j) =
- z.i{0,y.j-y.i}
-...(superness[x.j,x.i],superness[y.i,y.j]){z.j-z.i}...z.j{x.j-x.i,0} enddef;
+ z.i{0,y.j-y.i}...(superness[x.j,x.i],superness[y.i,y.j]){z.j-z.i}...z.j{x.j-x.i,0} enddef;
 
-%% Right curves (superness)
+% right curves (superness) %
 def super_qr(suffix j,k) =
-z.j{x.k-x.j,0}
-...(superness[x.j,x.k],superness[y.k,y.j]){z.k-z.j}
-...z.k{0,y.k-y.j} enddef;
+z.j{x.k-x.j,0}...(superness[x.j,x.k],superness[y.k,y.j]){z.k-z.j}...z.k{0,y.k-y.j} enddef;
 
-%% Right interior curves (superness)
-def super_quarterri(suffix i,j,k) =
-z.j{x.k-x.i,0}
-...(supernessi[x.j,x.k],supernessi[y.k,y.j]){z.k-z.j}
-...z.k{0,y.k-y.j} enddef;
-
-%% Left interior curves (superness)
-def super_quarterli(suffix i,j,k) =
- z.i{0,y.j-y.i}
-...(supernessi[x.j,x.i],supernessi[y.i,y.j]){z.j-z.i}
-...z.j{x.k-x.i,0} enddef;
-
-%%% glyph input %%%
+% glyph input %
 input glyphs/uc/A
 input glyphs/uc/B
 input glyphs/uc/C
@@ -238,7 +191,7 @@ font_normal_space:=3u#+0s#;
 font_normal_stretch:=0u#;
 font_normal_shrink:=0u#;
 
-%%% ligtable upper case %%%
+% ligtable upper case %
 % kerning pairs Learn FONTLAB Fast p. 99 / page 316 MetaFontBook
 
 ligtable "A": 
@@ -331,8 +284,7 @@ ligtable "X":
 ligtable "Z":
 "A" kern +0.2u#, "Y" kern +0.2u#;
 
-
-%%% ligtable lower case %%%
+% ligtable lower case %
 ligtable "e":
 "v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#, "z" kern -0.0u#,
 "f" kern -0.2u#, "t" kern -0.2u#;
@@ -373,7 +325,7 @@ ligtable "x":
 
 
 % ligtable "L": "O" =: oct"014";   % USE THIS FOR LIGATURES OR SPECIAL CHARACTERS
-%font_identifier:="FRAN" if slant<>0: & "SL" fi;
+% font_identifier:="FRAN" if slant<>0: & "SL" fi;
 
 font_coding_scheme:="OT1";
 
@@ -391,5 +343,4 @@ font_coding_scheme:="OT1";
 %font_unique_id		"4112233";
 % font_version		"002.005";
 % font_weight		"Light";
-% fight";
 % fi

@@ -22,7 +22,7 @@
 
 
 % box dimension definition %
-beginadjchar("B",corr*4.5,cap#,0);
+beginadjchar("B",4.5,cap#,0);
 
 % sidebearings %
 if (sidebearing=1):

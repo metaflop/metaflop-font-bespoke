@@ -1,52 +1,54 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%                                                                         %%%
-%%% Bespoke v1.6 – a Metaflop-Font                                          %%%
-%%% © 2012 by Simon Egli, Marco Müller, Teofilo Furtado                     %%%
-%%% www.metaflop.com                                                        %%%
-%%%                                                                         %%%
-%%% This program is free software: you can redistribute it and/or modify    %%%
-%%% it under the terms of the GNU General Public License as published by    %%%
-%%% the Free Software Foundation, either version 3 of the License, or       %%%
-%%% (at your option) any later version.                                     %%%
-%%%                                                                         %%%
-%%% This program is distributed in the hope that it will be useful,         %%%
-%%% but WITHOUT ANY WARRANTY; without even the implied warranty of          %%% 
-%%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            %%% 
-%%% GNU General Public License for more details.                            %%%
-%%%                                                                         %%%
-%%% You should have received a copy of the GNU General Public License       %%%
-%%% along with this program. If not, see <http://www.gnu.org/licenses/>.    %%%
-%%%                                                                         %%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                         %
+% Bespoke v1.7                                                            %
+% a Metaflop-font © 2012 by Simon Egli, Marco Müller                      %
+% thanks to Teofilo Furtado                                               %
+% www.metaflop.com                                                        %
+%                                                                         %
+% This program is free software: you can redistribute it and/or modify    %
+% it under the terms of the GNU General Public License as published by    %
+% the Free Software Foundation, either version 3 of the License, or       %
+% (at your option) any later version.                                     %
+%                                                                         %
+% This program is distributed in the hope that it will be useful,         %
+% but WITHOUT ANY WARRANTY; without even the implied warranty of          % 
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            % 
+% GNU General Public License for more details.                            %
+%                                                                         %
+% You should have received a copy of the GNU General Public License       %
+% along with this program. If not, see <http://www.gnu.org/licenses/>.    %
+%                                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %%% box dimension definition %%%
 beginadjchar("v",4.16,mean#,0);
 
-%%% sidebearings %%%
+% sidebearings %
 if (sidebearing=1):
 numeric l,r;
 normal_adjust_fit(space-0.3u#,space-0.3u#);
 fi
 
-%%% construction %%%
+% construction %
 x3l=leftstemloc-cont*px/2;
 x2r=w-x3l;
 (x4l+x1r)/2=.5w;
 x1r-x4l=corner;
 y1=y4=0;
 y2=y3=h;
-alphavv=diag_ratio(1,cont*px,h,x2r-x1r);
 
-%%% penpositions %%%
-penpos1(alphavv*px,0);
-penpos2(alphavv*px,0);
-penpos3(alphavv*cont*px,0);
-penpos4(alphavv*cont*px,0);
+% penpositions %
+alphav=diag_ratio(1,cont*px,h,x2r-x1r);
+penpos1(alphav*px,0);
+penpos2(alphav*px,0);
+penpos3(alphav*cont*px,0);
+penpos4(alphav*cont*px,0);
 
-%%% draw %%%
+% draw %
 z0=whatever[z3r,z4r]=whatever[z1l,z2l];
 fill z3l--z4l--z1r--z2r--z2l--z0--z3r--cycle;
 
-% penlabels(range 0 thru 30);
+%penlabels(range 1 thru 30);
 
 endchar;

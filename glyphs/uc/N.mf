@@ -34,13 +34,13 @@ fi
 x1=x2=leftstemloc;
 x1l=x2l=x1-(px/2);
 x3=x4=w-x1;
-x3r=x4r=w-x1r;
-x5r=x2+corner;
-x6l=x3-corner;
-y5=h;
-y6=0;
+x3l=x4l=x3+(px/2);
+x5r=x2l+corner;
+x6l=x3l-corner;
 y1=y3=0;
 y2=y4=h;
+y5=h;
+y6=0;
 
 % penpositions %
 alphan=diag_ratio(1,cont*px,h,x6l-x5r);
@@ -56,6 +56,6 @@ z10=whatever[z2r,z1r]=whatever[z6l,z5l];
 z11=whatever[z3r,z4r]=whatever[z5r,z6r];
 fill z1l--z2l--z5r--z11--z4r--z4l--z3l--z6l--z10--z1r--cycle;
 
-% penlabels(range 0 thru 30);
+%penlabels(range 0 thru 30);
 
 endchar;

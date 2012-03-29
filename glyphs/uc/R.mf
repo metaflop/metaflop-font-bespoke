@@ -22,7 +22,7 @@
 
 
 % box dimension definition %
-beginadjchar("R",corr*4.5,cap#,0);
+beginadjchar("R",4.5,cap#,0);
 
 % sidebearings %
 if (sidebearing=1):
@@ -59,8 +59,6 @@ penpos5(whatever,180);
 penpos6(whatever,180);
 penpos7(whatever,90);
 alphar1=diag_ratio(1,cont*px,h,x2l-x1r);
-%alphan=diag_ratio(1,cont*px,h,x6l-x5r);
-%penpos1(alphar1*cont*px,0);
 penpos9(alphar1*1.1*cont*px,0);
 
 % draw %

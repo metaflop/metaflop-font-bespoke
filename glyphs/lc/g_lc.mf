@@ -1,116 +1,89 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%                                                                         %%%
-%%% Bespoke v1.6 – a Metaflop-Font                                          %%%
-%%% © 2012 by Simon Egli, Marco Müller, Teofilo Furtado                     %%%
-%%% www.metaflop.com                                                        %%%
-%%%                                                                         %%%
-%%% This program is free software: you can redistribute it and/or modify    %%%
-%%% it under the terms of the GNU General Public License as published by    %%%
-%%% the Free Software Foundation, either version 3 of the License, or       %%%
-%%% (at your option) any later version.                                     %%%
-%%%                                                                         %%%
-%%% This program is distributed in the hope that it will be useful,         %%%
-%%% but WITHOUT ANY WARRANTY; without even the implied warranty of          %%% 
-%%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            %%% 
-%%% GNU General Public License for more details.                            %%%
-%%%                                                                         %%%
-%%% You should have received a copy of the GNU General Public License       %%%
-%%% along with this program. If not, see <http://www.gnu.org/licenses/>.    %%%
-%%%                                                                         %%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                         %
+% Bespoke v1.7                                                            %
+% a Metaflop-font © 2012 by Simon Egli, Marco Müller                      %
+% thanks to Teofilo Furtado                                               %
+% www.metaflop.com                                                        %
+%                                                                         %
+% This program is free software: you can redistribute it and/or modify    %
+% it under the terms of the GNU General Public License as published by    %
+% the Free Software Foundation, either version 3 of the License, or       %
+% (at your option) any later version.                                     %
+%                                                                         %
+% This program is distributed in the hope that it will be useful,         %
+% but WITHOUT ANY WARRANTY; without even the implied warranty of          % 
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            % 
+% GNU General Public License for more details.                            %
+%                                                                         %
+% You should have received a copy of the GNU General Public License       %
+% along with this program. If not, see <http://www.gnu.org/licenses/>.    %
+%                                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%% box dimension definition %%%
+
+% box dimension definition %
 beginadjchar("g",4.4,mean#,des#);
 
-%%% sidebearings %%%
+% sidebearings %
 if (sidebearing=1):
 numeric l,r;
 normal_adjust_fit(space+0.2u#,space+0.4u#);
 fi
 
-%%% overshoot %%%
-y13r=y12r=h-px +o; % overshoot up
-y17r=y16r=px -o; % overshoot down
-top y12=h +o; %
-top y13=h +o;
-bot y17=0 -o;
-bot y16=0 -o;
+% overshoot %
+top y12=h+o;
+top y13=h+o;
+bot y8=-d-o;
+bot y7=-d-o;
+y13r=y12r=h-px+o;
+y8r=y7r=-d+px-o;
 
-%%% construction %%%
-x17r=if (incx>.5): .5w else: x10r+incx*(x15r-x10r) fi;
-x16r=if (incx>.5): .5w else: x15r-incx*(x15r-x10r) fi;
-x17r=x12r; x16r=x13r;
-x10=leftstemloc;
-x15=w-x10;
-x15=x14;
-y11r=y14r;
-y15r=y10r;
-x11=x10;
-x10r=x11r=x10+(cont*px/2);
-x15r=x14r=x15-(cont*px/2);
-y10r=if (incy>.5): .5h else: y17r-incy*(y17r-y12r) fi;
-y11r=if (incy>.5): .5h else: y12r+incy*(y17r-y12r) fi;
-
-x7r=if (incx>.5): w-incx*(w) else: x6r-incx*((x6r-(w-x6r))) fi;
-x8r=if (incx>.5): x7r else: (w-x6r)+incx*(x6r-(w-x6r)) fi;
-y1r=(-d+px)+incy*((h-px)-px);
-if (y1r>(-d+px)+2/5((h-px)-px)): y1r:=(-d+px)+2/5((h-px)-px); fi
-x1=if (incx>.5): x7r-((w-(leftstemloc-.5(px*cont)+.5px))-x7r) else: leftstemloc-.5(px*cont)+.5px fi;
+% construction %
+x1=x2=x10=x11=leftstemloc;
+x1r=x2r=x10r=x11r=x10+(cont*px/2);
+x3=x6=x14=x15=w-x10;
+x3r=x6r=x14r=x15r=x15-(cont*px/2);
+x8r=x12r=x17r=x1r+0.5*(x6r-x1r)-0.5*incx*(x6r-x1r);
+x7r=x13r=x16r=x1r+0.5*(x6r-x1r)+0.5*incx*(x6r-x1r);
+bot y17=0;
+bot y16=0;
+y17r=y16r=px;
 y2=y3=h;
-x2=x1=x2l+.5px;
-x3=x6=x3l-.5(cont*px);
-y8r=y7r=-d+px;
-bot y8=-d;
-bot y7=-d;
-x6=w-leftstemloc;
-y6r=y1r;
-x1r=x1+(px/2);
-x6r=x6-(cont*px/2);
-ang:=angle(z6r-z7r);
+y10r=y15r=y16r+0.5*(y13r-y16r)-0.5*incy*(y13r-y16r);
+y11r=y14r=y16r+0.5*(y13r-y16r)+0.5*incy*(y13r-y16r);
+y1r=y6r=y16r-0.5*(y16l-y7r)-incy*(y16l-y7r);
 ang:=angle(z15r-z16r);
 
-%%% penpositions %%%
-penpos10(whatever,if (superness=.5): -(ang-90)/2 else: 0 fi);
-penpos11(whatever,if (superness=.5): ((ang-90)/2) else: 0 fi);
-penpos12(whatever,if (superness=.5): -(180-ang)/2 else: -90 fi);
-penpos13(whatever,if (superness=.5): (180-ang)/2 else: -90 fi);
-penpos14(whatever,if (superness=.5): -(ang-90)/2 else: 180 fi);
-penpos15(whatever,if (superness=.5): (ang-90)/2 else: 180 fi);
-penpos16(whatever,if (superness=.5): -(180-ang)/2 else: 90 fi);
-penpos17(whatever,if (superness=.5): (180-ang)/2 else: 90 fi);
-
-penpos1(whatever,if (superness=.5): -(ang-90)/2 else: 0 fi);
+% penpositions %
+penpos1(whatever,0);
 penpos2(whatever,0);
 penpos3(whatever,180);
-penpos6(whatever,if (superness=.5): (ang-90)/2 else: 180 fi);
-penpos7(whatever,if (superness=.5): -(180-ang)/2 else: 90 fi);
-penpos8(whatever,if (superness=.5): (180-ang)/2 else: 90 fi);
+penpos6(whatever,180);
+penpos7(whatever,90);
+penpos8(whatever,90);
+penpos10(whatever,0);
+penpos11(whatever,0);
+penpos12(whatever,-90);
+penpos13(whatever,-90);
+penpos14(whatever,180);
+penpos15(whatever,180);
+penpos16(whatever,90);
+penpos17(whatever,90);
 
-%%% draw %%%
+% draw %
 penstroke super_qr(13e,14e)---super_ql(15e,16e)---super_qr(17e,10e)---super_ql(11e,12e)---cycle;
 penstroke z3e---super_ql(6e,7e);
-if (incx > .5):
-	z100=((((leftstemloc-.5(cont*px)),-infinity)--((leftstemloc-.5(cont*px)),h+infinity)) intersectionpoint (super_ql(6l,7l)---super_qr(8l,1l)));
-	numeric t,u; (t,u)=((((leftstemloc-.5(cont*px)),-infinity)--((leftstemloc-.5(cont*px)),h+infinity)) intersectiontimes (super_ql(6l,7l)---z7l---super_qr(8l,1l)));
-if (x8l<leftstemloc-.5(cont*px)): 
-	x101=x100; else: z101=z100+whatever*(dir(angle(direction u of (super_ql(6l,7l)---z7l---super_qr(8l,1l)))-90));fi
-	y101=h;
-	path r; numeric t,u; (t,u)=((z100--z101) intersectiontimes (super_qr(8r,1r)---z1l));
-	r = subpath (0,u) of (super_qr(8r,1r)---z1l);
-	path ss; numeric t,u; (t,u)=((((leftstemloc-.5(cont*px)),-infinity)--((leftstemloc-.5(cont*px)),h+infinity)) intersectiontimes (super_ql(6l,7l)---z7l---super_qr(8l,1l)));
-	ss = subpath (u,0) of (super_ql(6l,7l)---z7l---super_qr(8l,1l));
-	fill ss---super_ql(6r,7r)---r---cycle;
-else:
-	z100=((-infinity,((-d+h/2)-appert*((-d+h/2)-y7)))--(infinity,((-d+h/2)-appert*((-d+h/2)-y7)))) intersectionpoint (super_qr(8l,1l)---z2l);
-	path x; numeric t,u; (t,u)=((((-infinity,((-d+h/2)-appert*((-d+h/2)-y7)))--(infinity,((-d+h/2)-appert*((-d+h/2)-y7))))) intersectiontimes (super_qr(8l,1l)---z2l));
-	z101=z100+whatever*(dir(angle(direction u of (super_qr(8l,1l)---z2l))+90));
-	x101=w;
-	path r; numeric t,u; (t,u)=((z100--z101) intersectiontimes (super_qr(8r,1r)---z2r));
-	r = subpath (u,0) of (super_qr(8r,1r)---z2r);
-	path ss; numeric t,u; (t,u)=(((0,((-d+h/2)-appert*((-d+h/2)-y7)))--(infinity,((-d+h/2)-appert*((-d+h/2)-y7)))) intersectiontimes (super_qr(8l,1l)---z2l));
-	ss = subpath (0,u) of (super_qr(8l,1l)---z2l);
-	fill ss---r---z7r---z7l---cycle;fi
 
-% penlabels(1,2,3,4,5,6,7,8);
-% labels (range 50 thru 200);
+z100=((-infinity,((-d+h/2)-appert*((-d+h/2)-y7)))--(infinity,((-d+h/2)-appert*((-d+h/2)-y7)))) intersectionpoint (super_qr(8l,1l)---z2l);
+path x; numeric t,u; (t,u)=((((-infinity,((-d+h/2)-appert*((-d+h/2)-y7)))--(infinity,((-d+h/2)-appert*((-d+h/2)-y7))))) intersectiontimes (super_qr(8l,1l)---z2l));
+z101=z100+whatever*(dir(angle(direction u of (super_qr(8l,1l)---z2l))+90));
+x101=w;
+path r; numeric t,u; (t,u)=((z100--z101) intersectiontimes (super_qr(8r,1r)---z2r));
+r = subpath (u,0) of (super_qr(8r,1r)---z2r);
+path ss; numeric t,u; (t,u)=(((0,((-d+h/2)-appert*((-d+h/2)-y7)))--(infinity,((-d+h/2)-appert*((-d+h/2)-y7)))) intersectiontimes (super_qr(8l,1l)---z2l));
+ss = subpath (0,u) of (super_qr(8l,1l)---z2l);
+fill ss---r---z7r---z7l---cycle;
+
+penlabels (range 1 thru 200);
+
 endchar;

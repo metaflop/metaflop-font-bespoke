@@ -36,8 +36,8 @@ x3r=x4r=w-x1l;
 x1r=x2r=x1+(px/2);
 x3l=x4l=x4r-cont*px;
 (x6l+x7r)/2=(x2r+x3l)/2;
-x5r=x2+corner;
-x8l=x4r-(x5r-x2l);
+x5r=x2l+corner;
+x8l=x4r-corner;
 x7r=x6l+corner;
 y1=y3=y6=y7=0;
 y2=y4=y5=y8=h;
@@ -60,6 +60,6 @@ z11=whatever[z6l,z5l]=whatever[z1r,z2r];
 z12=whatever[z7r,z8r];
 fill z1l--z2l--z5r--z10--z8l--z4r--z3r--z3l--z12--z7r--z6l--z11--z1r--cycle;
 
-% penlabels(range 0 thru 30);
+%penlabels(range 0 thru 30);
 
 endchar;

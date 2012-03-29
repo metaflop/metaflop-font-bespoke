@@ -22,7 +22,7 @@
 
 
 % box dimension definition %
-beginadjchar("K",corr*5,cap#,0);
+beginadjchar("K",5,cap#,0);
 
 % sidebearings %
 if (sidebearing=1):
@@ -43,12 +43,13 @@ y3=bar*h;
 % penpositions %
 penpos1(whatever,0);
 penpos2(whatever,0);
-alphak=diag_ratio(1,px,y4r-y3,x4r-x3l);
-penpos3(alphak*px,0);
-penpos4(alphak*px,0);
+alphaK=diag_ratio(1,px,y4r-y3,x4r-x3l);
+penpos3(alphaK*px,0);
+penpos4(alphaK*px,0);
 penpos5(1.2*cont*px,0);
 
 % draw %
+penstroke z2e..z1e;
 z11l=z4l+whatever*dir angle(z4r-z3r)=whatever[z2l,z1l];
 z11r=z4r+whatever*dir angle(z4r-z3r)=whatever[z2r,z1r];  
 path ss; ss=z4l---z11l---z1l;
@@ -57,7 +58,6 @@ path r; r=z5r---z2r;
 z12l=l intersectionpoint ss;
 z12r=r intersectionpoint ss;
 fill z4l---z4r---z11r---z11l---cycle;
-penstroke z2e..z1e;
 fill z5l---z5r---z12r---z12l---cycle;
 
 % penlabels(range 1 thru 50);

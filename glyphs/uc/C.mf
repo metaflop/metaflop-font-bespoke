@@ -22,7 +22,7 @@
 
 
 % box dimension definition %
-beginadjchar("C",corr*6,cap#,0);
+beginadjchar("C",6,cap#,0);
 
 % sidebearings %
 if (sidebearing=1):
@@ -43,10 +43,10 @@ x1=x2=leftstemloc;
 x1r=x2r=x1+(cont*px/2);
 x5=x6=w-x1;
 x5r=x6r=x6-(cont*px/2);
-x4r=x7r=(0.5*w)+(0.5*incx*w);
-x3r=x8r=(0.5*w)-(0.5*incx*w);
-y1r=y6r=(0.5*h)-(0.5*incy*h);
-y2r=y5r=(0.5*h)+(0.5*incy*h);
+x4r=x7r=x1r+0.5*(x6r-x1r)+0.5*incx*(x6r-x1r);
+x3r=x8r=x1r+0.5*(x6r-x1r)-0.5*incx*(x6r-x1r);
+y1r=y6r=y8r+0.5*(y3r-y8r)-0.5*incy*(y3r-y8r);
+y2r=y5r=y8r+0.5*(y3r-y8r)+0.5*incy*(y3r-y8r);
 ang:=angle(z6r-z7r);
 
 % penpositions %

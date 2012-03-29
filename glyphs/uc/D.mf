@@ -22,7 +22,7 @@
 
 
 % box dimension definition %
-beginadjchar("D",corr*5.25,cap#,0);
+beginadjchar("D",5.25,cap#,0);
 
 % sidebearings %
 if (sidebearing=1):
@@ -46,8 +46,8 @@ y1=0;
 y2=h;
 y4r=y3r=h-px;
 y7r=y8r=px;
-y5r=(0.5*h)+(0.5*incy*h);
-y6r=(0.5*h)-(0.5*incy*h);
+y6r=y8r+0.5*(y3r-y8r)-0.5*incy*(y3r-y8r);
+y5r=y8r+0.5*(y3r-y8r)+0.5*incy*(y3r-y8r);
 ang:=angle(z6r-z7r);
 
 % penpositions %

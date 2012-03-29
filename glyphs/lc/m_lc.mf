@@ -1,97 +1,80 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%                                                                         %%%
-%%% Bespoke v1.6 – a Metaflop-Font                                          %%%
-%%% © 2012 by Simon Egli, Marco Müller, Teofilo Furtado                     %%%
-%%% www.metaflop.com                                                        %%%
-%%%                                                                         %%%
-%%% This program is free software: you can redistribute it and/or modify    %%%
-%%% it under the terms of the GNU General Public License as published by    %%%
-%%% the Free Software Foundation, either version 3 of the License, or       %%%
-%%% (at your option) any later version.                                     %%%
-%%%                                                                         %%%
-%%% This program is distributed in the hope that it will be useful,         %%%
-%%% but WITHOUT ANY WARRANTY; without even the implied warranty of          %%% 
-%%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            %%% 
-%%% GNU General Public License for more details.                            %%%
-%%%                                                                         %%%
-%%% You should have received a copy of the GNU General Public License       %%%
-%%% along with this program. If not, see <http://www.gnu.org/licenses/>.    %%%
-%%%                                                                         %%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                         %
+% Bespoke v1.7                                                            %
+% a Metaflop-font © 2012 by Simon Egli, Marco Müller                      %
+% thanks to Teofilo Furtado                                               %
+% www.metaflop.com                                                        %
+%                                                                         %
+% This program is free software: you can redistribute it and/or modify    %
+% it under the terms of the GNU General Public License as published by    %
+% the Free Software Foundation, either version 3 of the License, or       %
+% (at your option) any later version.                                     %
+%                                                                         %
+% This program is distributed in the hope that it will be useful,         %
+% but WITHOUT ANY WARRANTY; without even the implied warranty of          % 
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            % 
+% GNU General Public License for more details.                            %
+%                                                                         %
+% You should have received a copy of the GNU General Public License       %
+% along with this program. If not, see <http://www.gnu.org/licenses/>.    %
+%                                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%% box dimension definition %%%
+
+% box dimension definition %
 beginadjchar("m",6.75,mean#,0);
 
-%%% sidebearings %%%
+% sidebearings %
 if (sidebearing=1):
 numeric l,r;
 normal_adjust_fit(space+0.4u#,space+0.35u#);
 fi
 
-%%% overshoot %%%
-y8r=y7r=h-px +o; % overshoot up
-top y8=h +o; % overshoot up
-top y7=h +o; % overshoot up
+% overshoot %
+top y3=mean+o;
+top y4=mean+o;
+top y9=mean+o;
+top y10=mean+o;
+y3r=y4r=y9r=y10r=mean-px+o;
 
-%%% construction %%%
-x3=x6=.5w;
-x6r=x6-(cont*px/2);
-x1=leftstemloc;
-x1r=x4r=x1+(cont*px/2);
-x8r=x1r+incx*(x6r-x1r);
-x7r=x6r-incx*(x6r-x1r);
-if (x8r>x1r+.5(x6r-x1r)): x8r:=x1r+.5(x6r-x1r); x7r:=x8r; fi
-%if (x7r>.5(x6r-x1r)): x7r:=x8r; fi
-y1r=(h-px)-incy*((h-px)-px);
-if (y1r<5/8h): y1r:=4.75/8h; fi     % start of upper curve
-y2=y3=0;
-x2=x4=x1=x2l+.5(cont*px);
-x3=x3l-.5(cont*px);
-y4=h;
-y6r=y1r;
-ang:=angle(z8r-z1r);
+% construction %
+x1=x2=x13=leftstemloc;
+x1r=x2r=x13r=x1+(cont*px/2);
+x5=x6=x7=x8=0.5w;
+x5r=x6r=x6-(cont*px/2);
+x7r=x5l;
+x8r=x6l;
+x11=x12=w-x2;
+x11r=x12r=x12-(cont*px/2);
+x3r=x1r+0.5(x6r-x1r)-0.5*incx*(x6r-x1r);
+x4r=x1r+0.5(x6r-x1r)+0.5*incx*(x6r-x1r);
+x9r=x6l+0.5(x12r-x8r)-0.5*incx*(x12r-x8r);
+x10r=x6l+0.5(x12r-x8r)+0.5*incx*(x12r-x8r);
+y1=y6=y8=y12=0;
+y13=mean;
+y2r=y5r=y7l=y11r=(0.5*mean)+(0.5*incy*mean)-(px/2);
+ang:=angle(z4r-z5r);
 
-x15=x14=w-x1;
-x14r=x14-(cont*px/2);
-x10=x6;
-x10r=x10+(cont*px/2);
-x13r=x10r+incx*(x14r-x10r);
-x12r=x14r-incx*(x14r-x10r);
-if (x13r>x10r+.5(x14r-x10r)): 
-	x13r:=x10r+.5(x14r-x10r); x12r:=x13r; fi
-y10r=y1r;
-y9=y15=0;
-x9=x10=x9l+.5(cont*px);
-x15=x15l-.5(cont*px);
-y13r=y12r=y7r;
-y13=y12=y7;
-y14r=y10r;
-ang:=angle(z12r-z10r);
-
-%%% penpositions %%%
-penpos1(whatever,if (superness=.5): ((ang-90)/2) else: 0 fi);
+% penpositions %
+penpos1(whatever,0);
 penpos2(whatever,0);
-penpos3(whatever,180);
-penpos4(whatever,180);
-penpos6(whatever,if (superness=.5): -(ang-90)/2 else: 180 fi);
-penpos7(whatever,if (superness=.5): (180-ang)/2 else: 90 fi);
-penpos8(whatever,if (superness=.5): -(180-ang)/2 else: 90 fi);
-penpos10(whatever,if (superness=.5): ((ang-90)/2) else: 0 fi);
-penpos9(whatever,0);
-penpos15(whatever,180);
-penpos14(whatever,if (superness=.5): -(ang-90)/2 else: 180 fi);
-penpos12(whatever,if (superness=.5): (180-ang)/2 else: 90 fi);
-penpos13(whatever,if (superness=.5): -(180-ang)/2 else: 90 fi);
+penpos3(whatever,90);
+penpos4(whatever,90);
+penpos5(whatever,180);
+penpos6(whatever,180);
+penpos7(whatever,0);
+penpos8(whatever,0);
+penpos9(whatever,90);
+penpos10(whatever,90);
+penpos11(whatever,180);
+penpos12(whatever,180);
+penpos13(whatever,0);
 
-%%% draw %%%
-penstroke z3e---super_ql(6e,7e)---super_qr(8e,1e);
-penstroke z2e---z4e;
-if (cont>1.5): 
-	x1l:=x1r-px; fi
-if (cont>1.5): 
-	x10l:=x10r-px; fi
-penstroke z15e---super_ql(14e,12e)---super_qr(13e,10e)---z9e;
+% draw %
+penstroke super_ql(2e,3e)---super_qr(4e,5e)--z6e;
+penstroke super_ql(7e,9e)---super_qr(10e,11e)--z12e;
+penstroke z1e..z13e;
 
-% penlabels(range 1 thru 20);
+%penlabels(range 0 thru 30);
 
 endchar;

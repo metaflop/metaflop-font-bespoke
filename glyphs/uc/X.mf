@@ -38,12 +38,12 @@ y1=y4=h;
 y2=y3=0;
 
 % penpositions %
-alphax1=diag_ratio(1,cont*px,h,x2r-x1l);
-alphax2=diag_ratio(1,px,h,x2r-x1l);
-penpos1(alphax1*cont*px,0);
-penpos2(alphax1*cont*px,0);
-penpos3(alphax2*px,0);
-penpos4(alphax2*px,0);
+alphaX1=diag_ratio(1,cont*px,h,x2r-x1l);
+alphaX2=diag_ratio(1,px,h,x2r-x1l);
+penpos1(alphaX1*cont*px,0);
+penpos2(alphaX1*cont*px,0);
+penpos3(alphaX2*px,0);
+penpos4(alphaX2*px,0);
 
 % draw %
 penstroke z1e..z2e;

@@ -45,18 +45,18 @@ y11=y14=0;
 y12=y13=h;
 
 % penpositions %
-alphaw:=diag_ratio(1,cont*px,h,x2r-x1r);
-alphav1:=diag_ratio(1,cont*px,h,x12r-x11r);
-penpos1(alphaw*px,0);
-penpos2(alphaw*px,0);
-penpos3(alphaw*cont*px,0);
-penpos4(alphaw*cont*px,0);
-penpos11(alphav1*px,0);
-penpos12(alphav1*px,0);
-penpos13(alphav1*cont*px,0);
-penpos14(alphav1*cont*px,0);
+alphaW:=diag_ratio(1,cont*px,h,x2r-x1r);
+alphaV1:=diag_ratio(1,cont*px,h,x12r-x11r);
+penpos1(alphaW*px,0);
+penpos2(alphaW*px,0);
+penpos3(alphaW*cont*px,0);
+penpos4(alphaW*cont*px,0);
+penpos11(alphaV1*px,0);
+penpos12(alphaV1*px,0);
+penpos13(alphaV1*cont*px,0);
+penpos14(alphaV1*cont*px,0);
 
-%%% draw %%%
+% draw %
 z0=whatever[z3r,z4r]=whatever[z1l,z2l];
 z10=whatever[z13r,z14r]=whatever[z11l,z12l];
 fill z3l--z4l--z1r--z2r--z2l--z0--z3r--cycle;

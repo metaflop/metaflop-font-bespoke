@@ -33,13 +33,13 @@ fi
 % construction %
 x3l=leftstemloc-cont*px/2;
 x2r=w-x3l;
-(x4l+x1r)/2=.5w;
-x1r-x4l=corner;
+(x1r+x4l)/2=.5w;
+x1r=x4l+corner;
 y1=y4=h;
 y2=y3=0;
-alphaa:=diag_ratio(1,cont*px,h,x2r-x1r);
 
 % penpositions %
+alphaa:=diag_ratio(1,cont*px,h,x2r-x1r);
 penpos1(alphaa*cont*px,0);
 penpos2(alphaa*cont*px,0);
 penpos3(alphaa*px,0);
@@ -56,6 +56,6 @@ z5=whatever[z3,z4]; z6=whatever[z1,z2];
 fill z3l--z4l--z1r--z2r--z2l--z0--z3r--cycle;
 penstroke z5e..z6e;
 
-% penlabels(range 0 thru 30);
+%penlabels(range 0 thru 30);
 
 endchar;

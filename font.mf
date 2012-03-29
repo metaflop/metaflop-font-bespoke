@@ -1,55 +1,51 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%                                                                         %%%
-%%% Bespoke v1.6 – a Metaflop-Font                                          %%%
-%%% © 2012 by Simon Egli, Marco Müller, Teofilo Furtado                     %%%
-%%% www.metaflop.com                                                        %%%
-%%%                                                                         %%%
-%%% This program is free software: you can redistribute it and/or modify    %%%
-%%% it under the terms of the GNU General Public License as published by    %%%
-%%% the Free Software Foundation, either version 3 of the License, or       %%%
-%%% (at your option) any later version.                                     %%%
-%%%                                                                         %%%
-%%% This program is distributed in the hope that it will be useful,         %%%
-%%% but WITHOUT ANY WARRANTY; without even the implied warranty of          %%% 
-%%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            %%% 
-%%% GNU General Public License for more details.                            %%%
-%%%                                                                         %%%
-%%% You should have received a copy of the GNU General Public License       %%%
-%%% along with this program. If not, see <http://www.gnu.org/licenses/>.    %%%
-%%%                                                                         %%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                         %
+% Bespoke v1.7                                                            %
+% a Metaflop-font © 2012 by Simon Egli, Marco Müller                      %
+% thanks to Teofilo Furtado                                               %
+% www.metaflop.com                                                        %
+%                                                                         %
+% This program is free software: you can redistribute it and/or modify    %
+% it under the terms of the GNU General Public License as published by    %
+% the Free Software Foundation, either version 3 of the License, or       %
+% (at your option) any later version.                                     %
+%                                                                         %
+% This program is distributed in the hope that it will be useful,         %
+% but WITHOUT ANY WARRANTY; without even the implied warranty of          % 
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            % 
+% GNU General Public License for more details.                            %
+%                                                                         %
+% You should have received a copy of the GNU General Public License       %
+% along with this program. If not, see <http://www.gnu.org/licenses/>.    %
+%                                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%% DIMENSION %%%%%%
 
-font_size:=10pt#;  % font size  / nicht verstellbar  		
-ht#:=10pt#;      % box height / nicht verstellbar		
-u#:=1.95pt#;      % unit widht 					$ 0.8 / 2
-s#:=0.15u#;             % unsichtbar machen / nicht verstellbar
-o#:=0.1pt#;	        % overshoot                             $ 0 / 1	
-px#:=0.6pt#;     % pen width 					$ 0.15 / 1.8 
+% dimension %
+font_size:=10pt#;  % font size  / not editable 		
+ht#:=10pt#;        % box height / not editable 	
+u#:=1.45pt#;       % unit widht 			    $ 0.75 / 2
+s#:=0.15u#;        % invisible / not editable 
+o#:=0.1pt#;	       % overshoot                  $ 0 / 1	
+px#:=0.9pt#;       % pen width 					$ 0.1 / 1
 
-%%%%% PROPORTION %%%%%%
+% proportion %
+cap#:=0.9ht#;      % cap heigt					$ 0.75 / 1	
+mean#:=0.72cap#;   % mean height				$ 0.5 / 1	
+bar:=0.5;          % bar height					$ 0.25 / 0.75
+asc#:=0.97ht#;     % ascender height		    $ 0.75 / 1.25	
+des#:=0.35ht#;     % descender heigt		    $ 0.25 / 0.75	
 
-cap#:=0.9ht#;   % cap heigt					$ 0.75 / 1	
-mean#:=0.72cap#;   % mean height				$ 0.6 / 1	
-bar:=0.5;       % bar height					$ 0.3 / 0.8
-asc#:=0.97ht#;    % ascender height				$ 0.8 / 1.1	
-des#:=0.35ht#;    % descender heigt				$ 0.2 / 0.6	
+% shape %
+incx:=0;           % horizontal increase        $ 0 / 0.75	
+incy:=0;           % vertical increase          $ 0 / 0.75
+appert:=0.5;       % apperture                  $ 0 / 0.75
+cont:=1.1;         % contrast                   $ 1 / 2
+superness:=0.72;   % superness					$ 0.25 / 1
+corner#:=1.0pt#;   % corner standard value = px $ 0 / 1.5
 
-%%%%% SHAPE %%%%%
-
-incx:=0.11;       % horizontal increase				$ 0.01 / 0.6	
-incy:=0.16;       % vertical increase				$ 0.01 / 0.6
-appert:=0.6;     % apperture 					$ 0.1 / 0.7
-cont:=1.1;       % contrast					$ 1 / 8
-superness:=0.5; % superness					$ 0.3 / 0.999
-corner#:=0.8pt#; % corner   standartwert = px			$ 0 / 2
-
-%%%%% export %%%%%
-
+% export %
 sidebearing:=1;    % switch sidebearings off (0) for .otf export, (1) for on
-
 
 input glyphs;
 bye;
-

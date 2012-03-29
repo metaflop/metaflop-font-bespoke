@@ -31,18 +31,14 @@ normal_adjust_fit(space-0.1u#,space-0.1u#);
 fi
 
 % construction %
-if (corner < 0):
-	corner:=(px-epsilon);fi
-x3l=leftstemloc-cont*px/2;
-x4r=w-x3l;
+x1=x5=x3l=leftstemloc-cont*px/2;
+x2=x6=x4r=w-x1;
 y4=h-corner;
 y3=corner;
-x1=x5=x3l;
-x2=x6=x4r;
 top y1=h;
-y1=y2;
+top y2=h;
 bot y5=0;
-y5=y6;
+bot y6=0;
 
 % penpositions %
 alphaz=diag_ratio(1,cont*px,y4-y3,x4r-x3l);
@@ -53,14 +49,11 @@ penpos2(px,90);
 penpos5(px,90);
 penpos6(px,90);
 
-%%% draw %%%
-z36=whatever[z6r,z5r]=whatever[z3r,z4r];
-z14=whatever[z2l,z1l]=whatever[z3l,z4l];
-if (corner=0):
-	fill z1l---z1r---z2r---z36---z6r---z6l---z5l---z14---cycle;
-else:
-	fill z1l---z1r---z2r---z4r---z36---z6r---z6l---z5l---z3l---z14---cycle;fi
+% draw %
+z10=whatever[z6r,z5r]=whatever[z3r,z4r];
+z11=whatever[z2l,z1l]=whatever[z3l,z4l];
+fill z1l---z1r---z2r---z4r---z10---z6r---z6l---z5l---z3l---z11---cycle;
 
-% penlabels(range 1 thru 30);
+%penlabels(range 1 thru 30);
 
 endchar;

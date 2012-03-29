@@ -40,9 +40,10 @@ x1=x2=leftstemloc;
 x1r=x2r=x1+(cont*px/2);
 x5=x6=w-x1;
 x5r=x6r=x5-(cont*px/2);
-x3r=(0.5*w)-(0.5*incx*w);
-x4r=(0.5*w)+(0.5*incx*w);
+x4r=x1r+0.5*(x6r-x1r)+0.5*incx*(x6r-x1r);
+x3r=x1r+0.5*(x6r-x1r)-0.5*incx*(x6r-x1r);
 y2r=y5r=(0.5*h)-(0.5*incy*h);
+
 y1=y6=h;
 ang:=angle(z5r-z4r);
 
@@ -57,6 +58,6 @@ penpos6(whatever,180);
 % draw %
 penstroke z6e---super_ql(5e,4e)---super_qr(3e,2e)---z1e;
 
-% penlabels(range 1 thru 30);
+%penlabels(range 1 thru 30);
 
 endchar;

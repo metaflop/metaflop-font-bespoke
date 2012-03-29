@@ -1,105 +1,76 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%                                                                         %%%
-%%% Bespoke v1.6 – a Metaflop-Font                                          %%%
-%%% © 2012 by Simon Egli, Marco Müller, Teofilo Furtado                     %%%
-%%% www.metaflop.com                                                        %%%
-%%%                                                                         %%%
-%%% This program is free software: you can redistribute it and/or modify    %%%
-%%% it under the terms of the GNU General Public License as published by    %%%
-%%% the Free Software Foundation, either version 3 of the License, or       %%%
-%%% (at your option) any later version.                                     %%%
-%%%                                                                         %%%
-%%% This program is distributed in the hope that it will be useful,         %%%
-%%% but WITHOUT ANY WARRANTY; without even the implied warranty of          %%% 
-%%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            %%% 
-%%% GNU General Public License for more details.                            %%%
-%%%                                                                         %%%
-%%% You should have received a copy of the GNU General Public License       %%%
-%%% along with this program. If not, see <http://www.gnu.org/licenses/>.    %%%
-%%%                                                                         %%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                         %
+% Bespoke v1.7                                                            %
+% a Metaflop-font © 2012 by Simon Egli, Marco Müller                      %
+% thanks to Teofilo Furtado                                               %
+% www.metaflop.com                                                        %
+%                                                                         %
+% This program is free software: you can redistribute it and/or modify    %
+% it under the terms of the GNU General Public License as published by    %
+% the Free Software Foundation, either version 3 of the License, or       %
+% (at your option) any later version.                                     %
+%                                                                         %
+% This program is distributed in the hope that it will be useful,         %
+% but WITHOUT ANY WARRANTY; without even the implied warranty of          % 
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            % 
+% GNU General Public License for more details.                            %
+%                                                                         %
+% You should have received a copy of the GNU General Public License       %
+% along with this program. If not, see <http://www.gnu.org/licenses/>.    %
+%                                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%% box dimension definition %%%
-beginadjchar("r",corr*3.5,mean#,0);
 
-%%% sidebearings %%%
+% box dimension definition %
+beginadjchar("r",3.5,mean#,0);
+
+% sidebearings %
 if (sidebearing=1):
 numeric l,r;
 normal_adjust_fit(space+0.4u#,space-0.1u#);
 fi
 
-%%% overshoot %%%
-y5r=y4r=h-px +o; % overshoot up
-top y4=h +o; % overshoot up
-top y5=h +o; % overshoot up
+% overshoot %
+top y3=mean+o;
+top y4=mean+o;
+y3r=y4r=mean-px+o;
 
-%%% construction %%%
-x7r= 
-if (incx>.5): 
-	x5r+(x5r-x3r) 
-else: 
-	w-(leftstemloc+.5(cont*px)) fi;
-x4r=
-if (incx>.5): 
-	x5r
-else: 
-	((w-(leftstemloc+.5(cont*px))))-incx*((w-(leftstemloc+.5(cont*px)))-x2r) fi;
-if (h>w):
-	y6r=y4r-(incy*(w-(leftstemloc-.5(cont*px)))) 
-else: 
-	y6r=y4r+incy*(px-y4r) fi;
-if (y6r<h-(.5w-(leftstemloc-.5(cont*px)))): 
-	y6r:=5/8h; fi;
-x5r=x2r+incx*((w-(leftstemloc+.5(cont*px)))-x2r);
-x2=leftstemloc;
-x3=x3r-.5px;
-y6r=y3r;
-x6=x7;
-x7r=x6r=x7-((cont*px)/2);
-y2r=y7r=0;
-x2r=x3r=x2+(cont*px/2);
-x1=x2; y1=h;
-ang:=(angle(z5r-z3r));
+% construction %
+x1=x2=x10=leftstemloc;
+x1r=x2r=x10r=x1+(cont*px/2);
+x5=x6=w-x2;
+x5r=x6r=x6-(cont*px/2);
+x4r=x1r+0.5*(x6r-x1r)+0.5*incx*(x6r-x1r);
+x3r=x1r+0.5*(x6r-x1r)-0.5*incx*(x6r-x1r);
+y1=y6=0;
+y10=mean;
+y2r=y5r=(0.5*mean)+(0.5*incy*mean)-(px/2);
+ang:=angle(z4r-z5r);
 
-%%% penpositions %%%
-penpos7(whatever,0);
-penpos6(whatever,if (superness=.5): -((ang-90)/2) else: 0 fi);
-penpos4(whatever,if (superness=.5): (180-ang)/2 else: -90 fi);
-penpos5(whatever,if (superness=.5): -(180-ang)/2 else: -90 fi);
-penpos3(whatever,if (superness=.5): (ang-90)/2 else: 180 fi);
+% penpositions %
+penpos1(whatever,0);
 penpos2(whatever,0);
-penpos1(cont*px,0);
+penpos3(whatever,90);
+penpos4(whatever,90);
+penpos5(whatever,180);
+penpos6(whatever,180);
+penpos10(whatever,0);
 
-%%% draw %%%
-penstroke z4e---super_qr(5e,3e)---z2e;
-penstroke z1e---z2e;
-if (incx>.5):
-	path tl; tl = z7l---super_ql(6l,4l);
-	path ap; ap = (w-(leftstemloc-.5(cont*px)),infinity)---(w-(leftstemloc-.5(cont*px)),-infinity);
-	path v; v = z7r---super_ql(6r,4r);
-	z100=ap intersectionpoint tl;
-	numeric t,u; (t,u)=ap intersectiontimes tl;
-	z101=z100+whatever*(dir(angle(direction u of tl)+90));
-	y101=0;
-	path r; numeric t,u; (t,u)=((z100--z101) intersectiontimes (v));
-	r = subpath (u,infinity) of (v);
-	path ss; numeric t,u; (t,u)=(ap intersectiontimes tl);
-	ss = subpath (infinity,u) of tl;
-	fill ss---r---cycle;
-else:
-	path tl; tl = z7l---super_ql(6l,4l);
-	path ap; ap = (0,.5h-appert*(.4h-y4r))---(w,.5h-appert*(.4h-y4r));   % .4h for amount of cutting up upper curve (change to multiplication)
-	path v; v = z7r---super_ql(6r,4r);
-	z100=ap intersectionpoint tl;
-	path x; numeric t,u; (t,u)=ap intersectiontimes tl;
-	z101=z100+whatever*(dir(angle(direction u of tl)+90));
-	x101=0;
-	path r; numeric t,u; (t,u)=((z100--z101) intersectiontimes v);
-	r = subpath (u,infinity) of v;
-	path ss; numeric t,u; (t,u)=(ap intersectiontimes tl);
-	ss = subpath (infinity,u) of tl;
-	fill ss---r---cycle;fi
+% draw %
+penstroke z1e..z10e;
+penstroke super_ql(2e,3e);
 
-% penlabels(range 1 thru 80);
+z99=((0,0.5mean+appert*0.5mean)--(infinity,0.5mean+appert*0.5mean)) intersectionpoint (z3l---super_qr(4l,5l)---z6l);
+path x; numeric t,u; (t,u)=((0,0.5mean+appert*0.5mean)--(infinity,0.5mean+appert*0.5mean)) intersectiontimes (z3l---super_qr(4l,5l)---z6l);
+	
+z98=z99+whatever*(dir(angle(direction u of (z3l---super_qr(4l,5l)---z6l))+90));
+x98=0;
+path b; numeric t,u; (t,u)=((z99--z98) intersectiontimes (z3r---super_qr(4r,5r)---z6r));
+b = subpath (0,u) of (z3r---super_qr(4r,5r)---z6r);
+path a; numeric t,u; (t,u)=(((0,0.5mean+appert*0.5mean)--(infinity,0.5mean+appert*0.5mean)) intersectiontimes (z3l---super_qr(4l,5l)---z6l));
+a = subpath (u,0) of (z3l---super_qr(4l,5l)---z6l);
+fill a---z3l---z3r---b---cycle;
+
+%penlabels(range 0 thru 30);
 
 endchar;

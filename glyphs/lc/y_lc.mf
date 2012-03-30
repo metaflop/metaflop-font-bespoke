@@ -22,7 +22,7 @@
 
 
 % box dimension definition %
-beginadjchar("y",4.16,mean#,des#);
+beginadjchar("y",4.15,mean#,des#);
 
 % sidebearings %
 if (sidebearing=1):

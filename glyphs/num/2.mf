@@ -39,14 +39,13 @@ x1r=x2r=x9r=x10r=x1+(cont*px/2);
 x13=x14=w-x1;
 x8=w-x1+.5px;
 x13r=x14r=w-x1r;
-x3r=x11r=x16r=(0.5*w)-(0.5*incx*w);
-x4r=x12r=x15r=(0.5*w)+(0.5*incx*w);
+x4r=x12r=x15r=x2r+0.5*(x14r-x2r)+0.5*incx*(x14r-x2r);
+x3r=x11r=x16r=x2r+0.5*(x14r-x2r)-0.5*incx*(x14r-x2r);
 x7r=x1l; 
 y1=0;
 bot y7=0;
 bot y8=0;
-y2r=y8r+0.5*(y4r-y8r)+0.5*incy*(y4r-y8r);
-% y2r=y8r+incy*(y4r-y8r); % alt version
+y2r=y8r+0.5*(y4r-y8r)+0.5*incy*(y4r-y8r)-px;
 y7r=y8r=y7+px/2;
 y3=y4=y15=y16=(.5h);
 y3r=y4r=(.5h)-.5px;
@@ -85,6 +84,6 @@ path a; numeric t,u; (t,u)=(((0,y16r+0.5*(y11r-y16r)+appert*0.5*(y11r-y16r))--(i
 a = subpath (u,0) of (z12l---super_qr(11l,10l)---z9l);
 fill a---z12l---z12r---b---cycle;
 
-%penlabels(range 1 thru 150);
+% penlabels(range 1 thru 150);
 
 endchar;

@@ -27,7 +27,6 @@ beginadjchar("5",4.5,cap#,0);
 % sidebearings %
 numeric l,r;
 normal_adjust_fit(space+0.7u#,space+0.7u#);
-eight:=.08h;
 
 % overshoot %
 bot y8=0-o;
@@ -40,13 +39,13 @@ x10=x99;
 x1r=x2r=x1+(cont*px/2);
 x5=x6=x11=w-x1;
 x5r=x6r=x6-(cont*px/2);
-x4r=x7r=(0.5*w)+(0.5*incx*w);
-x8r=x3r=(0.5*w)-(0.5*incx*w);
+x4r=x7r=x2r+0.5*(x6r-x2r)+0.5*incx*(x6r-x2r);
+x8r=x3r=x2r+0.5*(x6r-x2r)-0.5*incx*(x6r-x2r);
 top y10=h;
 top y11=h;
 y10l=y11l=y10-px/2;
-y3=y4=(.55h);
-y3r=y4r=(.55h)-.5px;
+y3=y4=(.6h);
+y3r=y4r=(.6h)-.5px;
 y1r=y6r=y8r+0.5*(y3r-y8r)-0.5*incy*(y3r-y8r);
 y2r=y5r=y8r+0.5*(y3r-y8r)+0.5*incy*(y3r-y8r);
 ang:=angle(z6r-z7r);
@@ -86,8 +85,8 @@ a = subpath (u,0) of (z4l---super_qr(3l,2l)---z1l);
 fill a---z4l---z4r---b---cycle;
 
 fill (x99,h)---z99---(x99+(cont*px),y99)---(x99+(cont*px),h)---cycle;
-
 penstroke z10e..z11e;
-penlabels(range 1 thru 150);
+
+% penlabels(range 1 thru 150);
 
 endchar;

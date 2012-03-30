@@ -42,13 +42,13 @@ x1=x2=x9=x10=leftstemloc;
 x1r=x2r=x9r=x10r=x1+(cont*px/2);
 x5=x6=x13=x14=w-x1;
 x5r=x6r=x13r=x14r=x6-(cont*px/2);
-x4r=x7r=x12r=x15r=(0.5*w)+(0.5*incx*w);
-x8r=x11r=x3r=x16r=(0.5*w)-(0.5*incx*w);
-y3=y4=y15=y16=(.5h);
-y3r=y4r=(.5h)-.5px;
-y15r=y16r=(.5h)+.5px;
-y1r=y6r=y8r+0.5*(y3r-y8r)-0.5*incy*(y3r-y8r);
-y2r=y5r=y8r+0.5*(y3r-y8r)+0.5*incy*(y3r-y8r);
+x4r=x7r=x12r=x15r=x2r+0.5*(x6r-x2r)+0.5*incx*(x6r-x2r);
+x8r=x11r=x3r=x16r=x2r+0.5*(x6r-x2r)-0.5*incx*(x6r-x2r);
+y3=y4=y15=y16=(.4h);
+y3r=y4r=(.4h)-.5px;
+y15r=y16r=(.4h)+.5px;
+y1r=y6r=y8r+0.5*(y3r-y8r)-0.5*incy*(y3r-y8r)+px;
+y2r=y5r=y8r+0.5*(y3r-y8r)+0.5*incy*(y3r-y8r)+px;
 y9r=y14r=y16r+0.5*(y11r-y16r)-0.5*incy*(y11r-y16r);
 y10r=y13r=y16r+0.5*(y11r-y16r)+0.5*incy*(y11r-y16r);
 ang:=angle(z6r-z7r);
@@ -85,6 +85,6 @@ path ss; numeric t,u; (t,u)=((0,y8r+0.5*(y3r-y8r)-appert*0.5*(y3r-y8r))--(infini
 ss = subpath (0,u) of (super_qr(8l,1l)---z2l);
 fill ss---r---z7r---z7l---cycle;
 
-penlabels(range 1 thru 150);
+% penlabels(range 1 thru 150);
 
 endchar;

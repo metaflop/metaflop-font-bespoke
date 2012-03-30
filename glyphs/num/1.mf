@@ -41,13 +41,13 @@ y3=.65h;
 alphaone:=diag_ratio(1,cont*px,y4-y3,x4l-x3l);
 penpos1(whatever,0);
 penpos2(whatever,0);
-penpos3(alphaone*px,0);
-penpos4(alphaone*px,0);
+penpos3(1.1*alphaone*px,0);
+penpos4(1.1*alphaone*px,0);
 
 % draw %
 z10=whatever[z1l,z2l]=whatever[z3r,z4r];
 fill z1l--z1r--z2r--z4l--z3l--z3r--z10--z1l--cycle;
 
-penlabels(range 1 thru 64);
+% penlabels(range 1 thru 64);
 
 endchar;

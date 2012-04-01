@@ -22,7 +22,7 @@
 
 
 % box dimension definition %
-beginadjichar(";",0.2, mean#, des#);
+beginadjchar("—",6,mean#,0);
 
 % sidebearings %
 if (sidebearing=1):
@@ -30,26 +30,18 @@ numeric l,r;
 normal_adjust_fit(space+0.5u#,space+0.5u#);
 fi
 
-% overshoot %
-x12-x13=1.2*cont*px+o;
-y11-y10=1.2*cont*px+o;
-
 % construction %
-x1=x2=x10=x11=leftstemloc;
-x1l=x2l=x1-(cont*px/2);
-.5(x12+x13)=leftstemloc;
-y12=y13=.5(y11+y10);
-y11=mean;
-y1=.1*mean+px;
-y2=-.3*des;
+x5=leftstemloc;
+x6=w-x5;
+y5=y6=0.8*mean;
+y5l=y6l=y5-px/2;
 
 % penpositions %
-penpos1(whatever,0);
-penpos2(whatever,0);
+penpos5(whatever,90);
+penpos6(whatever,90);
 
 % draw %
-penstroke z1e..z2e;
-fill super_qr(11,12)---super_ql(12,10)---super_qr(10,13)---super_ql(13,11)---cycle;
+penstroke z5e..z6e;
 
 % penlabels(range 1 thru 30);
 

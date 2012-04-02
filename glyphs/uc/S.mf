@@ -40,19 +40,17 @@ y7r=y8r=px-o;
 
 % construction %
 x1=x2=leftstemloc;
-x10=x12=leftstemloc+0.5*x1;
+x10=x12=leftstemloc+0.25*x1;
 x10r=x12r=x10+(cont*px/2);
 x1r=x2r=x1+(cont*px/2);
 x5=x6=x15=x16=w-x1;
 x5r=x6r=x15r=x16r=x6-(cont*px/2);
 x8r=x10r+0.5*(x16r-x10r)-0.5*incx*(x16r-x10r);
-x3r=x13r=x18r=
-	if (incx<0.1): x10r+0.5*(x16r-x10r)-0.5*incx*(x16r-x10r) 
-	else: x10r+0.5*(x16r-x10r)-0.5*incx*(x16r-x10r)+0.25*x1 fi;
-x4r=x7r=x14r=x17r=x10r+0.5*(x16r-x10r)+0.5*incx*(x16r-x10r);
-y3=y4=y17=y18=(.52h);
-y4r=y3r=(.52h)-.5px;
-y17r=y18r=(.52h)+.5px;
+x3r=x13r=x18l=x10r+0.5*(x16r-x10r)-0.5*incx*(x16r-x10r);
+x4r=x7r=x14r=x17l=x10r+0.5*(x16r-x10r)+0.5*incx*(x16r-x10r);
+y3=y4=y17=y18=(.5h);
+y4r=y3r=(.5h)-.5px;
+y17r=y18r=(.5h)+.5px;
 y1r=y6r=y8r+0.5*(y3r-y8r)-0.5*incy*(y3r-y8r);
 y2r=y5r=y8r+0.5*(y3r-y8r)+0.5*incy*(y3r-y8r);
 y10r=y16r=y18r+0.5*(y13r-y18r)-0.5*incy*(y13r-y18r);
@@ -60,22 +58,22 @@ y12r=y15r=y18r+0.5*(y13r-y18r)+0.5*incy*(y13r-y18r);
 ang:=angle(z6r-z7r);
 
 % penpositions %
-penpos1(whatever,0);
-penpos2(whatever,0);
-penpos3(whatever,-90);
-penpos4(whatever,-90);
-penpos5(whatever,180);
-penpos6(whatever,180);
-penpos7(whatever,90);
-penpos8(whatever,90);
-penpos10(whatever,0);
-penpos12(whatever,0);
-penpos13(whatever,-90);
-penpos14(whatever,-90);
-penpos15(whatever,180);
-penpos16(whatever,180);
-penpos17(whatever,90);
-penpos18(whatever,90);
+penpos1(whatever,if (superness=.5): -(ang-90)/2 else: 0 fi);
+penpos2(whatever,if (superness=.5): (ang-90)/2 else: 0 fi);
+penpos3(whatever,if (superness=.5): (180-ang)/2 else: 90 fi);
+penpos4(whatever,if (superness=.5): (180-ang)/2 else: 90 fi);
+penpos5(whatever,if (superness=.5): -(ang-90)/2 else: 180 fi);
+penpos6(whatever,if (superness=.5): (ang-90)/2 else: 180 fi);
+penpos7(whatever,if (superness=.5): -(180-ang)/2 else: -90 fi);
+penpos8(whatever,if (superness=.5): (180-ang)/2 else: -90 fi);
+penpos10(whatever,if (superness=.5): -(ang-90)/2 else: 0 fi);
+penpos12(whatever,if (superness=.5): (ang-90)/2 else: 0 fi);
+penpos13(whatever,if (superness=.5): -(180-ang)/2 else: 90 fi);
+penpos14(whatever,if (superness=.5): (180-ang)/2 else: 90 fi);
+penpos15(whatever,if (superness=.5): -(ang-90)/2 else: 180 fi);
+penpos16(whatever,if (superness=.5): (ang-90)/2 else: 180 fi);
+penpos17(whatever,if (superness=.5): (180-ang)/2 else: 90 fi);
+penpos18(whatever,if (superness=.5): (180-ang)/2 else: 90 fi);
 
 % draw %
 penstroke z3e---super_qr(4e,5e)---super_ql(6e,7e)---z8e;

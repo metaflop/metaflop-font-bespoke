@@ -48,11 +48,11 @@ penpos1(whatever,0);
 penpos2(whatever,0);
 penpos3(whatever,0);
 penpos4(whatever,0);
-alpham=diag_ratio(1,cont*px,h,x6l-x5r);
-penpos5(alpham*cont*px,0);
-penpos6(alpham*cont*px,0);
-penpos7(alpham*px,0);
-penpos8(alpham*px,0);
+alphaM=diag_ratio(1,cont*px,h,x6l-x5r);
+penpos5(alphaM*cont*px,0);
+penpos6(alphaM*cont*px,0);
+penpos7(alphaM*px,0);
+penpos8(alphaM*px,0);
 
 % draw %
 z10=whatever[z5r,z6r]=whatever[z7l,z8l];

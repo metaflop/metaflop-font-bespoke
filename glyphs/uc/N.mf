@@ -43,13 +43,13 @@ y5=h;
 y6=0;
 
 % penpositions %
-alphan=diag_ratio(1,cont*px,h,x6l-x5r);
+alphaN=diag_ratio(1,cont*px,h,x6l-x5r);
 penpos1(whatever,0);
 penpos2(whatever,0);
 penpos3(whatever,0);
 penpos4(whatever,0);
-penpos5(alphan*cont*px,0);
-penpos6(alphan*cont*px,0);
+penpos5(alphaN*cont*px,0);
+penpos6(alphaN*cont*px,0);
 
 % draw %
 z10=whatever[z2r,z1r]=whatever[z6l,z5l];

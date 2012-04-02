@@ -52,10 +52,10 @@ ang:=angle(z6r-z7r);
 penpos1(whatever,0);
 penpos2(whatever,0);
 penpos3(whatever,90);
-penpos4(whatever,90);
-penpos5(whatever,180);
-penpos6(whatever,180);
-penpos7(whatever,-90);
+penpos4(whatever,if (superness=.5): (180-ang)/2 else: 90 fi);
+penpos5(whatever,if (superness=.5): -(ang-90)/2 else: 180 fi);
+penpos6(whatever,if (superness=.5): (ang-90)/2 else: 180 fi);
+penpos7(whatever,if (superness=.5): -(180-ang)/2 else: -90 fi);
 penpos8(whatever,-90);
 
 % draw %

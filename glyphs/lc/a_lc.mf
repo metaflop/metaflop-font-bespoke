@@ -54,19 +54,19 @@ y10r=y13r=y3+0.5*(y11r-y3l)+0.5*incy*(y11r-y3l);
 ang:=angle(z6r-z7r);
 
 % penpositions %
-penpos1(whatever,0);
-penpos2(whatever,0);
-penpos3(whatever,90);
-penpos4(whatever,90);
-penpos5(whatever,180);
-penpos6(whatever,180);
-penpos7(whatever,-90);
-penpos8(whatever,-90);
-penpos9(whatever,0);
-penpos10(whatever,0);
-penpos11(whatever,-90);
-penpos12(whatever,-90);
-penpos13(whatever,180);
+penpos1(whatever,if (superness=.5): -(ang-90)/2 else: 0 fi);
+penpos2(whatever,if (superness=.5): (ang-90)/2 else: 0 fi);
+penpos3(whatever,if (superness=.5): -(180-ang)/2 else: 90 fi);
+penpos4(whatever,if (superness=.5): (180-ang)/2 else: 90 fi);
+penpos5(whatever,if (superness=.5): -(ang-90)/2 else: 180 fi);
+penpos6(whatever,if (superness=.5): (ang-90)/2 else: 180 fi);
+penpos7(whatever,if (superness=.5): -(180-ang)/2 else: -90 fi);
+penpos8(whatever,if (superness=.5): (180-ang)/2 else: -90 fi);
+penpos9(whatever,if (superness=.5): -(ang-90)/2 else: 0 fi);
+penpos10(whatever,if (superness=.5): (ang-90)/2 else: 0 fi);
+penpos11(whatever,if (superness=.5): -(180-ang)/2 else: -90 fi);
+penpos12(whatever,if (superness=.5): (180-ang)/2 else: -90 fi);
+penpos13(whatever,if (superness=.5): -(ang-90)/2 else: 180 fi);
 penpos14(whatever,180);
 
 % draw %
@@ -83,6 +83,6 @@ path a; numeric t,u; (t,u)=(((0,y3l+0.5*(y11r-y3l)+appert*0.5*(y11r-y3l))--(infi
 a = subpath (u,0) of (z12l---super_qr(11l,10l)---z9l);
 fill a---z12l---z12r---b---cycle;
 
-%penlabels(range 1 thru 150);
+% penlabels(range 1 thru 150);
 
 endchar;

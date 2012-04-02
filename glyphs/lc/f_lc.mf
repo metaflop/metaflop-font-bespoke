@@ -50,14 +50,14 @@ y3r=y4r=mean;
 ang:=(angle(z12r-z13r));
 
 % penpositions %
-penpos9(whatever,0);
-penpos10(whatever,0);
-penpos11(whatever,-90);
-penpos12(whatever,-90);
-penpos13(whatever,180);
-penpos14(whatever,180);
 penpos3(px,90);
 penpos4(px,90);
+penpos9(whatever,0);
+penpos10(whatever,if (superness=.5): -(ang-90)/2 else: 0 fi);
+penpos11(whatever,if (superness=.5): -(180-ang)/2 else: -90 fi);
+penpos12(whatever,if (superness=.5): (180-ang)/2 else: -90 fi);
+penpos13(whatever,if (superness=.5): (ang-90)/2 else: 180 fi);
+penpos14(whatever,180);
 
 % draw %
 penstroke z3e---z4e;
@@ -73,6 +73,6 @@ path a; numeric t,u; (t,u)=(((0,y13+appert*0.5*(y12r-y3r))--(infinity,y13+appert
 a = subpath (u,0) of (z11l---super_qr(12l,10l)---z9l);
 fill a---z11l---z11r---b---cycle;
 
-%penlabels(range 1 thru 150);
+% penlabels(range 1 thru 150);
 
 endchar;

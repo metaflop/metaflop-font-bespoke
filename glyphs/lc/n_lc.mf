@@ -45,14 +45,14 @@ x3r=x1r+0.5*(x6r-x1r)-0.5*incx*(x6r-x1r);
 y1=y6=0;
 y10=mean;
 y2r=y5r=(0.5*mean)+(0.5*incy*mean)+(px/2);
-ang:=angle(z4r-z5r);
+ang:=angle(z3r-z2r);
 
 % penpositions %
 penpos1(whatever,0);
-penpos2(whatever,0);
-penpos3(whatever,90);
-penpos4(whatever,90);
-penpos5(whatever,180);
+penpos2(whatever,if (superness=.5): (ang-90)/2 else: 0 fi);
+penpos3(whatever,if (superness=.5): -(180-ang)/2 else: 90 fi);
+penpos4(whatever,if (superness=.5): (180-ang)/2 else: 90 fi);
+penpos5(whatever,if (superness=.5): -(ang-90)/2 else: 180 fi);
 penpos6(whatever,180);
 penpos10(whatever,0);
 

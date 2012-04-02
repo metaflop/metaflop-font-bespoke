@@ -50,18 +50,18 @@ y2r=y5r=y8r+0.5*(y3r-y8r)+0.5*incy*(y3r-y8r);
 ang:=angle(z6r-z7r);
 
 % penpositions %
-penpos1(whatever,0);
-penpos2(whatever,0);
-penpos3(whatever,90);
-penpos4(whatever,90);
-penpos5(whatever,180);
-penpos6(whatever,180);
-penpos7(whatever,-90);
-penpos8(whatever,-90);
+penpos1(whatever,if (superness=.5): -(ang-90)/2 else: 0 fi);
+penpos2(whatever,if (superness=.5): (ang-90)/2 else: 0 fi);
+penpos3(whatever,if (superness=.5): -(180-ang)/2 else: 90 fi);
+penpos4(whatever,if (superness=.5): (180-ang)/2 else: 90 fi);
+penpos5(whatever,if (superness=.5): -(ang-90)/2 else: 180 fi);
+penpos6(whatever,if (superness=.5): (ang-90)/2 else: 180 fi);
+penpos7(whatever,if (superness=.5): -(180-ang)/2 else: -90 fi);
+penpos8(whatever,if (superness=.5): (180-ang)/2 else: -90 fi);
 
 % draw %
 penstroke super_qr(4e,5e)---super_ql(6e,7e)---super_qr(8e,1e)---super_ql(2e,3e)---cycle;
 
-%penlabels(range 0 thru 30);
+% penlabels(range 0 thru 30);
 
 endchar;

@@ -53,11 +53,11 @@ ang:=angle(z6r-z7r);
 
 % penpositions %
 penpos1(whatever,0);
-penpos2(whatever,0);
+penpos2(whatever,if (superness=.5): -(ang-90)/2 else: 0 fi);
 penpos3(whatever,180);
-penpos6(whatever,180);
-penpos7(whatever,90);
-penpos8(whatever,90);
+penpos6(whatever,if (superness=.5): (ang-90)/2 else: 180 fi);
+penpos7(whatever,if (superness=.5): -(180-ang)/2 else: -90 fi);
+penpos8(whatever,if (superness=.5): (180-ang)/2 else: -90 fi);
 
 % draw %
 fill super_qr(11,12)---super_ql(12,10)---super_qr(10,13)---super_ql(13,11)---cycle;

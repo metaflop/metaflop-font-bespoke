@@ -52,21 +52,21 @@ x9r=x6l+0.5(x12r-x8r)-0.5*incx*(x12r-x8r);
 x10r=x6l+0.5(x12r-x8r)+0.5*incx*(x12r-x8r);
 y1=y6=y8=y12=0;
 y13=mean;
-y2r=y5r=y7l=y11r=(0.5*mean)+(0.5*incy*mean)+(px/2);
-ang:=angle(z4r-z5r);
+y2r=y5r=y7r=y11r=(0.5*mean)+(0.5*incy*mean)+(px/2);
+ang:=angle(z3r-z2r);
 
 % penpositions %
 penpos1(whatever,0);
-penpos2(whatever,0);
-penpos3(whatever,90);
-penpos4(whatever,90);
-penpos5(whatever,180);
+penpos2(whatever,if (superness=.5): (ang-90)/2 else: 0 fi);
+penpos3(whatever,if (superness=.5): -(180-ang)/2 else: 90 fi);
+penpos4(whatever,if (superness=.5): (180-ang)/2 else: 90 fi);
+penpos5(whatever,if (superness=.5): -(ang-90)/2 else: 180 fi);
 penpos6(whatever,180);
-penpos7(whatever,0);
+penpos7(whatever,if (superness=.5): (ang-90)/2 else: 0 fi);
 penpos8(whatever,0);
-penpos9(whatever,90);
-penpos10(whatever,90);
-penpos11(whatever,180);
+penpos9(whatever,if (superness=.5): -(180-ang)/2 else: 90 fi);
+penpos10(whatever,if (superness=.5): (180-ang)/2 else: 90 fi);
+penpos11(whatever,if (superness=.5): -(ang-90)/2 else: 180 fi);
 penpos12(whatever,180);
 penpos13(whatever,0);
 
@@ -75,6 +75,6 @@ penstroke super_ql(2e,3e)---super_qr(4e,5e)--z6e;
 penstroke super_ql(7e,9e)---super_qr(10e,11e)--z12e;
 penstroke z1e..z13e;
 
-%penlabels(range 0 thru 30);
+% penlabels(range 0 thru 30);
 
 endchar;

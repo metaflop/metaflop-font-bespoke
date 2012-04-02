@@ -49,7 +49,6 @@ y1r=y6r=y8r+0.5*(y3r-y8r)-0.5*incy*(y3r-y8r);
 y2r=y5r=y8r+0.5*(y3r-y8r)+0.5*incy*(y3r-y8r);
 z10-z9=z1-z8;
 (z9r+z10)/2=(z7l+z6)/2;
-ang:=angle(z6r-z7r);
 
 % penpositions %
 penpos1(whatever,if (superness=.5): -(ang-90)/2 else: 0 fi);
@@ -60,8 +59,8 @@ penpos5(whatever,if (superness=.5): -(ang-90)/2 else: 180 fi);
 penpos6(whatever,if (superness=.5): (ang-90)/2 else: 180 fi);
 penpos7(whatever,if (superness=.5): -(180-ang)/2 else: -90 fi);
 penpos8(whatever,if (superness=.5): (180-ang)/2 else: -90 fi);
-penpos9(px,ang);
-penpos10(px,ang);
+penpos9(1.2*px,0);
+penpos10(1.2*px,0);
 
 
 % draw %

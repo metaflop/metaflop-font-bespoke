@@ -33,21 +33,21 @@ x3=x5l=leftstemloc-px/2;
 x4=w-x3;
 x1=x2=0.65*w;
 x1r=x2r=x1+(cont*px/2);
-x6l=x1+(cont*px/2)-corner;
+x6l=x2r-corner;
 y2=y6=h;
 y1=0;
 y3=y4=.4h;
 y3r=y4r=y3+(px/2);
-y5=y3-(cont*px/2)+corner;
+y5l=y3l+corner;
 
 % penpositions %
-alphafour=diag_ratio(1,cont*px,y6-y5,x6l-x5l);
+alphafour=diag_ratio(1,cont*px,0.4h,x6l-x5l);
 penpos1(whatever,0);
 penpos2(whatever,0);
 penpos3(whatever,90);
 penpos4(whatever,90);
-penpos5(alphafour*px,0);
-penpos6(alphafour*px,0);
+penpos5(alphaN*cont*px,0);
+penpos6(alphaN*cont*px,0);
 
 % draw % 
 z10=whatever[z4r,z3r]=whatever[z5r,z6r];

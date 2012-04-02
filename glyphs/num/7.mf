@@ -33,13 +33,14 @@ x1=x3l=leftstemloc-cont*px/2;
 x2=x4r=w-x1;
 top y1=h;
 top y2=h;
-y4=h-corner+px/2;
+y1l=y2l=y1-px/2;
+y4r=y2r-corner;
 y3=0;
 
 % penpositions %
-alphaseven=diag_ratio(1,cont*px,y4-y3,x4r-x3l);
-penpos1(px,90);
-penpos2(px,90);
+alphaseven=diag_ratio(1,cont*px,h,x4r-x3l);
+penpos1(whatever,90);
+penpos2(whatever,90);
 penpos3(alphaseven*cont*px,0);
 penpos4(alphaseven*cont*px,0);
 

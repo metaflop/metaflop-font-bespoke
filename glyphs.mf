@@ -165,11 +165,11 @@ input glyphs/punct/comma
 input glyphs/punct/semicolon
 input glyphs/punct/colon
 input glyphs/punct/hyphen
-input glyphs/punct/endash
-input glyphs/punct/emdash
+% input glyphs/punct/endash
+% input glyphs/punct/emdash
 input glyphs/punct/plus
-input glyphs/punct/minus
-input glyphs/punct/quotesingle
+% input glyphs/punct/minus
+% input glyphs/punct/quotesingle
 % input glyphs/punct/quotedbl
 input glyphs/punct/exclam
 % input glyphs/punct/question

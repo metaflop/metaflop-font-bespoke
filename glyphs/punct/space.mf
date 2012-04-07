@@ -22,7 +22,7 @@
 
 
 % box dimension definition %
-beginadjichar("space",2.5, mean#, 0);
+beginadjichar(oct"040",2.5, mean#, 0);
 
 % sidebearings %
 numeric l,r;

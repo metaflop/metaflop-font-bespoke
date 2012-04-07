@@ -190,6 +190,7 @@ input glyphs/uc/Y
 input glyphs/uc/Z
 
 input glyphs/lc/a_lc
+input glyphs/lc/ae
 input glyphs/lc/b_lc
 input glyphs/lc/c_lc
 input glyphs/lc/d_lc
@@ -232,7 +233,7 @@ input glyphs/punct/comma
 input glyphs/punct/semicolon
 input glyphs/punct/period
 input glyphs/punct/exclam
-% input glyphs/punct/space
+ input glyphs/punct/space
 
 font_quad:=10u#+0s#;
 font_normal_space:=3u#+0s#;

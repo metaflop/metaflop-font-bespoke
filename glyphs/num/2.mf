@@ -25,8 +25,10 @@
 beginadjchar("2",4.5,cap#,0);
 
 % sidebearings %
+if (sidebearing=1):
 numeric l,r;
 normal_adjust_fit(space+0.7u#,space+0.7u#);
+fi
 
 % overshoot %
 top y11=h+o;

@@ -45,7 +45,7 @@ superness:=0.75;   % superness					$ 0.25 / 1
 corner#:=1.0pt#;   % corner standard value = px $ 0 / 1.5
 
 % export %
-sidebearing:=1;    % switch sidebearings off (0) for .otf export, (1) for on
+sidebearing:=0;    % switch sidebearings off (0) for .otf export, (1) for on
 
 input glyphs;
 bye;

@@ -190,7 +190,6 @@ input glyphs/uc/Y
 input glyphs/uc/Z
 
 input glyphs/lc/a_lc
-input glyphs/lc/ae
 input glyphs/lc/b_lc
 input glyphs/lc/c_lc
 input glyphs/lc/d_lc

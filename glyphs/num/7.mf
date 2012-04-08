@@ -25,8 +25,10 @@
 beginadjchar("7",4,cap#,0);
 
 % sidebearings %
+if (sidebearing=1):
 numeric l,r;
 normal_adjust_fit(space+0.1u#,space+0.1u#);
+fi
 
 % construction %
 x1=x3l=leftstemloc-cont*px/2;

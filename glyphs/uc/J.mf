@@ -27,8 +27,7 @@ beginadjchar("J",4.5,cap#,0);
 % sidebearings %
 if (sidebearing=1):
 numeric l,r;
-normal_adjust_fit(space-0.3u#,space+0.45u#);
-fi
+normal_adjust_fit(space-0.3u#,space+0.45u#); fi
 
 % overshoot %
 bot y7=0-o;

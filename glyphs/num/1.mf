@@ -27,8 +27,7 @@ beginadjchar("1",4,cap#,0);
 % sidebearings %
 if (sidebearing=1):
 numeric l,r;
-normal_adjust_fit(space+0.1u#,space+0.1u#);
-fi
+normal_adjust_fit(space+0.1u#,space+0.1u#); fi
 
 % construction %
 x1=x2=.5w;
@@ -50,6 +49,6 @@ penpos4(1.1*alphaone*px,0);
 z10=whatever[z1l,z2l]=whatever[z3r,z4r];
 fill z1l---z1r---z2r---z4l---z3l---z3r---z10---z1l---cycle;
 
-% penlabels(range 1 thru 64);
+% penlabels(range 1 thru 150);
 
 endchar;

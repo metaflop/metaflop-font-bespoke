@@ -27,8 +27,7 @@ beginadjichar(";",0.2, mean#, des#);
 % sidebearings %
 if (sidebearing=1):
 numeric l,r;
-normal_adjust_fit(space+0.5u#,space+0.5u#);
-fi
+normal_adjust_fit(space+0.5u#,space+0.5u#); fi
 
 % overshoot %
 x12-x13=1.2*cont*px+o;
@@ -51,6 +50,6 @@ penpos2(whatever,0);
 penstroke z1e..z2e;
 fill super_qr(11,12)---super_ql(12,10)---super_qr(10,13)---super_ql(13,11)---cycle;
 
-% penlabels(range 1 thru 30);
+% penlabels(range 1 thru 150);
 
 endchar;

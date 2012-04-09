@@ -27,8 +27,7 @@ beginadjchar("U",5,cap#,0);
 % sidebearings %
 if (sidebearing=1):
 numeric l,r;
-normal_adjust_fit(space+0.45u#,space+0.45u#);
-fi
+normal_adjust_fit(space+0.45u#,space+0.45u#); fi
 
 % overshoot %
 bot y4=0 -o;
@@ -58,6 +57,6 @@ penpos6(whatever,180);
 % draw %
 penstroke z6e---super_ql(5e,4e)---super_qr(3e,2e)---z1e;
 
-% penlabels(range 1 thru 30);
+% penlabels(range 1 thru 150);
 
 endchar;

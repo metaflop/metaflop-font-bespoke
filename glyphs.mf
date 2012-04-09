@@ -94,7 +94,6 @@ def super_ql(suffix i,j) =
 def super_qr(suffix j,k) =
 z.j{x.k-x.j,0}...(superness[x.j,x.k],superness[y.k,y.j]){z.k-z.j}...z.k{0,y.k-y.j} enddef;
 
-
 % glyph input %
 input glyphs/uc/A
 input glyphs/uc/B

@@ -27,8 +27,7 @@ beginadjchar("V",5,cap#,0);
 % sidebearings %
 if (sidebearing=1):
 numeric l,r;
-normal_adjust_fit(space-0.4u#,space-0.4u#);
-fi
+normal_adjust_fit(space-0.4u#,space-0.4u#); fi
 
 % construction %
 x3l=leftstemloc-cont*px/2;
@@ -49,6 +48,6 @@ penpos4(alphaV*cont*px,0);
 z0=whatever[z3r,z4r]=whatever[z1l,z2l];
 fill z3l---z4l---z1r---z2r---z2l---z0---z3r---cycle;
 
-% penlabels(range 1 thru 30);
+% penlabels(range 1 thru 150);
 
 endchar;

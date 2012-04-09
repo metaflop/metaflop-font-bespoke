@@ -27,8 +27,7 @@ beginadjchar("y",4.15,mean#,des#);
 % sidebearings %
 if (sidebearing=1):
 numeric l,r;
-normal_adjust_fit(space-0.25u#,space-0.25u#);
-fi
+normal_adjust_fit(space-0.25u#,space-0.25u#); fi
 
 % construction %
 x3l=leftstemloc-cont*px/2;
@@ -52,6 +51,6 @@ y6=y7=-d;
 z7=z2l+whatever*dir(angle(z2l-z1l));
 fill z3l---z4l---z1l---z7---z6---z2r---z2l---z0---z3r---cycle;
 
-%penlabels(range 0 thru 30);
+% penlabels(range 1 thru 150);
 
 endchar;

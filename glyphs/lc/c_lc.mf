@@ -27,8 +27,7 @@ beginadjchar("c",4.4,mean#,0);
 % sidebearings %
 if (sidebearing=1):
 numeric l,r;
-normal_adjust_fit(space+0.2u#,space+0.1u#);
-fi
+normal_adjust_fit(space+0.2u#,space+0.1u#); fi
 
 % overshoot %
 top y3=mean+o;

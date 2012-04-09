@@ -27,8 +27,7 @@ beginadjchar("F",4.5,cap#,0);
 % sidebearings %
 if (sidebearing=1):
 numeric l,r;
-normal_adjust_fit(space+0.5u#,space-0.1u#);
-fi
+normal_adjust_fit(space+0.5u#,space-0.1u#); fi
 
 % construction %
 x1=x2=x3=x5=leftstemloc;
@@ -56,6 +55,6 @@ penstroke z1e---z2e;
 penstroke z3e---z4e;
 penstroke z5e---z6e;
 
-% penlabels(range 1 thru 30);
+% penlabels(range 1 thru 150);
 
 endchar;

@@ -27,8 +27,7 @@ beginadjchar("e",4.4,mean#,0);
 % sidebearings %
 if (sidebearing=1):
 numeric l,r;
-normal_adjust_fit(space+0.2u#,space+0.2u#);
-fi
+normal_adjust_fit(space+0.2u#,space+0.2u#); fi
 
 % overshoot %
 top y3=mean+o;
@@ -84,4 +83,5 @@ else:
   penstroke z9e---z10e;fi
 
 % penlabels(range 1 thru 150);
+
 endchar;

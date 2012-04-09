@@ -27,8 +27,7 @@ beginadjchar("r",3.5,mean#,0);
 % sidebearings %
 if (sidebearing=1):
 numeric l,r;
-normal_adjust_fit(space+0.4u#,space-0.1u#);
-fi
+normal_adjust_fit(space+0.4u#,space-0.1u#); fi
 
 % overshoot %
 top y3=mean+o;
@@ -71,6 +70,6 @@ path a; numeric t,u; (t,u)=(((0,0.5mean+appert*0.5mean)---(infinity,0.5mean+appe
 a = subpath (u,0) of (z3l---super_qr(4l,5l)---z6l);
 fill a---z3l---z3r---b---cycle;
 
-% penlabels(range 0 thru 30);
+% penlabels(range 1 thru 150);
 
 endchar;

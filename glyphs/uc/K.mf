@@ -27,8 +27,7 @@ beginadjchar("K",5,cap#,0);
 % sidebearings %
 if (sidebearing=1):
 numeric l,r;
-normal_adjust_fit(space+0.5u#,space-0.3u#);
-fi
+normal_adjust_fit(space+0.5u#,space-0.3u#); fi
 
 % construction %
 x1=x2=leftstemloc;
@@ -60,6 +59,6 @@ z12r=r intersectionpoint ss;
 fill z4l---z4r---z11r---z11l---cycle;
 fill z5l---z5r---z12r---z12l---cycle;
 
-% penlabels(range 1 thru 50);
+% penlabels(range 1 thru 150);
 
 endchar;

@@ -51,7 +51,7 @@ penpos4(alphaY*cont*px,0);
 
 % draw %
 z0=whatever[z3r,z4r]=whatever[z1l,z2l];
-fill z3l--z4l--z1r--z2r--z2l--z0--z3r--cycle;
+fill z3l---z4l---z1r---z2r---z2l---z0---z3r---cycle;
 penstroke z6e---z5e;
 
 % penlabels(range 1 thru 30);

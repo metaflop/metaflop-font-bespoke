@@ -53,8 +53,8 @@ y5=y6=bar*y0;
 z5=whatever[z3,z4]; z6=whatever[z1,z2];
 
 % draw %
-fill z3l--z4l--z1r--z2r--z2l--z0--z3r--cycle;
-penstroke z5e..z6e;
+fill z3l---z4l---z1r---z2r---z2l---z0---z3r---cycle;
+penstroke z5e---z6e;
 
 %penlabels(range 0 thru 30);
 

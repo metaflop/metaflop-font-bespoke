@@ -57,8 +57,8 @@ penpos6(whatever,180);
 penpos10(whatever,0);
 
 % draw %
-penstroke super_ql(2e,3e)---super_qr(4e,5e)--z6e;
-penstroke z1e..z10e;
+penstroke super_ql(2e,3e)---super_qr(4e,5e)---z6e;
+penstroke z1e---z10e;
 
 % penlabels(range 0 thru 30);
 

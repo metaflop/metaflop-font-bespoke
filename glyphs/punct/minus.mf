@@ -41,7 +41,7 @@ penpos5(whatever,90);
 penpos6(whatever,90);
 
 % draw %
-penstroke z5e..z6e;
+penstroke z5e---z6e;
 
 % penlabels(range 1 thru 30);
 

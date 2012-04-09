@@ -161,6 +161,7 @@ def super_quarterli(suffix i,j,k) =
  z.i{0,y.j-y.i}
 ...(supernessi[x.j,x.i],supernessi[y.i,y.j]){z.j-z.i}
 ...z.j{x.k-x.i,0} enddef;
+
 % glyph input %
 input glyphs/uc/A
 input glyphs/uc/B
@@ -232,7 +233,7 @@ input glyphs/punct/comma
 input glyphs/punct/semicolon
 input glyphs/punct/period
 input glyphs/punct/exclam
- input glyphs/punct/space
+input glyphs/punct/space
 
 font_quad:=10u#+0s#;
 font_normal_space:=3u#+0s#;

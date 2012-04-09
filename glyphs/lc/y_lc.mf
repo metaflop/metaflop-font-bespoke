@@ -50,7 +50,7 @@ z0=whatever[z3r,z4r]=whatever[z1l,z2l];
 z6=z2r+whatever*dir(angle(z2r-z1r));
 y6=y7=-d;
 z7=z2l+whatever*dir(angle(z2l-z1l));
-fill z3l--z4l--z1l--z7--z6--z2r--z2l--z0--z3r--cycle;
+fill z3l---z4l---z1l---z7---z6---z2r---z2l---z0---z3r---cycle;
 
 %penlabels(range 0 thru 30);
 

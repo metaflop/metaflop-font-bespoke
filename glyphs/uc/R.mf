@@ -63,7 +63,7 @@ penpos9(alphar1*1.1*cont*px,0);
 
 % draw %
 penstroke z1e---z2e;
-penstroke z3e---super_qr(4e,5e)---super_ql(6e,7e)--z8e;
+penstroke z3e---super_qr(4e,5e)---super_ql(6e,7e)---z8e;
 path ci; ci = super_ql(6l,7l)--z8l;
 path dl; dl = z9l---z2l;
 path dr; dr = z9r---z2r;

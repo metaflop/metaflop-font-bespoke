@@ -160,11 +160,21 @@ input glyphs/num/7
 input glyphs/num/8
 input glyphs/num/9
 
-input glyphs/punct/comma
-%input glyphs/punct/colon
-input glyphs/punct/semicolon
 input glyphs/punct/period
+input glyphs/punct/comma
+input glyphs/punct/semicolon
+input glyphs/punct/colon
+input glyphs/punct/hyphen
+input glyphs/punct/endash
+input glyphs/punct/emdash
+input glyphs/punct/plus
+% input glyphs/punct/quotesingle
+% input glyphs/punct/quotedbl
 input glyphs/punct/exclam
+% input glyphs/punct/question
+input glyphs/punct/amp
+% input glyphs/punct/backslash
+% input glyphs/punct/at
 input glyphs/punct/space
 
 font_quad:=10u#+0s#;

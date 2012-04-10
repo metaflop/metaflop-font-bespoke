@@ -22,7 +22,7 @@
 
 
 % box dimension definition %
-beginadjichar(":",0.2, mean#, 0);
+beginadjichar(oct"072",0.2, mean#, 0);
 
 % sidebearings %
 if (sidebearing=1):

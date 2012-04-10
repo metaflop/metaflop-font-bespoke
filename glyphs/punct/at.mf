@@ -22,7 +22,7 @@
 
 
 % box dimension definition %
-beginadjichar("@",0.2, cap#, 0);
+beginadjichar(oct"100",0.2, cap#, 0);
 
 % sidebearings %
 if (sidebearing=1):

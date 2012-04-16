@@ -22,10 +22,10 @@
 
 
 % dimension %
-font_size:=10pt#;  % font size  / not editable 		
-ht#:=10pt#;        % box height / not editable 	
+font_size:=10pt#;  % font size  @hidden
+ht#:=10pt#;        % box height @hidden
 u#:=1.45pt#;       % unit widht 			    $ 0.75 / 2
-s#:=0.15u#;        % invisible / not editable 
+s#:=0.15u#;        % spacing @hidden
 o#:=0.1pt#;	       % overshoot                  $ 0 / 1	
 px#:=0.9pt#;       % pen width 					$ 0.1 / 1
 

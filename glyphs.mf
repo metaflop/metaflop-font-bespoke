@@ -1,30 +1,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Bespoke v1.7                                                            %
+% MF Bespoke v1.8                                                         %
 % a Metaflop-font © 2012 by Simon Egli, Marco MŸller                      %
-% thanks to Teofilo Furtado                                               %
 % www.metaflop.com                                                        %
-%                                                                         %
-% This program is free software: you can redistribute it and/or modify    %
-% it under the terms of the GNU General Public License as published by    %
-% the Free Software Foundation, either version 3 of the License, or       %
-% (at your option) any later version.                                     %
-%                                                                         %
-% This program is distributed in the hope that it will be useful,         %
-% but WITHOUT ANY WARRANTY; without even the implied warranty of          % 
-% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            % 
-% GNU General Public License for more details.                            %
-%                                                                         %
-% You should have received a copy of the GNU General Public License       %
-% along with this program. If not, see <http://www.gnu.org/licenses/>.    %
+% licensed under gpl v3: www.gnu.org/licenses/                            %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-% contrast limit %
-%if (cont > 1.5):
-%px#:=0.2pt#;
-%fi
+% contrast %
 py#:=px#;
 
 % additional parameters / hidden parameter list %
@@ -41,8 +25,7 @@ if (sidebearing=1):
  l := -hround(left_adjustment*hppp)-letter_fit#; 
  interim xoffset := -l; charwd := charwd+2letter_fit#+left_adjustment+right_adjustment; 
  r := l+hround(charwd*hppp)-shrink_fit;
- w := r-hround(right_adjustment*hppp)-letter_fit#; enddef;
-fi
+ w := r-hround(right_adjustment*hppp)-letter_fit#; enddef;fi
 
 def endchar =
  scantokens extra_endchar;
@@ -164,11 +147,22 @@ input glyphs/punct/amp
 input glyphs/punct/colon
 input glyphs/punct/comma
 input glyphs/punct/exclam
+%input glyphs/punct/question
 input glyphs/punct/hyphen
 input glyphs/punct/period
 input glyphs/punct/plus
 input glyphs/punct/semicolon
+%input glyphs/punct/slash
 input glyphs/punct/space
+
+input glyphs/punct/endash
+input glyphs/punct/emdash
+%input glyphs/punct/quotesingle
+%input glyphs/punct/quotedbl
+%input glyphs/punct/parenleft
+%input glyphs/punct/parenright
+%input glyphs/punct/asterisk
+%input glyphs/punct/at
 
 font_quad:=10u#+0s#;
 font_normal_space:=3u#+0s#;

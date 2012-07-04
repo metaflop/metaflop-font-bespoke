@@ -1,22 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Bespoke v1.7                                                            %
+% MF Bespoke v1.8                                                         %
 % a Metaflop-font © 2012 by Simon Egli, Marco Müller                      %
-% thanks to Teofilo Furtado                                               %
 % www.metaflop.com                                                        %
-%                                                                         %
-% This program is free software: you can redistribute it and/or modify    %
-% it under the terms of the GNU General Public License as published by    %
-% the Free Software Foundation, either version 3 of the License, or       %
-% (at your option) any later version.                                     %
-%                                                                         %
-% This program is distributed in the hope that it will be useful,         %
-% but WITHOUT ANY WARRANTY; without even the implied warranty of          % 
-% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            % 
-% GNU General Public License for more details.                            %
-%                                                                         %
-% You should have received a copy of the GNU General Public License       %
-% along with this program. If not, see <http://www.gnu.org/licenses/>.    %
+% licensed under gpl v3: www.gnu.org/licenses/                            %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -26,8 +13,8 @@ beginadjchar("K",5,cap#,0);
 
 % sidebearings %
 if (sidebearing=1):
-numeric l,r;
-normal_adjust_fit(space+0.5u#,space-0.3u#); fi
+ numeric l,r;
+ normal_adjust_fit(space+0.5u#,space-0.3u#); fi
 
 % construction %
 x1=x2=leftstemloc;
@@ -39,12 +26,14 @@ y1=y5=0;
 y2=y4r=h;
 y3=bar*h;
 
+% diagonal angle
+alphaK=diag_ratio(1,cont*px,h,x5r-x2l);
+
 % penpositions %
 penpos1(whatever,0);
 penpos2(whatever,0);
-alphaK=diag_ratio(1,px,y4r-y3,x4r-x3l);
-penpos3(alphaK*px,0);
-penpos4(alphaK*px,0);
+penpos3(1.1*alphaK*cont*px,0);
+penpos4(1.1*alphaK*cont*px,0);
 penpos5(1.2*cont*px,0);
 
 % draw %
@@ -59,6 +48,7 @@ z12r=r intersectionpoint ss;
 fill z4l---z4r---z11r---z11l---cycle;
 fill z5l---z5r---z12r---z12l---cycle;
 
+% grayfont proof mode
 % penlabels(range 1 thru 150);
 
 endchar;

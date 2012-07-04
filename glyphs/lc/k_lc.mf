@@ -1,33 +1,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Bespoke v1.7                                                            %
+% MF Bespoke v1.8                                                         %
 % a Metaflop-font © 2012 by Simon Egli, Marco Müller                      %
-% thanks to Teofilo Furtado                                               %
 % www.metaflop.com                                                        %
-%                                                                         %
-% This program is free software: you can redistribute it and/or modify    %
-% it under the terms of the GNU General Public License as published by    %
-% the Free Software Foundation, either version 3 of the License, or       %
-% (at your option) any later version.                                     %
-%                                                                         %
-% This program is distributed in the hope that it will be useful,         %
-% but WITHOUT ANY WARRANTY; without even the implied warranty of          % 
-% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            % 
-% GNU General Public License for more details.                            %
-%                                                                         %
-% You should have received a copy of the GNU General Public License       %
-% along with this program. If not, see <http://www.gnu.org/licenses/>.    %
+% licensed under gpl v3: www.gnu.org/licenses/                            %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-%%% box dimension definition %%%
+% box dimension definition %
 beginadjchar("k",4.25,asc#,0);
 
-%%% sidebearings %%%
+% sidebearings %
 if (sidebearing=1):
-numeric l,r;
-normal_adjust_fit(space+0.4u#,space-0.2u#); fi
+ numeric l,r;
+ normal_adjust_fit(space+0.4u#,space-0.2u#); fi
 
 % construction %
 x1=x2=leftstemloc;
@@ -40,13 +27,15 @@ y2=h;
 y4r=mean;
 y3=.52*mean;
 
+% diagonal angle
+alphak=diag_ratio(1,cont*px,h,x5r-x2l);
+
 % penpositions %
 penpos1(whatever,0);
 penpos2(whatever,0);
-alphak=diag_ratio(1,px,y4r-y3,x4r-x3l);
-penpos3(alphak*px,0);
-penpos4(alphak*px,0);
-penpos5(cont*px,0);
+penpos3(1.2*alphak*cont*px,0);
+penpos4(1.2*alphak*cont*px,0);
+penpos5(1.1*cont*px,0);
 
 % draw %
 penstroke z2e..z1e;
@@ -60,6 +49,7 @@ z12r=r intersectionpoint ss;
 fill z4l---z4r---z11r---z11l---cycle;
 fill z5l---z5r---z12r---z12l---cycle;
 
+% grayfont proof mode
 % penlabels(range 1 thru 150);
 
 endchar;

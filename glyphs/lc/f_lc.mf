@@ -1,22 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Bespoke v1.7                                                            %
+% MF Bespoke v1.8                                                         %
 % a Metaflop-font © 2012 by Simon Egli, Marco Müller                      %
-% thanks to Teofilo Furtado                                               %
 % www.metaflop.com                                                        %
-%                                                                         %
-% This program is free software: you can redistribute it and/or modify    %
-% it under the terms of the GNU General Public License as published by    %
-% the Free Software Foundation, either version 3 of the License, or       %
-% (at your option) any later version.                                     %
-%                                                                         %
-% This program is distributed in the hope that it will be useful,         %
-% but WITHOUT ANY WARRANTY; without even the implied warranty of          % 
-% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            % 
-% GNU General Public License for more details.                            %
-%                                                                         %
-% You should have received a copy of the GNU General Public License       %
-% along with this program. If not, see <http://www.gnu.org/licenses/>.    %
+% licensed under gpl v3: www.gnu.org/licenses/                            %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -26,8 +13,8 @@ beginadjchar("f",3.5,asc#,0);
 
 % sidebearings %
 if (sidebearing=1):
-numeric l,r;
-normal_adjust_fit(space-0.2u#,space-0.05u#); fi
+ numeric l,r;
+ normal_adjust_fit(space-0.2u#,space-0.05u#); fi
 
 % overshoot %
 top y12=h+o;
@@ -39,23 +26,22 @@ x3=leftstemloc;
 x4=w-x3;
 x9=x10=w-x3+px/2;
 x9r=x10r=w-x3-.5(cont*px)+px/2;
-x13=x14=(.5w);
+x13=x14=(x3+x4)/2;
 x13r=x14r=x14+(cont*px/2);
 x11r=x13r+0.5*(x10r-x13r)-0.5*incx*(x10r-x13r);
 x12r=x13r+0.5*(x10r-x13r)+0.5*incx*(x10r-x13r);
-y10r=y13r=mean+0.5*(y11r-y3r)+0.5*incy*(y11r-y3r);
+y10r=y13r=y3r+0.5*(y11r-y3r)+0.5*incy*(y11r-y3r);
 y14=y9=0;
 y3r=y4r=mean;
-ang:=(angle(z12r-z13r));
 
 % penpositions %
 penpos3(px,90);
 penpos4(px,90);
 penpos9(whatever,0);
-penpos10(whatever,if (superness=.5): -(ang-90)/2 else: 0 fi);
-penpos11(whatever,if (superness=.5): -(180-ang)/2 else: -90 fi);
-penpos12(whatever,if (superness=.5): (180-ang)/2 else: -90 fi);
-penpos13(whatever,if (superness=.5): (ang-90)/2 else: 180 fi);
+penpos10(whatever,0);
+penpos11(whatever,-90);
+penpos12(whatever,-90);
+penpos13(whatever,180);
 penpos14(whatever,180);
 
 % draw %
@@ -72,6 +58,7 @@ path a; numeric t,u; (t,u)=(((0,mean+0.5(y11r-y3r)+appert*0.5*(y11r-y3r))---(inf
 a = subpath (u,0) of (z11l---super_qr(12l,10l)---z9l);
 fill a---z11l---z11r---b---cycle;
 
-penlabels(range 1 thru 150);
+% grayfont proof mode
+% penlabels(range 1 thru 150);
 
 endchar;

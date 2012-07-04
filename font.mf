@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Bespoke v1.7                                                            %
+% MF Bespoke v1.8                                                         %
 % a Metaflop-font © 2012 by Simon Egli, Marco Müller                      %
 % thanks to Teofilo Furtado                                               %
 % www.metaflop.com                                                        %
@@ -16,7 +16,7 @@
 % GNU General Public License for more details.                            %
 %                                                                         %
 % You should have received a copy of the GNU General Public License       %
-% along with this program. If not, see <http://www.gnu.org/licenses/>.    %
+% along with this program. If not, see www.gnu.org/licenses/              %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -41,7 +41,7 @@ incx:=0;           % horizontal increase        $ 0 / 0.75
 incy:=0;           % vertical increase          $ 0 / 0.75
 appert:=0.5;       % apperture                  $ 0 / 0.75
 cont:=1.1;         % contrast                   $ 1 / 2
-superness:=0.75;   % superness					$ 0.25 / 1
+superness:=0.72;   % superness					$ 0.25 / 1
 corner#:=1.0pt#;   % corner standard value = px $ 0 / 1.5
 
 % export %

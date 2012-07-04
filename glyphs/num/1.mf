@@ -1,22 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Bespoke v1.7                                                            %
+% MF Bespoke v1.8                                                         %
 % a Metaflop-font © 2012 by Simon Egli, Marco Müller                      %
-% thanks to Teofilo Furtado                                               %
 % www.metaflop.com                                                        %
-%                                                                         %
-% This program is free software: you can redistribute it and/or modify    %
-% it under the terms of the GNU General Public License as published by    %
-% the Free Software Foundation, either version 3 of the License, or       %
-% (at your option) any later version.                                     %
-%                                                                         %
-% This program is distributed in the hope that it will be useful,         %
-% but WITHOUT ANY WARRANTY; without even the implied warranty of          % 
-% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            % 
-% GNU General Public License for more details.                            %
-%                                                                         %
-% You should have received a copy of the GNU General Public License       %
-% along with this program. If not, see <http://www.gnu.org/licenses/>.    %
+% licensed under gpl v3: www.gnu.org/licenses/                            %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -26,8 +13,8 @@ beginadjchar("1",4,cap#,0);
 
 % sidebearings %
 if (sidebearing=1):
-numeric l,r;
-normal_adjust_fit(space+0.1u#,space+0.1u#); fi
+ numeric l,r;
+ normal_adjust_fit(space+0.1u#,space+0.1u#); fi
 
 % construction %
 x1=x2=.5w;
@@ -38,8 +25,10 @@ y1=0;
 y2=y4=h;
 y3=.65h;
 
-% penpositions %
+
 alphaone:=diag_ratio(1,cont*px,y4-y3,x4l-x3l);
+
+% penpositions %
 penpos1(whatever,0);
 penpos2(whatever,0);
 penpos3(1.1*alphaone*px,0);
@@ -49,6 +38,7 @@ penpos4(1.1*alphaone*px,0);
 z10=whatever[z1l,z2l]=whatever[z3r,z4r];
 fill z1l---z1r---z2r---z4l---z3l---z3r---z10---z1l---cycle;
 
+% grayfont proof mode
 % penlabels(range 1 thru 150);
 
 endchar;

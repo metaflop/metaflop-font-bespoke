@@ -1,22 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% Bespoke v1.7                                                            %
+% MF Bespoke v1.8                                                         %
 % a Metaflop-font © 2012 by Simon Egli, Marco Müller                      %
-% thanks to Teofilo Furtado                                               %
 % www.metaflop.com                                                        %
-%                                                                         %
-% This program is free software: you can redistribute it and/or modify    %
-% it under the terms of the GNU General Public License as published by    %
-% the Free Software Foundation, either version 3 of the License, or       %
-% (at your option) any later version.                                     %
-%                                                                         %
-% This program is distributed in the hope that it will be useful,         %
-% but WITHOUT ANY WARRANTY; without even the implied warranty of          % 
-% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            % 
-% GNU General Public License for more details.                            %
-%                                                                         %
-% You should have received a copy of the GNU General Public License       %
-% along with this program. If not, see <http://www.gnu.org/licenses/>.    %
+% licensed under gpl v3: www.gnu.org/licenses/                            %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -26,15 +13,15 @@ beginadjchar("P",4.5,cap#,0);
 
 % sidebearings %
 if (sidebearing=1):
-numeric l,r;
-normal_adjust_fit(space+0.5u#,space+0.1u#); fi
+ numeric l,r;
+ normal_adjust_fit(space+0.5u#,space+0.1u#); fi
 
 % construction %
 x1=x2=x3=x8=leftstemloc;
 x1r=x2r=x1+(cont*px/2);
 x5=x6=w-x1;
 x5r=x6r=x6-(cont*px/2);
-x4r=x7r=x1r+incx*w+px;;
+x4r=x7r=x2r+0.5*(x6r-x2r)+0.5*incx*(x6r-x2r);
 y1=0;
 y2=h;
 top y3=h;
@@ -44,22 +31,22 @@ y7=y8=bar*h;
 y7r=y8r=y7+.5px;
 y5r=y7r+.5*(y4r-y7r)+incy*.5*(y4r-y7r);
 y6r=y7r+.5*(y4r-y7r)-incy*.5*(y4r-y7r);
-ang:=angle(z6r-z7r);
 
 % penpositions %
 penpos1(whatever,0);
 penpos2(whatever,0);
 penpos3(whatever,90);
-penpos4(whatever,if (superness=.5): (180-ang)/2 else: 90 fi);
-penpos5(whatever,if (superness=.5): -(ang-90)/2 else: 180 fi);
-penpos6(whatever,if (superness=.5): (ang-90)/2 else: 180 fi);
-penpos7(whatever,if (superness=.5): -(180-ang)/2 else: -90 fi);
+penpos4(whatever,90);
+penpos5(whatever,180);
+penpos6(whatever,180);
+penpos7(whatever,-90);
 penpos8(whatever,-90);
 
 % draw %
 penstroke z1e---z2e;
 penstroke z3e---super_qr(4e,5e)---super_ql(6e,7e)---z8e;
 
+% grayfont proof mode
 % penlabels(range 1 thru 150);
 
 endchar;

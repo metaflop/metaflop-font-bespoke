@@ -9,7 +9,7 @@
 
 
 % box dimension definition %
-beginadjchar("T",5,cap#,0);
+beginadjchar("T",4.75,cap#,0);
 
 % sidebearings %
 if (sidebearing=1):
@@ -17,9 +17,9 @@ if (sidebearing=1):
  normal_adjust_fit(space-0.2u#,space-0.2u#); fi
 
 % construction %
-x3=leftstemloc;
+x3+0.5px=leftstemloc;
 x1l=x2l=x1-(cont*px/2);
-x1=x2=.5w;
+x1=x2=(x4+x3)/2;
 x4=w-x3;
 y1=0;
 y2=h;

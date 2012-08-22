@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
 % MF Bespoke v1.8                                                         %
-% a Metaflop-font © 2012 by Simon Egli, Marco MŸller                      %
+% a Metaflop-font ï¿½ 2012 by Simon Egli, Marco Mï¿½ller                      %
 % www.metaflop.com                                                        %
 % licensed under gpl v3: www.gnu.org/licenses/                            %
 %                                                                         %
@@ -165,7 +165,7 @@ input glyphs/punct/emdash
 %input glyphs/punct/at
 
 font_quad:=10u#+0s#;
-font_normal_space:=3u#+0s#;
+font_normal_space:=2u#+0s#;
 font_normal_stretch:=0u#;
 font_normal_shrink:=0u#;
 

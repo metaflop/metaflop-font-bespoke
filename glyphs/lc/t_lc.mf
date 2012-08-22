@@ -9,17 +9,17 @@
 
 
 % box dimension definition %
-beginadjchar("t",4,asc#,0);
+beginadjchar("t",3.25,asc#,0);
 
 % sidebearings %
 if (sidebearing=1):
  numeric l,r;
- normal_adjust_fit(space-0.5u#,space-0.5u#); fi
+ normal_adjust_fit(space-0.4u#,space-0.4u#); fi
 
 % construction %
-x3=leftstemloc;
+x3+0.5px=leftstemloc;
 x4=w-x3;
-x1=x2=.5w;
+x1=x2=(x4+x3)/2;
 x1l=x2l=x1-(cont*px/2);
 y1=0;
 y2=h;
@@ -37,6 +37,7 @@ penstroke z1e---z2e;
 penstroke z3e---z4e;
 
 % grayfont proof mode
-% penlabels(range 1 thru 150);
+
+penlabels(range 1 thru 150);
 
 endchar;

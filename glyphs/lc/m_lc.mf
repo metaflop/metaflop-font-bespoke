@@ -61,6 +61,6 @@ penstroke super_ql(7e,9e)---super_qr(10e,11e)---z12e;
 penstroke z1e---z13e;
 
 % grayfont proof mode
-penlabels(range 1 thru 150);
+% penlabels(range 1 thru 150);
 
 endchar;

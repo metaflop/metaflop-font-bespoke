@@ -305,7 +305,7 @@ ligtable "x":
 % ligtable "L": "O" =: oct"014";   % USE THIS FOR LIGATURES OR SPECIAL CHARACTERS
 % font_identifier:="FRAN" if slant<>0: & "SL" fi;
 
-font_coding_scheme:="OT1";
+font_coding_scheme:="ot1";
 
 % if known ps_output:  % presets for mf2pt1
 % font_coding_scheme	"ot1";

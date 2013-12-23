@@ -13,8 +13,8 @@ y3r=y4r=px-o;
 % construction %
 x1=x2=leftstemloc;
 x1r=x2r=x1+(cont*px/2);
-x5=x6=x7=w-x1;
-x5r=x6r=x7r=x5-(cont*px/2);
+x6=x7=w-x1;
+x5r=x6r=x7r=x6-(cont*px/2);
 x3r=x2r+0.5*(x5r-x2r)-0.5*incx*(x5r-x2r);
 x4r=x2r+0.5*(x5r-x2r)+0.5*incx*(x5r-x2r);
 y2r=y5r=y4r+0.3*(y1r-y4r)-0.3*incy*(y1r-y4r);
@@ -29,6 +29,9 @@ penpos4(whatever,90);
 penpos5(whatever,180);
 penpos6(whatever,180);
 penpos7(whatever,180);
+
+% branches %
+x5l=x5r+taper;
 
 % draw %
 penstroke super_ql(5e,4e)---super_qr(3e,2e)---z1e;

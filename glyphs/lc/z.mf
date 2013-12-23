@@ -1,0 +1,36 @@
+% box dimension definition %
+beginadjchar("z",4,mean#,0);
+
+% sidebearings %
+numeric l,r;
+normal_adjust_fit(space+0.1u#,space+0.1u#);
+
+% construction %
+x1=x5=x3l=leftstemloc-cont*px/2;
+x2=x6=x4r=w-x1;
+y4=h-corner;
+y3=corner;
+top y1=h;
+top y2=h;
+bot y5=0;
+bot y6=0;
+
+% diagonal angle
+alphaZ=diag_ratio(1,cont*px,y4-y3,x4r-x3l);
+
+% penpositions %
+penpos3(alphaZ*cont*px,0);
+penpos4(alphaZ*cont*px,0);
+penpos1(px,90);
+penpos2(px,90);
+penpos5(px,90);
+penpos6(px,90);
+
+% draw %
+z10=whatever[z6r,z5r]=whatever[z3r,z4r];
+z11=whatever[z2l,z1l]=whatever[z3l,z4l];
+fill z1l---z1r---z2r---z4r---z10---z6r---z6l---z5l---z3l---z11---cycle;
+
+penlabels(range 1 thru 150);
+
+endchar;

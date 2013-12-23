@@ -1,9 +1,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% MF Bespoke v1.8                                                         %
-% a Metaflop-font © 2012 by Simon Egli, Marco Müller                      %
-% thanks to Teofilo Furtado                                               %
+% MF Bespoke v1.85                                                        %
+% © 2013 by Marco Mueller and Simon Egli                                  %
+% thanks to Linus Roemer, Alexis Reigel, Theofilo Furtado                 %
 % www.metaflop.com                                                        %
+% licensed under gpl v3: www.gnu.org/licenses/                            %
+%                                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                     %
 %                                                                         %
 % This program is free software: you can redistribute it and/or modify    %
 % it under the terms of the GNU General Public License as published by    %
@@ -16,7 +19,7 @@
 % GNU General Public License for more details.                            %
 %                                                                         %
 % You should have received a copy of the GNU General Public License       %
-% along with this program. If not, see www.gnu.org/licenses/              %
+% along with this program. If not, see <http://www.gnu.org/licenses/>.    %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -24,14 +27,14 @@
 % dimension %
 font_size:=10pt#;  % font size  @hidden
 ht#:=10pt#;        % box height @hidden
-u#:=1.45pt#;       % unit widht 			    $ 0.75 / 2
+u#:=1.65pt#;       % unit widht 			    $ 0.75 / 2
 s#:=0.15u#;        % spacing @hidden
 o#:=0.1pt#;	       % overshoot                  $ 0 / 1	
 px#:=0.9pt#;       % pen width 					$ 0.1 / 1
 
 % proportion %
 cap#:=0.9ht#;      % cap heigt					$ 0.75 / 1	
-mean#:=0.72cap#;   % mean height				$ 0.5 / 1	
+mean#:=0.7cap#;   % mean height				$ 0.5 / 1	
 bar:=0.5;          % bar height					$ 0.25 / 0.75
 asc#:=0.95ht#;     % ascender height		    $ 0.75 / 1.25	
 des#:=0.35ht#;     % descender heigt		    $ 0.25 / 0.75	
@@ -43,9 +46,10 @@ appert:=0.5;       % apperture                  $ 0 / 0.75
 cont:=1.1;         % contrast                   $ 1 / 2
 superness:=0.72;   % superness					$ 0.25 / 1
 corner#:=1.0pt#;   % corner standard value = px $ 0 / 1.5
+taper#:=0.5pt#;    % tapering standard value    $ 0 / 1
 
 % export %
-sidebearing:=0;    % switch sidebearings off (0) for .otf export, (1) for on
+sidebearing:=1;    % sidebearings (0) off, (1) on for .otf export
 
 input glyphs;
 bye;

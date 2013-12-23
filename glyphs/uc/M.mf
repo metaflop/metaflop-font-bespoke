@@ -1,20 +1,9 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                                                                         %
-% MF Bespoke v1.8                                                         %
-% a Metaflop-font © 2012 by Simon Egli, Marco Müller                      %
-% www.metaflop.com                                                        %
-% licensed under gpl v3: www.gnu.org/licenses/                            %
-%                                                                         %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 % box dimension definition %
 beginadjchar("M",6,cap#,0);
 
 % sidebearings %
-if (sidebearing=1):
- numeric l,r;
- normal_adjust_fit(space+0.5u#,space+0.5u#); fi
+numeric l,r;
+normal_adjust_fit(space+0.5u#,space+0.5u#);
 
 % construction %
 x1l=x2l=leftstemloc-cont*px/2;
@@ -48,7 +37,6 @@ z11=whatever[z6l,z5l]=whatever[z1r,z2r];
 z12=whatever[z7r,z8r];
 fill z1l---z2l---z5r---z10---z8l---z4r---z3r---z3l---z12---z7r---z6l---z11---z1r---cycle;
 
-% grayfont proof mode
-% penlabels(range 1 thru 150);
+penlabels(range 1 thru 150);
 
 endchar;

@@ -1,20 +1,9 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                                                                         %
-% MF Bespoke v1.8                                                         %
-% a Metaflop-font © 2012 by Simon Egli, Marco Müller                      %
-% www.metaflop.com                                                        %
-% licensed under gpl v3: www.gnu.org/licenses/                            %
-%                                                                         %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 % box dimension definition %
 beginadjchar("2",4.5,cap#,0);
 
 % sidebearings %
-if (sidebearing=1):
- numeric l,r;
- normal_adjust_fit(space+0.7u#,space+0.7u#); fi
+numeric l,r;
+normal_adjust_fit(space+0.7u#,space+0.7u#);
 
 % overshoot %
 top y11=h+o;
@@ -71,7 +60,6 @@ path a; numeric t,u; (t,u)=(((0,y16r+0.5*(y11r-y16r)+appert*0.5*(y11r-y16r))---(
 a = subpath (u,0) of (z12l---super_qr(11l,10l)---z9l);
 fill a---z12l---z12r---b---cycle;
 
-% grayfont proof mode
-% penlabels(range 1 thru 150);
+penlabels(range 1 thru 150);
 
 endchar;

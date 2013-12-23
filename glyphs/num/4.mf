@@ -1,20 +1,9 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                                                                         %
-% MF Bespoke v1.8                                                         %
-% a Metaflop-font © 2012 by Simon Egli, Marco Müller                      %
-% www.metaflop.com                                                        %
-% licensed under gpl v3: www.gnu.org/licenses/                            %
-%                                                                         %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 % box dimension definition %
 beginadjchar("4",4.5,cap#,0);
 
 % sidebearings %
-if (sidebearing=1):
- numeric l,r;
- normal_adjust_fit(space+0.1u#,space+0.1u#); fi
+numeric l,r;
+normal_adjust_fit(space+0.1u#,space+0.1u#);
 
 % construction %
 x3=x5l=leftstemloc-px/2;
@@ -36,15 +25,14 @@ penpos1(whatever,0);
 penpos2(whatever,0);
 penpos3(whatever,90);
 penpos4(whatever,90);
-penpos5(alphaN*cont*px,0);
-penpos6(alphaN*cont*px,0);
+penpos5(alphafour*cont*px,0);
+penpos6(alphafour*cont*px,0);
 
 % draw % 
 z10=whatever[z4r,z3r]=whatever[z5r,z6r];
 z11=whatever[z2l,z1l]=whatever[z5r,z6r];
-fill z1l---z1r---z2r---z6l---z5l---z3l---z4l---z4r---z10---z11---cycle;
+fill z1l--z1r--z2r--z6l--z5l--z3l--z4l--z4r--z10--z11--cycle;
 
-% grayfont proof mode
-% penlabels(range 1 thru 150);
+penlabels(range 1 thru 150);
 
 endchar;

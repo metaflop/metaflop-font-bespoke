@@ -1,15 +1,28 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% MF Bespoke v1.8                                                         %
-% a Metaflop-font � 2012 by Simon Egli, Marco M�ller                      %
+% MF Bespoke v1.85                                                        %
+% © 2013 by Marco Mueller and Simon Egli                                  %
+% thanks to Linus Roemer, Alexis Reigel, Theofilo Furtado                 %
 % www.metaflop.com                                                        %
 % licensed under gpl v3: www.gnu.org/licenses/                            %
 %                                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                     %
+%                                                                         %
+% This program is free software: you can redistribute it and/or modify    %
+% it under the terms of the GNU General Public License as published by    %
+% the Free Software Foundation, either version 3 of the License, or       %
+% (at your option) any later version.                                     %
+%                                                                         %
+% This program is distributed in the hope that it will be useful,         %
+% but WITHOUT ANY WARRANTY; without even the implied warranty of          % 
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            % 
+% GNU General Public License for more details.                            %
+%                                                                         %
+% You should have received a copy of the GNU General Public License       %
+% along with this program. If not, see <http://www.gnu.org/licenses/>.    %
+%                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-% contrast %
-py#:=px#;
 
 % additional parameters / hidden parameter list %
 barheight#:=bar*cap#;                   % upper cross bar
@@ -17,27 +30,28 @@ leftstemloc#:=0.2u#+s#+((cont*px#)/2);  % position of left stem
 letter_fit#:=0.0u#;                     % amount of letter fit
 shrink_fit:=.0u#;                       % amount of shrink fit
 space:=0.0;                             % letterspacing (0 = compress)
-
-% sidebearings on/off %
-% definition of left and right-side bearings. To use in glyph after beginchar: normal_adjust_fit(-1.5u#,-1.5u#);
-if (sidebearing=1):
+py#:=px#;                               % contrast
+ 
+ % sidebearings %
  def normal_adjust_fit(expr left_adjustment,right_adjustment) = 
- l := -hround(left_adjustment*hppp)-letter_fit#; 
- interim xoffset := -l; charwd := charwd+2letter_fit#+left_adjustment+right_adjustment; 
- r := l+hround(charwd*hppp)-shrink_fit;
- w := r-hround(right_adjustment*hppp)-letter_fit#; enddef;fi
-
-def endchar =
- scantokens extra_endchar;
- chardx:=w;
- shipit;
- endgroup enddef;	
+  l := -hround(left_adjustment*hppp)-letter_fit#; 
+  interim xoffset := -l; 
+  charwd := charwd+2letter_fit#+left_adjustment+right_adjustment; 
+  r := l+hround(charwd*hppp)-shrink_fit;
+  w := r-hround(right_adjustment*hppp)-letter_fit#; 
+ enddef;
 
 mode=luxo;
 mode_setup;
 
+% font infos %
+font_quad:=10u#+0s#;
+font_normal_space:=3u#+0s#;
+font_normal_stretch:=0u#;
+font_normal_shrink:=0u#;
+font_coding_scheme:="t1";
+
 % pixel conversions %
-% metafont needs these pixel definitions to calculate the final dimensions of the parameter values
 define_pixels(s,u);
 define_blacker_pixels(px,py);
 define_good_x_pixels(leftstemloc, letter_fit);
@@ -46,29 +60,582 @@ define_good_y_pixels(des);
 define_good_y_pixels(cap);
 define_good_y_pixels(mean);
 define_good_y_pixels(corner);
+define_good_y_pixels(taper);
 define_corrected_pixels(o);
 
+% enc numbers %
+def enc(expr name)=
+  if name="grave":
+   0
+  elseif name="acute":
+   1
+  elseif name="circumflex":
+   2
+  elseif name="tilde":
+   3
+  elseif name="dieresis":
+   4
+  elseif name="hungarumlaut":
+   5
+  elseif name="ring":
+   6
+  elseif name="caron":
+   7
+  elseif name="breve":
+   8
+  elseif name="macron":
+   9
+  elseif name="dotaccent":
+   10
+  elseif name="cedilla":
+   11
+  elseif name="ogonek":
+   12
+  elseif name="quotesinglbase":
+   13
+  elseif name="guilsinglleft":
+   14
+  elseif name="guilsinglright":
+   15
+  elseif name="quotedblleft":
+   16
+  elseif name="quotedblright":
+   17
+  elseif name="quotedblbase":
+   18
+  elseif name="guillemotleft":
+   19
+  elseif name="guillemotright":
+   20
+  elseif name="endash":
+   21
+  elseif name="emdash":
+   22
+  elseif name="cwm":
+   23
+  elseif name="perthousandzero":
+   24
+  elseif name="dotlessi":
+   25
+  elseif name="dotlessj":
+   26
+  elseif name="ff":
+   27
+  elseif name="fi":
+   28
+  elseif name="fl":
+   29
+  elseif name="ffi":
+   30
+  elseif name="ffl":
+   31
+  elseif name="visiblespace":
+   32
+  elseif name="exclam":
+   33
+  elseif name="quotedbl":
+   34
+  elseif name="numbersign":
+   35
+  elseif name="dollar":
+   36
+  elseif name="percent":
+   37
+  elseif name="ampersand":
+   38
+  elseif name="quoteright":
+   39
+  elseif name="parenleft":
+   40
+  elseif name="parenright":
+   41
+  elseif name="asterisk":
+   42
+  elseif name="plus":
+   43
+  elseif name="comma":
+   44
+  elseif name="combininghyphen":
+   45
+  elseif name="period":
+   46
+  elseif name="slash":
+   47
+  elseif name="zero":
+   48
+  elseif name="one":
+   49
+  elseif name="two":
+   50
+  elseif name="three":
+   51
+  elseif name="four":
+   52
+  elseif name="five":
+   53
+  elseif name="six":
+   54
+  elseif name="seven":
+   55
+  elseif name="eight":
+   56
+  elseif name="nine":
+   57
+  elseif name="colon":
+   58
+  elseif name="semicolon":
+   59
+  elseif name="less":
+   60
+  elseif name="equal":
+   61
+  elseif name="greater":
+   62
+  elseif name="question":
+   63
+  elseif name="at":
+   64
+  elseif name="A":
+   65
+  elseif name="B":
+   66
+  elseif name="C":
+   67
+  elseif name="D":
+   68
+  elseif name="E":
+   69
+  elseif name="F":
+   70
+  elseif name="G":
+   71
+  elseif name="H":
+   72
+  elseif name="I":
+   73
+  elseif name="J":
+   74
+  elseif name="K":
+   75
+  elseif name="L":
+   76
+  elseif name="M":
+   77
+  elseif name="N":
+   78
+  elseif name="O":
+   79
+  elseif name="P":
+   80
+  elseif name="Q":
+   81
+  elseif name="R":
+   82
+  elseif name="S":
+   83
+  elseif name="T":
+   84
+  elseif name="U":
+   85
+  elseif name="V":
+   86
+  elseif name="W":
+   87
+  elseif name="X":
+   88
+  elseif name="Y":
+   89
+  elseif name="Z":
+   90
+  elseif name="bracketleft":
+   91
+  elseif name="backslash":
+   92
+  elseif name="bracketright":
+   93
+  elseif name="asciicircum":
+   94
+  elseif name="underscore":
+   95
+  elseif name="quoteleft":
+   96
+  elseif name="a":
+   97
+  elseif name="b":
+   98
+  elseif name="c":
+   99
+  elseif name="d":
+   100
+  elseif name="e":
+   101
+  elseif name="f":
+   102
+  elseif name="g":
+   103
+  elseif name="h":
+   104
+  elseif name="i":
+   105
+  elseif name="j":
+   106
+  elseif name="k":
+   107
+  elseif name="l":
+   108
+  elseif name="m":
+   109
+  elseif name="n":
+   110
+  elseif name="o":
+   111
+  elseif name="p":
+   112
+  elseif name="q":
+   113
+  elseif name="r":
+   114
+  elseif name="s":
+   115
+  elseif name="t":
+   116
+  elseif name="u":
+   117
+  elseif name="v":
+   118
+  elseif name="w":
+   119
+  elseif name="x":
+   120
+  elseif name="y":
+   121
+  elseif name="z":
+   122
+  elseif name="braceleft":
+   123
+  elseif name="bar":
+   124
+  elseif name="braceright":
+   125
+  elseif name="asciitilde":
+   126
+  elseif name="hyphen":
+   127
+  elseif name="Abreve":
+   128
+  elseif name="Aogonek":
+   129
+  elseif name="Cacute":
+   130
+  elseif name="Ccaron":
+   131
+  elseif name="Dcaron":
+   132
+  elseif name="Ecaron":
+   133
+  elseif name="Eogonek":
+   134
+  elseif name="Gbreve":
+   135
+  elseif name="Lacute":
+   136
+  elseif name="Lcaron":
+   137
+  elseif name="Lslash":
+   138
+  elseif name="Nacute":
+   139
+  elseif name="Ncaron":
+   140
+  elseif name="Eng":
+   141
+  elseif name="Ohungarumlaut":
+   142
+  elseif name="Racute":
+   143
+  elseif name="Rcaron":
+   144
+  elseif name="Sacute":
+   145
+  elseif name="Scaron":
+   146
+  elseif name="Scedilla":
+   147
+  elseif name="Tcaron":
+   148
+  elseif name="Tcedilla":
+   149
+  elseif name="Uhungarumlaut":
+   150
+  elseif name="Uring":
+   151
+  elseif name="Ydieresis":
+   152
+  elseif name="Zacute":
+   153
+  elseif name="Zcaron":
+   154
+  elseif name="Zdotaccent":
+   155
+  elseif name="IJ":
+   156
+  elseif name="Idotaccent":
+   157
+  elseif name="dcroat":
+   158
+  elseif name="section":
+   159
+  elseif name="abreve":
+   160
+  elseif name="aogonek":
+   161
+  elseif name="cacute":
+   162
+  elseif name="ccaron":
+   163
+  elseif name="dcaron":
+   164
+  elseif name="ecaron":
+   165
+  elseif name="eogonek":
+   166
+  elseif name="gbreve":
+   167
+  elseif name="lacute":
+   168
+  elseif name="lcaron":
+   169
+  elseif name="lslash":
+   170
+  elseif name="nacute":
+   171
+  elseif name="ncaron":
+   172
+  elseif name="eng":
+   173
+  elseif name="ohungarumlaut":
+   174
+  elseif name="racute":
+   175
+  elseif name="rcaron":
+   176
+  elseif name="sacute":
+   177
+  elseif name="scaron":
+   178
+  elseif name="scedilla":
+   179
+  elseif name="tcaron":
+   180
+  elseif name="tcedilla":
+   181
+  elseif name="uhungarumlaut":
+   182
+  elseif name="uring":
+   183
+  elseif name="ydieresis":
+   184
+  elseif name="zacute":
+   185
+  elseif name="zcaron":
+   186
+  elseif name="zdotaccent":
+   187
+  elseif name="ij":
+   188
+  elseif name="exclamdown":
+   189
+  elseif name="questiondown":
+   190
+  elseif name="sterling":
+   191
+  elseif name="Agrave":
+   192
+  elseif name="Aacute":
+   193
+  elseif name="Acircumflex":
+   194
+  elseif name="Atilde":
+   195
+  elseif name="Adieresis":
+   196
+  elseif name="Aring":
+   197
+  elseif name="AE":
+   198
+  elseif name="Ccedilla":
+   199
+  elseif name="Egrave":
+   200
+  elseif name="Eacute":
+   201
+  elseif name="Ecircumflex":
+   202
+  elseif name="Edieresis":
+   203
+  elseif name="Igrave":
+   204
+  elseif name="Iacute":
+   205
+  elseif name="Icircumflex":
+   206
+  elseif name="Idieresis":
+   207
+  elseif name="Eth":
+   208
+  elseif name="Ntilde":
+   209
+  elseif name="Ograve":
+   210
+  elseif name="Oacute":
+   211
+  elseif name="Ocircumflex":
+   212
+  elseif name="Otilde":
+   213
+  elseif name="Odieresis":
+   214
+  elseif name="OE":
+   215
+  elseif name="Oslash":
+   216
+  elseif name="Ugrave":
+   217
+  elseif name="Uacute":
+   218
+  elseif name="Ucircumflex":
+   219
+  elseif name="Udieresis":
+   220
+  elseif name="Yacute":
+   221
+  elseif name="Thorn":
+   222
+  elseif name="Germandbls": 
+   223
+  elseif name="agrave":
+   224
+  elseif name="aacute":
+   225
+  elseif name="acircumflex":
+   226
+  elseif name="atilde":
+   227
+  elseif name="adieresis":
+   228
+  elseif name="aring":
+   229
+  elseif name="ae":
+   230
+  elseif name="ccedilla":
+   231
+  elseif name="egrave":
+   232
+  elseif name="eacute":
+   233
+  elseif name="ecircumflex":
+   234
+  elseif name="edieresis":
+   235
+  elseif name="igrave":
+   236
+  elseif name="iacute":
+   237
+  elseif name="icircumflex":
+   238
+  elseif name="idieresis":
+   239
+  elseif name="eth":
+   240
+  elseif name="ntilde":
+   241
+  elseif name="ograve":
+   242
+  elseif name="oacute":
+   243
+  elseif name="ocircumflex":
+   244
+  elseif name="otilde":
+   245
+  elseif name="odieresis":
+   246
+  elseif name="oe":
+   247
+  elseif name="oslash":
+   248
+  elseif name="ugrave":
+   249
+  elseif name="uacute":
+   250
+  elseif name="ucircumflex":
+   251
+  elseif name="udieresis":
+   252
+  elseif name="yacute":
+   253
+  elseif name="thorn":
+   254
+  elseif name="germandbls":
+   255
+  else:
+   errmessage("unknown name to encode");
+  fi
+enddef;
+
+% composite glyphs %
+numeric charwidths_[];   % will store the width of every char at the index of the encoding number
+numeric charheights_[];  % as above for heights
+numeric chardepths_[];   % as above for depths
+picture charpictures_[]; % as above for the pictures (the glyphs themselves)
+numeric charitalcorrs_[];% as above for italic corrections
+pair charanchortops_[];  % choose some sensible anchors (top, bot ...)
+pair charanchorbots_[]; 
+
 % begin charater macros %
-def beginadjchar(expr code, unit_width, h, d) =
+def beginadjchar(expr code,unit_width,h,d) =
 beginchar(code,unit_width*u#+s#,h,d);
 pickup adj_pen;
 enddef;
 
-def beginadjichar(expr code, unit_width, h, d) =
+def beginadjichar(expr code,unit_width,h,d) =
 beginchar(code,2(unit_width*u#+s#+(cont*px#)/2),h,d);
 pickup adj_pen;
 enddef;
 
-% fixed pen settings %
+% end character macros %
+extra_endchar := extra_endchar&"charpictures_[charcode]:=currentpicture;"
+ &"charwidths_[charcode]=charwd;"
+ &"charheights_[charcode]=charht;"
+ &"chardepths_[charcode]=chardp;"
+ &"charitalcorrs_[charcode]=charic;";
+
+% composite glyphs %
+def composite(expr codea,codeb,codec,anchor,height,depth) =
+ widthb:=charwidths_[codeb];
+ charicb:=charitalcorrs_[codeb];
+ beginchar(codea,widthb,height,depth);
+ charic:=charicb;
+ addto currentpicture also charpictures_[codeb];
+ if anchor="top":
+  addto currentpicture also charpictures_[codec] shifted 
+  (charanchortops_[codeb]-charanchortops_[codec]);
+ elseif anchor="bot":
+  addto currentpicture also charpictures_[codec] shifted 
+  (charanchorbots_[codeb]-charanchorbots_[codec]);
+ else:
+  errmessage "Wrong anchor name";
+ fi
+ endchar;
+enddef;
+
+% pen settings %
 pickup pencircle xscaled px yscaled py rotated 15;
 adj_pen:=savepen;
-
 vardef diag_ratio(expr a,b,y,c) =
 numeric aa_, bb_, cc_; bb_=b/y; cc_=c/y; aa_=a-(b/y)*(b/y);
 (a*(cc_++sqrt aa_)-bb_*cc_)/aa_ enddef;
 
 % superness macros %
-
 % left curves (superness) %
 def super_ql(suffix i,j) =
  z.i{0,y.j-y.i}...(superness[x.j,x.i],superness[y.i,y.j]){z.j-z.i}...z.j{x.j-x.i,0} enddef;
@@ -77,7 +644,78 @@ def super_ql(suffix i,j) =
 def super_qr(suffix j,k) =
 z.j{x.k-x.j,0}...(superness[x.j,x.k],superness[y.k,y.j]){z.k-z.j}...z.k{0,y.k-y.j} enddef;
 
-% glyph input %
+% glyph inputs %
+%input glyphs/acc/grave
+%input glyphs/acc/acute
+%input glyphs/acc/circumflex
+%input glyphs/acc/tilde
+%input glyphs/acc/dieresis
+%input glyphs/acc/hungarumlaut
+%input glyphs/acc/ring
+%input glyphs/acc/caron
+%input glyphs/acc/breve
+%input glyphs/acc/macron
+%input glyphs/acc/dotaccent
+%input glyphs/acc/cedilla
+%input glyphs/acc/ogonek
+
+%input glyphs/punct/quotesinglbase
+%input glyphs/punct/guilsinglleft
+%input glyphs/punct/guilsinglright
+%input glyphs/punct/quotedblleft
+%input glyphs/punct/quotedblright
+%input glyphs/punct/quotedblbase
+%input glyphs/punct/guillemotleft
+%input glyphs/punct/guillemotright
+%input glyphs/punct/endash
+%input glyphs/punct/emdash
+input glyphs/punct/cwm
+%input glyphs/punct/perthousandzero
+%input glyphs/punct/dotlessi
+%input glyphs/punct/dotlessj
+
+%input glyphs/lig/ff
+%input glyphs/lig/fi
+%input glyphs/lig/fl
+%input glyphs/lig/ffi
+%input glyphs/lig/ffl
+
+input glyphs/punct/visiblespace
+%input glyphs/punct/exclam
+%input glyphs/punct/quotedbl
+%input glyphs/punct/numbersign 
+%input glyphs/punct/dollar 
+%input glyphs/punct/percent 
+%input glyphs/punct/ampersand
+%input glyphs/punct/quoteright
+%input glyphs/punct/parenleft
+%input glyphs/punct/parenright
+%input glyphs/punct/asterisk
+%input glyphs/punct/plus
+%input glyphs/punct/comma
+%input glyphs/punct/hyphen
+%input glyphs/punct/period
+%input glyphs/punct/slash
+
+input glyphs/num/0
+input glyphs/num/1
+input glyphs/num/2
+input glyphs/num/3
+input glyphs/num/4
+input glyphs/num/5
+input glyphs/num/6
+input glyphs/num/7
+input glyphs/num/8
+input glyphs/num/9
+
+%input glyphs/punct/colon
+%input glyphs/punct/semicolon
+%input glyphs/punct/less
+%input glyphs/punct/equal
+%input glyphs/punct/greater
+%input glyphs/punct/question
+%input glyphs/punct/at
+
 input glyphs/uc/A
 input glyphs/uc/B
 input glyphs/uc/C
@@ -105,220 +743,503 @@ input glyphs/uc/X
 input glyphs/uc/Y
 input glyphs/uc/Z
 
-input glyphs/lc/a_lc
-input glyphs/lc/b_lc
-input glyphs/lc/c_lc
-input glyphs/lc/d_lc
-input glyphs/lc/e_lc
-input glyphs/lc/f_lc
-input glyphs/lc/g_lc
-input glyphs/lc/h_lc
-input glyphs/lc/i_lc
-input glyphs/lc/j_lc
-input glyphs/lc/k_lc
-input glyphs/lc/l_lc
-input glyphs/lc/m_lc
-input glyphs/lc/n_lc
-input glyphs/lc/o_lc
-input glyphs/lc/p_lc
-input glyphs/lc/q_lc
-input glyphs/lc/r_lc
-input glyphs/lc/s_lc
-input glyphs/lc/t_lc
-input glyphs/lc/u_lc
-input glyphs/lc/v_lc
-input glyphs/lc/w_lc
-input glyphs/lc/x_lc
-input glyphs/lc/y_lc
-input glyphs/lc/z_lc
+%input glyphs/punct/bracketleft
+%input glyphs/punct/backslash
+%input glyphs/punct/bracketright
+%input glyphs/punct/asciicircum
+%input glyphs/punct/underscore
+%input glyphs/punct/quoteleft
 
-input glyphs/num/0
-input glyphs/num/1
-input glyphs/num/2
-input glyphs/num/3
-input glyphs/num/4
-input glyphs/num/5
-input glyphs/num/6
-input glyphs/num/7
-input glyphs/num/8
-input glyphs/num/9
+input glyphs/lc/a
+input glyphs/lc/b
+input glyphs/lc/c
+input glyphs/lc/d
+input glyphs/lc/e
+input glyphs/lc/f
+input glyphs/lc/g
+input glyphs/lc/h
+input glyphs/lc/i
+input glyphs/lc/j
+input glyphs/lc/k
+input glyphs/lc/l
+input glyphs/lc/m
+input glyphs/lc/n
+input glyphs/lc/o
+input glyphs/lc/p
+input glyphs/lc/q
+input glyphs/lc/r
+input glyphs/lc/s
+input glyphs/lc/t
+input glyphs/lc/u
+input glyphs/lc/v
+input glyphs/lc/w
+input glyphs/lc/x
+input glyphs/lc/y
+input glyphs/lc/z
 
-input glyphs/punct/amp
-input glyphs/punct/colon
-input glyphs/punct/comma
-input glyphs/punct/exclam
-%input glyphs/punct/question
-input glyphs/punct/hyphen
-input glyphs/punct/period
-input glyphs/punct/plus
-input glyphs/punct/semicolon
-%input glyphs/punct/slash
-input glyphs/punct/space
+%input glyphs/punct/braceleft
+%input glyphs/punct/bar
+%input glyphs/punct/braceright
+%input glyphs/punct/asciitilde
 
-input glyphs/punct/endash
-input glyphs/punct/emdash
-%input glyphs/punct/quotesingle
-%input glyphs/punct/quotedbl
-%input glyphs/punct/parenleft
-%input glyphs/punct/parenright
-%input glyphs/punct/asterisk
-%input glyphs/punct/at
+%input glyphs/uc/Abreve
+%input glyphs/uc/Aogonek
+%input glyphs/uc/Cacute
+%input glyphs/uc/Ccaron
+%input glyphs/uc/Dcaron
+%input glyphs/uc/Ecaron
+%input glyphs/uc/Eogonek
+%input glyphs/uc/Gbreve
+%input glyphs/uc/Lacute
+%input glyphs/uc/Lcaron
+%input glyphs/uc/Lslash
+%input glyphs/uc/Nacute
+%input glyphs/uc/Ncaron
+%input glyphs/uc/Eng
+%input glyphs/uc/Ohungarumlaut
+%input glyphs/uc/Racute
+%input glyphs/uc/Rcaron
+%input glyphs/uc/Sacute
+%input glyphs/uc/Scaron
+%input glyphs/uc/Scedilla
+%input glyphs/uc/Tcaron
+%input glyphs/uc/Tcedilla
+%input glyphs/uc/Uhungarumlaut
+%input glyphs/uc/Uring
+%input glyphs/uc/Ydieresis
+%input glyphs/uc/Zacute
+%input glyphs/uc/Zcaron
+%input glyphs/uc/Zdotaccent
+%input glyphs/uc/IJ
+%input glyphs/uc/Idotaccent
 
-font_quad:=10u#+0s#;
-font_normal_space:=2u#+0s#;
-font_normal_stretch:=0u#;
-font_normal_shrink:=0u#;
+%input glyphs/lc/dcroat
+%input glyphs/punct/section
+%input glyphs/lc/abreve
+%input glyphs/lc/aogonek
+%input glyphs/lc/cacute
+%input glyphs/lc/ccaron
+%input glyphs/lc/dcaron
+%input glyphs/lc/ecaron
+%input glyphs/lc/eogonek
+%input glyphs/lc/gbreve
+%input glyphs/lc/lacute
+%input glyphs/lc/lcaron
+%input glyphs/lc/lslash
+%input glyphs/lc/nacute
+%input glyphs/lc/ncaron
+%input glyphs/lc/eng
+%input glyphs/lc/ohungarumlaut
+%input glyphs/lc/racute
+%input glyphs/lc/rcaron
+%input glyphs/lc/sacute
+%input glyphs/lc/scaron
+%input glyphs/lc/scedilla
+%input glyphs/lc/tcaron
+%input glyphs/lc/tcedilla
+%input glyphs/lc/uhungarumlaut
+%input glyphs/lc/uring
+%input glyphs/lc/ydieresis
+%input glyphs/lc/zacute
+%input glyphs/lc/zcaron
+%input glyphs/lc/zdotaccent
+%input glyphs/lc/ij
 
-% ligtable upper case %
-% kerning pairs Learn FONTLAB Fast p. 99 / page 316 MetaFontBook
+%input glyphs/punct/exclamdown
+%input glyphs/punct/questiondown
+%input glyphs/punct/sterling
 
-ligtable "A": 
-"C" kern +0.0u#, "G" kern +0.0u#, "O" kern +0.0u#, "Q" kern +0.0u#, 
-"S" kern +0.0u#, "T" kern -0.4u#, "U" kern +0.0u#, "Z" kern +0.2u#, 
-"V" kern -0.1u#, "W" kern -0.1u#, "Y" kern -0.1u#,
-"a" kern +0.1u#, "c" kern +0.1u#, "d" kern +0.1u#, "e" kern +0.1u#, "g" kern +0.1u#, "o" kern +0.1u#, "q" kern +0.1u#,
-"s" kern +0.1u#, "t" kern -0.0u#, "u" kern -0.0u#, 
-"v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#;
-ligtable "B":
-"V" kern +0.0u#, "W" kern +0.0u#, "Y" kern +0.0u#;
-ligtable "C":
-"T" kern +0.0u#, 
-"V" kern +0.2u#, "W" kern +0.2u#, "Y" kern +0.2u#;
-ligtable "D":
-"A" kern +0.0u#, "J" kern -0.1u#, 
-"V" kern +0.0u#, "W" kern +0.0u#, "Y" kern +0.0u#;
-ligtable "F":
-"A" kern -0.3u#, "J" kern -0.6u#, "T" kern +0.2u#, 
-"C" kern -0.1u#, "G" kern -0.1u#, "O" kern -0.1u#, "Q" kern -0.1u#,
-"V" kern +0.2u#, "W" kern +0.2u#, "Y" kern +0.2u#,
-"a" kern -0.1u#, "c" kern -0.0u#, "d" kern -0.0u#, "e" kern -0.0u#, "g" kern -0.0u#, "o" kern -0.0u#, "q" kern -0.0u#,
-"r" kern -0.0u#, "s" kern -0.0u#, "t" kern -0.0u#, "u" kern -0.0u#, 
-"v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#;
-ligtable "G":
-"V" kern +0.0u#, "W" kern +0.0u#, "Y" kern +0.0u#;
-ligtable "K":
-"C" kern -0.2u#, "G" kern -0.2u#, "O" kern -0.2u#, "Q" kern -0.2u#, 
-"a" kern -0.1u#, "c" kern -0.1u#, "d" kern -0.1u#, "e" kern -0.1u#, "g" kern -0.1u#, "o" kern -0.1u#, "q" kern -0.1u#,
-"v" kern -0.1u#, "w" kern -0.1u#, "y" kern -0.1u#;
-ligtable "L":
-"A" kern +0.2u#, "T" kern -0.6u#, 
-"C" kern -0.2u#, "G" kern -0.2u#, "O" kern -0.2u#, "Q" kern -0.2u#,
-"V" kern -0.5u#, "W" kern -0.5u#, "Y" kern -0.5u#,
-"a" kern -0.0u#, "c" kern -0.0u#, "d" kern -0.0u#, "e" kern -0.0u#, "g" kern -0.0u#, "o" kern -0.0u#, "q" kern -0.0u#,
-"v" kern -0.1u#, "w" kern -0.1u#, "y" kern -0.1u#;
-ligtable "O":
-"A" kern +0.0u#, "T" kern -0.1u#,
-"V" kern +0.0u#, "W" kern +0.0u#, "Y" kern -0.1u#;
-ligtable "P":
-"A" kern -0.3u#, "J" kern -0.8u#, "T" kern -0.1u#, 
-"V" kern +0.0u#, "W" kern +0.0u#, "Y" kern +0.0u#,
-"a" kern -0.1u#, "c" kern -0.1u#, "d" kern -0.1u#, "e" kern -0.1u#, "g" kern -0.1u#, "o" kern -0.1u#, "q" kern -0.1u#,
-"s" kern -0.0u#,
-"v" kern +0.1u#, "w" kern +0.1u#, "y" kern +0.1u#;
-ligtable "Q":
-"A" kern +0.0u#, "T" kern -0.1u#,
-"V" kern +0.0u#, "W" kern +0.0u#, "Y" kern -0.1u#;
-ligtable "R":
-"A" kern -0.1u#, "T" kern -0.1u#, 
-"V" kern +0.0u#, "W" kern +0.0u#, "Y" kern +0.0u#,
-"a" kern -0.0u#, "c" kern -0.0u#, "d" kern -0.0u#, "e" kern -0.0u#, "g" kern -0.0u#, "o" kern -0.0u#, "q" kern -0.0u#,
-"s" kern -0.0u#,
-"v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#;
-ligtable "S":
-"T" kern +0.0u#, 
-"V" kern +0.0u#, "W" kern +0.0u#, "Y" kern +0.0u#,
-"v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#;
-ligtable "T":
-"A" kern -0.4u#, "F" kern +0.0u#, "T" kern +0.2u#, 
-"C" kern -0.1u#, "G" kern -0.1u#, "O" kern -0.1u#, "Q" kern -0.1u#,
-"a" kern -0.3u#, "c" kern -0.3u#, "d" kern -0.3u#, "e" kern -0.3u#, "g" kern -0.3u#, "o" kern -0.3u#, "q" kern -0.3u#,
-"n" kern -0.3u#, "m" kern -0.3u#, "p" kern -0.3u#,
-"r" kern -0.3u#, "s" kern -0.3u#, "u" kern -0.3u#, "x" kern -0.3u#,
-"v" kern -0.3u#, "w" kern -0.3u#, "y" kern -0.3u#, "z" kern -0.3u#;
-ligtable "V":
-"A" kern -0.1u#, 
-"C" kern +0.0u#, "G" kern +0.0u#, "O" kern +0.0u#, "Q" kern +0.0u#,
-"a" kern -0.2u#, "c" kern -0.1u#, "d" kern -0.1u#, "e" kern -0.1u#, "g" kern -0.1u#, "o" kern -0.1u#, "q" kern -0.1u#,
-"n" kern -0.1u#, "m" kern -0.1u#, "p" kern -0.1u#,
-"r" kern -0.1u#, "s" kern -0.1u#, "u" kern -0.1u#, "x" kern -0.1u#,
-"v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#, "z" kern -0.0u#;
-ligtable "W":
-"A" kern -0.1u#, 
-"C" kern +0.0u#, "G" kern +0.0u#, "O" kern +0.0u#, "Q" kern +0.0u#,
-"a" kern -0.3u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
-"n" kern -0.2u#, "m" kern -0.2u#, "p" kern -0.2u#,
-"r" kern -0.2u#, "s" kern -0.2u#, "u" kern -0.2u#, "x" kern -0.2u#,
-"v" kern -0.1u#, "w" kern -0.1u#, "y" kern -0.1u#, "z" kern -0.2u#;
-ligtable "Y":
-"A" kern -0.1u#, 
-"C" kern -0.1u#, "G" kern -0.1u#, "O" kern -0.1u#, "Q" kern -0.1u#, "Z" kern +0.2u#,
-"a" kern -0.4u#, "c" kern -0.3u#, "d" kern -0.3u#, "e" kern -0.3u#, "g" kern -0.3u#, "o" kern -0.3u#, "q" kern -0.3u#,
-"n" kern -0.3u#, "m" kern -0.3u#, "p" kern -0.3u#,
-"r" kern -0.3u#, "s" kern -0.3u#, "u" kern -0.3u#, "x" kern -0.3u#,
-"v" kern -0.2u#, "w" kern -0.2u#, "y" kern -0.2u#, "z" kern -0.3u#;
-ligtable "X":
-"C" kern +0.0u#, "G" kern +0.0u#, "O" kern +0.0u#, "Q" kern +0.0u#,
-"a" kern -0.4u#, "c" kern -0.3u#, "d" kern -0.3u#, "e" kern -0.3u#, "g" kern -0.3u#, "o" kern -0.3u#, "q" kern -0.3u#;
-ligtable "Z":
-"A" kern +0.2u#, "Y" kern +0.2u#;
+%input glyphs/uc/Agrave
+%input glyphs/uc/Aacute
+%input glyphs/uc/Acircumflex
+%input glyphs/uc/Atilde
+%input glyphs/uc/Adieresis
+%input glyphs/uc/Aring
+%input glyphs/uc/AE
+%input glyphs/uc/Ccedilla
+%input glyphs/uc/Egrave
+%input glyphs/uc/Eacute
+%input glyphs/uc/Ecircumflex
+%input glyphs/uc/Edieresis
+%input glyphs/uc/Igrave
+%input glyphs/uc/Iacute
+%input glyphs/uc/Icircumflex
+%input glyphs/uc/Idieresis
+%input glyphs/uc/Eth
+%input glyphs/uc/Ntilde
+%input glyphs/uc/Ograve
+%input glyphs/uc/Oacute
+%input glyphs/uc/Ocircumflex
+%input glyphs/uc/Otilde
+%input glyphs/uc/Odieresis
+%input glyphs/uc/OE
+%input glyphs/uc/Oslash
+%input glyphs/uc/Ugrave
+%input glyphs/uc/Uacute
+%input glyphs/uc/Ucircumflex
+%input glyphs/uc/Udieresis
+%input glyphs/uc/Yacute
+%input glyphs/uc/Thorn
+%input glyphs/uc/Germandbls
+%input glyphs/lc/agrave
+%input glyphs/lc/aacute
+%input glyphs/lc/acircumflex
+%input glyphs/lc/atilde
+%input glyphs/lc/adieresis
+%input glyphs/lc/aring
+%input glyphs/lc/ae
+%input glyphs/lc/ccedilla
+%input glyphs/lc/eacute
+%input glyphs/lc/egrave
+%input glyphs/lc/ecircumflex
+%input glyphs/lc/edieresis
+%input glyphs/lc/iacute
+%input glyphs/lc/igrave
+%input glyphs/lc/icircumflex
+%input glyphs/lc/idieresis
+%input glyphs/lc/eth
+%input glyphs/lc/ntilde
+%input glyphs/lc/oacute
+%input glyphs/lc/ograve
+%input glyphs/lc/ocircumflex
+%input glyphs/lc/otilde
+%input glyphs/lc/odieresis
+%input glyphs/lc/oe
+%input glyphs/lc/oslash
+%input glyphs/lc/uacute
+%input glyphs/lc/ugrave
+%input glyphs/lc/ucircumflex
+%input glyphs/lc/udieresis
+%input glyphs/lc/yacute
+%input glyphs/lc/thorn
+%input glyphs/lc/germandbls
 
-% ligtable lower case %
-ligtable "e":
-"v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#, "z" kern -0.0u#,
-"f" kern -0.2u#, "t" kern -0.2u#;
-ligtable "o":
-"v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#, "z" kern -0.0u#,
-"f" kern -0.2u#, "t" kern -0.2u#;
-ligtable "p":
-"v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#, "z" kern -0.0u#,
-"f" kern -0.2u#, "t" kern -0.2u#;
-ligtable "c":
-"v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#, "z" kern -0.0u#,
-"f" kern -0.1u#, "t" kern -0.1u#;
-ligtable "b":
-"v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#, "z" kern -0.0u#,
-"f" kern -0.2u#, "t" kern -0.2u#;
-ligtable "f":
-"a" kern -0.3u#, "c" kern -0.3u#, "d" kern -0.3u#, "e" kern -0.3u#, "g" kern -0.3u#, "o" kern -0.3u#, "q" kern -0.3u#,
-"j" kern -0.4u#, "f" kern -0.3u#, "t" kern -0.3u#,
-"v" kern -0.1u#, "w" kern -0.1u#, "y" kern -0.1u#, "z" kern -0.1u#;
-ligtable "i":
-"j" kern -0.3u#;
-ligtable "r":
-"a" kern -0.2u#, "c" kern -0.2u#, "d" kern -0.2u#, "e" kern -0.2u#, "g" kern -0.2u#, "o" kern -0.2u#, "q" kern -0.2u#,
-"j" kern -0.4u#, "f" kern -0.1u#, "t" kern -0.1u#,
-"v" kern -0.0u#, "w" kern -0.0u#, "y" kern -0.0u#, "z" kern -0.0u#;
-ligtable "t":
-"a" kern -0.3u#, "c" kern -0.3u#, "d" kern -0.3u#, "e" kern -0.3u#, "g" kern -0.3u#, "o" kern -0.3u#, "q" kern -0.3u#,
-"j" kern -0.4u#, "f" kern +0.1u#, "t" kern +0.1u#,
-"v" kern -0.1u#, "w" kern -0.1u#, "y" kern -0.1u#, "z" kern -0.1u#;
-ligtable "v":
-"a" kern -0.0u#, "c" kern -0.0u#, "d" kern -0.0u#, "e" kern -0.0u#, "g" kern -0.0u#, "o" kern -0.0u#, "q" kern -0.0u#;
-ligtable "w":
-"a" kern -0.0u#, "c" kern -0.0u#, "d" kern -0.0u#, "e" kern -0.0u#, "g" kern -0.0u#, "o" kern -0.0u#, "q" kern -0.0u#;
-ligtable "y":
-"a" kern -0.0u#, "c" kern -0.0u#, "d" kern -0.0u#, "e" kern -0.0u#, "g" kern -0.0u#, "o" kern -0.0u#, "q" kern -0.0u#;
-ligtable "x":
-"a" kern -0.0u#, "c" kern -0.0u#, "d" kern -0.0u#, "e" kern -0.0u#, "g" kern -0.0u#, "o" kern -0.0u#, "q" kern -0.0u#;
+% kernings %
+numeric kernclassesf_[][], % list of kerning classes (first position)
+ kernclassess_[][],        % list of kerning classes (second position)
+ ligmatrix_[][][];         % matrix with kern and ligature entries: 255 times X times 2
+kernclassesf_[0][0]=0;     % number of kernclassesf (will be increased)
+kernclassess_[0][0]=0;     % number of kernclassess (will be increased)
+ligmatrix_[0][0]=0;        % number of first glyph that may combine with a second glyph to a ligature
+% the negative indices store additional information
+for i=0 upto 255:
+ ligmatrix_[i][0][0]:=0;   % set the number of kerns with char i to zero
+endfor
+ 
+def addkernclassf(text a) = % add a kerning class to kernclassesf
+ kernclassesf_[0][0]:=kernclassesf_[0][0]+1; % number of kernclassesf
+ numeric i,j;
+ i:=kernclassesf_[0][0];
+ j:=0; % number of chars in current class
+ for b=a:
+  j:=j+1;
+  kernclassesf_[i][j]:=enc(b);
+ endfor
+ kernclassesf_[i][0]:=j; % number of chars in current class is stored at 0th position
+enddef;
 
+def addkernclasss(text a) = %add a kerning class to kernclassess 
+ kernclassess_[0][0]:=kernclassess_[0][0]+1; % number of kernclassess
+ numeric i,j;
+ i:=kernclassess_[0][0];
+ j:=0; % number of chars in current class
+ for b=a:
+  j:=j+1;
+  kernclassess_[i][j]:=enc(b);
+ endfor
+ kernclassess_[i][0]:=j; % number of chars in current class is stored at 0th position
+enddef;
 
-% ligtable "L": "O" =: oct"014";   % USE THIS FOR LIGATURES OR SPECIAL CHARACTERS
-% font_identifier:="FRAN" if slant<>0: & "SL" fi;
+% hier sollte noch ein check rein, der überprüft, ob nicht etwa ein existierendes kern überschrieben wird
+def addlig(expr first,second,third) = % replace first and second to the ligature third
+ numeric i,n;
+ i:=enc(first);
+ n:=ligmatrix_[i][0][0];
+ n:=n+1;
+ ligmatrix_[i][0][0]:=n;
+ ligmatrix_[i][n][0]:=-enc(second); % the minus is a flag for "ligature" instead of "kern"
+ ligmatrix_[i][n][1]:=enc(third);
+enddef;
 
-font_coding_scheme:="ot1";
+def addclasskern(expr first,second,kvalue) = % kern all chars of first class and second class by kvalue
+ numeric i,j,n,e;
+ % get the indices i and j of the two classes:
+ i:=0; % default value (cannot be true)
+ j:=0; % default value (cannot be true)
+ for k=1 upto kernclassesf_[0][0]:
+  if kernclassesf_[k][1]=enc(first):
+   i:=k;
+   exitif 1=1; %j ust exit
+  fi 
+ endfor
+ if i=0:
+  errmessage("unknown first kerning class");
+ fi
+ for k=1 upto kernclassess_[0][0]:
+  if kernclassess_[k][1]=enc(second):
+   j:=k;
+   exitif 1=1; % just exit
+  fi 
+ endfor
+ if j=0:
+  errmessage("unknown second kerning class");
+ fi
+ for l=1 upto kernclassesf_[i][0]:
+  e:=kernclassesf_[i][l];
+  for m=1 upto kernclassess_[j][0]:
+   n:=ligmatrix_[e][0][0];
+   n:=n+1;
+   ligmatrix_[e][0][0]:=n;
+   ligmatrix_[e][n][0]:=kernclassess_[j][m]; 
+   ligmatrix_[e][n][1]:=kvalue;
+  endfor
+ endfor
+enddef;
 
-% if known ps_output:  % presets for mf2pt1
-% font_coding_scheme	"ot1";
-% font_comment	"Copyright (C) 2012 MetaFlop";
-% font_family	"Fontname";	
-% font_fixed_pitch	false;
-% font_identifier	"Fontname Light Oblique";
-% font_name			"Fontname-LightOblique";
-% font_size			10pt;
-%font_slant		1/6;
-% font_underline_position	-1pt#;
-% font_underline_thickness	1/2pt#;
-%font_unique_id		"4112233";
-% font_version		"002.005";
-% font_weight		"Light";
-% fi
+def generateligtable = % generate all kernings/ligatures at once
+ % first classes
+ numeric n;
+ for i=0 upto 255: 
+  n:=ligmatrix_[i][0][0];
+  if n<>0: % skip empty entries 
+   ligtable i:
+   for j=1 upto n-1: %last entry needs a semicolon
+    if ligmatrix_[i][j][0]<0: % the minus is a flag for "ligature"
+     -ligmatrix_[i][j][0]=:ligmatrix_[i][j][1],
+    else:
+     ligmatrix_[i][j][0] kern ligmatrix_[i][j][1],
+    fi
+   endfor
+   %last entry needs a semicolon:
+   if ligmatrix_[i][n][0]<0: % the minus is a flag for "ligature"
+    -ligmatrix_[i][n][0]=:ligmatrix_[i][n][1];
+   else:
+    ligmatrix_[i][n][0] kern ligmatrix_[i][n][1];
+   fi
+  fi
+ endfor
+enddef;
+
+addkernclassf("A","Abreve","Aogonek","Agrave","Aacute","Acircumflex","Atilde","Adieresis","Aring");
+addkernclassf("B");
+addkernclassf("C","Cacute","Ccaron","Ccedilla");
+addkernclassf("D","Dcaron","O","Ohungarumlaut","Ograve","Oacute","Ocircumflex","Otilde","Odieresis","Eth");
+addkernclassf("F");
+addkernclassf("J","U","Uhungarumlaut","Ugrave","Uacute","Ucircumflex","Udieresis","IJ","Oslash");
+addkernclassf("K","X");
+addkernclassf("L","Lacute","Lcaron","Lslash");
+addkernclassf("P");
+addkernclassf("Thorn");
+addkernclassf("Q");
+addkernclassf("R","Racute","Rcaron");
+addkernclassf("S","Sacute","Scedilla","Scaron");
+addkernclassf("T","Tcaron","Tcedilla");
+addkernclassf("V","W");
+addkernclassf("Y","Ydieresis","Yacute");
+addkernclassf("a","abreve","aogonek","agrave","aacute","acircumflex","atilde","adieresis","aring");
+addkernclassf("b");
+addkernclassf("c","cacute","ccaron","ccedilla");
+addkernclassf("d","dcaron","o","ohungarumlaut","ograve","oacute","ocircumflex","otilde","odieresis","eth");
+addkernclassf("f");
+addkernclassf("j","u","uhungarumlaut","ugrave","uacute","ucircumflex","udieresis","ij","oslash");
+addkernclassf("k","x");
+addkernclassf("l","lacute","lcaron","lslash");
+addkernclassf("p");
+addkernclassf("thorn");
+addkernclassf("q");
+addkernclassf("r","racute","rcaron");
+addkernclassf("t","tcaron","tcedilla");
+addkernclassf("v","w");
+addkernclassf("y","ydieresis","yacute");
+
+addkernclasss("A","Abreve","Aogonek","Agrave","Aacute","Acircumflex","Atilde","Adieresis","Aring","AE","Germandbls");
+addkernclasss("C","G","O","Q","Cacute","Ccaron","Gbreve","Ohungarumlaut","Ccedilla","Ograve","Oacute","Ocircumflex","Otilde","Odieresis","OE","Oslash");
+addkernclasss("J");
+addkernclasss("T","Tcaron","Tcedilla");
+addkernclasss("U","Uhungarumlaut","Ugrave","Uacute","Ucircumflex","Udieresis","IJ","Oslash");
+addkernclasss("V","W");
+addkernclasss("X");
+addkernclasss("Y","Ydieresis","Yacute");
+addkernclasss("a","aogonek","ae","germandbls");
+addkernclasss("abreve","agrave","aacute","acircumflex","atilde","adieresis","aring");
+addkernclasss("b","d","e","f","h","i","k","l","m","n","p","r","eogonek","lslash","lcaron","eng","thorn"); 
+addkernclasss("dcaron","ecaron","lacute","nacute","ncaron","racute","rcaron","egrave","eacute","edieresis","igrave","iacute","icircumflex","idieresis","ntilde"); 
+addkernclasss("c","g","o","q","ccedilla","oe","oslash");
+addkernclasss("cacute","ccaron","gbreve","ohungarumlaut","ograve","oacute","ocircumflex","otilde","odieresis");
+addkernclasss("j");
+addkernclasss("s","scedilla");
+addkernclasss("sacute","scaron");
+addkernclasss("t","tcedilla");
+addkernclasss("tcaron");
+addkernclasss("u");
+addkernclasss("uhungarumlaut","ugrave","uacute","ucircumflex","udieresis","ij");
+addkernclasss("v","w");
+addkernclasss("x");
+addkernclasss("y");
+addkernclasss("ydieresis","yacute");
+addkernclasss("z");
+addkernclasss("zacute","zcaron","zdotaccent");
+addkernclasss("period","comma");
+
+addclasskern("A","T",-.5u#); 
+addclasskern("A","V",-.25u#);
+addclasskern("B","T",-.25u#); 
+addclasskern("B","V",0u#);
+addclasskern("C","C",0u#);  
+addclasskern("D","C",0u#);  
+addclasskern("D","T",-.25u#); 
+addclasskern("D","X",-.25u#); 
+addclasskern("D","period",-.25u#); 
+addclasskern("F","C",0u#);
+addclasskern("F","J",-1.75u#);
+addclasskern("F","c",-.5u#); 
+addclasskern("F","cacute",-.5u#); 
+addclasskern("F","j",-.5u#);
+addclasskern("F","period",-.75u#);
+addclasskern("J","period",-.25u#); 
+addclasskern("K","C",-.25u#); 
+addclasskern("K","t",-.75u#); 
+addclasskern("L","T",-1.75u#);
+addclasskern("L","V",-1.25u#); 
+addclasskern("L","Y",-1.75u#); 
+addclasskern("L","t",-u#);
+addclasskern("L","tcaron",-u#);
+addclasskern("L","v",-.5u#);
+addclasskern("L","y",-.5u#);
+addclasskern("L","ydieresis",-.5u#);  
+addclasskern("P","C",0u#);
+addclasskern("P","J",-1.75u#);
+addclasskern("P","T",0u#);
+addclasskern("P","V",0u#);
+addclasskern("P","c",-u#); 
+addclasskern("P","cacute",0u#); 
+addclasskern("P","j",-.25u#);
+addclasskern("P","period",-.75u#); 
+%addclasskern("Thorn","T",-.5u#); 
+%addclasskern("Thorn","V",-.25u#); 
+%addclasskern("Thorn","X",-.5u#); 
+%addclasskern("Thorn","period",-1.5u#); 
+addclasskern("Q","T",-.25u#); 
+addclasskern("Q","period",-.25u#); 
+addclasskern("R","C",0u#);
+addclasskern("S","C",0u#); 
+addclasskern("S","c",0u#); 
+addclasskern("S","cacute",0u#); 
+addclasskern("T","A",-.5u#);
+addclasskern("T","C",-.25u#); 
+addclasskern("T","J",-.5u#); 
+addclasskern("T","T",1.25u#);
+addclasskern("T","a",-.75u#); 
+addclasskern("T","abreve",-.5u#); 
+addclasskern("T","b",0u#); 
+addclasskern("T","dcaron",-.75u#); 
+addclasskern("T","c",-.75u#); 
+addclasskern("T","cacute",-.75u#); 
+addclasskern("T","j",-.5u#); 
+addclasskern("T","s",-.75u#); 
+addclasskern("T","sacute",-.75u#); 
+addclasskern("T","t",-.5u#);
+addclasskern("T","tcaron",-.5u#);
+addclasskern("T","u",-.75u#); 
+addclasskern("T","uhungarumlaut",-u#)
+addclasskern("T","v",-.5u#); 
+addclasskern("T","x",-.5u#); 
+addclasskern("T","y",-.5u#);
+addclasskern("T","ydieresis",-.5u#); 
+addclasskern("T","z",-.5u#); 
+addclasskern("T","zacute",-.5u#); 
+addclasskern("T","period",-.75u#);
+addclasskern("V","A",-.25u#);
+addclasskern("V","C",0u#);
+addclasskern("V","J",-.75u#);
+addclasskern("V","V",.5u#);
+addclasskern("V","a",-u#);
+addclasskern("V","abreve",-.5u#);
+addclasskern("V","b",-.5u#); 
+addclasskern("V","c",-u#);
+addclasskern("V","cacute",-.5u#);
+addclasskern("V","j",-u#);
+addclasskern("V","s",-u#); 
+addclasskern("V","sacute",-.5u#); 
+addclasskern("V","u",-.5u#); 
+addclasskern("V","x",-.5u#); 
+addclasskern("V","ydieresis",.5u#); 
+addclasskern("V","z",-.5u#); 
+addclasskern("V","period",-1u#);
+addclasskern("Y","J",-u#);
+addclasskern("Y","j",-u#);
+addclasskern("Y","period",-1.25u#);
+
+addclasskern("a","t",-.25u#); 
+addclasskern("a","tcaron",-.25u#); 
+addclasskern("a","v",0u#);
+addclasskern("b","t",-.25u#); 
+addclasskern("b","tcaron",-.25u#); 
+addclasskern("b","v",-.25u#);
+addclasskern("c","c",-.25u#);  
+addclasskern("c","cacute",-.25u#);  
+addclasskern("d","c",0u#);  
+addclasskern("d","cacute",0u#);  
+addclasskern("d","t",-.25u#); 
+addclasskern("d","tcaron",-.25u#); 
+addclasskern("d","x",-.25u#); 
+addclasskern("d","period",0u#); 
+addclasskern("f","c",-.25u#); 
+addclasskern("f","cacute",-.25u#); 
+addclasskern("f","j",-.5u#);
+addclasskern("j","period",0u#); 
+addclasskern("k","c",-.25u#); 
+addclasskern("k","cacute",-.25u#); 
+addclasskern("l","t",-.5u#);
+addclasskern("l","tcaron",-.5u#);
+addclasskern("l","v",-.25u#);
+addclasskern("l","y",-.25u#); 
+addclasskern("l","ydieresis",-.25u#); 
+addclasskern("p","j",-.25u#);
+addclasskern("p","v",-.25u#);
+addclasskern("p","period",-.5u#); 
+%addclasskern("thorn","t",-.5u#); 
+%addclasskern("thorn","tcaron",-.5u#);
+%addclasskern("thorn","v",-.25u#); 
+%addclasskern("thorn","x",-u#); 
+%addclasskern("thorn","period",-3u#); 
+addclasskern("q","t",-.25u#);
+addclasskern("q","period",0u#); 
+addclasskern("r","c",-.25u#);
+addclasskern("r","cacute",-.25u#);
+addclasskern("t","a",-.25u#);
+addclasskern("t","abreve",-.25u#); 
+addclasskern("t","c",-.25u#); 
+addclasskern("t","cacute",-.25u#); 
+addclasskern("t","j",-.5u#); 
+addclasskern("t","t",.25u#);
+addclasskern("t","tcaron",.25u#);
+addclasskern("t","period",-.25u#);
+addclasskern("v","a",-.25u#);
+addclasskern("v","abreve",-.25u#);
+addclasskern("v","c",-.25u#);
+addclasskern("v","cacute",-.25u#);
+addclasskern("v","j",-.25u#);
+addclasskern("v","v",.25u#);
+addclasskern("v","period",-.75u#);
+addclasskern("y","j",-.25u#);
+addclasskern("y","period",-.75u#);
+
+% ligatures will overwrite existing kerning pairs
+% addlig("f","i","fi"); 
+% addlig("f","f","ff"); 
+% addlig("f","l","fl"); 
+% addlig("ff","i","ffi"); 
+% addlig("ff","l","ffl"); 
+% addlig("quoteleft","quoteleft","quotedblleft"); 
+% addlig("quoteright","quoteright","quotedblright"); 
+% addlig("hyphen","hyphen","endash"); 
+% addlig("endash","hyphen","emdash"); 
+% addlig("less","less","guillemotleft"); 
+% addlig("greater","greater","guillemotright"); 
+% addlig("exclam","quoteleft","exclamdown"); 
+% addlig("question","quoteleft","questiondown"); 
+
+generateligtable;
+
+bye.

@@ -48,6 +48,10 @@ path rr; numeric t,u; (t,u)=(ci intersectiontimes dr);
 rr = subpath (0,u) of dr;
 fill rr---rl---cycle;
 
+% composite glyphs %
+charanchortops_[charcode]=(.5w,1.25h);
+charanchorbots_[charcode]=(.5w,0);
+
 penlabels(range 1 thru 150);
 
 endchar;

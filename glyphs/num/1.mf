@@ -8,24 +8,23 @@ normal_adjust_fit(space+0.1u#,space+0.1u#);
 % construction %
 x1=x2=.5w;
 x1l=x2l=x1-(cont*px/2);
-x3l=leftstemloc-cont*px/2;
-x4l=x2+(cont*px/2)-corner;
+x3l=leftstemloc;
+x4l=x2+(px/2)-corner;
 y1=0;
-y2=y4=h;
-y3=.65h;
+y2=y4l=h;
+y3l=.75h+(px/1.8);
 
-
-alphaone:=diag_ratio(1,cont*px,y4-y3,x4l-x3l);
+alphaone:=diag_ratio(1,px,y4l-y3l,x4l-x3l);
 
 % penpositions %
 penpos1(whatever,0);
 penpos2(whatever,0);
-penpos3(1.1*alphaone*px,0);
-penpos4(1.1*alphaone*px,0);
+penpos3(1.1*alphaone*px+0.25corner,-90);
+penpos4(1.1*alphaone*px+0.25corner,-90);
 
 % draw %
 z10=whatever[z1l,z2l]=whatever[z3r,z4r];
-fill z1l---z1r---z2r---z4l---z3l---z3r---z10---z1l---cycle;
+fill z1l--z1r--z2r--z4l--z3l--z3r--z10--z1l--cycle;
 
 penlabels(range 1 thru 150);
 

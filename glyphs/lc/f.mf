@@ -47,6 +47,9 @@ path a; numeric t,u; (t,u)=(((0,mean+0.5(y11r-y3r)+1.4appert*0.5*(y11r-y3r))--(i
 a = subpath (u,0) of (z11l--super_qr(12l,10l)--z9l);
 fill a--z11l--z11r--b--cycle;
 
+% composite glyphs %
+charanchorbots_[charcode]=(.5w,0);
+
 penlabels(range 1 thru 150);
 
 endchar;

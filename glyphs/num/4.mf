@@ -18,15 +18,15 @@ y3r=y4r=y3+(px/2);
 y5l=y3l+corner;
 
 % diagonal angle
-alphafour=diag_ratio(1,cont*px,0.4h,x6l-x5l);
+alphafour=diag_ratio(1,px,h,x6l-x5l);
 
 % penpositions %
 penpos1(whatever,0);
 penpos2(whatever,0);
 penpos3(whatever,90);
 penpos4(whatever,90);
-penpos5(alphafour*cont*px,0);
-penpos6(alphafour*cont*px,0);
+penpos5(1.0*alphafour*cont*px+0.1corner,0);
+penpos6(1.0*alphafour*cont*px+0.1corner,0);
 
 % draw % 
 z10=whatever[z4r,z3r]=whatever[z5r,z6r];

@@ -70,6 +70,10 @@ path a; numeric t,u; (t,u)=(((0,y18r+0.5*(y13r-y18r)+appert*0.5*(y13r-y18r))---(
 a = subpath (u,0) of (z13l---super_qr(14l,15l)---z16l);
 fill a---z13l---z13r---b---cycle;
 
+% composite glyphs %
+charanchortops_[charcode]=(.5w,1.25h);
+charanchorbots_[charcode]=(.5w,0);
+
 penlabels(range 1 thru 150);
 
 endchar;

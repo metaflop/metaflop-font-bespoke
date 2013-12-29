@@ -48,6 +48,10 @@ penstroke z1e---z2e;
 penstroke z3e---super_qr(4e,5e)---super_ql(6e,7e)---z8e;
 penstroke z9e---super_qr(10e,11e)---super_ql(12e,13e)---z14e;
 
+% composite glyphs %
+charanchortops_[charcode]=(.5w,1.25h);
+charanchorbots_[charcode]=(.5w,0);
+
 penlabels(range 1 thru 150);
 
 endchar;

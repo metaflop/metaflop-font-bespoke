@@ -47,6 +47,9 @@ path ss; numeric t,u; (t,u)=(((0,((-d+mean/2)-1.4appert*((-d+mean/2)-y7)))--(inf
 ss = subpath (0,u) of (super_qr(8l,2l)--z1l);
 fill ss--r--z7r--z7l--cycle;
 
+% composite glyphs %
+charanchortops_[charcode]=(.5w,1.4h);
+
 penlabels(range 1 thru 150);
 
 endchar;

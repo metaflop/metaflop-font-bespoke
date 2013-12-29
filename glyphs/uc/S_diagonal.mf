@@ -79,6 +79,10 @@ fill a---z13l---z13r---b---cycle;
 
 %fill z3l---z18r---z3r---z18l---cycle;
 
+% composite glyphs %
+charanchortops_[charcode]=(.5w,1.25h);
+charanchorbots_[charcode]=(.5w,0);
+
 penlabels(range 1 thru 150);
 
 endchar;

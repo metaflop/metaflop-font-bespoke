@@ -38,6 +38,9 @@ z12r=r intersectionpoint ss;
 fill z4l--z4r--z11r--z11l--cycle;
 fill z5l--z5r--z12r--z12l--cycle;
 
+% composite glyphs %
+charanchorbots_[charcode]=(.5w,0);
+
 penlabels(range 1 thru 150);
 
 endchar;

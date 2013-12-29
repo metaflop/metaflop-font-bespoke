@@ -33,6 +33,10 @@ z5=whatever[z3,z4]; z6=whatever[z1,z2];
 fill z3l---z4l---z1r---z2r---z2l---z0---z3r---cycle;
 penstroke z5e---z6e;
 
+% composite glyphs %
+charanchortops_[charcode]=(.5w,1.25h);
+charanchorbots_[charcode]=(.73w,0);
+
 penlabels(range 1 thru 150);
 
 endchar;

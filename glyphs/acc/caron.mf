@@ -1,5 +1,5 @@
 % box dimension definition %
-beginadjchar(2,3,cap#,0);
+beginadjchar(7,3,cap#,0);
 
 % sidebearings %
 numeric l,r;
@@ -9,16 +9,16 @@ normal_adjust_fit(space*-0.1u#,space*-0.1u#);
 x4=leftstemloc;
 x2=w-leftstemloc;
 x3=0.5w;
-y2=y4=0.85h;
-y3=h;
+y2=y4=h;
+y3=0.85h;
 
 % diagonal angle
-alphacircum=diag_ratio(1,cont*px,h,x4-x3);
+alphacaron=diag_ratio(1,cont*px,h,x4-x3);
 
 % penpositions %
-penpos2(alphacircum*cont*px,0);
-penpos3(1.4alphacircum*cont*px,0);
-penpos4(alphacircum*cont*px,0);
+penpos2(alphacaron*cont*px,0);
+penpos3(1.4alphacaron*cont*px,0);
+penpos4(alphacaron*cont*px,0);
 
 % draw %
 fill z3l--z4l--z4r--z3r--cycle;

@@ -27,10 +27,10 @@
 % dimension %
 font_size:=10pt#;  % font size  @hidden
 ht#:=10pt#;        % box height @hidden
-u#:=1.65pt#;       % unit widht 			    $ 0.75 / 2
+u#:=1.45pt#;       % unit widht 			    $ 0.75 / 2
 s#:=0.15u#;        % spacing @hidden
 o#:=0.1pt#;	       % overshoot                  $ 0 / 1	
-px#:=0.9pt#;       % pen width 					$ 0.1 / 1
+px#:=0.75pt#;       % pen width 					$ 0.1 / 1
 
 % proportion %
 cap#:=0.9ht#;      % cap heigt					$ 0.75 / 1	
@@ -42,7 +42,7 @@ des#:=0.35ht#;     % descender heigt		    $ 0.25 / 0.75
 % shape %
 incx:=0;           % horizontal increase        $ 0 / 0.75	
 incy:=0;           % vertical increase          $ 0 / 0.75
-appert:=0.5;       % apperture                  $ 0 / 0.75
+appert:=0.6;       % apperture                  $ 0 / 0.75
 cont:=1.1;         % contrast                   $ 1 / 2
 superness:=0.72;   % superness					$ 0.25 / 1
 corner#:=1.0pt#;   % corner standard value = px $ 0 / 1.5

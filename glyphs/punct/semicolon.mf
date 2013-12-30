@@ -1,5 +1,5 @@
 % box dimension definition %
-beginadjichar(59,0.2,mean#,des#);
+beginadjchar(59,1,mean#,des#);
 
 % sidebearings %
 numeric l,r;
@@ -10,20 +10,23 @@ x12-x13=1.2*cont*px+o;
 y11-y10=1.2*cont*px+o;
 
 % construction %
-x1=x2=x10=x11=leftstemloc;
-x1l=x2l=x1-(cont*px/2);
+x3=x10=x11=leftstemloc;
+x4=w-leftstemloc-px;
 .5(x12+x13)=leftstemloc;
+y3=1.2*cont*px+o;
+y4=-0.4des;
 y12=y13=.5(y11+y10);
 y11=mean;
-y1=.1*mean+px;
-y2=-.3*des;
+
+% diagonal angle
+alphasemicolon=diag_ratio(1,cont*px,h,x4-x3);
 
 % penpositions %
-penpos1(whatever,0);
-penpos2(whatever,0);
+penpos3(1.3alphasemicolon*cont*px,0);
+penpos4(0.9alphasemicolon*cont*px,0);
 
 % draw %
-penstroke z1e..z2e;
+fill z3l--z4l--z4r--z3r--cycle;
 fill super_qr(11,12)---super_ql(12,10)---super_qr(10,13)---super_ql(13,11)---cycle;
 
 penlabels(range 1 thru 150);

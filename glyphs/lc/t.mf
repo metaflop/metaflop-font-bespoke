@@ -1,9 +1,9 @@
 % box dimension definition %
-beginadjchar("t",3.5,asc#,0);
+beginadjchar("t",3,asc#,0);
 
 % sidebearings %
 numeric l,r;
-normal_adjust_fit(space-0.5u#,space-0.5u#);
+normal_adjust_fit(space-0.25u#,space-0.25u#);
 
 % construction %
 x3=leftstemloc-px/2;
@@ -12,8 +12,8 @@ x1=x2=(x4+x3)/2;
 x1l=x2l=x1-(cont*px/2);
 y1=0;
 y2=h;
-y3=y4=mean;
-y3l=y4l=mean-px/2;
+y3=y4=mean-px/2;
+y3r=y4r=mean;
 
 % penpositions %
 penpos1(whatever,0);

@@ -10,14 +10,14 @@ x1=x2=x3=x8=leftstemloc;
 x1r=x2r=x1+(cont*px/2);
 x5=x6=w-x1;
 x5r=x6r=x6-(cont*px/2);
-x4r=x7r=x2r+0.5*(x6r-x2r)+0.5*incx*(x6r-x2r);
+x4r=x7r=x2r+0.45*(x6r-x2r)+0.45*incx*(x6r-x2r);
 x9r=w-x1l;
 y1=y9=0;
 y2=h;
 top y3=h;
 y3=y4;
 y3r=y4r=h-px;
-y7=y8=bar*h;
+y7=y8=0.9bar*h;
 y7r=y8r=y7+.5px;
 y5r=y7r+.5*(y4r-y7r)+incy*.5*(y4r-y7r);
 y6r=y7r+.5*(y4r-y7r)-incy*.5*(y4r-y7r);
@@ -37,16 +37,16 @@ penpos7(whatever,-90);
 penpos9(alphar1*1.1*cont*px,0);
 
 % draw %
-penstroke z1e---z2e;
-penstroke z3e---super_qr(4e,5e)---super_ql(6e,7e)---z8e;
+penstroke z1e--z2e;
+penstroke z3e--super_qr(4e,5e)--super_ql(6e,7e)--z8e;
 path ci; ci = super_ql(6l,7l)--z8l;
-path dl; dl = z9l---z2l;
-path dr; dr = z9r---z2r;
+path dl; dl = z9l--z2l;
+path dr; dr = z9r--z2r;
 path rl; numeric t,u; (t,u)=(ci intersectiontimes dl);
 rl = subpath (u,0) of dl;
 path rr; numeric t,u; (t,u)=(ci intersectiontimes dr);
 rr = subpath (0,u) of dr;
-fill rr---rl---cycle;
+fill rr--rl--cycle;
 
 % composite glyphs %
 charanchortops_[charcode]=(.4w,1.25h);

@@ -1,9 +1,9 @@
 % box dimension definition %
-beginadjchar("q",4.4,mean#,des#);
+beginadjchar("q",4.5,mean#,des#);
 
 % sidebearings %
 numeric l,r;
-normal_adjust_fit(space+0.2u#,space+0.4u#);
+normal_adjust_fit(space+0.25u#,space+0.4u#);
 
 % overshoot %
 top y3=mean+o;

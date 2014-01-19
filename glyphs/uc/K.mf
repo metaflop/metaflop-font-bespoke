@@ -3,7 +3,7 @@ beginadjchar("K",5,cap#,0);
 
 % sidebearings %
 numeric l,r;
-normal_adjust_fit(space+0.5u#,space-0.3u#);
+normal_adjust_fit(space+0.5u#,space-0.2u#);
 
 % construction %
 x1=x2=leftstemloc;
@@ -29,13 +29,13 @@ penpos5(1.2*cont*px,0);
 penstroke z2e..z1e;
 z11l=z4l+whatever*dir angle(z4r-z3r)=whatever[z2l,z1l];
 z11r=z4r+whatever*dir angle(z4r-z3r)=whatever[z2r,z1r];  
-path ss; ss=z4l---z11l---z1l;
-path l; l=z5l---z2l;
-path r; r=z5r---z2r;
+path ss; ss=z4l--z11l--z1l;
+path l; l=z5l--z2l;
+path r; r=z5r--z2r;
 z12l=l intersectionpoint ss;
 z12r=r intersectionpoint ss;
-fill z4l---z4r---z11r---z11l---cycle;
-fill z5l---z5r---z12r---z12l---cycle;
+fill z4l--z4r--z11r--z11l--cycle;
+fill z5l--z5r--z12r--z12l--cycle;
 
 % composite glyphs %
 charanchortops_[charcode]=(.5w,1.25h);

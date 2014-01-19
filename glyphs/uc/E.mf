@@ -1,5 +1,5 @@
 % box dimension definition %
-beginadjchar("E",4.5,cap#,0);
+beginadjchar("E",4,cap#,0);
 
 % sidebearings %
 numeric l,r;
@@ -32,10 +32,10 @@ penpos7(whatever,90);
 penpos8(whatever,90);
 
 % draw %
-penstroke z1e---z2e;
-penstroke z3e---z4e;
-penstroke z5e---z6e;
-penstroke z7e---z8e;
+penstroke z1e--z2e;
+penstroke z3e--z4e;
+penstroke z5e--z6e;
+penstroke z7e--z8e;
 
 % composite glyphs %
 charanchortops_[charcode]=(.5w,1.25h);

@@ -49,7 +49,7 @@ font_quad:=10u#+0s#;
 font_normal_space:=3u#+0s#;
 font_normal_stretch:=0u#;
 font_normal_shrink:=0u#;
-font_coding_scheme:="T1";
+font_coding_scheme:="t1";
 
 % pixel conversions %
 define_pixels(s,u);
@@ -645,57 +645,38 @@ def super_qr(suffix j,k) =
 z.j{x.k-x.j,0}...(superness[x.j,x.k],superness[y.k,y.j]){z.k-z.j}...z.k{0,y.k-y.j} enddef;
 
 % glyph inputs %
-input glyphs/acc/grave
-input glyphs/acc/acute
-input glyphs/acc/circumflex
-%input glyphs/acc/tilde
-input glyphs/acc/dieresis
-%input glyphs/acc/hungarumlaut
-input glyphs/acc/ring
-input glyphs/acc/caron
-input glyphs/acc/breve
-%input glyphs/acc/macron
-%input glyphs/acc/dotaccent
-%input glyphs/acc/cedilla
-%input glyphs/acc/ogonek
+input glyphs/acc/dotaccent
 
-%input glyphs/punct/quotesinglbase
-%input glyphs/punct/guilsinglleft
-%input glyphs/punct/guilsinglright
-%input glyphs/punct/quotedblleft
-%input glyphs/punct/quotedblright
-%input glyphs/punct/quotedblbase
-%input glyphs/punct/guillemotleft
-%input glyphs/punct/guillemotright
+input glyphs/punct/quotesinglbase
+input glyphs/punct/guilsinglleft
+input glyphs/punct/guilsinglright
+input glyphs/punct/quotedblleft
+input glyphs/punct/quotedblright
+input glyphs/punct/quotedblbase
+input glyphs/punct/guillemotleft
+input glyphs/punct/guillemotright
 input glyphs/punct/endash
 input glyphs/punct/emdash
 input glyphs/punct/cwm
-%input glyphs/punct/perthousandzero
 input glyphs/punct/dotlessi
-input glyphs/punct/dotlessj
 
-%input glyphs/lig/ff
-%input glyphs/lig/fi
-%input glyphs/lig/fl
-%input glyphs/lig/ffi
-%input glyphs/lig/ffl
+input glyphs/lig/ff
+input glyphs/lig/fi
+input glyphs/lig/fl
+input glyphs/lig/ffi
+input glyphs/lig/ffl
 
 input glyphs/punct/visiblespace
 input glyphs/punct/exclam
-input glyphs/punct/quotedbl
-%input glyphs/punct/numbersign 
-%input glyphs/punct/dollar 
-%input glyphs/punct/percent 
 input glyphs/punct/ampersand
-%input glyphs/punct/quoteright
-%input glyphs/punct/parenleft
-%input glyphs/punct/parenright
-%input glyphs/punct/asterisk
+input glyphs/punct/quoteright
+input glyphs/punct/parenleft
+input glyphs/punct/parenright
 input glyphs/punct/plus
 input glyphs/punct/comma
 input glyphs/punct/hyphen
 input glyphs/punct/period
-%input glyphs/punct/slash
+input glyphs/punct/slash
 
 input glyphs/num/0
 input glyphs/num/1
@@ -710,11 +691,7 @@ input glyphs/num/9
 
 input glyphs/punct/colon
 input glyphs/punct/semicolon
-%input glyphs/punct/less
-%input glyphs/punct/equal
-%input glyphs/punct/greater
 input glyphs/punct/question
-input glyphs/punct/at
 
 input glyphs/uc/A
 input glyphs/uc/B
@@ -743,13 +720,6 @@ input glyphs/uc/X
 input glyphs/uc/Y
 input glyphs/uc/Z
 
-%input glyphs/punct/bracketleft
-%input glyphs/punct/backslash
-%input glyphs/punct/bracketright
-%input glyphs/punct/asciicircum
-%input glyphs/punct/underscore
-%input glyphs/punct/quoteleft
-
 input glyphs/lc/a
 input glyphs/lc/b
 input glyphs/lc/c
@@ -776,143 +746,6 @@ input glyphs/lc/w
 input glyphs/lc/x
 input glyphs/lc/y
 input glyphs/lc/z
-
-%input glyphs/punct/braceleft
-%input glyphs/punct/bar
-%input glyphs/punct/braceright
-%input glyphs/punct/asciitilde
-
-input glyphs/uc/Abreve
-%input glyphs/uc/Aogonek
-input glyphs/uc/Cacute
-input glyphs/uc/Ccaron
-input glyphs/uc/Dcaron
-input glyphs/uc/Ecaron
-%input glyphs/uc/Eogonek
-input glyphs/uc/Gbreve
-input glyphs/uc/Lacute
-%input glyphs/uc/Lcaron
-%input glyphs/uc/Lslash
-input glyphs/uc/Nacute
-input glyphs/uc/Ncaron
-%input glyphs/uc/Eng
-%input glyphs/uc/Ohungarumlaut
-input glyphs/uc/Racute
-input glyphs/uc/Rcaron
-input glyphs/uc/Sacute
-input glyphs/uc/Scaron
-%input glyphs/uc/Scedilla
-input glyphs/uc/Tcaron
-%input glyphs/uc/Tcedilla
-%input glyphs/uc/Uhungarumlaut
-input glyphs/uc/Uring
-input glyphs/uc/Ydieresis
-input glyphs/uc/Zacute
-input glyphs/uc/Zcaron
-%input glyphs/uc/Zdotaccent
-%input glyphs/uc/IJ
-%input glyphs/uc/Idotaccent
-
-%input glyphs/lc/dcroat
-%input glyphs/punct/section
-input glyphs/lc/abreve
-%input glyphs/lc/aogonek
-input glyphs/lc/cacute
-input glyphs/lc/ccaron
-%input glyphs/lc/dcaron
-input glyphs/lc/ecaron
-%input glyphs/lc/eogonek
-input glyphs/lc/gbreve
-input glyphs/lc/lacute
-%input glyphs/lc/lcaron
-%input glyphs/lc/lslash
-input glyphs/lc/nacute
-input glyphs/lc/ncaron
-%input glyphs/lc/eng
-%input glyphs/lc/ohungarumlaut
-input glyphs/lc/racute
-input glyphs/lc/rcaron
-input glyphs/lc/sacute
-input glyphs/lc/scaron
-%input glyphs/lc/scedilla
-%input glyphs/lc/tcaron
-%input glyphs/lc/tcedilla
-%input glyphs/lc/uhungarumlaut
-input glyphs/lc/uring
-input glyphs/lc/ydieresis
-input glyphs/lc/zacute
-input glyphs/lc/zcaron
-%input glyphs/lc/zdotaccent
-%input glyphs/lc/ij
-
-%input glyphs/punct/exclamdown
-%input glyphs/punct/questiondown
-%input glyphs/punct/sterling
-
-input glyphs/uc/Agrave
-input glyphs/uc/Aacute
-input glyphs/uc/Acircumflex
-%input glyphs/uc/Atilde
-input glyphs/uc/Adieresis
-input glyphs/uc/Aring
-%input glyphs/uc/AE
-%input glyphs/uc/Ccedilla
-input glyphs/uc/Egrave
-input glyphs/uc/Eacute
-input glyphs/uc/Ecircumflex
-input glyphs/uc/Edieresis
-input glyphs/uc/Igrave
-input glyphs/uc/Iacute
-input glyphs/uc/Icircumflex
-input glyphs/uc/Idieresis
-%input glyphs/uc/Eth
-%input glyphs/uc/Ntilde
-input glyphs/uc/Ograve
-input glyphs/uc/Oacute
-input glyphs/uc/Ocircumflex
-%input glyphs/uc/Otilde
-input glyphs/uc/Odieresis
-%input glyphs/uc/OE
-%input glyphs/uc/Oslash
-input glyphs/uc/Ugrave
-input glyphs/uc/Uacute
-input glyphs/uc/Ucircumflex
-input glyphs/uc/Udieresis
-input glyphs/uc/Yacute
-%input glyphs/uc/Thorn
-%input glyphs/uc/Germandbls
-input glyphs/lc/agrave
-input glyphs/lc/aacute
-input glyphs/lc/acircumflex
-%input glyphs/lc/atilde
-input glyphs/lc/adieresis
-input glyphs/lc/aring
-%input glyphs/lc/ae
-%input glyphs/lc/ccedilla
-input glyphs/lc/eacute
-input glyphs/lc/egrave
-input glyphs/lc/ecircumflex
-input glyphs/lc/edieresis
-input glyphs/lc/iacute
-input glyphs/lc/igrave
-input glyphs/lc/icircumflex
-input glyphs/lc/idieresis
-%input glyphs/lc/eth
-%input glyphs/lc/ntilde
-input glyphs/lc/oacute
-input glyphs/lc/ograve
-input glyphs/lc/ocircumflex
-%input glyphs/lc/otilde
-input glyphs/lc/odieresis
-%input glyphs/lc/oe
-%input glyphs/lc/oslash
-input glyphs/lc/uacute
-input glyphs/lc/ugrave
-input glyphs/lc/ucircumflex
-input glyphs/lc/udieresis
-input glyphs/lc/yacute
-%input glyphs/lc/thorn
-%input glyphs/lc/germandbls
 
 % kernings %
 numeric kernclassesf_[][], % list of kerning classes (first position)

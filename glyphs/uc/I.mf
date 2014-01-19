@@ -3,7 +3,7 @@ beginadjichar("I",0.2,cap#,0);
 
 % sidebearings %
 numeric l,r;
-normal_adjust_fit(space+0.55u#,space+0.55u#);
+normal_adjust_fit(space+0.6u#,space+0.6u#);
 
 % construction %
 x1=x2=leftstemloc;
@@ -16,7 +16,7 @@ penpos1(whatever,0);
 penpos2(whatever,0);
 
 % draw %
-penstroke z1e---z2e;
+penstroke z1e--z2e;
 
 % composite glyphs %
 charanchortops_[charcode]=(.5w,1.25h);

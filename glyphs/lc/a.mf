@@ -1,9 +1,9 @@
 % box dimension definition %
-beginadjchar("a",3.75,mean#,0);
+beginadjchar("a",4,mean#,0);
 
 % sidebearings %
 numeric l,r;
-normal_adjust_fit(space+0.2u#,space+0.35u#);
+normal_adjust_fit(space+0.25u#,space+0.4u#);
 
 % overshoot %
 bot y8=0-o;

@@ -1,5 +1,5 @@
 % box dimension definition %
-beginadjchar("J",4.5,cap#,0);
+beginadjchar("J",4.25,cap#,0);
 
 % sidebearings %
 numeric l,r;
@@ -18,7 +18,7 @@ x5r=x6r=x6-(cont*px/2);
 x7r=x1r+0.5*(x6r-x1r)+0.5*incx*(x6r-x1r);
 x8r=x1r+0.5*(x6r-x1r)-0.5*incx*(x6r-x1r);
 y5=y2=h;
-y1r=y6r=y7r+0.3*(y5r-y7r)-0.3*incy*(y5r-y7r);
+y1r=y6r=y7r+0.25*(y5r-y7r)-0.25*incy*(y5r-y7r);
 
 % penpositions %
 penpos1(whatever,0);
@@ -29,17 +29,17 @@ penpos7(whatever,-90);
 penpos8(whatever,-90);
 
 % draw %
-penstroke z5e---super_ql(6e,7e);
+penstroke z5e--super_ql(6e,7e);
 
-z100=((-infinity,0.5h-appert*0.5h)--(infinity,0.5h-appert*0.5h)) intersectionpoint (super_qr(8l,1l)---z2l);
-path x; numeric t,u; (t,u)=((-infinity,0.5h-appert*0.5h)---(infinity,0.5h-appert*0.5h)) intersectiontimes (super_qr(8l,1l)---z2l);
-z101=z100+whatever*(dir(angle(direction u of (super_qr(8l,1l)---z2l))+90));
+z100=((-infinity,0.5h-1.25*appert*0.5h)--(infinity,0.5h-1.25*appert*0.5h)) intersectionpoint (super_qr(8l,1l)--z2l);
+path x; numeric t,u; (t,u)=((-infinity,0.5h-1.25*appert*0.5h)--(infinity,0.5h-1.25*appert*0.5h)) intersectiontimes (super_qr(8l,1l)--z2l);
+z101=z100+whatever*(dir(angle(direction u of (super_qr(8l,1l)--z2l))+90));
 x101=w;
-path r; numeric t,u; (t,u)=((z100--z101) intersectiontimes (super_qr(8r,1r)---z2r));
-r = subpath (u,0) of (super_qr(8r,1r)---z2r);
-path ss; numeric t,u; (t,u)=((0,0.5h-appert*0.5h)---(infinity,0.5h-appert*0.5h)) intersectiontimes (super_qr(8l,1l)---z2l);
-ss = subpath (0,u) of (super_qr(8l,1l)---z2l);
-fill ss---r---z7r---z7l---cycle;
+path r; numeric t,u; (t,u)=((z100--z101) intersectiontimes (super_qr(8r,1r)--z2r));
+r = subpath (u,0) of (super_qr(8r,1r)--z2r);
+path ss; numeric t,u; (t,u)=((0,0.5h-1.25*appert*0.5h)--(infinity,0.5h-1.25*appert*0.5h)) intersectiontimes (super_qr(8l,1l)--z2l);
+ss = subpath (0,u) of (super_qr(8l,1l)--z2l);
+fill ss--r--z7r--z7l--cycle;
 
 % composite glyphs %
 charanchortops_[charcode]=(.5w,1.25h);

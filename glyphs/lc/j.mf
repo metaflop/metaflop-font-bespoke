@@ -3,7 +3,7 @@ beginadjchar("j",3,asc#,des#);
 
 % sidebearings %
 numeric l,r;
-normal_adjust_fit(space-0.6u#,space+0.45u#);
+normal_adjust_fit(space-1.3u#,space+0.45u#);
 
 % overshoot %
 bot y8=-d-o;

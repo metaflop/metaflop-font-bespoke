@@ -3,7 +3,7 @@ beginadjchar("Z",5,cap#,0);
 
 % sidebearings %
 numeric l,r;
-normal_adjust_fit(space-0.1u#,space-0.1u#);
+normal_adjust_fit(space+0.0u#,space+0.0u#);
 
 % construction %
 x1=x5=x3l=leftstemloc-cont*px/2;
@@ -29,7 +29,7 @@ penpos6(px,90);
 % draw %
 z10=whatever[z6r,z5r]=whatever[z3r,z4r];
 z11=whatever[z2l,z1l]=whatever[z3l,z4l];
-fill z1l---z1r---z2r---z4r---z10---z6r---z6l---z5l---z3l---z11---cycle;
+fill z1l--z1r--z2r--z4r--z10--z6r--z6l--z5l--z3l--z11--cycle;
 
 % composite glyphs %
 charanchortops_[charcode]=(.5w,1.25h);

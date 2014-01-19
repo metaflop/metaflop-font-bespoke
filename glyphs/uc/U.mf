@@ -29,7 +29,7 @@ penpos5(whatever,180);
 penpos6(whatever,180);
 
 % draw %
-penstroke z6e---super_ql(5e,4e)---super_qr(3e,2e)---z1e;
+penstroke z6e--super_ql(5e,4e)--super_qr(3e,2e)--z1e;
 
 % composite glyphs %
 charanchortops_[charcode]=(.5w,1.25h);

@@ -1,5 +1,5 @@
 % box dimension definition %
-beginadjchar("M",6,cap#,0);
+beginadjchar("M",6.75,cap#,0);
 
 % sidebearings %
 numeric l,r;
@@ -35,7 +35,7 @@ penpos8(alphaM*px,0);
 z10=whatever[z5r,z6r]=whatever[z7l,z8l];
 z11=whatever[z6l,z5l]=whatever[z1r,z2r];
 z12=whatever[z7r,z8r];
-fill z1l---z2l---z5r---z10---z8l---z4r---z3r---z3l---z12---z7r---z6l---z11---z1r---cycle;
+fill z1l--z2l--z5r--z10--z8l--z4r--z3r--z3l--z12--z7r--z6l--z11--z1r--cycle;
 
 % composite glyphs %
 charanchortops_[charcode]=(.5w,1.25h);

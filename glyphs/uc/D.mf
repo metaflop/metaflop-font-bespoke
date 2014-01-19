@@ -1,5 +1,5 @@
 % box dimension definition %
-beginadjchar("D",5.25,cap#,0);
+beginadjchar("D",5.5,cap#,0);
 
 % sidebearings %
 numeric l,r;
@@ -9,7 +9,7 @@ normal_adjust_fit(space+0.5u#,space+0.25u#);
 x1=x2=x3=x8=leftstemloc;
 x1r=x2r=x1+(cont*px/2);
 %x4r=x7r=x1r+incx*(x6r-x2r);
-x4r=x7r=x2r+0.25*(x6r-x2r)+0.75*incx*(x6r-x2r);
+x4r=x7r=x2r+0.35*(x6r-x2r)+0.65*incx*(x6r-x2r);
 x5=x6=w-x1;
 x5r=x6r=x6-(cont*px/2);
 top y4=h;
@@ -34,8 +34,8 @@ penpos7(whatever,-90);
 penpos8(whatever,-90);
 
 % draw %
-penstroke z3e---super_qr(4e,5e)---super_ql(6e,7e)---z8e;
-penstroke z1e---z2e;
+penstroke z3e--super_qr(4e,5e)--super_ql(6e,7e)--z8e;
+penstroke z1e--z2e;
 
 % composite glyphs %
 charanchortops_[charcode]=(.4w,1.25h);

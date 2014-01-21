@@ -1,9 +1,9 @@
 % box dimension definition %
-beginadjchar(63,4.5,cap#,0);
+beginadjchar(63,4,cap#,0);
 
 % sidebearings %
 numeric l,r;
-normal_adjust_fit(space+0.7u#,space+0.7u#);
+normal_adjust_fit(space+0.3u#,space+0.3u#);
 
 % overshoot %
 x5-x6=1.2*cont*px+o;
@@ -16,7 +16,7 @@ y12r=y11r=h-px+o;
 x1=x2=x4=x3=0.5w;
 x1l=x2l=x1-(cont*px/2);
 .5(x5+x6)=0.5w;
-y1=y4+0.2*h;
+y1=y4+0.15*h;
 y2=y16r;
 y3=0;
 y5=y6=.5(y4+y3);

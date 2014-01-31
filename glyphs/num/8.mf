@@ -14,12 +14,14 @@ top y12=h+o;
 y12r=y11r=h-px+o;
 
 % construction %
-x1=x2=x9l=x10l=leftstemloc;
+x1=x2=leftstemloc;
 x1r=x2r=x1+(cont*px/2);
-x9r=x10r=x1+(cont*px);
-x5=x6=x13l=x14l=w-x1;
+x9=x10=leftstemloc+0.05w;
+x9r=x10r=x9+(cont*px/2);
+x5=x6=w-x1;
 x5r=x6r=x6-(cont*px/2);
-x13r=x14r=x6-(cont*px);
+x13=x14=0.95w-x1;
+x13r=x14r=x13-(cont*px/2);
 x4r=x7r=x12r=x15r=x2r+0.5*(x6r-x2r)+0.5*incx*(x6r-x2r);
 x8r=x11r=x3r=x16r=x2r+0.5*(x6r-x2r)-0.5*incx*(x6r-x2r);
 y3=y4=y15=y16=(.525h);

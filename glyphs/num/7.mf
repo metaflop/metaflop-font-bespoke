@@ -25,7 +25,7 @@ penpos4(alphaseven*cont*px,0);
 
 % draw %
 z11=whatever[z2l,z1l]=whatever[z3l,z4l];
-fill z1l---z1r---z2r---z4r---z3r---z3l---z11---cycle;
+fill z1l--z1r--z2r--z4r--z3r--z3l--z11--cycle;
 
 penlabels(range 1 thru 150);
 

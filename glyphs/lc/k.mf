@@ -6,15 +6,14 @@ numeric l,r;
 normal_adjust_fit(space+0.5u#,space-0.2u#);
 
 % construction %
-x1=x2=leftstemloc;
+x1=x2=x6=leftstemloc;
 x1l=x2l=x1-(cont*px/2);
 x3r=x1+(cont*px/2);
-x4r=x5r;
-x5r=w-x1l;
+x4r=x5r=w-x1l;
 y1=y5=0;
 y2=h;
-y4=mean;
-y3=.5*mean;
+y3=.3*mean;
+y4=y6=mean;
 
 % diagonal angle %
 alphak=diag_ratio(1,cont*px,h,x5r-x2l);
@@ -22,21 +21,25 @@ alphak=diag_ratio(1,cont*px,h,x5r-x2l);
 % penpositions %
 penpos1(whatever,0);
 penpos2(whatever,0);
-penpos3(1.4u*alphak*cont*px,0);
-penpos4(1.4u*alphak*cont*px,0);
+penpos3(1.2*alphak*cont*px,0);
+%penpos3(1.2u*alphak*cont*px,0);
+penpos4(1.2*alphak*cont*px,0);
+%penpos4(1.2u*alphak*cont*px,0);
 penpos5(1.2*cont*px,0);
+penpos6(1.2*cont*px,0);
 
 % draw %
 penstroke z2e--z1e;
 z11l=z4l+whatever*dir angle(z4l-z3l)=whatever[z2r,z1r];
 z11r=z4r+whatever*dir angle(z4r-z3r)=whatever[z2r,z1r];  
 path ss; ss=z4r--z3l--z1l;
-path l; l=z5l--z2l;
-path r; r=z5r--z2r;
+path l; l=z5l--z6l;
+path r; r=z5r--z6r;
 z12l=l intersectionpoint ss;
 z12r=r intersectionpoint ss;
 fill z4l--z4r--z11r--z11l--cycle;
 fill z5l--z5r--z12r--z12l--cycle;
+%penstroke z5e--z6e;
 
 % composite glyphs %
 charanchorbots_[charcode]=(.5w,0);

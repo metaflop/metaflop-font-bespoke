@@ -1,0 +1,112 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                         %
+% MF Bespoke v1.86                                                        %
+% © 2014 by Marco Mueller and Simon Egli                                  %
+% thanks to Linus Roemer, Alexis Reigel, Theofilo Furtado                 %
+% www.metaflop.com                                                        %
+% licensed under gpl v3: www.gnu.org/licenses/                            %
+%                                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                    %
+
+
+%input glyphs/acc/dotaccent
+
+%input glyphs/punct/quotesinglbase
+%input glyphs/punct/guilsinglleft
+%input glyphs/punct/guilsinglright
+%input glyphs/punct/quotedblleft
+%input glyphs/punct/quotedblright
+%input glyphs/punct/quotedblbase
+%input glyphs/punct/guillemotleft
+%input glyphs/punct/guillemotright
+input glyphs/punct/endash
+input glyphs/punct/emdash
+input glyphs/punct/cwm
+input glyphs/punct/dotlessi
+
+%input glyphs/lig/ff
+%input glyphs/lig/fi
+%input glyphs/lig/fl
+%input glyphs/lig/ffi
+%input glyphs/lig/ffl
+
+input glyphs/punct/visiblespace
+input glyphs/punct/exclam
+input glyphs/punct/ampersand
+%input glyphs/punct/quoteright
+%input glyphs/punct/parenleft
+%input glyphs/punct/parenright
+input glyphs/punct/plus
+input glyphs/punct/comma
+input glyphs/punct/hyphen
+input glyphs/punct/period
+%input glyphs/punct/slash
+
+input glyphs/num/0
+input glyphs/num/1
+input glyphs/num/2
+input glyphs/num/3
+input glyphs/num/4
+input glyphs/num/5
+input glyphs/num/6
+input glyphs/num/7
+input glyphs/num/8
+input glyphs/num/9
+
+input glyphs/punct/colon
+input glyphs/punct/semicolon
+input glyphs/punct/question
+
+input glyphs/uc/A
+input glyphs/uc/B
+input glyphs/uc/C
+input glyphs/uc/D
+input glyphs/uc/E
+input glyphs/uc/F
+input glyphs/uc/G
+input glyphs/uc/H
+input glyphs/uc/I 
+input glyphs/uc/J
+input glyphs/uc/K
+input glyphs/uc/L
+input glyphs/uc/M
+input glyphs/uc/N
+input glyphs/uc/O
+input glyphs/uc/P
+input glyphs/uc/Q
+input glyphs/uc/R
+input glyphs/uc/S
+input glyphs/uc/T
+input glyphs/uc/U
+input glyphs/uc/V
+input glyphs/uc/W
+input glyphs/uc/X
+input glyphs/uc/Y
+input glyphs/uc/Z
+
+input glyphs/lc/a
+input glyphs/lc/b
+input glyphs/lc/c
+input glyphs/lc/d
+input glyphs/lc/e
+input glyphs/lc/f
+input glyphs/lc/g
+input glyphs/lc/h
+input glyphs/lc/i
+input glyphs/lc/j
+input glyphs/lc/k
+input glyphs/lc/l
+input glyphs/lc/m
+input glyphs/lc/n
+input glyphs/lc/o
+input glyphs/lc/p
+input glyphs/lc/q
+input glyphs/lc/r
+input glyphs/lc/s
+input glyphs/lc/t
+input glyphs/lc/u
+input glyphs/lc/v
+input glyphs/lc/w
+input glyphs/lc/x
+input glyphs/lc/y
+input glyphs/lc/z

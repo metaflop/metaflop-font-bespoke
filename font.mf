@@ -45,7 +45,7 @@ incy:=0;           % vertical increase          $ 0 / 0.75
 appert:=0.6;       % apperture                  $ 0 / 0.75
 cont:=1.1;         % contrast                   $ 1 / 2
 superness:=0.72;   % superness					$ 0.25 / 1
-corner#:=1.0pt#;   % corner standard value = px $ 0 / 1.5
+corner#:=1pt#;   % corner standard value = px $ 0 / 1.5
 taper#:=0.5pt#;    % tapering standard value    $ 0 / 1
 
 % export %

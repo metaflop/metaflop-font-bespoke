@@ -1,5 +1,5 @@
 % box dimension definition %
-beginadjchar(38,6,cap#,0);
+beginadjchar(38,5.5,cap#,0);
 
 % sidebearings %
  numeric l,r;
@@ -17,7 +17,7 @@ y12r=y11r=h-px+o;
 x1=x2=x9=x10=leftstemloc;
 x1r=x2r=x9r=x10r=x1+(cont*px/2);
 x5=x6=x13=x14=x17=w-3x1;
-x18=w-x1;
+x18=w-0.5x1;
 x5r=x6r=x13r=x14r=x17r=x6-(cont*px/2);
 x4r=x7r=x12r=x15r=x2r+0.5*(x6r-x2r)+0.5*incx*(x6r-x2r);
 x8r=x11r=x3r=x16r=x2r+0.5*(x6r-x2r)-0.5*incx*(x6r-x2r);

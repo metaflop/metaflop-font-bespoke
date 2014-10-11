@@ -49,7 +49,7 @@ rr = subpath (0,u) of dr;
 fill rr--rl--cycle;
 
 % composite glyphs %
-charanchortops_[charcode]=(.4w,1.25h);
+charanchortops_[charcode]=(.4w,1.25h+.5px);
 charanchorbots_[charcode]=(.5w,0);
 
 penlabels(range 1 thru 150);

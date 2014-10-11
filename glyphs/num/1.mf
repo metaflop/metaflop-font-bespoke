@@ -19,8 +19,8 @@ alphaone:=diag_ratio(1,px,y4l-y3l,x4l-x3l);
 % penpositions %
 penpos1(whatever,0);
 penpos2(whatever,0);
-penpos3(alphaone*cont*px+0.1corner,0);
-penpos4(alphaone*cont*px+0.1corner,0);
+penpos3(alphaone*px+0.1corner,0);
+penpos4(alphaone*px+0.1corner,0);
 
 % draw %
 z10=whatever[z1l,z2l]=whatever[z3r,z4r];

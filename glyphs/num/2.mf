@@ -20,11 +20,10 @@ x8=w-x9+(cont*px/2);
 x12=x10r+0.5*(x14r-x10r)+0.5*incx*(x14r-x10r);
 x3=x11=x10r+0.5*(x14r-x10r)-0.5*incx*(x14r-x10r);
 x18=0.5w;
-y1=corner-0.5px;
-y1r=corner;
+y1=0.5px;
 bot y7=0;
 bot y8=0;
-y7r=y8r=y21r=y7+px/2;
+y1r=y7r=y8r=y21r=y7+px/2;
 y3=(.3h);
 y3l=(.3h)-0.5px;
 y10=y13=y18r+0.5*(y11r-y18r)+0.5*incy*(y11r-y18r);
@@ -43,8 +42,8 @@ dz=direction 1 of trial;
 alpha2=diag_ratio(1,cont*px,h,x3-x1r);
 
 % penpositions %
-penpos1(whatever,cont*(angle dz)-90);
-penpos3(whatever,cont*(angle dz)-90);
+penpos1(whatever,1.1*(angle dz)-90);
+penpos3(whatever,1.1*(angle dz)-90);
 penpos7(whatever,90);
 penpos8(whatever,90);
 penpos9(whatever,0);
@@ -58,7 +57,7 @@ penpos21(whatever,90);
 % draw %
 z20=whatever[z8l,z7l]=whatever[z3l,z1l];
 z21=whatever[z8,z7]=whatever[z3,z1];
-fill z20--z3l--z3r--z1r--cycle;
+fill z7l--z20--z3l--z3r--z1r--cycle;
 penstroke z4e---z3e..z14e{up}--z13e&super_ql(13e,12e);
 penstroke z21e--z8e;
 z99=((0,y18r+0.5*(y11r-y18r)+0.75*appert*0.5*(y11r-y18r))--(infinity,y11r+0.5*(y11r-y18r)+0.75*appert*0.5*(y11r-y18r))) intersectionpoint (z12l--super_qr(11l,10l)--z9l);

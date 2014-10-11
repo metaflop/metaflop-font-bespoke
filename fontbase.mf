@@ -579,13 +579,13 @@ pair charanchorbots_[];
 
 % begin character macros %
 def beginadjchar(expr code,unit_width,h,d) =
-beginchar(code,unit_width*u#+s#,h,d);
-pickup adj_pen;
+ beginchar(code,unit_width*u#+s#,h,d);
+ pickup adj_pen;
 enddef;
 
 def beginadjichar(expr code,unit_width,h,d) =
-beginchar(code,2(unit_width*u#+s#+(cont*px#)/2),h,d);
-pickup adj_pen;
+ beginchar(code,2(unit_width*u#+s#+(cont*px#)/2),h,d);
+ pickup adj_pen;
 enddef;
 
 % end character macros %
@@ -631,6 +631,16 @@ def super_ql(suffix i,j) =
 % right curves (superness) %
 def super_qr(suffix j,k) =
 z.j{x.k-x.j,0}...(superness[x.j,x.k],superness[y.k,y.j]){z.k-z.j}...z.k{0,y.k-y.j} enddef;
+
+% tight left curves (superness) %
+% s is the relative superness
+def super_qlt(suffix i,j)(expr s) =
+ z.i{0,y.j-y.i}...((s*superness)[x.j,x.i],(s*superness)[y.i,y.j]){z.j-z.i}...z.j{x.j-x.i,0} enddef;
+
+% tight right curves (superness) %
+def super_qrt(suffix j,k)(expr s) =
+  z.j{x.k-x.j,0}...((s*superness)[x.j,x.k],(s*superness)[y.k,y.j]){z.k-z.j}...z.k{0,y.k-y.j} 
+enddef;
 
 numeric kernclassesf_[][], % list of kerning classes (first position)
  kernclassess_[][], % list of kerning classes (second position)

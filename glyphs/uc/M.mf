@@ -7,8 +7,8 @@ normal_adjust_fit(space+0.5u#,space+0.5u#);
 
 % construction %
 x1l=x2l=leftstemloc-cont*px/2;
-x3r=x4r=w-x1l;
 x1r=x2r=x1l+px;
+x3r=x4r=w-x1l;
 x3l=x4l=x4r-cont*px;
 (x6l+x7r)/2=(x2r+x3l)/2;
 x5r=x2l+corner;
@@ -38,7 +38,7 @@ z12=whatever[z7r,z8r];
 fill z1l--z2l--z5r--z10--z8l--z4r--z3r--z3l--z12--z7r--z6l--z11--z1r--cycle;
 
 % composite glyphs %
-charanchortops_[charcode]=(.5w,1.25h);
+charanchortops_[charcode]=(.5w,1.25h+.5px);
 charanchorbots_[charcode]=(.5w,0);
 
 penlabels(range 1 thru 150);

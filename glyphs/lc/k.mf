@@ -21,10 +21,8 @@ alphak=diag_ratio(1,cont*px,h,x5r-x2l);
 % penpositions %
 penpos1(whatever,0);
 penpos2(whatever,0);
-penpos3(1.2*alphak*cont*px,0);
-%penpos3(1.2u*alphak*cont*px,0);
-penpos4(1.2*alphak*cont*px,0);
-%penpos4(1.2u*alphak*cont*px,0);
+penpos3(1.2*alphak*px,0);
+penpos4(1.2*alphak*px,0);
 penpos5(1.2*cont*px,0);
 penpos6(1.2*cont*px,0);
 

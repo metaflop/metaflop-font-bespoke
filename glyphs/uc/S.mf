@@ -23,23 +23,27 @@ x15=x16=0.95w-x1;
 x18=0.5w;
 x5r=x6r=x6-(cont*px/2);
 x15l=x16l=x15-(cont*px/2);
-x8=x17=x13=x10l+0.5*(x16l-x10l)-0.5*incx*(x16l-x10l);
-x3=x7=x14=x10l+0.5*(x16l-x10l)+0.5*incx*(x16l-x10l);
-y18=0.5h;
-y18l=0.5h+.5px;
-y18r=0.5h-.5px;
-y3=y18-0.05*(y5-y6);
-y3r=y18-0.05*(y5-y6)-0.5px;
-y17=y18+0.05*(y12-y10);
-y17l=y18+0.05*(y12-y10)+0.5px;
+x8=x1r+0.5*(x6r-x1r)-0.5*incx*(x6r-x1r);
+x13=x10l+0.5*(x16l-x10l)-0.5*incx*(x16l-x10l);
+x17=x10l+0.5*(x16l-x10l)-0.5*incx*(x16l-x10l)-.25px;
+x7=x1r+0.5*(x6r-x1r)+0.5*incx*(x6r-x1r);
+x14=x10l+0.5*(x16l-x10l)+0.5*incx*(x16l-x10l);
+x3=x10l+0.5*(x6r-x1r)+0.5*incx*(x6r-x1r)+.05px;
+y18=0.5mean;
+y18l=0.5mean+.5px;
+y18r=0.5mean-.5px;
+y3=y18-0.05*(y5-y6)-.075px;
+y3r=y18-0.05*(y5-y6)-.075px-.5px;
+y17=y18+0.05*(y12-y10)+.075px;
+y17l=y18+0.05*(y12-y10)+.075px+.5px;
 y1=y6=y8r+0.5*(y18r-y8r)-0.5*incy*(y18r-y8r);
 y2=y5=y8r+0.5*(y18r-y8r)+0.5*incy*(y18r-y8r);
 y10=y16=y18l+0.5*(y13l-y18l)-0.5*incy*(y13l-y18l);
 y12=y15=y18l+0.5*(y13l-y18l)+0.5*incy*(y13l-y18l);
 path trial;
 trial=z12{down}..z18..{down}z6;
-pair dz;
-dz=direction 1 of trial;
+pair dzs;
+dzs=direction 1 of trial;
 
 % penpositions %
 penpos1(whatever,0);
@@ -77,15 +81,11 @@ b = subpath (0,u) of (z13l--super_qr(14l,15l)--z16l);
 path a; numeric t,u; (t,u)=(((0,y18l+0.5*(y13l-y18l)+0.75*appert*0.5*(y13l-y18l))--(infinity,y18l+0.5*(y13l-y18l)+0.75*appert*0.5*(y13l-y18l))) intersectiontimes (z13r--super_qr(14r,15r)--z16r));
 a = subpath (u,0) of (z13r--super_qr(14r,15r)--z16r);
 fill a--z13r--z13l--b--cycle;
+penstroke z13e{left}..z12e{down}..z10e{down}..z17e---z3e{right}..z5e{down}..z6e{down}..z7e{left};
 
-if incx=0:
-  penstroke z13e{left}..z12e{down}..z10e{down}..z17e..z5e{down}..z6e{down}..z7e{left};
-else:
-  penstroke z13e{left}..z12e{down}..z10e{down}..z17e---z3e..z5e{down}..z6e{down}..z7e{left};
-fi
 
 % composite glyphs %
-charanchortops_[charcode]=(.5w,1.25h);
+charanchortops_[charcode]=(.5w,1.25h+.5px);
 charanchorbots_[charcode]=(.5w,0);
 
 penlabels(range 1 thru 150);

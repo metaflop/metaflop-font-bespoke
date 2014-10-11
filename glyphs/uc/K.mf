@@ -21,8 +21,8 @@ alphaK=diag_ratio(1,cont*px,h,x5r-x2l);
 % penpositions %
 penpos1(whatever,0);
 penpos2(whatever,0);
-penpos3(1.1*alphaK*cont*px,0);
-penpos4(1.1*alphaK*cont*px,0);
+penpos3(1.1*alphaK*px,0);
+penpos4(1.1*alphaK*px,0);
 penpos5(1.2*cont*px,0);
 
 % draw %
@@ -38,7 +38,7 @@ fill z4l--z4r--z11r--z11l--cycle;
 fill z5l--z5r--z12r--z12l--cycle;
 
 % composite glyphs %
-charanchortops_[charcode]=(.5w,1.25h);
+charanchortops_[charcode]=(.5w,1.25h+.5px);
 charanchorbots_[charcode]=(.5w,0);
 
 penlabels(range 1 thru 150);

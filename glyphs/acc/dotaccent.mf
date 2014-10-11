@@ -1,0 +1,23 @@
+% box dimension definition %
+beginadjchar(10,0.2,cap#,0);
+
+% sidebearings %
+numeric l,r;
+normal_adjust_fit(space+0.6u#,space+0.6u#);
+
+% overshoot %
+x6-x5=1.2*cont*px+o;
+y4-y3=1.2*cont*px+o;
+
+% construction %
+x4=x3=leftstemloc;
+.5(x5+x6)=leftstemloc;
+y4=h;
+y5=y6=.5(y4+y3);
+
+% draw %
+fill super_qr(4,5)---super_ql(5,3)---super_qr(3,6)---super_ql(6,4)---cycle;
+
+penlabels(range 1 thru 150);
+
+endchar;

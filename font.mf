@@ -29,8 +29,7 @@ font_size:=10pt#;  % font size                  @hidden
 ht#:=10pt#;        % box height                 @hidden
 u#:=1.4pt#;        % unit widht 			    $ 0.75 / 2
 s#:=0u#;           % spacing                    @hidden
-o#:=0.1pt#;	       % overshoot                  $ 0 / 1	
-px#:=0.8pt#;       % pen width 					$ 0.1 / 1
+px#:=0.9pt#;       % pen width 					$ 0.1 / 1
 
 % proportion %
 cap#:=0.9ht#;      % cap heigt					$ 0.75 / 1	
@@ -46,6 +45,9 @@ appert:=0.6;       % apperture                  $ 0 / 0.75
 cont:=1.1;         % contrast                   $ 1 / 2
 superness:=0.72;   % superness					$ 0.25 / 1
 corner#:=1pt#;   % corner standard value = px $ 0 / 1.5
+
+% proportion %
+o#:=0.1pt#;	       % overshoot                  $ 0 / 1	
 taper#:=0.5pt#;    % tapering standard value    $ 0 / 1
 
 % export %

@@ -34,7 +34,7 @@ z11=whatever[z3r,z4r]=whatever[z5r,z6r];
 fill z1l--z2l--z5r--z11--z4r--z4l--z3l--z6l--z10--z1r--cycle;
 
 % composite glyphs %
-charanchortops_[charcode]=(.5w,1.25h);
+charanchortops_[charcode]=(.5w,1.25h+.5px);
 charanchorbots_[charcode]=(.5w,0);
 
 penlabels(range 1 thru 150);

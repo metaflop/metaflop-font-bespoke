@@ -58,7 +58,7 @@ else:
  penstroke z9e--z10e;fi
 
 % composite glyphs %
-charanchortops_[charcode]=(.5w,1.35h);
+charanchortops_[charcode]=(.5w,1.35h+px/2);
 charanchorbots_[charcode]=(.5w,0);
 
 penlabels(range 1 thru 150);

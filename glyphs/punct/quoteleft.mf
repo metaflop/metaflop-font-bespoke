@@ -1,0 +1,26 @@
+% box dimension definition %
+beginadjchar(96,1,cap#,0);
+
+% sidebearings %
+numeric l,r;
+normal_adjust_fit(space+0.6u#,space+0.5u#);
+
+% construction %
+x3=leftstemloc;
+x4=w-leftstemloc-px;
+y3=h;
+y4=0.8h-cont*px+o;
+
+% diagonal angle
+alphaquoteleft=diag_ratio(1,cont*px,h,x4-x3);
+
+% penpositions %
+penpos4(1.2alphaquoteleft*cont*px,0);
+penpos3(0.9alphaquoteleft*cont*px,0);
+
+% draw %
+fill z3l--z4l--z4r--z3r--cycle;
+
+penlabels(range 1 thru 150);
+
+endchar;

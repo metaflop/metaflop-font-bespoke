@@ -33,7 +33,7 @@ y5r=y8r+0.5*(y3r-y8r)+0.5*incy*(y3r-y8r);
 y2r=y12r=y8r+0.7*(y3r-y8r)+0.3*incy*(y3r-y8r);
 
 % branches %
-x2l=x12r-taper;
+x2l=x12r-taper*cont*px;
 
 % penpositions %
 penpos1(whatever,0);

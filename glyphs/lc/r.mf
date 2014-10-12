@@ -31,7 +31,7 @@ penpos6(whatever,180);
 penpos10(whatever,0);
 
 % branches %
-x2l=x2r-taper;
+x2l=x2r-taper*cont*px;
 
 % draw %
 penstroke z1e..z10e;

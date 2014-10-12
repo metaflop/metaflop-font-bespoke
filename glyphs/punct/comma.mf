@@ -15,7 +15,7 @@ y4=-0.4des;
 alphacomma=diag_ratio(1,cont*px,h,x4-x3);
 
 % penpositions %
-penpos3(1.3alphacomma*cont*px,0);
+penpos3(1.2alphacomma*cont*px,0);
 penpos4(0.9alphacomma*cont*px,0);
 
 % draw %

@@ -28,7 +28,7 @@ y9r=y14r=0;
 y10r=y13r=y3r+0.5*(y11r-y3r)+0.5*incy*(y11r-y3r);
 
 % branches %
-x5l=x6l=x5r+taper;
+x5l=x6l=x5r+taper*cont*px;
 
 % penpositions %
 penpos1(whatever,0);

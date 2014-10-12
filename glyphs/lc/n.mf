@@ -22,7 +22,7 @@ y10=mean;
 y2r=y5r=0.7*(y3r-y1r)+0.3*incy*(y3r-y1r);
 
 % branches %
-x2l=x2r-taper;
+x2l=x2r-taper*cont*px;
 
 % penpositions %
 penpos1(whatever,0);

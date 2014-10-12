@@ -26,7 +26,7 @@ y9=-d;
 y10=mean;
 
 % branches %
-x1l=x2l=x1r-taper;
+x1l=x2l=x1r-taper*cont*px;
 
 % penpositions %
 penpos1(whatever,0);

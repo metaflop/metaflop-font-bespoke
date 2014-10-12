@@ -30,8 +30,8 @@ y13=mean;
 y2r=y5r=y7r=y11r=0.7*(y3r-y1r)+0.3*incy*(y3r-y1r);
 
 % branches %
-x2l=x2r-taper;
-x7l=x7r-taper;
+x2l=x2r-taper*cont*px;
+x7l=x7r-taper*cont*px;
 
 % penpositions %
 penpos1(whatever,0);

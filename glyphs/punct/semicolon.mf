@@ -22,7 +22,7 @@ y11=mean;
 alphasemicolon=diag_ratio(1,cont*px,h,x4-x3);
 
 % penpositions %
-penpos3(1.3alphasemicolon*cont*px,0);
+penpos3(1.2alphasemicolon*cont*px,0);
 penpos4(0.9alphasemicolon*cont*px,0);
 
 % draw %

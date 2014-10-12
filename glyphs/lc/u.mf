@@ -31,7 +31,7 @@ penpos6(whatever,180);
 penpos7(whatever,180);
 
 % branches %
-x5l=x5r+taper;
+x5l=x5r+taper*cont*px;
 
 % draw %
 penstroke super_ql(5e,4e)---super_qr(3e,2e)---z1e;

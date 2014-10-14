@@ -48,12 +48,12 @@ corner#:=1pt#;   % corner standard value = px $ 0 / 1.5
 
 % proportion %
 o#:=0.1pt#;	       % overshoot                  $ 0 / 1	
-taper#:=0.5pt#;    % tapering standard value    $ 0 / 1
+taper:=0.5;    % tapering standard value    $ 0 / 1
 
 % export %
 sidebearing:=1;  % sidebearings (0) off, (1) on for .otf export
 
 input fontbase;  % now generate the font
-input glyphs_preview;
+input glyphs;
 input ligkerndef;
 bye;

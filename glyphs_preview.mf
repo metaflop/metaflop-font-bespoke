@@ -9,8 +9,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                    %
 
 
-%input glyphs/acc/dotaccent
-
 %input glyphs/punct/quotesinglbase
 %input glyphs/punct/guilsinglleft
 %input glyphs/punct/guilsinglright
@@ -22,7 +20,6 @@
 input glyphs/punct/endash
 input glyphs/punct/emdash
 input glyphs/punct/cwm
-input glyphs/punct/dotlessi
 
 %input glyphs/lig/ff
 %input glyphs/lig/fi

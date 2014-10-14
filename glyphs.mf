@@ -35,7 +35,7 @@ input glyphs/acc/ring
 input glyphs/acc/caron
 input glyphs/acc/breve
 %input glyphs/acc/macron
-%input glyphs/acc/dotaccent
+input glyphs/acc/dotaccent
 %input glyphs/acc/cedilla
 %input glyphs/acc/ogonek
 
@@ -67,7 +67,7 @@ input glyphs/punct/quotedbl
 %input glyphs/punct/dollar 
 %input glyphs/punct/percent 
 input glyphs/punct/ampersand
-%input glyphs/punct/quoteright
+input glyphs/punct/quoteright
 %input glyphs/punct/parenleft
 %input glyphs/punct/parenright
 %input glyphs/punct/asterisk
@@ -128,7 +128,7 @@ input glyphs/uc/Z
 %input glyphs/punct/bracketright
 %input glyphs/punct/asciicircum
 %input glyphs/punct/underscore
-%input glyphs/punct/quoteleft
+input glyphs/punct/quoteleft
 
 input glyphs/lc/a
 input glyphs/lc/b

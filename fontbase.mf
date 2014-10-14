@@ -45,7 +45,6 @@ define_good_y_pixels(des);
 define_good_y_pixels(cap);
 define_good_y_pixels(mean);
 define_good_y_pixels(corner);
-define_good_y_pixels(taper);
 define_corrected_pixels(o);
 
 % enc numbers %

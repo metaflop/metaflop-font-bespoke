@@ -1,5 +1,5 @@
 % box dimension definition %
-beginadjchar("a",4,mean#,0);
+beginadjchar("a",4.1,mean#,0);
 
 % sidebearings %
 numeric l,r;
@@ -20,12 +20,12 @@ x13=x14=w-x1;
 x5r=x6r=x13r=x14r=x13-(cont*px/2);
 x4r=x7r=x12r=x1r+0.5*(x6r-x1r)+0.5*incx*(x6r-x1r);
 x3r=x8r=x11r=x1r+0.5*(x6r-x1r)-0.5*incx*(x6r-x1r);
-y3=y4=0.55*mean;
+y3=y4=0.6*mean;
 y3r=y4r=y3-px/2;
 y1r=y6r=y8r+0.5*(y3r-y8r)-0.5*incy*(y3r-y8r);
 y2r=y5r=y8r+0.5*(y3r-y8r)+0.5*incy*(y3r-y8r);
 y9r=y14r=0;
-y10r=y13r=y3r+0.5*(y11r-y3r)+0.5*incy*(y11r-y3r);
+y10r=y13r=y3l+0.5*incy*(y11r-y3r);
 
 % branches %
 x5l=x6l=x5r+taper*cont*px;

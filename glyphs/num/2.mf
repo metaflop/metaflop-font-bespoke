@@ -44,15 +44,15 @@ alpha2=diag_ratio(1,cont*px,h,x3-x1r);
 % penpositions %
 penpos1(whatever,1.1*(angle dz)-90);
 penpos3(whatever,1.1*(angle dz)-90);
-penpos7(whatever,90);
-penpos8(whatever,90);
-penpos9(whatever,0);
-penpos10(whatever,0);
-penpos11(whatever,90);
-penpos12(whatever,90);
-penpos13(whatever,180);
-penpos14(whatever,180);
-penpos21(whatever,90);
+pos7(whatever,right,90);
+pos8(whatever,right,90);
+pos9(whatever,up,0);
+pos10(whatever,up,0);
+pos11(whatever,right,90);
+pos12(whatever,right,90);
+pos13(whatever,up,180);
+pos14(whatever,up,180);
+pos21(whatever,right,90);
 
 % draw %
 z20=whatever[z8l,z7l]=whatever[z3l,z1l];

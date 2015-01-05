@@ -13,16 +13,13 @@ x1r=x4l+corner;
 y1=y4=h;
 y2=y3=0;
 
-% diagonal angle
-alphaA=diag_ratio(1,cont*px,h,x2r-x1r);
-
 % penpositions %
-penpos1(alphaA*cont*px,0);
-penpos2(alphaA*cont*px,0);
-penpos3(alphaA*px,0);
-penpos4(alphaA*px,0);
-penpos5(px,90);
-penpos6(px,90);
+pos1(cont*px,(x1r-x2r,h),0);
+pos2(cont*px,(x1r-x2r,h),0);
+pos3(px,(x4l-x3l,.9h),0);
+pos4(px,(x4l-x3l,.9h),0);
+pos5(px,right,90);
+pos6(px,right,90);
 
 % inner top corner %
 z0=whatever[z3r,z4r]=whatever[z1l,z2l];

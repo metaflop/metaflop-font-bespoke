@@ -19,12 +19,12 @@ y3l=y4l=y3-px/2;
 y5l=y6l=y5-px/2;
 
 % penpositions %
-penpos1(whatever,0);
-penpos2(whatever,0);
-penpos3(whatever,90);
-penpos4(whatever,90);
-penpos5(whatever,90);
-penpos6(whatever,90);
+pos1(whatever,up,0);
+pos2(whatever,up,0);
+pos3(whatever,right,90);
+pos4(whatever,right,90);
+pos5(whatever,right,90);
+pos6(whatever,right,90);
 
 % draw %
 penstroke z1e--z2e;

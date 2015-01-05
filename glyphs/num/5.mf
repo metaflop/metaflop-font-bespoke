@@ -36,18 +36,18 @@ y2r=y12r=y8r+0.7*(y3r-y8r)+0.3*incy*(y3r-y8r);
 x2l=x12r-taper*cont*px;
 
 % penpositions %
-penpos1(whatever,0);
-penpos2(whatever,-30);
-penpos3(whatever,90);
-penpos4(whatever,90);
-penpos5(whatever,180);
-penpos6(whatever,180);
-penpos7(whatever,-90);
-penpos8(whatever,-90);
-penpos9(whatever,0);
-penpos10(whatever,90);
-penpos11(whatever,90);
-penpos12(whatever,0);
+pos1(whatever,up,0);
+pos2(whatever,up,-30);
+pos3(whatever,right,90);
+pos4(whatever,right,90);
+pos5(whatever,up,180);
+pos6(whatever,up,180);
+pos7(whatever,right,-90);
+pos8(whatever,right,-90);
+pos9(whatever,up,0);
+pos10(whatever,right,90);
+pos11(whatever,right,90);
+pos12(whatever,up,0);
 
 % draw %
 penstroke z10e--z11e;

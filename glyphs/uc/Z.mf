@@ -12,19 +12,18 @@ y4=h-corner;
 y3=corner;
 top y1=h;
 top y2=h;
+y1l=y2l=h-px;
 bot y5=0;
 bot y6=0;
-
-% diagonal angle
-alphaz=diag_ratio(1,cont*px,h,x4r-x3l);
+y5r=y6r=px;
 
 % penpositions %
-penpos3(alphaz*cont*px,0);
-penpos4(alphaz*cont*px,0);
-penpos1(px,90);
-penpos2(px,90);
-penpos5(px,90);
-penpos6(px,90);
+pos1(whatever,right,90);
+pos2(whatever,right,90);
+pos3(cont*px,(x4r-x3l-px,h),0);
+pos4(cont*px,(x4r-x3l-px,h),0);
+pos5(whatever,right,90);
+pos6(whatever,right,90);
 
 % draw %
 z10=whatever[z6r,z5r]=whatever[z3r,z4r];

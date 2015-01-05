@@ -32,20 +32,20 @@ y1r=y6r=y16r-0.4(y16r-y7r)-0.6*incy*(y16r-y7r);
 x14l=x15l=x3r+taper*cont*px;
 
 % penpositions %
-penpos1(whatever,0);
-penpos2(whatever,0);
-penpos3(whatever,180);
-penpos6(whatever,180);
-penpos7(whatever,90);
-penpos8(whatever,90);
-penpos10(whatever,0);
-penpos11(whatever,0);
-penpos12(whatever,90);
-penpos13(whatever,90);
-penpos14(whatever,180);
-penpos15(whatever,180);
-penpos16(whatever,-90);
-penpos17(whatever,-90);
+pos1(whatever,up,0);
+pos2(whatever,up,0);
+pos3(whatever,up,180);
+pos6(whatever,up,180);
+pos7(whatever,right,90);
+pos8(whatever,right,90);
+pos10(whatever,up,0);
+pos11(whatever,up,0);
+pos12(whatever,right,90);
+pos13(whatever,right,90);
+pos14(whatever,up,180);
+pos15(whatever,up,180);
+pos16(whatever,right,-90);
+pos17(whatever,right,-90);
 
 % draw %
 penstroke super_qr(13e,14e)--super_ql(15e,16e)--super_qr(17e,10e)--super_ql(11e,12e)--cycle;

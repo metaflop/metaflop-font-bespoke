@@ -25,14 +25,14 @@ y3=y4=mean-px/2;
 y3r=y4r=mean;
 
 % penpositions %
-penpos3(whatever,90);
-penpos4(whatever,90);
-penpos9(whatever,0);
-penpos10(whatever,0);
-penpos11(whatever,-90);
-penpos12(whatever,-90);
-penpos13(whatever,180);
-penpos14(whatever,180);
+pos3(whatever,right,90);
+pos4(whatever,right,90);
+pos9(whatever,up,0);
+pos10(whatever,up,0);
+pos11(whatever,right,-90);
+pos12(whatever,right,-90);
+pos13(whatever,up,180);
+pos14(whatever,up,180);
 
 % draw %
 penstroke z3e--z4e;

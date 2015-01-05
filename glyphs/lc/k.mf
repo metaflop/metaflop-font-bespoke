@@ -6,25 +6,22 @@ numeric l,r;
 normal_adjust_fit(space+0.5u#,space-0.2u#);
 
 % construction %
-x1=x2=x6=leftstemloc;
+x1=x2=leftstemloc;
 x1l=x2l=x1-(cont*px/2);
-x3r=x1+(cont*px/2);
+x3r=x6r=x1+(cont*px/2);
 x4r=x5r=w-x1l;
 y1=y5=0;
 y2=h;
 y3=.3*mean;
 y4=y6=mean;
 
-% diagonal angle %
-alphak=diag_ratio(1,cont*px,h,x5r-x2l);
-
 % penpositions %
-penpos1(whatever,0);
-penpos2(whatever,0);
-penpos3(1.2*alphak*px,0);
-penpos4(1.2*alphak*px,0);
-penpos5(1.2*cont*px,0);
-penpos6(1.2*cont*px,0);
+pos1(whatever,up,0);
+pos2(whatever,up,0);
+pos3(px,(x4r-x3r,mean-.3*mean),0);
+pos4(px,(x4r-x3r,mean-.3*mean),0);
+pos5(cont*px,(x6r-x5r+px,mean-.3*mean),0);
+pos6(cont*px,(x6r-x5r+px,mean-.3*mean),0);
 
 % draw %
 penstroke z2e--z1e;

@@ -10,18 +10,18 @@ x1=x2=leftstemloc;
 x1l=x2l=x1-(cont*px/2);
 x3=x4=w-x1;
 x3r=x4r=x3-(cont*px/2);
-y1=y3=cap;
-y2=y4=.65*cap;
+y1=y3=h;
+y2=y4=.7h;
 
 % penpositions %
-penpos1(whatever,0);
-penpos2(whatever,0);
-penpos3(whatever,0);
-penpos4(whatever,0);
+pos1(whatever,up,0);
+pos2(whatever,up,0);
+pos3(whatever,up,0);
+pos4(whatever,up,0);
 
 % draw %
-penstroke z1e---z2e;
-penstroke z3e---z4e;
+penstroke z1e--z2e;
+penstroke z3e--z4e;
 
 penlabels(range 1 thru 150);
 

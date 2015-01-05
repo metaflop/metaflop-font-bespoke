@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% MF Bespoke v1.86                                                        %
+% MF Bespoke v1.87                                                        %
 % © 2014 by Marco Mueller and Simon Egli                                  %
 % thanks to Linus Roemer, Alexis Reigel, Theofilo Furtado                 %
 % www.metaflop.com                                                        %

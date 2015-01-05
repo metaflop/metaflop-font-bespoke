@@ -29,17 +29,17 @@ y10=h;
 x13l=x2r-taper;
 
 % penpositions %
-penpos1(whatever,0);
-penpos2(whatever,0);
-penpos3(whatever,90);
-penpos4(whatever,90);
-penpos5(whatever,180);
-penpos6(whatever,180);
-penpos7(whatever,-90);
-penpos8(whatever,-90);
-penpos10(whatever,0);
-penpos12(whatever,0);
-penpos13(whatever,0);
+pos1(whatever,up,0);
+pos2(whatever,up,0);
+pos3(whatever,right,90);
+pos4(whatever,right,90);
+pos5(whatever,up,180);
+pos6(whatever,up,180);
+pos7(whatever,right,-90);
+pos8(whatever,right,-90);
+pos10(whatever,up,0);
+pos12(whatever,up,0);
+pos13(whatever,up,0);
 
 % draw %
 penstroke super_qr(8e,1e)---super_ql(2e,3e)---super_qr(4e,5e)---super_ql(6e,7e)---cycle;

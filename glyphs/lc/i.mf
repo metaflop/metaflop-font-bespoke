@@ -19,8 +19,8 @@ y4=h;
 y5=y6=.5(y4+y3);
 
 % penpositions %
-penpos1(whatever,0);
-penpos2(whatever,0);
+pos1(whatever,up,0);
+pos2(whatever,up,0);
 
 % draw %
 penstroke z1e..z2e;

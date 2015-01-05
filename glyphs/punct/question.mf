@@ -33,16 +33,16 @@ y9r=y14r=y16r+0.5*(y11r-y16r)-0.5*incy*(y11r-y16r);
 y10r=y13r=y16r+0.5*(y11r-y16r)+0.5*incy*(y11r-y16r);
 
 % penpositions %
-penpos1(whatever,0);
-penpos2(whatever,0);
-penpos9(whatever,0);
-penpos10(whatever,0);
-penpos11(whatever,90);
-penpos12(whatever,90);
-penpos13(whatever,180);
-penpos14(whatever,180);
-penpos15(whatever,-90);
-penpos16(whatever,-90);
+pos1(whatever,up,0);
+pos2(whatever,up,0);
+pos9(whatever,up,0);
+pos10(whatever,up,0);
+pos11(whatever,right,90);
+pos12(whatever,right,90);
+pos13(whatever,up,180);
+pos14(whatever,up,180);
+pos15(whatever,right,-90);
+pos16(whatever,right,-90);
 
 % draw %
 penstroke z1e---z2e;

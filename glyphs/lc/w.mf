@@ -19,19 +19,15 @@ x11r-x14l=corner;
 y11=y14=0;
 y12=y13=h;
 
-% diagonal angle
-alphaw1:=diag_ratio(1,cont*px,h,x2r-x1r);
-alphaw2:=diag_ratio(1,cont*px,h,x12r-x11r);
-
 % penpositions %
-penpos1(alphaw1*px,0);
-penpos2(alphaw1*px,0);
-penpos3(alphaw1*cont*px,0);
-penpos4(alphaw1*cont*px,0);
-penpos11(alphaw2*px,0);
-penpos12(alphaw2*px,0);
-penpos13(alphaw2*cont*px,0);
-penpos14(alphaw2*cont*px,0);
+pos1(px,(x2r-x1r,h),0);
+pos2(px,(x2r-x1r,h),0);
+pos3(cont*px,(x3l-x4l,h),0);
+pos4(cont*px,(x3l-x4l,h),0);
+pos11(px,(x12r-x11r,h),0);
+pos12(px,(x12r-x11r,h),0);
+pos13(cont*px,(x13l-x14l,h),0);
+pos14(cont*px,(x13l-x14l,h),0);
 
 % draw %
 z0=whatever[z3r,z4r]=whatever[z1l,z2l];

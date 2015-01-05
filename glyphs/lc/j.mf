@@ -26,12 +26,12 @@ y2r=y6r=y7r-0.5*(y7r)+0.5*incy*(y7r);
 y13=y12=.5(y11+y10);
 
 % penpositions %
-penpos1(whatever,0);
-penpos2(whatever,0);
-penpos3(whatever,180);
-penpos6(whatever,180);
-penpos7(whatever,-90);
-penpos8(whatever,-90);
+pos1(whatever,up,0);
+pos2(whatever,up,0);
+pos3(whatever,up,180);
+pos6(whatever,up,180);
+pos7(whatever,right,-90);
+pos8(whatever,right,-90);
 
 % draw %
 fill super_qr(11,12)--super_ql(12,10)--super_qr(10,13)--super_ql(13,11)--cycle;

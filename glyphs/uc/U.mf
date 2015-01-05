@@ -21,12 +21,12 @@ y2r=y5r=y4r+0.3*(y1r-y4r)-0.3*incy*(y1r-y4r);
 y1=y6=h;
 
 % penpositions %
-penpos1(whatever,0);
-penpos2(whatever,0);
-penpos3(whatever,90);
-penpos4(whatever,90);
-penpos5(whatever,180);
-penpos6(whatever,180);
+pos1(whatever,up,0);
+pos2(whatever,up,0);
+pos3(whatever,right,90);
+pos4(whatever,right,90);
+pos5(whatever,up,180);
+pos6(whatever,up,180);
 
 % draw %
 penstroke z6e--super_ql(5e,4e)--super_qr(3e,2e)--z1e;

@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% MF Bespoke v1.85                                                        %
+% MF Bespoke v1.87                                                        %
 % © 2013 by Marco Mueller and Simon Egli                                  %
 % thanks to Linus Roemer, Alexis Reigel, Theofilo Furtado                 %
 % www.metaflop.com                                                        %
@@ -34,19 +34,19 @@ input glyphs/acc/dieresis
 input glyphs/acc/ring
 input glyphs/acc/caron
 input glyphs/acc/breve
-%input glyphs/acc/macron
+input glyphs/acc/macron
 input glyphs/acc/dotaccent
 %input glyphs/acc/cedilla
 %input glyphs/acc/ogonek
 
-%input glyphs/punct/quotesinglbase
-%input glyphs/punct/guilsinglleft
-%input glyphs/punct/guilsinglright
-%input glyphs/punct/quotedblleft
-%input glyphs/punct/quotedblright
-%input glyphs/punct/quotedblbase
-%input glyphs/punct/guillemotleft
-%input glyphs/punct/guillemotright
+input glyphs/punct/quotesinglbase
+input glyphs/punct/guilsinglleft
+input glyphs/punct/guilsinglright
+input glyphs/punct/quotedblleft
+input glyphs/punct/quotedblright
+input glyphs/punct/quotedblbase
+input glyphs/punct/guillemotleft
+input glyphs/punct/guillemotright
 input glyphs/punct/endash
 input glyphs/punct/emdash
 input glyphs/punct/cwm

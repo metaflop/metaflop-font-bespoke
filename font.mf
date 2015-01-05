@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% MF Bespoke v1.86                                                        %
+% MF Bespoke v1.87                                                        %
 % © 2014 by Marco Mueller and Simon Egli                                  %
 % thanks to Linus Roemer, Alexis Reigel, Theofilo Furtado                 %
 % www.metaflop.com                                                        %
@@ -41,14 +41,15 @@ des#:=0.35ht#;     % descender heigt		    $ 0.25 / 0.75
 % shape %
 incx:=0;           % horizontal increase        $ 0 / 0.75	
 incy:=0;           % vertical increase          $ 0 / 0.75
-appert:=0.6;       % apperture                  $ 0 / 0.75
 cont:=1.1;         % contrast                   $ 1 / 2
 superness:=0.72;   % superness					$ 0.25 / 1
-corner#:=1pt#;   % corner standard value = px $ 0 / 1.5
+slant:=0;        % slanting amount            $ -0.3 / 0.3
 
-% proportion %
+% optical corrections %
+appert:=0.6;       % apperture                  $ 0 / 0.75
+corner#:=1pt#;     % corner standard value = px $ 0 / 1.5
 o#:=0.1pt#;	       % overshoot                  $ 0 / 1	
-taper:=0.5;    % tapering standard value    $ 0 / 1
+taper:=0.5;        % tapering standard value    $ 0 / 1
 
 % export %
 sidebearing:=1;  % sidebearings (0) off, (1) on for .otf export

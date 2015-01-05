@@ -30,20 +30,20 @@ y11r=y13r+0.5*(y7l-y13r)+0.5*incy*(y7l-y13r);
 y12r=y13r+0.5*(y7l-y13r)-0.5*incy*(y7l-y13r);
 
 % penpositions %
-penpos1(whatever,0);
-penpos2(whatever,0);
-penpos3(whatever,90);
-penpos4(whatever,90);
-penpos5(whatever,180);
-penpos6(whatever,180);
-penpos7(whatever,-90);
-penpos8(whatever,-90);
-penpos9(whatever,90);
-penpos10(whatever,90);
-penpos11(whatever,180);
-penpos12(whatever,180);
-penpos13(whatever,-90);
-penpos14(whatever,-90);
+pos1(whatever,up,0);
+pos2(whatever,up,0);
+pos3(whatever,right,90);
+pos4(whatever,right,90);
+pos5(whatever,up,180);
+pos6(whatever,up,180);
+pos7(whatever,right,-90);
+pos8(whatever,right,-90);
+pos9(whatever,right,90);
+pos10(whatever,right,90);
+pos11(whatever,up,180);
+pos12(whatever,up,180);
+pos13(whatever,right,-90);
+pos14(whatever,right,-90);
 
 % draw %
 penstroke z1e--z2e;

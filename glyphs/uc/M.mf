@@ -18,18 +18,15 @@ y1=y3=y6=y7=0;
 y2=y4=y5=y8=h;
 x12=x3l;
 
-% diagonal angle
-alphaM=diag_ratio(1,cont*px,h,x4r-x7r);
-
 % penpositions %
-penpos1(whatever,0);
-penpos2(whatever,0);
-penpos3(whatever,0);
-penpos4(whatever,0);
-penpos5(alphaM*cont*px,0);
-penpos6(alphaM*cont*px,0);
-penpos7(alphaM*px,0);
-penpos8(alphaM*px,0);
+pos1(whatever,up,0);
+pos2(whatever,up,0);
+pos3(whatever,up,0);
+pos4(whatever,up,0);
+pos5(cont*px,(x2l-x6l,h),0);
+pos6(cont*px,(x2l-x6l,h),0);
+pos7(px,(x8l-x6l,h),0);
+pos8(px,(x8l-x6l,h),0);
 
 % draw %
 z10=whatever[z5r,z6r]=whatever[z7l,z8l];

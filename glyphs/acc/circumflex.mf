@@ -12,17 +12,14 @@ x3=0.5w;
 y2=y4=0.85h;
 y3=h;
 
-% diagonal angle
-alphacircum=diag_ratio(1,cont*px,h,x4-x3);
-
 % penpositions %
-penpos2(alphacircum*cont*px,0);
-penpos3(1.4alphacircum*cont*px,0);
-penpos4(alphacircum*cont*px,0);
+pos2(cont*px,(x3-x2,.2h),0);
+pos3(cont*px,(x3-x2,.2h),0);
+pos4(cont*px,(x4-x3,.2h),0);
 
 % draw %
-fill z3l--z4l--z4r--z3r--cycle;
-fill z3l--z2l--z2r--z3r--cycle;
+penstroke z2e--z3e;
+penstroke z3e--z4e;
 
 % composite anchor %
 charanchortops_[charcode]=(.5w,h);

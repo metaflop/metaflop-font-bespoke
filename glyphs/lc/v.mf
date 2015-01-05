@@ -13,14 +13,11 @@ x1r-x4l=corner;
 y1=y4=0;
 y2=y3=h;
 
-% diagonal angle
-alphav=diag_ratio(1,cont*px,h,x2r-x1r);
-
 % penpositions %
-penpos1(alphav*px,0);
-penpos2(alphav*px,0);
-penpos3(alphav*cont*px,0);
-penpos4(alphav*cont*px,0);
+pos1(px,(x2r-x1r,h),0);
+pos2(px,(x2r-x1r,h),0);
+pos3(cont*px,(x3l-x4l,h),0);
+pos4(cont*px,(x3l-x4l,h),0);
 
 % draw %
 z0=whatever[z3r,z4r]=whatever[z1l,z2l];

@@ -16,10 +16,10 @@ y5=y6=0.5*mean;
 y5l=y6l=y5-px/2;
 
 % penpositions %
-penpos1(whatever,0);
-penpos2(whatever,0);
-penpos5(whatever,90);
-penpos6(whatever,90);
+pos1(whatever,up,0);
+pos2(whatever,up,0);
+pos5(whatever,right,90);
+pos6(whatever,right,90);
 
 % draw %
 penstroke z1e---z2e;

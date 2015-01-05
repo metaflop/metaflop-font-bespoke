@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% MF Bespoke v1.86                                                        %
+% MF Bespoke v1.87                                                        %
 % © 2014 by Marco Mueller and Simon Egli                                  %
 % thanks to Linus Roemer, Alexis Reigel, Theofilo Furtado                 %
 % www.metaflop.com                                                        %
@@ -28,6 +28,11 @@ enddef;
 
 mode=luxo;
 mode_setup;
+
+% slant %
+if unknown slant: slant:=0 else: currenttransform:=
+ identity slanted slant yscaled aspect_ratio 
+fi;
 
 % font infos %
 font_quad:=10u#+0s#;
@@ -621,6 +626,50 @@ adj_pen:=savepen;
 vardef diag_ratio(expr a,b,y,c) =
 numeric aa_, bb_, cc_; bb_=b/y; cc_=c/y; aa_=a-(b/y)*(b/y);
 (a*(cc_++sqrt aa_)-bb_*cc_)/aa_ enddef;
+
+% sign returns the signature of a number
+def sign(expr a) = 
+ if a<0:
+  -1 %false
+ else:
+  1 %true
+ fi
+enddef;
+
+% extended penpos macros %
+% widthcorr preserves correct widths even after slanting
+% d is the drawing direction
+% t is the angle of the line that is being measured to the horizontal
+def widthcorr(expr d,t) = 
+ if ((angle(d)=90) or (angle(d)=-90)) and ((t mod 180)=0):
+  1 % no inexact calculations for the most frequent case
+ else:
+  abs(length((d/length(d)) slanted slant)/sind(angle(d)-t))
+ fi
+enddef;
+
+% pos is a generalized penpos, that preserves correct lengths even after slanting
+% b is the width of the stem
+% d is the drawing direction
+% t is the angle of the line that is being measured to the horizontal
+vardef pos@#(expr b,d,t) = 
+ penpos@#(b*widthcorr(d,t),t)
+enddef;
+
+% posdiag is a penpos for horizontal pens of diagonal inscribing stems
+% (diagonal constellations like in "A" or "K")
+% a is the number of diagnal stems - typically 1 ("K") or 2 ("A")
+% b is the width of the stem
+% d is the amount of the stem that has to be inscribed 
+% - typically .5 (half the stem) or 1 (full stem)
+% c total width
+% y total height
+vardef posdiag@#(expr a,b,d,c,y) =
+ numeric bb,cc,diag; 
+ bb=d*b/abs(y);
+ cc=c/abs(y);
+ penpos@#(b*(a*sqrt(a*a*slant*slant+a*a+sign(c)*sign(y)*2*a*cc*slant-bb*bb+cc*cc)-bb*(cc+sign(c)*sign(y)*a*slant))/(a*a-bb*bb),0)
+enddef;
 
 % superness macros %
 % left curves (superness) %

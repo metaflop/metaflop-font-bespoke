@@ -36,14 +36,14 @@ cap#:=0.9ht#;      % cap heigt					$ 0.75 / 1
 mean#:=0.65cap#;   % mean height				$ 0.5 / 1	
 bar:=0.5;          % bar height					$ 0.25 / 0.75
 asc#:=0.95ht#;     % ascender height		    $ 0.75 / 1.25	
-des#:=0.35ht#;     % descender heigt		    $ 0.25 / 0.75	
+des#:=0.3ht#;      % descender heigt		    $ 0.25 / 0.75	
 
 % shape %
 incx:=0;           % horizontal increase        $ 0 / 0.75	
 incy:=0;           % vertical increase          $ 0 / 0.75
 cont:=1.1;         % contrast                   $ 1 / 2
 superness:=0.72;   % superness					$ 0.25 / 1
-slant:=0;        % slanting amount            $ -0.3 / 0.3
+slant:=0;          % slanting amount            $ -0.3 / 0.3
 
 % optical corrections %
 appert:=0.6;       % apperture                  $ 0 / 0.75
@@ -52,9 +52,9 @@ o#:=0.1pt#;	       % overshoot                  $ 0 / 1
 taper:=0.5;        % tapering standard value    $ 0 / 1
 
 % export %
-sidebearing:=1;  % sidebearings (0) off, (1) on for .otf export
+sidebearing:=1;    % sidebearings (0) off, (1) on for .otf export
 
-input fontbase;  % now generate the font
+input fontbase;    % now generate the font
 input glyphs;
 input ligkerndef;
 bye;

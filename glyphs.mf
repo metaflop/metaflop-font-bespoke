@@ -68,14 +68,14 @@ input glyphs/punct/quotedbl
 %input glyphs/punct/percent 
 input glyphs/punct/ampersand
 input glyphs/punct/quoteright
-%input glyphs/punct/parenleft
-%input glyphs/punct/parenright
+input glyphs/punct/parenleft
+input glyphs/punct/parenright
 %input glyphs/punct/asterisk
 input glyphs/punct/plus
 input glyphs/punct/comma
 input glyphs/punct/hyphen
 input glyphs/punct/period
-%input glyphs/punct/slash
+input glyphs/punct/slash
 
 input glyphs/num/0
 input glyphs/num/1
@@ -124,7 +124,7 @@ input glyphs/uc/Y
 input glyphs/uc/Z
 
 %input glyphs/punct/bracketleft
-%input glyphs/punct/backslash
+input glyphs/punct/backslash
 %input glyphs/punct/bracketright
 %input glyphs/punct/asciicircum
 %input glyphs/punct/underscore

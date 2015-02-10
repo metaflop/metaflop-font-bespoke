@@ -90,9 +90,9 @@ input glyphs/num/9
 
 input glyphs/punct/colon
 input glyphs/punct/semicolon
-%input glyphs/punct/less
-%input glyphs/punct/equal
-%input glyphs/punct/greater
+input glyphs/punct/less
+input glyphs/punct/equal
+input glyphs/punct/greater
 input glyphs/punct/question
 %input glyphs/punct/at
 
@@ -123,11 +123,11 @@ input glyphs/uc/X
 input glyphs/uc/Y
 input glyphs/uc/Z
 
-%input glyphs/punct/bracketleft
+input glyphs/punct/bracketleft
 input glyphs/punct/backslash
-%input glyphs/punct/bracketright
-%input glyphs/punct/asciicircum
-%input glyphs/punct/underscore
+input glyphs/punct/bracketright
+input glyphs/punct/asciicircum
+input glyphs/punct/underscore
 input glyphs/punct/quoteleft
 
 input glyphs/lc/a
@@ -158,7 +158,7 @@ input glyphs/lc/y
 input glyphs/lc/z
 
 %input glyphs/punct/braceleft
-%input glyphs/punct/bar
+input glyphs/punct/bar
 %input glyphs/punct/braceright
 %input glyphs/punct/asciitilde
 

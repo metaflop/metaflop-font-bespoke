@@ -1,0 +1,36 @@
+% box dimension definition %
+beginadjchar(91,2,cap#,des#);
+
+% sidebearings %
+numeric l,r;
+normal_adjust_fit(space+0.7u#,space+0.1u#);
+
+% construction %
+x1=x2=x3=x7=leftstemloc;
+x1l=x2l=x1-(cont*px/2);
+x4=x8=w-x1l;
+y1=-d;
+y2=1.05h;
+top y3=1.05h;
+top y4=1.05h;
+bot y7=-d;
+bot y8=-d;
+y3l=y4l=y3-px/2;
+y7l=y8l=y7-px/2;
+
+% penpositions %
+pos1(whatever,up,0);
+pos2(whatever,up,0);
+pos3(whatever,right,90);
+pos4(whatever,right,90);
+pos7(whatever,right,90);
+pos8(whatever,right,90);
+
+% draw %
+penstroke z1e--z2e;
+penstroke z3e--z4e;
+penstroke z7e--z8e;
+
+penlabels(range 1 thru 150);
+
+endchar;

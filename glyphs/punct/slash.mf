@@ -12,8 +12,8 @@ y2=1.05h;
 y1=-.05h;
 
 % penpositions %
-pos1(cont*px,(x2r-x1l-px,h),0);
-pos2(cont*px,(x2r-x1l-px,h),0);
+pos1(cont*px,(x2r-x1l-px,1.2h),0);
+pos2(cont*px,(x2r-x1l-px,1.2h),0);
 
 % draw %
 penstroke z1e--z2e;

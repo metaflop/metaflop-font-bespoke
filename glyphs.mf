@@ -50,7 +50,7 @@ input glyphs/punct/guillemotright
 input glyphs/punct/endash
 input glyphs/punct/emdash
 input glyphs/punct/cwm
-%input glyphs/punct/perthousandzero
+input glyphs/punct/perthousandzero
 input glyphs/punct/dotlessi
 input glyphs/punct/dotlessj
 
@@ -63,9 +63,9 @@ input glyphs/punct/dotlessj
 input glyphs/punct/visiblespace
 input glyphs/punct/exclam
 input glyphs/punct/quotedbl
-%input glyphs/punct/numbersign 
+input glyphs/punct/numbersign 
 %input glyphs/punct/dollar 
-%input glyphs/punct/percent 
+input glyphs/punct/percent 
 input glyphs/punct/ampersand
 input glyphs/punct/quoteright
 input glyphs/punct/parenleft

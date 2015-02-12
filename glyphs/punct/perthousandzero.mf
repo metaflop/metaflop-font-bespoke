@@ -1,0 +1,37 @@
+% box dimension definition %
+beginadjchar(24,3.25,cap#,0);
+
+% sidebearings %
+numeric l,r;
+normal_adjust_fit(space+0.1u#,space+0.1u#);
+
+% construction %
+x11=x12=leftstemloc;
+x11r=x12r=x11+(cont*px/2);
+x15=x16=w-x11l-(cont*px/2);
+x15r=x16r=x16-cont*px/2;
+x14r=x17r=x11r+0.5*(x16r-x11r)+0.5*incx*(x16r-x11r);
+x13r=x18r=x11r+0.5*(x16r-x11r)-0.5*incx*(x16r-x11r);
+y13=y14=0.45h;
+y13r=y14r=0.45h-(px/2);
+y17=y18=px/2;
+y17r=y18r=px;
+y11r=y16r=y18r+0.5*(y13r-y18r)-0.5*incy*(y13r-y18r);
+y12r=y15r=y18r+0.5*(y13r-y18r)+0.5*incy*(y13r-y18r);
+
+% penpositions %
+pos11(whatever,up,0);
+pos12(whatever,up,0);
+pos13(whatever,right,90);
+pos14(whatever,right,90);
+pos15(whatever,up,180);
+pos16(whatever,up,180);
+pos17(whatever,right,-90);
+pos18(whatever,right,-90);
+
+% draw %
+penstroke super_qr(14e,15e)---super_ql(16e,17e)---super_qr(18e,11e)---super_ql(12e,13e)---cycle;
+
+penlabels(range 1 thru 150);
+
+endchar;

@@ -18,8 +18,8 @@ pos2(cont*px,(x2-x1,.4h),90);
 pos6(cont*px,(x2-x1,.4h),90);
 
 % draw %
-penstroke z1e---z2e;
-penstroke z1e---z6e;
+penstroke z1e--z2e;
+penstroke z1e--z6e;
 
 penlabels(range 1 thru 150);
 

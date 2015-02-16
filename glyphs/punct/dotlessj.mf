@@ -1,5 +1,5 @@
 % box dimension definition %
-beginadjchar(26,3,asc#,des#);
+beginadjchar(26,3,mean#,des#);
 
 % sidebearings %
 numeric l,r;
@@ -42,7 +42,7 @@ ss = subpath (0,u) of (super_qr(8l,2l)--z1l);
 fill ss--r--z7r--z7l--cycle;
 
 % composite glyphs %
-charanchortops_[charcode]=(.5w,1.35h+px/2);
+charanchortops_[charcode]=(.815w,1.525h);
 
 penlabels(range 1 thru 150);
 

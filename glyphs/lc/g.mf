@@ -62,7 +62,7 @@ ss = subpath (0,u) of (super_qr(8l,1l)--z2l);
 fill ss--r--z7r--z7l--cycle;
 
 % composite glyphs %
-charanchortops_[charcode]=(.5w,1.35h+px/2);
+charanchortops_[charcode]=(.5w,1.525h);
 
 penlabels(range 1 thru 150);
 

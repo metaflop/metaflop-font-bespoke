@@ -28,9 +28,9 @@
 input glyphs/acc/grave
 input glyphs/acc/acute
 input glyphs/acc/circumflex
-%input glyphs/acc/tilde
+input glyphs/acc/tilde
 input glyphs/acc/dieresis
-%input glyphs/acc/hungarumlaut
+input glyphs/acc/hungarumlaut
 input glyphs/acc/ring
 input glyphs/acc/caron
 input glyphs/acc/breve
@@ -176,7 +176,7 @@ input glyphs/uc/Lacute
 input glyphs/uc/Nacute
 input glyphs/uc/Ncaron
 %input glyphs/uc/Eng
-%input glyphs/uc/Ohungarumlaut
+input glyphs/uc/Ohungarumlaut
 input glyphs/uc/Racute
 input glyphs/uc/Rcaron
 input glyphs/uc/Sacute
@@ -184,14 +184,14 @@ input glyphs/uc/Scaron
 %input glyphs/uc/Scedilla
 input glyphs/uc/Tcaron
 %input glyphs/uc/Tcedilla
-%input glyphs/uc/Uhungarumlaut
+input glyphs/uc/Uhungarumlaut
 input glyphs/uc/Uring
 input glyphs/uc/Ydieresis
 input glyphs/uc/Zacute
 input glyphs/uc/Zcaron
-%input glyphs/uc/Zdotaccent
+input glyphs/uc/Zdotaccent
 %input glyphs/uc/IJ
-%input glyphs/uc/Idotaccent
+input glyphs/uc/Idotaccent
 
 %input glyphs/lc/dcroat
 %input glyphs/punct/section
@@ -209,7 +209,7 @@ input glyphs/lc/lacute
 input glyphs/lc/nacute
 input glyphs/lc/ncaron
 %input glyphs/lc/eng
-%input glyphs/lc/ohungarumlaut
+input glyphs/lc/ohungarumlaut
 input glyphs/lc/racute
 input glyphs/lc/rcaron
 input glyphs/lc/sacute
@@ -217,12 +217,12 @@ input glyphs/lc/scaron
 %input glyphs/lc/scedilla
 %input glyphs/lc/tcaron
 %input glyphs/lc/tcedilla
-%input glyphs/lc/uhungarumlaut
+input glyphs/lc/uhungarumlaut
 input glyphs/lc/uring
 input glyphs/lc/ydieresis
 input glyphs/lc/zacute
 input glyphs/lc/zcaron
-%input glyphs/lc/zdotaccent
+input glyphs/lc/zdotaccent
 %input glyphs/lc/ij
 
 %input glyphs/punct/exclamdown
@@ -232,7 +232,7 @@ input glyphs/lc/zcaron
 input glyphs/uc/Agrave
 input glyphs/uc/Aacute
 input glyphs/uc/Acircumflex
-%input glyphs/uc/Atilde
+input glyphs/uc/Atilde
 input glyphs/uc/Adieresis
 input glyphs/uc/Aring
 input glyphs/uc/AE
@@ -246,11 +246,11 @@ input glyphs/uc/Iacute
 input glyphs/uc/Icircumflex
 input glyphs/uc/Idieresis
 %input glyphs/uc/Eth
-%input glyphs/uc/Ntilde
+input glyphs/uc/Ntilde
 input glyphs/uc/Ograve
 input glyphs/uc/Oacute
 input glyphs/uc/Ocircumflex
-%input glyphs/uc/Otilde
+input glyphs/uc/Otilde
 input glyphs/uc/Odieresis
 input glyphs/uc/OE
 %input glyphs/uc/Oslash
@@ -261,10 +261,11 @@ input glyphs/uc/Udieresis
 input glyphs/uc/Yacute
 %input glyphs/uc/Thorn
 %input glyphs/uc/Germandbls
+
 input glyphs/lc/agrave
 input glyphs/lc/aacute
 input glyphs/lc/acircumflex
-%input glyphs/lc/atilde
+input glyphs/lc/atilde
 input glyphs/lc/adieresis
 input glyphs/lc/aring
 input glyphs/lc/ae
@@ -278,11 +279,11 @@ input glyphs/lc/igrave
 input glyphs/lc/icircumflex
 input glyphs/lc/idieresis
 %input glyphs/lc/eth
-%input glyphs/lc/ntilde
+input glyphs/lc/ntilde
 input glyphs/lc/oacute
 input glyphs/lc/ograve
 input glyphs/lc/ocircumflex
-%input glyphs/lc/otilde
+input glyphs/lc/otilde
 input glyphs/lc/odieresis
 input glyphs/lc/oe
 %input glyphs/lc/oslash

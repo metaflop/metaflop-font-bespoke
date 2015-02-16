@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% MF Bespoke v1.86                                                        %
+% MF Bespoke v1.87                                                        %
 % © 2014 by Marco Mueller and Simon Egli                                  %
 % thanks to Linus Roemer, Alexis Reigel, Theofilo Furtado                 %
 % www.metaflop.com                                                        %
@@ -9,17 +9,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                    %
 
 
-%input glyphs/punct/quotesinglbase
-%input glyphs/punct/guilsinglleft
-%input glyphs/punct/guilsinglright
-%input glyphs/punct/quotedblleft
-%input glyphs/punct/quotedblright
-%input glyphs/punct/quotedblbase
-%input glyphs/punct/guillemotleft
-%input glyphs/punct/guillemotright
+% glyph inputs %
+input glyphs/acc/dotaccent
+
+input glyphs/punct/quotesinglbase
+input glyphs/punct/guilsinglleft
+input glyphs/punct/guilsinglright
+input glyphs/punct/quotedblleft
+input glyphs/punct/quotedblright
+input glyphs/punct/quotedblbase
+input glyphs/punct/guillemotleft
+input glyphs/punct/guillemotright
 input glyphs/punct/endash
 input glyphs/punct/emdash
 input glyphs/punct/cwm
+input glyphs/punct/dotlessi
+input glyphs/punct/dotlessj
 
 %input glyphs/lig/ff
 %input glyphs/lig/fi
@@ -30,14 +35,14 @@ input glyphs/punct/cwm
 input glyphs/punct/visiblespace
 input glyphs/punct/exclam
 input glyphs/punct/ampersand
-%input glyphs/punct/quoteright
-%input glyphs/punct/parenleft
-%input glyphs/punct/parenright
+input glyphs/punct/quoteright
+input glyphs/punct/parenleft
+input glyphs/punct/parenright
 input glyphs/punct/plus
 input glyphs/punct/comma
 input glyphs/punct/hyphen
 input glyphs/punct/period
-%input glyphs/punct/slash
+input glyphs/punct/slash
 
 input glyphs/num/0
 input glyphs/num/1

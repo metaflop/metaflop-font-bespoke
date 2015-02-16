@@ -26,7 +26,7 @@ penstroke z1e--z2e;
 penstroke z3e--z4e;
 
 % composite glyphs %
-charanchortops_[charcode]=(leftstemloc,1.25h+.5px);
+charanchortops_[charcode]=(leftstemloc,1.275h);
 charanchorbots_[charcode]=(.5w,0);
 
 penlabels(range 1 thru 150);

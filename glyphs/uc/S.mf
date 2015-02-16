@@ -84,7 +84,7 @@ fill a--z13r--z13l--b--cycle;
 penstroke z13e{left}..z12e{down}..z10e{down}..z17e---z3e..z5e{down}..z6e{down}..z7e{left};
 
 % composite glyphs %
-charanchortops_[charcode]=(.5w,1.25h+.5px);
+charanchortops_[charcode]=(.5w,1.275h);
 charanchorbots_[charcode]=(.5w,0);
 
 penlabels(range 1 thru 150);

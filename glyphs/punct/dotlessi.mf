@@ -19,7 +19,7 @@ pos2(whatever,up,0);
 penstroke z1e..z2e;
 
 % composite glyphs %
-charanchortops_[charcode]=(.5w,1.35h+px/2);
+charanchortops_[charcode]=(.5w,1.525h);
 
 penlabels(range 1 thru 150);
 

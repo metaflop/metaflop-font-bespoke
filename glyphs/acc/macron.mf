@@ -3,13 +3,13 @@ beginadjchar(9,3,cap#,0);
 
 % sidebearings %
 numeric l,r;
-normal_adjust_fit(space-0.1u#,space-0.1u#);
+normal_adjust_fit(space-0.45u#,space-0.45u#);
 
 % construction %
-x1=leftstemloc;
-x2=w-leftstemloc;
-y1=y2=h-px;
-y1l=y2l=y1-px/2;
+x1=leftstemloc/2;
+x2=w-x1;
+y1=y2=0.875h;
+y1l=y2l=y1-px/2.25;
 
 % penpositions %
 pos1(whatever,right,90);

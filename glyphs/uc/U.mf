@@ -32,7 +32,7 @@ pos6(whatever,up,180);
 penstroke z6e--super_ql(5e,4e)--super_qr(3e,2e)--z1e;
 
 % composite glyphs %
-charanchortops_[charcode]=(.5w,1.25h+.5px);
+charanchortops_[charcode]=(.5w,1.275h);
 charanchorbots_[charcode]=(.5w,0);
 
 penlabels(range 1 thru 150);

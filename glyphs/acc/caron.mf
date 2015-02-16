@@ -3,19 +3,19 @@ beginadjchar(7,3,cap#,0);
 
 % sidebearings %
 numeric l,r;
-normal_adjust_fit(space-0.1u#,space-0.1u#);
+normal_adjust_fit(space-0.45u#,space-0.45u#);
 
 % construction %
 x4=leftstemloc;
 x2=w-leftstemloc;
 x3=0.5w;
 y2=y4=h;
-y3=0.85h;
+y3=0.8h;
 
 % penpositions %
-pos2(cont*px,(x3-x2,.2h),0);
+pos2(cont*px/1.35,(x3-x2,.2h),0);
 pos3(cont*px,(x3-x2,.2h),0);
-pos4(cont*px,(x4-x3,.2h),0);
+pos4(cont*px/1.35,(x4-x3,.2h),0);
 
 % draw %
 penstroke z2e--z3e;

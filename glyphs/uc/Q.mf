@@ -44,7 +44,7 @@ penstroke super_qr(4e,5e)--super_ql(6e,7e)--super_qr(8e,1e)--super_ql(2e,3e)--cy
 penstroke z9e--z10e;
 
 % composite glyphs %
-charanchortops_[charcode]=(.5w,1.25h+.5px);
+charanchortops_[charcode]=(.5w,1.275h);
 charanchorbots_[charcode]=(.5w,0);
 
 penlabels(range 1 thru 150);

@@ -21,8 +21,9 @@ x5r=x6r=x13r=x14r=x6-(cont*px/2);
 x4r=x7r=x12r=x15r=x1r+0.5*(x6r-x1r)+0.5*incx*(x6r-x1r);
 x8r=x11r=x1r+0.5*(x6r-x1r)-0.5*incx*(x6r-x1r);
 x3r=x16r=x1r+0.5*(x6r-x1r)-0.35*incx*(x6r-x1r);
-y3=y4=y15=y16=(.5h);
-y3r=y4r=(.5h)-.5px;
+x17=0.4w;
+y3=y4=y15=y16=y17=(.5h);
+y3r=y4r=y17r=(.5h)-.5px;
 y15r=y16r=(.5h)+.5px;
 y1r=y6r=y8r+0.5*(y3r-y8r)-0.5*incy*(y3r-y8r);
 y2r=y5r=y8r+0.5*(y3r-y8r)+0.5*incy*(y3r-y8r);
@@ -46,9 +47,10 @@ pos13(whatever,up,180);
 pos14(whatever,up,180);
 pos15(whatever,right,-90);
 pos16(whatever,right,-90);
+pos17(whatever,right,90);
 
 % draw % 
-penstroke z3e--super_qr(4e,5e)--super_ql(6e,7e)--z8e;
+penstroke z17e--z3e--super_qr(4e,5e)--super_ql(6e,7e)--z8e;
 penstroke super_qr(15e,14e)--z14e--z13e&super_ql(13e,12e);
 z100=((-infinity,y8r+0.5*(y3r-y8r)-appert*0.5*(y3r-y8r))--(infinity,y8r+0.5*(y3r-y8r)-appert*0.5*(y3r-y8r))) intersectionpoint (super_qr(8l,1l)--z2l);
 path x; numeric t,u; (t,u)=((-infinity,y8r+0.5*(y3r-y8r)-appert*0.5*(y3r-y8r))--(infinity,y8r+0.5*(y3r-y8r)-appert*0.5*(y3r-y8r))) intersectiontimes (super_qr(8l,1l)--z2l);

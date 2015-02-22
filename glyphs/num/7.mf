@@ -6,8 +6,9 @@ numeric l,r;
 normal_adjust_fit(space+0.2u#,space+0.3u#);
 
 % construction %
-x1=x3l=leftstemloc-cont*px/2;
+x1=leftstemloc-cont*px/2;
 x2=x4r=w-x1;
+x3l=0.2w;
 top y1=h;
 top y2=h;
 y1l=y2l=y1-px/2;

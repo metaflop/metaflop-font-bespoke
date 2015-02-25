@@ -28,6 +28,8 @@ y1r=y8r+0.5*(y3r-y8r)-0.5*incy*(y3r-y8r);
 y6r=y8r+0.5*(y3r-y8r)-0.5*incy*(y3r-y8r);
 y2r=y5r=y8r+0.5*(y3r-y8r)+0.5*incy*(y3r-y8r);
 
+x6r=x6l-taper*cont*px;
+
 % penpositions %
 pos1(whatever,up,0);
 pos2(whatever,up,0);

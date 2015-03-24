@@ -3,11 +3,11 @@ beginadjchar(1,3,cap#,0);
 
 % sidebearings %
 numeric l,r;
-normal_adjust_fit(space-1.0u#,space+0.1u#);
+normal_adjust_fit(space-0.85u#,space-0.15u#);
 
 % construction %
-x4=0.5w;
-x3=w-leftstemloc;
+x4=0.45w;
+x3=0.775w;
 y4=0.8h;
 y3=h;
 

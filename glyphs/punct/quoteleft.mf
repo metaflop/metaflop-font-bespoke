@@ -6,13 +6,13 @@ numeric l,r;
 normal_adjust_fit(space+0.4u#,space+0.4u#);
 
 % construction %
-x4=leftstemloc;
-x3=w-leftstemloc;
+x4=.25w;
+x3=.725w;
 y3=h;
-y4=.7h;
+y4=.675h;
 
 % penpositions %
-pos3(cont*px,(x3-x4,.45h),0);
+pos3(cont*px/1.35,(x3-x4,.45h),0);
 pos4(cont*px,(x3-x4,.45h),0);
 
 % draw %

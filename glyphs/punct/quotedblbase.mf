@@ -1,23 +1,23 @@
 % box dimension definition %
-beginadjchar(18,3.5,mean#,des#);
+beginadjchar(18,3,cap#,des#);
 
 % sidebearings %
 numeric l,r;
-normal_adjust_fit(space+0.4u#,space+0.4u#);
+normal_adjust_fit(space+0.8u#,space+0.8u#);
 
 % construction %
-x1=leftstemloc;
+x1=.075w;
 x2=.35w;
 x4=.65w;
-x3=w-leftstemloc;
-y2=y3=0.2h;
-y1=y4=-0.25h;
+x3=.925w;
+y2=y3=0.125h;
+y1=y4=-0.2h;
 
 % penpositions %
-pos1(cont*px,(x1-x2,.45h),0);
+pos1(cont*px/1.35,(x1-x2,.45h),0);
 pos2(cont*px,(x1-x2,.45h),0);
 pos3(cont*px,(x3-x4,.45h),0);
-pos4(cont*px,(x3-x4,.45h),0);
+pos4(cont*px/1.35,(x3-x4,.45h),0);
 
 % draw %
 penstroke z1e--z2e;

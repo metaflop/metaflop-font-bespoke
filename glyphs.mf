@@ -36,7 +36,7 @@ input glyphs/acc/caron
 input glyphs/acc/breve
 input glyphs/acc/macron
 input glyphs/acc/dotaccent
-%input glyphs/acc/cedilla
+input glyphs/acc/cedilla
 %input glyphs/acc/ogonek
 
 input glyphs/punct/quotesinglbase
@@ -181,9 +181,9 @@ input glyphs/uc/Racute
 input glyphs/uc/Rcaron
 input glyphs/uc/Sacute
 input glyphs/uc/Scaron
-%input glyphs/uc/Scedilla
+input glyphs/uc/Scedilla
 input glyphs/uc/Tcaron
-%input glyphs/uc/Tcedilla
+input glyphs/uc/Tcedilla
 input glyphs/uc/Uhungarumlaut
 input glyphs/uc/Uring
 input glyphs/uc/Ydieresis
@@ -214,9 +214,9 @@ input glyphs/lc/racute
 input glyphs/lc/rcaron
 input glyphs/lc/sacute
 input glyphs/lc/scaron
-%input glyphs/lc/scedilla
+input glyphs/lc/scedilla
 %input glyphs/lc/tcaron
-%input glyphs/lc/tcedilla
+input glyphs/lc/tcedilla
 input glyphs/lc/uhungarumlaut
 input glyphs/lc/uring
 input glyphs/lc/ydieresis
@@ -236,7 +236,7 @@ input glyphs/uc/Atilde
 input glyphs/uc/Adieresis
 input glyphs/uc/Aring
 input glyphs/uc/AE
-%input glyphs/uc/Ccedilla
+input glyphs/uc/Ccedilla
 input glyphs/uc/Egrave
 input glyphs/uc/Eacute
 input glyphs/uc/Ecircumflex
@@ -269,7 +269,7 @@ input glyphs/lc/atilde
 input glyphs/lc/adieresis
 input glyphs/lc/aring
 input glyphs/lc/ae
-%input glyphs/lc/ccedilla
+input glyphs/lc/ccedilla
 input glyphs/lc/eacute
 input glyphs/lc/egrave
 input glyphs/lc/ecircumflex
@@ -293,4 +293,4 @@ input glyphs/lc/ucircumflex
 input glyphs/lc/udieresis
 input glyphs/lc/yacute
 %input glyphs/lc/thorn
-%input glyphs/lc/germandbls
+input glyphs/lc/germandbls

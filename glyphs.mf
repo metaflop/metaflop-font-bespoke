@@ -54,11 +54,11 @@ input glyphs/punct/perthousandzero
 input glyphs/punct/dotlessi
 input glyphs/punct/dotlessj
 
-%input glyphs/lig/ff
-%input glyphs/lig/fi
-%input glyphs/lig/fl
-%input glyphs/lig/ffi
-%input glyphs/lig/ffl
+input glyphs/lig/ff
+input glyphs/lig/fi
+input glyphs/lig/fl
+input glyphs/lig/ffi
+input glyphs/lig/ffl
 
 input glyphs/punct/visiblespace
 input glyphs/punct/exclam

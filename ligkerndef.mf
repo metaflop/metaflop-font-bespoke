@@ -214,17 +214,17 @@ addkernclasss("period","comma");
 %addclasskern("y","period",-.75u#);
 
 % ligatures will overwrite existing kerning pairs
-% addlig("f","i","fi"); 
-% addlig("f","f","ff"); 
-% addlig("f","l","fl"); 
-% addlig("ff","i","ffi"); 
-% addlig("ff","l","ffl"); 
-% addlig("quoteleft","quoteleft","quotedblleft"); 
-% addlig("quoteright","quoteright","quotedblright"); 
-% addlig("hyphen","hyphen","endash"); 
-% addlig("endash","hyphen","emdash"); 
-% addlig("less","less","guillemotleft"); 
-% addlig("greater","greater","guillemotright"); 
+addlig("f","i","fi"); 
+addlig("f","f","ff"); 
+addlig("f","l","fl"); 
+addlig("ff","i","ffi"); 
+addlig("ff","l","ffl"); 
+addlig("quoteleft","quoteleft","quotedblleft"); 
+addlig("quoteright","quoteright","quotedblright"); 
+addlig("hyphen","hyphen","endash"); 
+addlig("endash","hyphen","emdash"); 
+addlig("less","less","guillemotleft"); 
+addlig("greater","greater","guillemotright"); 
 % addlig("exclam","quoteleft","exclamdown"); 
 % addlig("question","quoteleft","questiondown"); 
 

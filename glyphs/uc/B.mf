@@ -21,13 +21,17 @@ y13l=y14l=y13-px/2;
 top y3=h;
 top y4=h;
 y3r=y4r=h-px;
-y7=y8=y9=y10=1.05*bar*h;
-y7r=y8r=y7+.5px;
+y8=y9=y10=1.05*bar*h;
+y7r=y8+.5px;
+y8l=y8-.5px;
 y9l=y10l=y9+.5px;
 y5r=y7r+.5*(y4r-y7r)+incy*.5*(y4r-y7r);
 y6r=y7r+.5*(y4r-y7r)-incy*.5*(y4r-y7r);
-y11r=y13r+0.5*(y7l-y13r)+0.5*incy*(y7l-y13r);
-y12r=y13r+0.5*(y7l-y13r)-0.5*incy*(y7l-y13r);
+y11r=y13r+0.5*(y8l-y13r)+0.5*incy*(y8l-y13r);
+y12r=y13r+0.5*(y8l-y13r)-0.5*incy*(y8l-y13r);
+
+% branches %
+y7l=y8l+.75taper*cont*px;
 
 % penpositions %
 pos1(whatever,up,0);

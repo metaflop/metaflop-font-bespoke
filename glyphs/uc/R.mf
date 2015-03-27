@@ -11,7 +11,7 @@ x1r=x2r=x1+(cont*px/2);
 x5=x6=w-x1;
 x5r=x6r=x6-(cont*px/2);
 x4r=x7r=x2r+0.45*(x6r-x2r)+0.45*incx*(x6r-x2r);
-x9r=w-x1l;
+x9r=w;
 y1=y9=0;
 y2=h;
 top y3=h;

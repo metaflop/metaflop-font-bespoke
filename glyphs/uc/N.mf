@@ -7,9 +7,9 @@ normal_adjust_fit(space+0.5u#,space+0.5u#);
 
 % construction %
 x1=x2=leftstemloc;
-x1l=x2l=x1-(px/2);
+x1l=x2l=x1-(cont*px/2);
 x3=x4=w-x1;
-x3l=x4l=x3+(px/2);
+x3l=x4l=x3+(cont*px/2);
 x5r=x2l+corner;
 x6l=x3l-corner;
 y1=y3=0;
@@ -22,8 +22,8 @@ pos1(whatever,up,0);
 pos2(whatever,up,0);
 pos3(whatever,up,0);
 pos4(whatever,up,0);
-pos5(cont*px,(x2l-x6l,h),0);
-pos6(cont*px,(x2l-x6l,h),0);
+pos5(px,(x2l-x6l,h),0);
+pos6(px,(x2l-x6l,h),0);
 
 % draw %
 z10=whatever[z2r,z1r]=whatever[z6l,z5l];

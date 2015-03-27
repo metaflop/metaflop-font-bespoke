@@ -114,7 +114,8 @@ input glyphs/uc/O
 input glyphs/uc/P
 input glyphs/uc/Q
 input glyphs/uc/R
-input glyphs/uc/S
+input glyphs/uc/S1       % diagonal S curve
+%input glyphs/uc/S2      % round S curve
 input glyphs/uc/T
 input glyphs/uc/U
 input glyphs/uc/V

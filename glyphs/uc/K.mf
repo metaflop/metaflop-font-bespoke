@@ -9,7 +9,7 @@ normal_adjust_fit(space+0.5u#,space-0.2u#);
 x1=x2=leftstemloc;
 x1l=x2l=x6l=x1-(cont*px/2);
 x3l=x2r; 
-x4l=x5l=w-x1r;
+x4r=x5r=w-x1r+px;
 y1=y5=0;
 y2=y4=y6=h;
 y3=bar*h;
@@ -17,10 +17,10 @@ y3=bar*h;
 % penpositions %
 pos1(whatever,up,0);
 pos2(whatever,up,0);
-pos3(px,(x4l-x3l,h-bar*h),0);
-pos4(px,(x4l-x3l,h-bar*h),0);
-pos5(cont*px,(x2l-x5l,h),0);
-pos6(cont*px,(x2l-x5l,h),0);
+pos3(px,(x4r-x3l-px,h-bar*h),0);
+pos4(px,(x4r-x3l-px,h-bar*h),0);
+pos5(cont*px,(x2l-x5r+px,h),0);
+pos6(cont*px,(x2l-x5r+px,h),0);
 
 % draw %
 penstroke z2e..z1e;

@@ -3,16 +3,16 @@ beginadjchar("W",8,cap#,0);
 
 % sidebearings %
 numeric l,r;
-normal_adjust_fit(space-0.2u#,space-0.2u#);
+normal_adjust_fit(space-0.1u#,space-0.1u#);
 
 % construction %
 x3l=leftstemloc-cont*px/2;
-x2r=x11r;
+x2r=x11r-.25px;
 (x4l+x1r)/2=x3l+.5(x2r-x3l);
 x1r-x4l=corner;
 y1=y4=0;
 y2=y3=h;
-x13l=x4l;
+x13l=x4l+.25px;
 x12r=w-x3l;
 (x14l+x11r)/2=x13l+.5(x12r-x13l);
 x11r-x14l=corner;

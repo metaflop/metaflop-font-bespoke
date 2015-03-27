@@ -16,7 +16,7 @@ y2=h;
 top y3=h;
 y3=y4;
 y3r=y4r=h-px;
-y7=y8=0.8bar*h;
+y7=y8=0.825bar*h;
 y7r=y8r=y7+.5px;
 y5r=y7r+.5*(y4r-y7r)+incy*.5*(y4r-y7r);
 y6r=y7r+.5*(y4r-y7r)-incy*.5*(y4r-y7r);

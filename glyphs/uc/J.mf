@@ -18,7 +18,7 @@ x5r=x6r=x6-(cont*px/2);
 x7r=x1r+0.5*(x6r-x1r)+0.5*incx*(x6r-x1r);
 x8r=x1r+0.5*(x6r-x1r)-0.5*incx*(x6r-x1r);
 y5=y2=h;
-y1r=y6r=y7r+0.25*(y5r-y7r)-0.25*incy*(y5r-y7r);
+y1r=y6r=y7r+0.22*(y5r-y7r)-0.22*incy*(y5r-y7r);
 
 % penpositions %
 pos1(whatever,up,0);

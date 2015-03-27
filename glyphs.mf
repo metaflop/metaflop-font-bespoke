@@ -79,10 +79,11 @@ input glyphs/punct/slash
 
 input glyphs/num/0
 input glyphs/num/1
-input glyphs/num/2
+input glyphs/num/21      % diagonal
+%input glyphs/num/22     % round
 input glyphs/num/3
 input glyphs/num/4
-input glyphs/num/5
+input glyphs/num/5 
 input glyphs/num/6
 input glyphs/num/7
 input glyphs/num/8
@@ -114,8 +115,8 @@ input glyphs/uc/O
 input glyphs/uc/P
 input glyphs/uc/Q
 input glyphs/uc/R
-input glyphs/uc/S1       % diagonal S curve
-%input glyphs/uc/S2      % round S curve
+input glyphs/uc/S1       % diagonal
+%input glyphs/uc/S2      % round
 input glyphs/uc/T
 input glyphs/uc/U
 input glyphs/uc/V

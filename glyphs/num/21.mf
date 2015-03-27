@@ -1,0 +1,75 @@
+% box dimension definition %
+beginadjchar("2",4.25,cap#,0);
+
+% sidebearings %
+numeric l,r;
+normal_adjust_fit(space+0.2u#,space+0.3u#);
+
+% overshoot %
+top y11=h+o;
+top y12=h+o;
+y12r=y11r=h-px+o;
+
+% construction %
+x9=x10=leftstemloc;
+x9r=x10r=x9+(cont*px/2);
+x7=x1r=leftstemloc-(cont*px/2);
+x13=x14=w-x9;
+x13r=x14r=w-x9-(cont*px/2);
+x8=w-x9+(cont*px/2);
+x12=x10r+0.5*(x14r-x10r)+0.5*incx*(x14r-x10r);
+x3=x11=x10r+0.5*(x14r-x10r)-0.5*incx*(x14r-x10r);
+x18=0.5w;
+y1=0.5px;
+bot y7=0;
+bot y8=0;
+y1r=y7r=y8r=y21r=y7+px/2;
+y3=(.3h);
+y3l=(.3h)-0.5px;
+y10=y13=y18r+0.5*(y11r-y18r)+0.5*incy*(y11r-y18r);
+y9=y14=y18r+0.5*(y11r-y18r)-0.5*incy*(y11r-y18r);
+y18=0.6h;
+y18l=0.6h+.5px;
+y18r=0.6h-.5px;
+z4l=0.5*(z3l-z1l)+z1l;
+z4r=0.5*(z3r-z1r)+z1r;
+path trial;
+trial=z14{down}..z3..z7;
+pair dz;
+dz=direction 1 of trial;
+
+% diagonal angle
+alpha2=diag_ratio(1,cont*px,h,x3-x1r);
+
+% penpositions %
+penpos1(whatever,1.15*(angle dz)-90);
+penpos3(whatever,1.15*(angle dz)-90);
+pos7(whatever,right,90);
+pos8(whatever,right,90);
+pos9(whatever,up,0);
+pos10(whatever,up,0);
+pos11(whatever,right,90);
+pos12(whatever,right,90);
+pos13(whatever,up,180);
+pos14(whatever,up,180);
+pos21(whatever,right,90);
+
+% draw %
+z20=whatever[z8l,z7l]=whatever[z3l,z1l];
+z21=whatever[z8,z7]=whatever[z3,z1];
+fill z7l--z20--z3l--z3r--z1r--cycle;
+penstroke z4e---z3e..z14e{up}--z13e&super_ql(13e,12e);
+penstroke z21e--z8e;
+z99=((0,y18r+0.5*(y11r-y18r)+0.75*appert*0.5*(y11r-y18r))--(infinity,y11r+0.5*(y11r-y18r)+0.75*appert*0.5*(y11r-y18r))) intersectionpoint (z12l--super_qr(11l,10l)--z9l);
+path x; numeric t,u; (t,u)=((0,y18r+0.5*(y11r-y18r)+0.75*appert*0.5*(y11r-y18r))--(infinity,y18r+0.5*(y11r-y18r)+0.75*appert*0.5*(y11r-y18r))) intersectiontimes (z12l--super_qr(11l,10l)--z9l);	
+z98=z99+whatever*(dir(angle(direction u of (z12l--super_qr(11l,10l)--z9l))+90));
+x98=w;
+path b; numeric t,u; (t,u)=((z99--z98) intersectiontimes (z12r--super_qr(11r,10r)--z9r));
+b = subpath (0,u) of (z12r--super_qr(11r,10r)--z9r);
+path a; numeric t,u; (t,u)=(((0,y18r+0.5*(y11r-y18r)+0.75*appert*0.5*(y11r-y18r))--(infinity,y18r+0.5*(y11r-y18r)+0.75*appert*0.5*(y11r-y18r))) intersectiontimes (z12l--super_qr(11l,10l)--z9l));
+a = subpath (u,0) of (z12l--super_qr(11l,10l)--z9l);
+fill a--z12l--z12r--b--cycle;
+
+penlabels(range 1 thru 150);
+
+endchar;

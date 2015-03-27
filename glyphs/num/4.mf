@@ -3,7 +3,7 @@ beginadjchar("4",4.75,cap#,0);
 
 % sidebearings %
 numeric l,r;
-normal_adjust_fit(space+0.1u#,space+0.0u#);
+normal_adjust_fit(space+0.1u#,space+0.1u#);
 
 % construction %
 x3=x5l=leftstemloc-px/2;
@@ -22,8 +22,8 @@ pos1(whatever,up,0);
 pos2(whatever,up,0);
 pos3(whatever,right,90);
 pos4(whatever,right,90);
-pos5(cont*px,(x6l-x5l,.7h+.5px+corner),0);
-pos6(cont*px,(x6l-x5l,.7h+.5px+corner),0);
+pos5(cont*px,(x6l-x5l,.8h+.5px+corner),0);
+pos6(cont*px,(x6l-x5l,.8h+.5px+corner),0);
 
 % draw % 
 z10=whatever[z4r,z3r]=whatever[z5r,z6r];

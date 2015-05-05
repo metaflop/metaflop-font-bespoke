@@ -17,10 +17,10 @@ y2=y3=h;
 y5=0;
 
 % penpositions %
-pos1(px,(x2r-x1r,h-0.75bar*h),0);
-pos2(px,(x2r-x1r,h-0.75bar*h),0);
-pos3(cont*px,(x3l-x4l,h-0.6bar*h),0);
-pos4(cont*px,(x3l-x4l,h-0.6bar*h),0);
+pos1(px,(x2r-x1r,.9h-.75bar*h),0);
+pos2(px,(x2r-x1r,.9h-.75bar*h),0);
+pos3(cont*px,(x3l-x4l,h-0.75bar*h),0);
+pos4(cont*px,(x3l-x4l,h-0.75bar*h),0);
 pos5(whatever,up,0);
 pos6(whatever,up,0);
 

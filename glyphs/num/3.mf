@@ -31,7 +31,7 @@ y9r=y14r=y16r+0.5*(y11r-y16r)-0.5*incy*(y11r-y16r);
 y10r=y13r=y16r+0.5*(y11r-y16r)+0.5*incy*(y11r-y16r);
 
 % branches %
-y15l=y17r+.75taper*cont*px;
+y15l=y3l-taper*cont*px;
 
 % penpositions %
 pos1(whatever,up,0);
@@ -55,23 +55,23 @@ pos17(whatever,right,90);
 % draw % 
 penstroke z17e--z3e--super_qr(4e,5e)--super_ql(6e,7e)--z8e;
 penstroke super_qr(15e,14e)--z14e--z13e&super_ql(13e,12e);
-z100=((-infinity,y8r+0.5*(y3r-y8r)-appert*0.5*(y3r-y8r))--(infinity,y8r+0.5*(y3r-y8r)-appert*0.5*(y3r-y8r))) intersectionpoint (super_qr(8l,1l)--z2l);
-path x; numeric t,u; (t,u)=((-infinity,y8r+0.5*(y3r-y8r)-appert*0.5*(y3r-y8r))--(infinity,y8r+0.5*(y3r-y8r)-appert*0.5*(y3r-y8r))) intersectiontimes (super_qr(8l,1l)--z2l);
+z100=((-infinity,y8r+0.5*(y3r-y8r)-apert*0.5*(y3r-y8r))--(infinity,y8r+0.5*(y3r-y8r)-apert*0.5*(y3r-y8r))) intersectionpoint (super_qr(8l,1l)--z2l);
+path x; numeric t,u; (t,u)=((-infinity,y8r+0.5*(y3r-y8r)-apert*0.5*(y3r-y8r))--(infinity,y8r+0.5*(y3r-y8r)-apert*0.5*(y3r-y8r))) intersectiontimes (super_qr(8l,1l)--z2l);
 z101=z100+whatever*(dir(angle(direction u of (super_qr(8l,1l)--z2l))+90));
 x101=w;
 path r; numeric t,u; (t,u)=((z100--z101) intersectiontimes (super_qr(8r,1r)--z2r));
 r = subpath (u,0) of (super_qr(8r,1r)--z2r);
-path ss; numeric t,u; (t,u)=((0,y8r+0.5*(y3r-y8r)-appert*0.5*(y3r-y8r))--(infinity,y8r+0.5*(y3r-y8r)-appert*0.5*(y3r-y8r))) intersectiontimes (super_qr(8l,1l)--z2l);
+path ss; numeric t,u; (t,u)=((0,y8r+0.5*(y3r-y8r)-apert*0.5*(y3r-y8r))--(infinity,y8r+0.5*(y3r-y8r)-apert*0.5*(y3r-y8r))) intersectiontimes (super_qr(8l,1l)--z2l);
 ss = subpath (0,u) of (super_qr(8l,1l)--z2l);
 fill ss--r--z7r--z7l--cycle;
 
-z99=((0,y16r+0.5*(y11r-y16r)+appert*0.5*(y11r-y16r))--(infinity,y11r+0.5*(y11r-y16r)+appert*0.5*(y11r-y16r))) intersectionpoint (z12l--super_qr(11l,10l)--z9l);
-path x; numeric t,u; (t,u)=((0,y16r+0.5*(y11r-y16r)+appert*0.5*(y11r-y16r))--(infinity,y16r+0.5*(y11r-y16r)+appert*0.5*(y11r-y16r))) intersectiontimes (z12l--super_qr(11l,10l)--z9l);	
+z99=((0,y16r+0.5*(y11r-y16r)+apert*0.5*(y11r-y16r))--(infinity,y11r+0.5*(y11r-y16r)+apert*0.5*(y11r-y16r))) intersectionpoint (z12l--super_qr(11l,10l)--z9l);
+path x; numeric t,u; (t,u)=((0,y16r+0.5*(y11r-y16r)+apert*0.5*(y11r-y16r))--(infinity,y16r+0.5*(y11r-y16r)+apert*0.5*(y11r-y16r))) intersectiontimes (z12l--super_qr(11l,10l)--z9l);	
 z98=z99+whatever*(dir(angle(direction u of (z12l--super_qr(11l,10l)--z9l))+90));
 x98=w;
 path b; numeric t,u; (t,u)=((z99--z98) intersectiontimes (z12r--super_qr(11r,10r)--z9r));
 b = subpath (0,u) of (z12r--super_qr(11r,10r)--z9r);
-path a; numeric t,u; (t,u)=(((0,y16r+0.5*(y11r-y16r)+appert*0.5*(y11r-y16r))--(infinity,y16r+0.5*(y11r-y16r)+appert*0.5*(y11r-y16r))) intersectiontimes (z12l--super_qr(11l,10l)--z9l));
+path a; numeric t,u; (t,u)=(((0,y16r+0.5*(y11r-y16r)+apert*0.5*(y11r-y16r))--(infinity,y16r+0.5*(y11r-y16r)+apert*0.5*(y11r-y16r))) intersectiontimes (z12l--super_qr(11l,10l)--z9l));
 a = subpath (u,0) of (z12l--super_qr(11l,10l)--z9l);
 fill a--z12l--z12r--b--cycle;
 

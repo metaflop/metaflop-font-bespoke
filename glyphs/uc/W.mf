@@ -20,12 +20,12 @@ y11=y14=0;
 y12=y13=h;
 
 % penpositions %
-pos1(px,(x2r-x1r,h),0);
-pos2(px,(x2r-x1r,h),0);
+pos1(px,(x2r-x1r,.8h),0);
+pos2(px,(x2r-x1r,.8h),0);
 pos3(cont*px,(x3l-x4l,h),0);
 pos4(cont*px,(x3l-x4l,h),0);
-pos11(px,(x12r-x11r,h),0);
-pos12(px,(x12r-x11r,h),0);
+pos11(px,(x12r-x11r,.8h),0);
+pos12(px,(x12r-x11r,.8h),0);
 pos13(cont*px,(x13l-x14l,h),0);
 pos14(cont*px,(x13l-x14l,h),0);
 

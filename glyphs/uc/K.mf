@@ -19,8 +19,8 @@ pos1(whatever,up,0);
 pos2(whatever,up,0);
 pos3(px,(x4r-x3l-px,h-bar*h),0);
 pos4(px,(x4r-x3l-px,h-bar*h),0);
-pos5(cont*px,(x2l-x5r+px,h),0);
-pos6(cont*px,(x2l-x5r+px,h),0);
+pos5(cont*px,(x2l-x5r+px,.95h),0);
+pos6(cont*px,(x2l-x5r+px,.95h),0);
 
 % draw %
 penstroke z2e..z1e;

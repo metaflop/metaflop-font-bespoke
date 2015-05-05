@@ -3,7 +3,7 @@ beginadjchar("e",4.6,mean#,0);
 
 % sidebearings %
 numeric l,r;
-normal_adjust_fit(space+0.25u#,space+0.15u#);
+normal_adjust_fit(space+0.2u#,space+0.15u#);
 
 % overshoot %
 top y3=mean+o;
@@ -41,13 +41,13 @@ pos11(whatever,up,180);
 
 % draw %
 penstroke super_qr(8e,1e)--super_ql(2e,3e)--super_qr(4e,5e);
-z100=((0,0.5mean-appert*0.5mean)--(infinity,0.5mean-appert*0.5mean)) intersectionpoint (z5l--super_ql(6l,7l)--z8l);
-path x; numeric t,u; (t,u)=((0,0.5mean-appert*0.5mean)--(infinity,0.5mean-appert*0.5mean)) intersectiontimes (z5l--super_ql(6l,7l)--z8l);
+z100=((0,0.5mean-apert*0.5mean)--(infinity,0.5mean-apert*0.5mean)) intersectionpoint (z5l--super_ql(6l,7l)--z8l);
+path x; numeric t,u; (t,u)=((0,0.5mean-apert*0.5mean)--(infinity,0.5mean-apert*0.5mean)) intersectiontimes (z5l--super_ql(6l,7l)--z8l);
 z101=z100+whatever*(dir(angle(direction u of (z5l--super_ql(6l,7l)--z8l))+90));
 x101=0;
 path r; numeric t,u; (t,u)=((z100--z101) intersectiontimes (z5r--super_ql(6r,7r)--z8r));
 r = subpath (u,infinity) of (z5r--super_ql(6r,7r)--z8r);
-path ss; numeric t,u; (t,u)=(((0,0.5mean-appert*0.5mean)--(infinity,0.5mean-appert*0.5mean)) intersectiontimes (z5l--super_ql(6l,7l)--z8l));
+path ss; numeric t,u; (t,u)=(((0,0.5mean-apert*0.5mean)--(infinity,0.5mean-apert*0.5mean)) intersectiontimes (z5l--super_ql(6l,7l)--z8l));
 ss = subpath (infinity,u) of (z5l--super_ql(6l,7l)--z8l);
 fill z8r--z8l--ss--r--cycle;
 z102=whatever[z10r,z9r]=whatever[z4l,z5l];

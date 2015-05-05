@@ -14,10 +14,10 @@ y1=y4=h;
 y2=y3=0;
 
 % penpositions %
-pos1(cont*px,(x1l-x2r,1.2h),0);
-pos2(cont*px,(x1l-x2r,1.2h),0);
-pos3(px,(x4r-x3l-px,h),0);
-pos4(px,(x4r-x3l-px,h),0);
+pos1(cont*px,(x1l-x2r,1.25h),0);
+pos2(cont*px,(x1l-x2r,1.25h),0);
+pos3(px,(x4r-x3l-px,.9h),0);
+pos4(px,(x4r-x3l-px,.9h),0);
 
 % draw %
 penstroke z1e--z2e;

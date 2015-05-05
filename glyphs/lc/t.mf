@@ -3,7 +3,7 @@ beginadjchar("t",3,asc#,0);
 
 % sidebearings %
 numeric l,r;
-normal_adjust_fit(space-0.25u#,space-0.25u#);
+normal_adjust_fit(space-0.15u#,space-0.15u#);
 
 % construction %
 x3=leftstemloc-px/2;

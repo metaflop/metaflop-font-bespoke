@@ -3,7 +3,7 @@ beginadjchar("o",4.6,mean#,0);
 
 % sidebearings %
 numeric l,r;
-normal_adjust_fit(space+0.25u#,space+0.25u#);
+normal_adjust_fit(space+0.2u#,space+0.2u#);
 
 % overshoot %
 top y3=mean+o;

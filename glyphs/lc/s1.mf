@@ -1,13 +1,13 @@
 % box dimension definition %
-beginadjchar("S",4.75,cap#,0);
+beginadjchar("s",3.8,mean#,0);
 
 % sidebearings %
 numeric l,r;
-normal_adjust_fit(space+0.2u#,space+0.25u#);
+normal_adjust_fit(space+0.1u#,space+0.1u#);
 
 % overshoot %
-top y13=h+o;
-top y14=h+o;
+top y13=mean+o;
+top y14=mean+o;
 y13l=y14l=h-px+o;
 bot y7=0-o;
 bot y8=0-o;
@@ -32,9 +32,9 @@ x3=x10l+0.7*(x6r-x1r)+0.3*incx*(x6r-x1r);
 y18=0.5h;
 y18l=0.5h+.5px;
 y18r=0.5h-.5px;
-y3=y18-0.05*(y5-y6)-.25px;
+y3=y18-0.05*(y5-y6)-.15px;
 y3r=y3-.5px;
-y17=y18+0.05*(y12-y10)+.35px;
+y17=y18+0.05*(y12-y10)+.2px;
 y17l=y17+.5px;
 y1=y6=y8r+0.52*(y18r-y8r)-0.48*incy*(y18r-y8r);
 y2=y5=y8r+0.52*(y18r-y8r)+0.48*incy*(y18r-y8r);
@@ -84,7 +84,7 @@ fill a--z13r--z13l--b--cycle;
 penstroke super_qrt(13e,12e,1.02)..z10e{down}..z17e---z3e..z5e{down}..super_qlt(6e,7e,1.02);
 
 % composite glyphs %
-charanchortops_[charcode]=(.5w,1.275h);
+charanchortops_[charcode]=(.5w,1.525h);
 charanchorbots_[charcode]=(.5w,0);
 
 penlabels(range 1 thru 150);

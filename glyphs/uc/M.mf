@@ -23,10 +23,10 @@ pos1(whatever,up,0);
 pos2(whatever,up,0);
 pos3(whatever,up,0);
 pos4(whatever,up,0);
-pos5(px,(x2l-x6l,h),0);
-pos6(px,(x2l-x6l,h),0);
-pos7(px,(x8l-x6l,h),0);
-pos8(px,(x8l-x6l,h),0);
+pos5(px,(x2l-x6l,.75h),0);
+pos6(px,(x2l-x6l,.75h),0);
+pos7(px,(x8l-x6l,.75h),0);
+pos8(px,(x8l-x6l,.75h),0);
 
 % draw %
 z10=whatever[z5r,z6r]=whatever[z7l,z8l];

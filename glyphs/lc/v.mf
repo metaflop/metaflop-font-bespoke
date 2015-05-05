@@ -3,7 +3,7 @@ beginadjchar("v",4.5,mean#,0);
 
 % sidebearings %
 numeric l,r;
-normal_adjust_fit(space-0.25u#,space-0.25u#);
+normal_adjust_fit(space-0.15u#,space-0.15u#);
 
 % construction %
 x3l=leftstemloc-cont*px/2;
@@ -14,17 +14,17 @@ y1=y4=0;
 y2=y3=h;
 
 % penpositions %
-pos1(px,(x2r-x1r,h),0);
-pos2(px,(x2r-x1r,h),0);
+pos1(px,(x2r-x1r,.75h),0);
+pos2(px,(x2r-x1r,.75h),0);
 pos3(cont*px,(x3l-x4l,h),0);
 pos4(cont*px,(x3l-x4l,h),0);
 
 % draw %
 z0=whatever[z3r,z4r]=whatever[z1l,z2l];
-fill z3l---z4l---z1r---z2r---z2l---z0---z3r---cycle;
+fill z3l--z4l--z1r--z2r--z2l--z0--z3r--cycle;
 
 % composite glyphs %
-charanchortops_[charcode]=(.5w,1.525h);
+charanchortops_[charcode]=(.5w,1.275h);
 charanchorbots_[charcode]=(.5w,0);
 
 penlabels(range 1 thru 150);

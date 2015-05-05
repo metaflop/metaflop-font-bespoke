@@ -31,7 +31,7 @@ y11r=y13r+0.5*(y8l-y13r)+0.5*incy*(y8l-y13r);
 y12r=y13r+0.5*(y8l-y13r)-0.5*incy*(y8l-y13r);
 
 % branches %
-y7l=y8l+.75taper*cont*px;
+y7l=y8r-taper*cont*px;
 
 % penpositions %
 pos1(whatever,up,0);

@@ -14,8 +14,8 @@ y1=y4=0;
 y2=y3=h;
 
 % penpositions %
-pos1(px,(x2r-x1r,h),0);
-pos2(px,(x2r-x1r,h),0);
+pos1(px,(x2r-x1r,.75h),0);
+pos2(px,(x2r-x1r,.75h),0);
 pos3(cont*px,(x3l-x4l,h),0);
 pos4(cont*px,(x3l-x4l,h),0);
 

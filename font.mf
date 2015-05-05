@@ -39,8 +39,8 @@ asc#:=0.95ht#;     % ascender height		    $ 0.75 / 1.25
 des#:=0.3ht#;      % descender heigt		    $ 0.25 / 0.75	
 
 % shape %
-incx:=0.25;           % horizontal increase        $ 0 / 0.75	
-incy:=0.25;           % vertical increase          $ 0 / 0.75
+incx:=0;           % horizontal increase        $ 0 / 0.75	
+incy:=0;           % vertical increase          $ 0 / 0.75
 cont:=1.1;         % contrast                   $ 1 / 2
 superness:=0.72;   % superness					$ 0.25 / 1
 slant:=0;          % slanting amount            $ -0.75 / 0.75

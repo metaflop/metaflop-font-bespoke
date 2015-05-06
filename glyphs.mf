@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
 % MF Bespoke v1.87                                                        %
-% © 2013 by Marco Mueller and Simon Egli                                  %
+% © 2015 by Marco Mueller and Simon Egli                                  %
 % thanks to Linus Roemer, Alexis Reigel, Theofilo Furtado                 %
 % www.metaflop.com                                                        %
 % licensed under gpl v3: www.gnu.org/licenses/                            %
@@ -37,7 +37,7 @@ input glyphs/acc/breve
 input glyphs/acc/macron
 input glyphs/acc/dotaccent
 input glyphs/acc/cedilla
-%input glyphs/acc/ogonek
+input glyphs/acc/ogonek
 
 input glyphs/punct/quotesinglbase
 input glyphs/punct/guilsinglleft
@@ -150,7 +150,8 @@ input glyphs/lc/o
 input glyphs/lc/p
 input glyphs/lc/q
 input glyphs/lc/r
-input glyphs/lc/s
+input glyphs/lc/s1       % diagonal
+%input glyphs/lc/s2      % round
 input glyphs/lc/t
 input glyphs/lc/u
 input glyphs/lc/v
@@ -165,12 +166,12 @@ input glyphs/punct/bar
 %input glyphs/punct/asciitilde
 
 input glyphs/uc/Abreve
-%input glyphs/uc/Aogonek
+input glyphs/uc/Aogonek
 input glyphs/uc/Cacute
 input glyphs/uc/Ccaron
 input glyphs/uc/Dcaron
 input glyphs/uc/Ecaron
-%input glyphs/uc/Eogonek
+input glyphs/uc/Eogonek
 input glyphs/uc/Gbreve
 input glyphs/uc/Lacute
 %input glyphs/uc/Lcaron
@@ -198,12 +199,12 @@ input glyphs/uc/Idotaccent
 %input glyphs/lc/dcroat
 %input glyphs/punct/section
 input glyphs/lc/abreve
-%input glyphs/lc/aogonek
+input glyphs/lc/aogonek
 input glyphs/lc/cacute
 input glyphs/lc/ccaron
 %input glyphs/lc/dcaron
 input glyphs/lc/ecaron
-%input glyphs/lc/eogonek
+input glyphs/lc/eogonek
 input glyphs/lc/gbreve
 input glyphs/lc/lacute
 %input glyphs/lc/lcaron

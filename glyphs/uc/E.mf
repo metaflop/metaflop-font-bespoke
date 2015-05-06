@@ -39,7 +39,7 @@ penstroke z7e--z8e;
 
 % composite glyphs %
 charanchortops_[charcode]=(.5w,1.275h);
-charanchorbots_[charcode]=(.5w,0);
+charanchorbots_[charcode]=(.835w,0);
 
 penlabels(range 1 thru 150);
 

@@ -59,7 +59,7 @@ else:
 
 % composite glyphs %
 charanchortops_[charcode]=(.5w,1.525h);
-charanchorbots_[charcode]=(.5w,0);
+charanchorbots_[charcode]=(.45w,0);
 
 penlabels(range 1 thru 150);
 

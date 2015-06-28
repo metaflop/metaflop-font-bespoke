@@ -46,7 +46,7 @@ input glyphs/punct/slash
 
 input glyphs/num/0
 input glyphs/num/1
-input glyphs/num/2
+input glyphs/num/21      % diagonal
 input glyphs/num/3
 input glyphs/num/4
 input glyphs/num/5
@@ -77,7 +77,7 @@ input glyphs/uc/O
 input glyphs/uc/P
 input glyphs/uc/Q
 input glyphs/uc/R
-input glyphs/uc/S
+input glyphs/uc/S1      % diagonal
 input glyphs/uc/T
 input glyphs/uc/U
 input glyphs/uc/V
@@ -104,7 +104,7 @@ input glyphs/lc/o
 input glyphs/lc/p
 input glyphs/lc/q
 input glyphs/lc/r
-input glyphs/lc/s
+input glyphs/lc/s1      % diagonal
 input glyphs/lc/t
 input glyphs/lc/u
 input glyphs/lc/v

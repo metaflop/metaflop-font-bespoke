@@ -63,9 +63,10 @@ input glyphs/lig/ffl
 input glyphs/punct/visiblespace
 input glyphs/punct/exclam
 input glyphs/punct/quotedbl
-input glyphs/punct/numbersign 
-input glyphs/punct/dollar1       % diagonal
-%input glyphs/punct/dollar2      % round
+input glyphs/punct/numbersign
+if (incx>0.25) or (incy>0.25) or (superness>0.8): input glyphs/punct/dollar2;
+else: input glyphs/punct/dollar1;
+fi 
 input glyphs/punct/percent 
 input glyphs/punct/ampersand
 input glyphs/punct/quoteright
@@ -80,8 +81,9 @@ input glyphs/punct/slash
 
 input glyphs/num/0
 input glyphs/num/1
-input glyphs/num/21      % diagonal
-%input glyphs/num/22     % round
+if (incx>0.25) or (incy>0.25) or (superness>0.8): input glyphs/num/22;
+else: input glyphs/num/21;
+fi 
 input glyphs/num/3
 input glyphs/num/4
 input glyphs/num/5 
@@ -116,11 +118,9 @@ input glyphs/uc/O
 input glyphs/uc/P
 input glyphs/uc/Q
 input glyphs/uc/R
-if incx < 0.25: input glyphs/uc/S1; 
-else: input glyphs/uc/S2;
-fi;
-%input glyphs/uc/S1       % diagonal
-%input glyphs/uc/S2      % round
+if (incx>0.25) or (incy>0.25) or (superness>0.8): input glyphs/uc/S2;
+else: input glyphs/uc/S1;
+fi
 input glyphs/uc/T
 input glyphs/uc/U
 input glyphs/uc/V
@@ -154,8 +154,9 @@ input glyphs/lc/o
 input glyphs/lc/p
 input glyphs/lc/q
 input glyphs/lc/r
-input glyphs/lc/s1       % diagonal
-%input glyphs/lc/s2      % round
+if (incx>0.25) or (incy>0.25) or (superness>0.8): input glyphs/lc/s2;
+else: input glyphs/lc/s1;
+fi
 input glyphs/lc/t
 input glyphs/lc/u
 input glyphs/lc/v

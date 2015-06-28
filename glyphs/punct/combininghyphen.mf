@@ -1,5 +1,5 @@
 % box dimension definition %
-beginadjchar(21,4.5,mean#,0);
+beginadjchar(45,2.75,mean#,0);
 
 % sidebearings %
 numeric l,r;
@@ -16,7 +16,7 @@ pos5(whatever,right,90);
 pos6(whatever,right,90);
 
 % draw %
-penstroke z5e--z6e;
+penstroke z5e---z6e;
 
 penlabels(range 1 thru 150);
 

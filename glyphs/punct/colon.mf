@@ -21,8 +21,8 @@ y12=y13=.5(y11+y10);
 y5=y6=.5(y4+y3);
 
 % draw %
-fill super_qr(4,5)---super_ql(5,3)---super_qr(3,6)---super_ql(6,4)---cycle;
-fill super_qr(11,12)---super_ql(12,10)---super_qr(10,13)---super_ql(13,11)---cycle;
+fill super_qr(4,5)--super_ql(5,3)--super_qr(3,6)--super_ql(6,4)--cycle;
+fill super_qr(11,12)--super_ql(12,10)--super_qr(10,13)--super_ql(13,11)--cycle;
 
 penlabels(range 1 thru 150);
 

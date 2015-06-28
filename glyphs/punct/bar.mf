@@ -1,12 +1,12 @@
 % box dimension definition %
-beginadjichar(124,0.2,cap#,0);
+beginadjchar(124,1.2,cap#,0);
 
 % sidebearings %
 numeric l,r;
-normal_adjust_fit(space+0.6u#,space+0.6u#);
+normal_adjust_fit(space+0.55u#,space+0.55u#);
 
 % construction %
-x1=x2=leftstemloc;
+x1=x2=.5w;
 x1l=x2l=x1-(cont*px/2);
 y2=1.05h;
 y1=-.05h;

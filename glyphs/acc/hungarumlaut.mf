@@ -6,10 +6,10 @@ numeric l,r;
 normal_adjust_fit(space-0.45u#,space-0.45u#);
 
 % construction %
-x1=leftstemloc/2;
-x2=0.415w;
-x4=0.565w;
-x3=w-leftstemloc/2;
+x1=0.2w;
+x2=0.5w;
+x4=0.7w;
+x3=w;
 y1=y4=0.8h;
 y2=y3=h;
 

@@ -49,9 +49,9 @@ pos12(whatever,up,180);
 pos13(whatever,up,0);
 
 % draw %
-penstroke super_ql(2e,3e)---super_qr(4e,5e)---z6e;
-penstroke super_ql(7e,9e)---super_qr(10e,11e)---z12e;
-penstroke z1e---z13e;
+penstroke super_ql(2e,3e)--super_qr(4e,5e)--z6e;
+penstroke super_ql(7e,9e)--super_qr(10e,11e)--z12e;
+penstroke z1e--z13e;
 
 % composite glyphs %
 charanchortops_[charcode]=(.5w,1.525h);

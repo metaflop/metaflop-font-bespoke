@@ -16,7 +16,7 @@ pos1(whatever,up,0);
 pos2(whatever,up,0);
 
 % draw %
-penstroke z1e---z2e;
+penstroke z1e--z2e;
 
 % composite glyphs %
 charanchortops_[charcode]=(.6w,1.25h);

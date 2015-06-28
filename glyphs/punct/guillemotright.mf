@@ -22,10 +22,10 @@ pos5(cont*px,(x4r-x5l,h),0);
 pos6(cont*px,(x4r-x5l,h),0);
 
 % draw %
-penstroke z1e---z2e;
-penstroke z1e---z3e;
-penstroke z4e---z5e;
-penstroke z4e---z6e;
+penstroke z1e--z2e;
+penstroke z1e--z3e;
+penstroke z4e--z5e;
+penstroke z4e--z6e;
 
 penlabels(range 1 thru 150);
 

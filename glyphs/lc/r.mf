@@ -37,16 +37,16 @@ x2l=x2r-taper*cont*px;
 penstroke z1e..z10e;
 penstroke super_ql(2e,3e);
 
-z99=((0,0.5mean+1.6apert*0.5mean)--(infinity,0.5mean+1.6apert*0.5mean)) intersectionpoint (z3l---super_qr(4l,5l)---z6l);
-path x; numeric t,u; (t,u)=((0,0.5mean+1.6apert*0.5mean)--(infinity,0.5mean+1.6apert*0.5mean)) intersectiontimes (z3l---super_qr(4l,5l)---z6l);
+z99=((0,0.5mean+1.6apert*0.5mean)--(infinity,0.5mean+1.6apert*0.5mean)) intersectionpoint (z3l--super_qr(4l,5l)--z6l);
+path x; numeric t,u; (t,u)=((0,0.5mean+1.6apert*0.5mean)--(infinity,0.5mean+1.6apert*0.5mean)) intersectiontimes (z3l--super_qr(4l,5l)--z6l);
 	
-z98=z99+whatever*(dir(angle(direction u of (z3l---super_qr(4l,5l)---z6l))+90));
+z98=z99+whatever*(dir(angle(direction u of (z3l--super_qr(4l,5l)--z6l))+90));
 x98=0;
-path b; numeric t,u; (t,u)=((z99--z98) intersectiontimes (z3r---super_qr(4r,5r)---z6r));
-b = subpath (0,u) of (z3r---super_qr(4r,5r)---z6r);
-path a; numeric t,u; (t,u)=(((0,0.5mean+1.6apert*0.5mean)---(infinity,0.5mean+1.6apert*0.5mean)) intersectiontimes (z3l---super_qr(4l,5l)---z6l));
-a = subpath (u,0) of (z3l---super_qr(4l,5l)---z6l);
-fill a---z3l---z3r---b---cycle;
+path b; numeric t,u; (t,u)=((z99--z98) intersectiontimes (z3r--super_qr(4r,5r)--z6r));
+b = subpath (0,u) of (z3r--super_qr(4r,5r)--z6r);
+path a; numeric t,u; (t,u)=(((0,0.5mean+1.6apert*0.5mean)--(infinity,0.5mean+1.6apert*0.5mean)) intersectiontimes (z3l--super_qr(4l,5l)--z6l));
+a = subpath (u,0) of (z3l--super_qr(4l,5l)--z6l);
+fill a--z3l--z3r--b--cycle;
 
 % composite glyphs %
 charanchortops_[charcode]=(.4w,1.525h);

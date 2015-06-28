@@ -1,25 +1,25 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% MF Bespoke v1.87                                                        %
-% © 2014 by Marco Mueller and Simon Egli                                  %
+% MF Bespoke v1.9                                                         %
+% © 2015 by Marco Mueller and Simon Egli                                  %
 % thanks to Linus Roemer, Alexis Reigel, Theofilo Furtado                 %
-% www.metaflop.com                                                        %
-% licensed under agpl v3: www.gnu.org/licenses/                            %
+% <http://www.metaflop.com>                                               %
+% licensed under gpl v3: www.gnu.org/licenses/                            %
 %                                                                         %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                          
 %                                                                         %
 % This program is free software: you can redistribute it and/or modify    %
-% it under the terms of the GNU General Public License as published by    %
-% the Free Software Foundation, either version 3 of the License, or       %
+% it under the terms of the GNU General Public License as published       %
+% bythe Free Software Foundation, either version 3 of the License, or     %
 % (at your option) any later version.                                     %
 %                                                                         %
 % This program is distributed in the hope that it will be useful,         %
 % but WITHOUT ANY WARRANTY; without even the implied warranty of          % 
-% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the            % 
-% GNU General Public License for more details.                            %
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU        % 
+% General Public License for more details.                                %
 %                                                                         %
 % You should have received a copy of the GNU General Public License       %
-% along with this program. If not, see <http://www.gnu.org/licenses/>.    %
+% along with this program. If not, see <http://www.gnu.org/licenses/>.    %                            %
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -57,4 +57,5 @@ sidebearing:=1;    % sidebearings (0) off, (1) on for .otf export
 input fontbase;    % now generate the font
 input glyphs;
 input ligkerndef;
+
 bye;

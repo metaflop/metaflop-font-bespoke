@@ -58,7 +58,7 @@ pos21(whatever,right,90);
 z20=whatever[z8l,z7l]=whatever[z3l,z1l];
 z21=whatever[z8,z7]=whatever[z3,z1];
 fill z7l--z20--z3l--z3r--z1r--cycle;
-penstroke z4e---z3e..z14e{up}--z13e&super_ql(13e,12e);
+penstroke z4e--z3e..z14e{up}--z13e&super_ql(13e,12e);
 penstroke z21e--z8e;
 z99=((0,y18r+0.5*(y11r-y18r)+0.75*apert*0.5*(y11r-y18r))--(infinity,y11r+0.5*(y11r-y18r)+0.75*apert*0.5*(y11r-y18r))) intersectionpoint (z12l--super_qr(11l,10l)--z9l);
 path x; numeric t,u; (t,u)=((0,y18r+0.5*(y11r-y18r)+0.75*apert*0.5*(y11r-y18r))--(infinity,y18r+0.5*(y11r-y18r)+0.75*apert*0.5*(y11r-y18r))) intersectiontimes (z12l--super_qr(11l,10l)--z9l);	

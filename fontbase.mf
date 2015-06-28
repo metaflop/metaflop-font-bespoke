@@ -1,12 +1,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
-% MF Bespoke v1.87                                                        %
-% © 2014 by Marco Mueller and Simon Egli                                  %
+% MF Bespoke v1.9                                                         %
+% © 2015 by Marco Mueller and Simon Egli                                  %
 % thanks to Linus Roemer, Alexis Reigel, Theofilo Furtado                 %
-% www.metaflop.com                                                        %
+% <http://www.metaflop.com>                                               %
 % licensed under gpl v3: www.gnu.org/licenses/                            %
 %                                                                         %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
 
 
 % additional parameters / hidden parameter list for metrics %
@@ -596,7 +596,7 @@ enddef;
 extra_endchar := extra_endchar&"charpictures_[charcode]:=currentpicture;"
  &"charwidths_[charcode]=charwd;"
  &"charheights_[charcode]=charht;"
- &"chardepths_[charcode]=chardp;"
+ &"charde.95pths_[charcode]=chardp;"
  &"charitalcorrs_[charcode]=charic;"
  &"charxoffsets_[charcode]=xoffset;";
 

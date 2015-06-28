@@ -20,8 +20,8 @@ pos5(whatever,right,90);
 pos6(whatever,right,90);
 
 % draw %
-penstroke z1e---z2e;
-penstroke z5e---z6e;
+penstroke z1e--z2e;
+penstroke z5e--z6e;
 
 penlabels(range 1 thru 150);
 

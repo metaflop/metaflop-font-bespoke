@@ -81,7 +81,7 @@ b = subpath (0,u) of (z13l--super_qr(14l,15l)--z16l);
 path a; numeric t,u; (t,u)=(((0,y18l+0.5*(y13l-y18l)+0.75*apert*0.5*(y13l-y18l))--(infinity,y18l+0.5*(y13l-y18l)+0.75*apert*0.5*(y13l-y18l))) intersectiontimes (z13r--super_qr(14r,15r)--z16r));
 a = subpath (u,0) of (z13r--super_qr(14r,15r)--z16r);
 fill a--z13r--z13l--b--cycle;
-penstroke super_qrt(13e,12e,1.02)..z10e{down}..z17e---z3e..z5e{down}..super_qlt(6e,7e,1.02);
+penstroke super_qrt(13e,12e,1.02)..z10e{down}..z17e--z3e..z5e{down}..super_qlt(6e,7e,1.02);
 
 % composite glyphs %
 charanchortops_[charcode]=(.5w,1.525h);

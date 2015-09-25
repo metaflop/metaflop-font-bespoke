@@ -144,7 +144,7 @@ def enc(expr name)=
    43
   elseif name="comma":
    44
-  elseif name="combininghyphen":
+  elseif name="hyphen":
    45
   elseif name="period":
    46
@@ -308,7 +308,7 @@ def enc(expr name)=
    125
   elseif name="asciitilde":
    126
-  elseif name="hyphen":
+  elseif name="softhyphen":
    127
   elseif name="Abreve":
    128

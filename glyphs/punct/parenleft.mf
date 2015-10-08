@@ -6,15 +6,16 @@ numeric l,r;
 normal_adjust_fit(space+0.25u#,space-0.5u#);
 
 % overshoot %
-top y3=1.1h+o;
-y3r=1.1h-px+o;
-bot y4=-1.1d-o;
-y4r=px-1.1d-o;
+top y3=top y6=1.1h+o;
+y3r=y6r=1.1h-px+o;
+bot y4=bot y5=-1.1d-o;
+y4r=y5r=px-1.1d-o;
 
 % construction %
 x1=x2=leftstemloc;
 x1r=x2r=x1+(cont*px/2);
 x3r=x4r=w-incx*(w-(cont*px/2)-x1r);
+x5=x6=w;
 y1r=y4r+0.5*(y3r-y4r)-0.5*incy*(y3r-y4r);
 y2r=y4r+0.5*(y3r-y4r)+0.5*incy*(y3r-y4r);
 
@@ -23,16 +24,19 @@ pos1(whatever,up,0);
 pos2(whatever,up,0);
 pos3(whatever,right,90);
 pos4(whatever,right,90);
+pos5(whatever,right,90);
+pos6(whatever,right,90);
 
 % draw %
-z100=((infinity,-1.1d+.25*apert*.25(y3r-y4r))--(0,-1.1d+.25*apert*.25(y3r-y4r))) intersectionpoint (z2l--super_qlt(1l,4l,.95));
-path x; numeric t,u; (t,u)=((0,-1.1d+.25*apert*.25(y3r-y4r))--(infinity,-1.1d+.25*apert*.25(y3r-y4r))) intersectiontimes (z2l--super_qlt(1l,4l,.95));
-z101=z100+whatever*(dir(angle(direction u of (z2l--super_qlt(1l,4l,.95)))+90));
+penstroke z1e--z2e;
+z100=((infinity,-1.1d+.25*apert*.25(y3r-y4r))--(0,-1.1d+.25*apert*.25(y3r-y4r))) intersectionpoint (z2l--super_qlt(1l,4l,.95)--z5l);
+path x; numeric t,u; (t,u)=((0,-1.1d+.25*apert*.25(y3r-y4r))--(infinity,-1.1d+.25*apert*.25(y3r-y4r))) intersectiontimes (z2l--super_qlt(1l,4l,.95)--z5l);
+z101=z100+whatever*(dir(angle(direction u of (z2l--super_qlt(1l,4l,.95)--z5l))+90));
 x101=w;
-path r; numeric t,u; (t,u)=((z100--z101) intersectiontimes (z2r--super_qlt(1r,4r,.95)));
-r = subpath (u,0) of (z2r--super_qlt(1r,4r,.95));
-path ss; numeric t,u; (t,u)=(((0,-1.1d+.25*apert*.25(y3r-y4r))--(infinity,-1.1d+.25*apert*.25(y3r-y4r))) intersectiontimes (z2l--super_qlt(1l,4l,.95)));
-ss = subpath (0,u) of (z2l--super_qlt(1l,4l,.95));
+path r; numeric t,u; (t,u)=((z100--z101) intersectiontimes (z2r--super_qlt(1r,4r,.95)--z5r));
+r = subpath (u,0) of (z2r--super_qlt(1r,4r,.95)--z5r);
+path ss; numeric t,u; (t,u)=(((0,-1.1d+.25*apert*.25(y3r-y4r))--(infinity,-1.1d+.25*apert*.25(y3r-y4r))) intersectiontimes (z2l--super_qlt(1l,4l,.95)--z5l));
+ss = subpath (0,u) of (z2l--super_qlt(1l,4l,.95)--z5l);
 fill ss--r--z1r--z1l--cycle;
 
 z99=((infinity,1.1h-.25*apert*.25(y3r-y4r))--(0,1.1h-.25*apert*.25(y3r-y4r))) intersectionpoint (z1l--super_qlt(2l,3l,.95));

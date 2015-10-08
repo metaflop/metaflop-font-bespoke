@@ -1,0 +1,158 @@
+% box dimension definition %
+beginadjchar(223,9.25,cap#,0);
+
+% sidebearings %
+numeric l,r;
+normal_adjust_fit(space+0.2u#,space+0.25u#);
+
+% overshoot %
+top y13=h+o;
+top y14=h+o;
+y13l=y14l=h-px+o;
+bot y7=0-o;
+bot y8=0-o;
+y7r=y8r=px-o;
+
+top y33=h+o;
+top y34=h+o;
+y33l=y34l=h-px+o;
+bot y27=0-o;
+bot y28=0-o;
+y27r=y28r=px-o;
+
+% construction %
+x1=x2=leftstemloc;
+x10=x12=leftstemloc+.35px;
+x1r=x2r=x1+(cont*px/2);
+x10l=x12l=x10+(cont*px/2);
+x5=x6=0.45w;
+x15=x16=0.45w-.35px;
+x18=0.25w;
+x5r=x6r=x6-(cont*px/2);
+x15l=x16l=x15-(cont*px/2);
+x8=x1r+0.5*(x6r-x1r)-0.5*incx*(x6r-x1r);
+x13=x10l+0.5*(x16l-x10l)-0.5*incx*(x16l-x10l);
+x17=x10l+0.3*(x16l-x10l)-0.7*incx*(x16l-x10l);
+x7=x1r+0.5*(x6r-x1r)+0.5*incx*(x6r-x1r);
+x14=x10l+0.5*(x16l-x10l)+0.5*incx*(x16l-x10l);
+x3=x10l+0.7*(x6r-x1r)+0.3*incx*(x6r-x1r);
+y18=0.5h;
+y18l=0.5h+.5px;
+y18r=0.5h-.5px;
+y3=y18-0.05*(y5-y6)-.25px;
+y3r=y3-.5px;
+y17=y18+0.05*(y12-y10)+.35px;
+y17l=y17+.5px;
+y1=y6=y8r+0.52*(y18r-y8r)-0.48*incy*(y18r-y8r);
+y2=y5=y8r+0.52*(y18r-y8r)+0.48*incy*(y18r-y8r);
+y10=y16=y18l+0.5*(y13l-y18l)-0.5*incy*(y13l-y18l);
+y12=y15=y18l+0.5*(y13l-y18l)+0.5*incy*(y13l-y18l);
+path trial;
+trial=z12{down}..z18..{down}z6;
+pair dzS;
+dzS=direction 1 of trial;
+
+x21=x22=0.55w;
+x30=x32=0.55w+.35px;
+x21r=x22r=x21+(cont*px/2);
+x30l=x32l=x30+(cont*px/2);
+x25=x26=w-x1;
+x35=x36=w-x1-.35px;
+x38=0.75w;
+x25r=x26r=x26-(cont*px/2);
+x35l=x36l=x35-(cont*px/2);
+x28=x21r+0.5*(x26r-x21r)-0.5*incx*(x26r-x21r);
+x33=x30l+0.5*(x36l-x30l)-0.5*incx*(x36l-x30l);
+x37=x30l+0.3*(x36l-x30l)-0.7*incx*(x36l-x30l);
+x27=x21r+0.5*(x26r-x21r)+0.5*incx*(x26r-x21r);
+x34=x30l+0.5*(x36l-x30l)+0.5*incx*(x36l-x30l);
+x23=x30l+0.7*(x26r-x21r)+0.3*incx*(x26r-x21r);
+y38=0.5h;
+y38l=0.5h+.5px;
+y38r=0.5h-.5px;
+y23=y38-0.05*(2y5-2y6)-.25px;
+y23r=y23-.5px;
+y37=y38+0.05*(y32-y30)+.35px;
+y37l=y37+.5px;
+y21=y26=y28r+0.52*(y38r-y28r)-0.48*incy*(y38r-y28r);
+y22=y25=y28r+0.52*(y38r-y28r)+0.48*incy*(y38r-y28r);
+y30=y36=y38l+0.5*(y33l-y38l)-0.5*incy*(y33l-y38l);
+y32=y35=y38l+0.5*(y33l-y38l)+0.5*incy*(y33l-y38l);
+
+% penpositions %
+pos1(whatever,up,0);
+pos2(whatever,up,0);
+penpos3(whatever,(angle dzS-90));
+pos5(whatever,up,180);
+pos6(whatever,up,180);
+pos7(whatever,right,-90);
+pos8(whatever,right,-90);
+pos10(whatever,up,0);
+pos12(whatever,up,0);
+pos13(whatever,right,90);
+pos14(whatever,right,90);
+pos15(whatever,up,180);
+pos16(whatever,up,180);
+penpos17(whatever,(angle dzS-90));
+
+pos21(whatever,up,0);
+pos22(whatever,up,0);
+penpos23(whatever,(angle dzS-90));
+pos25(whatever,up,180);
+pos26(whatever,up,180);
+pos27(whatever,right,-90);
+pos28(whatever,right,-90);
+pos30(whatever,up,0);
+pos32(whatever,up,0);
+pos33(whatever,right,90);
+pos34(whatever,right,90);
+pos35(whatever,up,180);
+pos36(whatever,up,180);
+penpos37(whatever,(angle dzS-90));
+
+% draw %
+z100=((-infinity,y8r+0.5*(y18r-y8r)-0.75*apert*0.5*(y18r-y8r))--(infinity,y8r+0.5*(y18r-y8r)-0.75*apert*0.5*(y18r-y8r))) intersectionpoint (super_qrt(8l,1l,1.02)--z2l);
+path x; numeric t,u; (t,u)=((-infinity,y8r+0.5*(y18r-y8r)-0.75*apert*0.5*(y18r-y8r))--(infinity,y8r+0.5*(y18r-y8r)-0.75*apert*0.5*(y18r-y8r))) intersectiontimes (super_qrt(8l,1l,1.02)--z2l);
+z101=z100+whatever*(dir(angle(direction u of (super_qrt(8l,1l,1.02)--z2l))+90));
+x101=w;
+path r; numeric t,u; (t,u)=((z100--z101) intersectiontimes (super_qrt(8r,1r,1.02)--z2r));
+r = subpath (u,0) of (super_qrt(8r,1r,1.02)--z2r);
+path ss; numeric t,u; (t,u)=((0,y8r+0.5*(y18r-y8r)-0.75*apert*0.5*(y18r-y8r))--(infinity,y8r+0.5*(y18r-y8r)-0.75*apert*0.5*(y18r-y8r))) intersectiontimes (super_qrt(8l,1l,1.02)--z2l);
+ss = subpath (0,u) of (super_qrt(8l,1l,1.02)--z2l);
+fill ss--r--z7r--z7l--cycle;
+
+z99=((0,y18l+0.5*(y13l-y18l)+0.75*apert*0.5*(y13l-y18l))--(infinity,y18l+0.5*(y13l-y18l)+0.75*apert*0.5*(y13l-y18l))) intersectionpoint (z13r--super_qr(14r,15r)--z16r);
+path x; numeric t,u; (t,u)=((0,y18l+0.5*(y13l-y18l)+0.75*apert*0.5*(y13l-y18l))--(infinity,y18l+0.5*(y13l-y18l)+0.75*apert*0.5*(y13l-y18l))) intersectiontimes (z13r--super_qr(14r,15r)--z16r);
+z98=z99+whatever*(dir(angle(direction u of (z13r--super_qr(14r,15r)--z16r))+90));
+x98=0;
+path b; numeric t,u; (t,u)=((z99--z98) intersectiontimes (z13l--super_qr(14l,15l)--z16l));
+b = subpath (0,u) of (z13l--super_qr(14l,15l)--z16l);
+path a; numeric t,u; (t,u)=(((0,y18l+0.5*(y13l-y18l)+0.75*apert*0.5*(y13l-y18l))--(infinity,y18l+0.5*(y13l-y18l)+0.75*apert*0.5*(y13l-y18l))) intersectiontimes (z13r--super_qr(14r,15r)--z16r));
+a = subpath (u,0) of (z13r--super_qr(14r,15r)--z16r);
+fill a--z13r--z13l--b--cycle;
+penstroke super_qrt(13e,12e,1.02)..z10e{down}..z17e---z3e..z5e{down}..super_qlt(6e,7e,1.02);
+
+z200=((-infinity,y28r+0.5*(y38r-y28r)-0.75*apert*0.5*(y38r-y28r))--(infinity,y28r+0.5*(y38r-y28r)-0.75*apert*0.5*(y38r-y28r))) intersectionpoint (super_qrt(28l,21l,1.02)--z22l);
+path x; numeric t,u; (t,u)=((-infinity,y28r+0.5*(y38r-y28r)-0.75*apert*0.5*(y38r-y28r))--(infinity,y28r+0.5*(y38r-y28r)-0.75*apert*0.5*(y38r-y28r))) intersectiontimes (super_qrt(28l,21l,1.02)--z22l);
+z201=z200+whatever*(dir(angle(direction u of (super_qrt(28l,21l,1.02)--z22l))+90));
+x201=w;
+path r; numeric t,u; (t,u)=((z200--z201) intersectiontimes (super_qrt(28r,21r,1.02)--z22r));
+r = subpath (u,0) of (super_qrt(28r,21r,1.02)--z22r);
+path ss; numeric t,u; (t,u)=((0,y28r+0.5*(y38r-y28r)-0.75*apert*0.5*(y38r-y28r))--(infinity,y28r+0.5*(y38r-y28r)-0.75*apert*0.5*(y18r-y8r))) intersectiontimes (super_qrt(28l,21l,1.02)--z22l);
+ss = subpath (0,u) of (super_qrt(28l,21l,1.02)--z22l);
+fill ss--r--z27r--z27l--cycle;
+
+z199=((0,y38l+0.5*(y33l-y38l)+0.75*apert*0.5*(y33l-y38l))--(infinity,y38l+0.5*(y33l-y38l)+0.75*apert*0.5*(y33l-y38l))) intersectionpoint (z33r--super_qr(34r,35r)--z36r);
+path x; numeric t,u; (t,u)=((0,y38l+0.5*(y33l-y38l)+0.75*apert*0.5*(y33l-y38l))--(infinity,y38l+0.5*(y33l-y38l)+0.75*apert*0.5*(y33l-y38l))) intersectiontimes (z33r--super_qr(34r,35r)--z36r);
+z198=z199+whatever*(dir(angle(direction u of (z33r--super_qr(34r,35r)--z36r))+90));
+x198=0;
+path b; numeric t,u; (t,u)=((z199--z198) intersectiontimes (z33l--super_qr(34l,35l)--z36l));
+b = subpath (0,u) of (z33l--super_qr(34l,35l)--z36l);
+path a; numeric t,u; (t,u)=(((0,y38l+0.5*(y33l-y38l)+0.75*apert*0.5*(y33l-y38l))--(infinity,y38l+0.5*(y33l-y38l)+0.75*apert*0.5*(y33l-y38l))) intersectiontimes (z33r--super_qr(34r,35r)--z36r));
+a = subpath (u,0) of (z33r--super_qr(34r,35r)--z36r);
+fill a--z33r--z33l--b--cycle;
+penstroke super_qrt(33e,32e,1.02)..z30e{down}..z37e---z23e..z25e{down}..super_qlt(26e,27e,1.02);
+
+penlabels(range 1 thru 150);
+
+endchar;

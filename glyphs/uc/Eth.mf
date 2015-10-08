@@ -1,0 +1,48 @@
+% box dimension definition %
+beginadjchar(208,6,cap#,0);
+
+% sidebearings %
+numeric l,r;
+normal_adjust_fit(space+0.5u#,space+0.3u#);
+
+% construction %
+x1=x2=x3=x8=0.2w;
+x1r=x2r=x1+(cont*px/2);
+x4r=x7r=x2r+0.35*(x6r-x2r)+0.65*incx*(x6r-x2r);
+x5=x6=w-leftstemloc;
+x5r=x6r=x6-(cont*px/2);
+x9=0;
+x10=0.55w;
+top y4=h;
+y4=y3;
+bot y7=0;
+y7=y8;
+y1=0;
+y2=h;
+y4r=y3r=h-px;
+y7r=y8r=px;
+y6r=y8r+0.5*(y3r-y8r)-0.5*incy*(y3r-y8r);
+y5r=y8r+0.5*(y3r-y8r)+0.5*incy*(y3r-y8r);
+y9=y10=0.5h;
+y9r=y10r=y9-px/2;
+
+% penpositions %
+pos1(whatever,up,0);
+pos2(whatever,up,0);
+pos3(whatever,right,90);
+pos4(whatever,right,90);
+pos5(whatever,up,180);
+pos6(whatever,up,180);
+pos7(whatever,right,-90);
+pos8(whatever,right,-90);
+pos9(whatever,right,90);
+pos10(whatever,right,90);
+
+% draw %
+penstroke z3e--super_qr(4e,5e)--super_ql(6e,7e)--z8e;
+penstroke z1e--z2e;
+penstroke z9e--z10e;
+
+penlabels(range 1 thru 150);
+
+endchar;

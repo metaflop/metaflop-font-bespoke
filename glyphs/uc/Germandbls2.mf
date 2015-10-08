@@ -1,5 +1,5 @@
 % box dimension definition %
-beginadjchar("S",4.75,cap#,0);
+beginadjchar(223,9.25,cap#,0);
 
 % sidebearings %
 numeric l,r;
@@ -13,10 +13,17 @@ bot y7=0-o;
 bot y8=0-o;
 y7r=y8r=px-o;
 
+top y33=h+o;
+top y34=h+o;
+y33r=y34r=h-px+o;
+bot y27=0-o;
+bot y28=0-o;
+y27r=y28r=px-o;
+
 % construction %
 x1=x2=x10=x12=leftstemloc;
 x1r=x2r=x10r=x12r=x1+(cont*px/2);
-x5=x6=x15=x16=w-x1;
+x5=x6=x15=x16=0.425w;
 x5r=x6r=x15r=x16r=x6-(cont*px/2);
 x8r=x10r+0.5*(x16r-x10r)-0.5*incx*(x16r-x10r);
 x3r=x13r=x18l=x10r+0.5*(x16r-x10r)-0.5*incx*(x16r-x10r);
@@ -28,6 +35,21 @@ y1r=y6r=y8r+0.5*(y3r-y8r)-0.5*incy*(y3r-y8r);
 y2r=y5r=y8r+0.5*(y3r-y8r)+0.5*incy*(y3r-y8r);
 y10r=y16r=y18r+0.5*(y13r-y18r)-0.5*incy*(y13r-y18r);
 y12r=y15r=y18r+0.5*(y13r-y18r)+0.5*incy*(y13r-y18r);
+
+x21=x22=x30=x32=0.575w;
+x21r=x22r=x30r=x32r=x21+(cont*px/2);
+x25=x26=x35=x36=w-x1;
+x25r=x26r=x35r=x36r=x26-(cont*px/2);
+x28r=x30r+0.5*(x36r-x30r)-0.5*incx*(x36r-x30r);
+x23r=x33r=x38l=x30r+0.5*(x36r-x30r)-0.5*incx*(x36r-x30r);
+x24r=x27r=x34r=x37l=x30r+0.5*(x36r-x30r)+0.5*incx*(x36r-x30r);
+y23=y24=y37=y38=(.5h);
+y24r=y23r=(.5h)-.5px;
+y37r=y38r=(.5h)+.5px;
+y21r=y26r=y28r+0.5*(y23r-y28r)-0.5*incy*(y23r-y28r);
+y22r=y25r=y28r+0.5*(y23r-y28r)+0.5*incy*(y23r-y28r);
+y30r=y36r=y38r+0.5*(y33r-y38r)-0.5*incy*(y33r-y38r);
+y32r=y35r=y38r+0.5*(y33r-y38r)+0.5*incy*(y33r-y38r);
 
 % penpositions %
 pos1(whatever,up,0);
@@ -46,6 +68,23 @@ pos15(whatever,up,180);
 pos16(whatever,up,180);
 pos17(whatever,right,90);
 pos18(whatever,right,90);
+
+pos21(whatever,up,0);
+pos22(whatever,up,0);
+pos23(whatever,right,90);
+pos24(whatever,right,90);
+pos25(whatever,up,180);
+pos26(whatever,up,180);
+pos27(whatever,right,-90);
+pos28(whatever,right,-90);
+pos30(whatever,up,0);
+pos32(whatever,up,0);
+pos33(whatever,right,90);
+pos34(whatever,right,90);
+pos35(whatever,up,180);
+pos36(whatever,up,180);
+pos37(whatever,right,90);
+pos38(whatever,right,90);
 
 % draw %
 penstroke z3e--super_qr(4e,5e)--super_ql(6e,7e)--z8e;
@@ -70,9 +109,27 @@ path a; numeric t,u; (t,u)=(((0,y18r+0.5*(y13r-y18r)+0.85*apert*0.5*(y13r-y18r))
 a = subpath (u,0) of (z13l--super_qr(14l,15l)--z16l);
 fill a--z13l--z13r--b--cycle;
 
-% composite glyphs %
-charanchortops_[charcode]=(.5w,1.25h);
-charanchorbots_[charcode]=(.5w,0);
+penstroke z23e--super_qr(24e,25e)--super_ql(26e,27e)--z28e;
+z200=((-infinity,y28r+0.5*(y23r-y28r)-0.85*apert*0.5*(y23r-y28r))--(infinity,y28r+0.5*(y23r-y28r)-0.85*apert*0.5*(y23r-y28r))) intersectionpoint (super_qr(28l,21l)--z22l);
+path x; numeric t,u; (t,u)=((-infinity,y28r+0.5*(y23r-y28r)-0.85*apert*0.5*(y23r-y28r))--(infinity,y28r+0.5*(y23r-y28r)-0.85*apert*0.5*(y23r-y28r))) intersectiontimes (super_qr(28l,21l)--z22l);
+z201=z200+whatever*(dir(angle(direction u of (super_qr(28l,21l)--z22l))+90));
+x201=w;
+path r; numeric t,u; (t,u)=((z200--z201) intersectiontimes (super_qr(28r,21r)--z22r));
+r = subpath (u,0) of (super_qr(28r,21r)--z22r);
+path ss; numeric t,u; (t,u)=((0,y28r+0.5*(y23r-y28r)-0.85*apert*0.5*(y23r-y28r))--(infinity,y28r+0.5*(y23r-y28r)-0.85*apert*0.5*(y3r-y8r))) intersectiontimes (super_qr(28l,21l)--z22l);
+ss = subpath (0,u) of (super_qr(28l,21l)--z22l);
+fill ss--r--z27r--z27l--cycle;
+
+penstroke super_qr(38e,30e)--z32e&super_ql(32e,33e);
+z199=((0,y38r+0.5*(y33r-y38r)+0.85*apert*0.5*(y33r-y38r))--(infinity,y38r+0.5*(y33r-y38r)+0.85*apert*0.5*(y33r-y38r))) intersectionpoint (z33l--super_qr(34l,35l)--z36l);
+path x; numeric t,u; (t,u)=((0,y38r+0.5*(y33r-y38r)+0.85*apert*0.5*(y33r-y38r))--(infinity,y38r+0.5*(y33r-y38r)+0.85*apert*0.5*(y33r-y38r))) intersectiontimes (z33l--super_qr(34l,35l)--z36l);
+z198=z199+whatever*(dir(angle(direction u of (z33l--super_qr(34l,35l)--z36l))+90));
+x198=0;
+path b; numeric t,u; (t,u)=((z199--z198) intersectiontimes (z33r--super_qr(34r,35r)--z36r));
+b = subpath (0,u) of (z33r--super_qr(34r,35r)--z36r);
+path a; numeric t,u; (t,u)=(((0,y38r+0.5*(y33r-y38r)+0.85*apert*0.5*(y33r-y38r))--(infinity,y38r+0.5*(y33r-y38r)+0.85*apert*0.5*(y33r-y38r))) intersectiontimes (z33l--super_qr(34l,35l)--z36l));
+a = subpath (u,0) of (z33l--super_qr(34l,35l)--z36l);
+fill a--z33l--z33r--b--cycle;
 
 penlabels(range 1 thru 150);
 

@@ -168,7 +168,7 @@ input glyphs/lc/z
 %input glyphs/punct/braceleft
 input glyphs/punct/bar
 %input glyphs/punct/braceright
-%input glyphs/punct/asciitilde
+input glyphs/punct/asciitilde
 input glyphs/punct/softhyphen
 
 input glyphs/uc/Abreve
@@ -254,7 +254,7 @@ input glyphs/uc/Igrave
 input glyphs/uc/Iacute
 input glyphs/uc/Icircumflex
 input glyphs/uc/Idieresis
-%input glyphs/uc/Eth
+input glyphs/uc/Eth
 input glyphs/uc/Ntilde
 input glyphs/uc/Ograve
 input glyphs/uc/Oacute
@@ -262,15 +262,16 @@ input glyphs/uc/Ocircumflex
 input glyphs/uc/Otilde
 input glyphs/uc/Odieresis
 input glyphs/uc/OE
-%input glyphs/uc/Oslash
+input glyphs/uc/Oslash
 input glyphs/uc/Ugrave
 input glyphs/uc/Uacute
 input glyphs/uc/Ucircumflex
 input glyphs/uc/Udieresis
 input glyphs/uc/Yacute
-%input glyphs/uc/Thorn
-%input glyphs/uc/Germandbls
-
+input glyphs/uc/Thorn
+if (incx>0.25) or (incy>0.25) or (superness>0.8): input glyphs/uc/Germandbls2;
+else: input glyphs/uc/Germandbls1;
+fi
 input glyphs/lc/agrave
 input glyphs/lc/aacute
 input glyphs/lc/acircumflex
@@ -295,11 +296,11 @@ input glyphs/lc/ocircumflex
 input glyphs/lc/otilde
 input glyphs/lc/odieresis
 input glyphs/lc/oe
-%input glyphs/lc/oslash
+input glyphs/lc/oslash
 input glyphs/lc/ugrave
 input glyphs/lc/uacute
 input glyphs/lc/ucircumflex
 input glyphs/lc/udieresis
 input glyphs/lc/yacute
-%input glyphs/lc/thorn
+input glyphs/lc/thorn
 input glyphs/lc/germandbls

@@ -1,1 +1,1 @@
-composite(180,116,39,"top",cap#,0);
+composite(180,116,39,"topright",cap#,0);

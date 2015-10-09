@@ -18,6 +18,9 @@ pos4(cont*px/1.35,(x3-x4,.45h),0);
 % draw %
 penstroke z3e--z4e;
 
+% composite anchor %
+charanchortoprights_[charcode]=(0,h);
+
 penlabels(range 1 thru 150);
 
 endchar;

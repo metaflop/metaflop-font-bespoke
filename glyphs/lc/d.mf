@@ -46,6 +46,7 @@ penstroke z9e--z10e;
 
 % composite glyphs %
 charanchorbots_[charcode]=(.5w,0);
+charanchortoprights_[charcode]=(w,h);
 
 penlabels(range 1 thru 150);
 

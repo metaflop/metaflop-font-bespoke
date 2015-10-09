@@ -1,5 +1,5 @@
 % box dimension definition %
-beginadjchar("L",4,cap#,0);
+beginadjchar(138,4,cap#,0);
 
 % sidebearings %
 numeric l,r;
@@ -11,24 +11,25 @@ x1l=x2l=x1-(cont*px/2);
 x4=w-x1l;
 y1=0;
 y2=h;
-bot y3=0;
-bot y4=0;
+bot y3=bot y4=0;
 y3l=y4l=y3-px/2;
+x14=-0.1w;
+x13=0.65w;
+y13=0.65h;
+y14=0.35h;
 
 % penpositions %
 pos1(whatever,up,0);
 pos2(whatever,up,0);
 pos3(whatever,right,90);
 pos4(whatever,right,90);
+pos13(cont*px,(x13-x14,.125h),90);
+pos14(cont*px,(x13-x14,.125h),90);
 
 % draw %
 penstroke z1e--z2e;
 penstroke z3e--z4e;
-
-% composite glyphs %
-charanchortops_[charcode]=(leftstemloc,1.275h);
-charanchorbots_[charcode]=(0.5w,0);
-charanchortoprights_[charcode]=(0.4w,h);
+penstroke z13e--z14e;
 
 penlabels(range 1 thru 150);
 

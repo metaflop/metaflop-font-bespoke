@@ -180,8 +180,8 @@ input glyphs/uc/Ecaron
 input glyphs/uc/Eogonek
 input glyphs/uc/Gbreve
 input glyphs/uc/Lacute
-%input glyphs/uc/Lcaron
-%input glyphs/uc/Lslash
+input glyphs/uc/Lcaron
+input glyphs/uc/Lslash
 input glyphs/uc/Nacute
 input glyphs/uc/Ncaron
 %input glyphs/uc/Eng
@@ -199,7 +199,7 @@ input glyphs/uc/Ydieresis
 input glyphs/uc/Zacute
 input glyphs/uc/Zcaron
 input glyphs/uc/Zdotaccent
-%input glyphs/uc/IJ
+input glyphs/uc/IJ
 input glyphs/uc/Idotaccent
 
 %input glyphs/lc/dcroat
@@ -208,13 +208,13 @@ input glyphs/lc/abreve
 input glyphs/lc/aogonek
 input glyphs/lc/cacute
 input glyphs/lc/ccaron
-%input glyphs/lc/dcaron
+input glyphs/lc/dcaron
 input glyphs/lc/ecaron
 input glyphs/lc/eogonek
 input glyphs/lc/gbreve
 input glyphs/lc/lacute
-%input glyphs/lc/lcaron
-%input glyphs/lc/lslash
+input glyphs/lc/lcaron
+input glyphs/lc/lslash
 input glyphs/lc/nacute
 input glyphs/lc/ncaron
 %input glyphs/lc/eng
@@ -224,7 +224,7 @@ input glyphs/lc/rcaron
 input glyphs/lc/sacute
 input glyphs/lc/scaron
 input glyphs/lc/scedilla
-%input glyphs/lc/tcaron
+input glyphs/lc/tcaron
 input glyphs/lc/tcedilla
 input glyphs/lc/uhungarumlaut
 input glyphs/lc/uring
@@ -232,7 +232,7 @@ input glyphs/lc/ydieresis
 input glyphs/lc/zacute
 input glyphs/lc/zcaron
 input glyphs/lc/zdotaccent
-%input glyphs/lc/ij
+input glyphs/lc/ij
 
 %input glyphs/punct/exclamdown
 %input glyphs/punct/questiondown

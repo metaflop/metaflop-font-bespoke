@@ -580,6 +580,7 @@ numeric charitalcorrs_[];% as above for italic corrections
 numeric charxoffsets_[]; % as above for the xoffsets
 pair charanchortops_[];  % choose some sensible anchors (top, bot ...)
 pair charanchorbots_[]; 
+pair charanchortoprights_[]; 
 
 % begin character macros %
 def beginadjchar(expr code,unit_width,h,d) =
@@ -614,6 +615,9 @@ def composite(expr codea,codeb,codec,anchor,height,depth) =
  elseif anchor="bot":
   addto currentpicture also charpictures_[codec] shifted 
   (charanchorbots_[codeb]-charanchorbots_[codec]);
+ elseif anchor="topright":
+  addto currentpicture also charpictures_[codec] shifted 
+  (charanchortoprights_[codeb]-charanchortoprights_[codec]);
  else:
   errmessage "Wrong anchor name";
  fi

@@ -1,5 +1,5 @@
 % box dimension definition %
-beginadjchar(40,3,cap#,des#);
+beginadjchar(123,3.5,cap#,des#);
 
 % sidebearings %
 numeric l,r;
@@ -12,12 +12,17 @@ bot y4=bot y5=-1.1d-o;
 y4r=y5r=px-1.1d-o;
 
 % construction %
-x1=x2=leftstemloc;
-x1r=x2r=x1+(cont*px/2);
+x1=x2=x9=x10=0.3w;
+x1r=x2r=x9r=x10r=x1+(cont*px/2);
 x3r=x4r=w-incx*(w-(cont*px/2)-x1r);
 x5=x6=w;
-y1r=y4r+0.5*(y3r-y4r)-0.5*incy*(y3r-y4r);
-y2r=y4r+0.5*(y3r-y4r)+0.5*incy*(y3r-y4r);
+x7=x8=0;
+y1r=y4r+0.2*(y3r-y4r)-0.2*incy*(y3r-y4r);
+y2r=y4r+0.8*(y3r-y4r)+0.2*incy*(y3r-y4r);
+y9r=y4r+0.35*(y3r-y4r)+0.15*incy*(y3r-y4r);
+y10r=y4r+0.65*(y3r-y4r)-0.15*incy*(y3r-y4r);
+y7=y8=0.5(1.1h-1.1d);
+y7r=y8l=y7+(cont*px/2);
 
 % penpositions %
 pos1(whatever,up,0);
@@ -26,9 +31,14 @@ pos3(whatever,right,90);
 pos4(whatever,right,90);
 pos5(whatever,right,90);
 pos6(whatever,right,90);
+pos7(whatever,right,90);
+pos8(whatever,right,90);
+pos9(whatever,up,0);
+pos10(whatever,up,0);
 
 % draw %
-penstroke z1e--z2e;
+penstroke z1e--super_ql(9e,7e);
+penstroke z2e--super_ql(10e,8e);
 z100=((infinity,-1.1d+.25*apert*.25(y3r-y4r))--(0,-1.1d+.25*apert*.25(y3r-y4r))) intersectionpoint (z2l--super_qlt(1l,4l,.95)--z5l);
 path x; numeric t,u; (t,u)=((0,-1.1d+.25*apert*.25(y3r-y4r))--(infinity,-1.1d+.25*apert*.25(y3r-y4r))) intersectiontimes (z2l--super_qlt(1l,4l,.95)--z5l);
 z101=z100+whatever*(dir(angle(direction u of (z2l--super_qlt(1l,4l,.95)--z5l))+90));

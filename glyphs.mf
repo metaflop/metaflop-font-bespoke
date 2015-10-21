@@ -165,7 +165,7 @@ input glyphs/lc/x
 input glyphs/lc/y
 input glyphs/lc/z
 
-%input glyphs/punct/braceleft
+input glyphs/punct/braceleft
 input glyphs/punct/bar
 %input glyphs/punct/braceright
 input glyphs/punct/asciitilde
@@ -184,7 +184,7 @@ input glyphs/uc/Lcaron
 input glyphs/uc/Lslash
 input glyphs/uc/Nacute
 input glyphs/uc/Ncaron
-%input glyphs/uc/Eng
+input glyphs/uc/Eng
 input glyphs/uc/Ohungarumlaut
 input glyphs/uc/Racute
 input glyphs/uc/Rcaron
@@ -202,8 +202,8 @@ input glyphs/uc/Zdotaccent
 input glyphs/uc/IJ
 input glyphs/uc/Idotaccent
 
-%input glyphs/lc/dcroat
-%input glyphs/punct/section
+input glyphs/lc/dcroat
+input glyphs/punct/section
 input glyphs/lc/abreve
 input glyphs/lc/aogonek
 input glyphs/lc/cacute
@@ -217,7 +217,7 @@ input glyphs/lc/lcaron
 input glyphs/lc/lslash
 input glyphs/lc/nacute
 input glyphs/lc/ncaron
-%input glyphs/lc/eng
+input glyphs/lc/eng
 input glyphs/lc/ohungarumlaut
 input glyphs/lc/racute
 input glyphs/lc/rcaron
@@ -234,9 +234,9 @@ input glyphs/lc/zcaron
 input glyphs/lc/zdotaccent
 input glyphs/lc/ij
 
-%input glyphs/punct/exclamdown
-%input glyphs/punct/questiondown
-%input glyphs/punct/sterling
+input glyphs/punct/exclamdown
+input glyphs/punct/questiondown
+input glyphs/punct/sterling
 
 input glyphs/uc/Agrave
 input glyphs/uc/Aacute
@@ -288,7 +288,7 @@ input glyphs/lc/igrave
 input glyphs/lc/iacute
 input glyphs/lc/icircumflex
 input glyphs/lc/idieresis
-%input glyphs/lc/eth
+input glyphs/lc/eth
 input glyphs/lc/ntilde
 input glyphs/lc/ograve
 input glyphs/lc/oacute

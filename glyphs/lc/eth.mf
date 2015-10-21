@@ -1,0 +1,52 @@
+% box dimension definition %
+beginadjchar(240,4.5,asc#,0);
+
+% sidebearings %
+numeric l,r;
+normal_adjust_fit(space+0.2u#,space+0.3u#);
+
+% overshoot %
+top y3=top y4=mean+o;
+y3r=y4r=mean-px+o;
+bot y7=bot y8=0-o;
+y7r=y8r=px-o;
+
+% construction %
+x1=x2=leftstemloc;
+x1r=x2r=x1+(cont*px/2);
+x6=w-x1;
+x5r=x6r=x6-(cont*px/2);
+x10r=0.35w-(cont*px/2);
+x13=0.3w;
+x14=0.95w;
+x4r=x7r=x1r+0.5*(x6r-x1r)+0.5*incx*(x6r-x1r);
+x3r=x8r=x1r+0.5*(x6r-x1r)-0.5*incx*(x6r-x1r);
+y1r=y6r=y8r+0.5*(y3r-y8r)-0.5*incy*(y3r-y8r);
+y2r=y5r=y8r+0.5*(y3r-y8r)+0.5*incy*(y3r-y8r);
+y10=h;
+y13=0.75h;
+y14=0.9h;
+
+% branches %
+x5l=x5r+taper*cont*px;
+
+% penpositions %
+pos1(whatever,up,0);
+pos2(whatever,up,0);
+pos3(whatever,right,90);
+pos4(whatever,right,90);
+pos5(whatever,up,180);
+pos6(whatever,up,180);
+pos7(whatever,right,-90);
+pos8(whatever,right,-90);
+pos10(cont*px,(x6r-x10r,0.4h),180);
+pos13(px,(x14-x13,.15h),90);
+pos14(px,(x14-x13,.15h),90);
+
+% draw %
+penstroke z10e..super_ql(6e,7e)--super_qr(8e,1e)--super_ql(2e,3e)--super_qr(4e,5e);
+penstroke z13e--z14e;
+
+penlabels(range 1 thru 150);
+
+endchar;

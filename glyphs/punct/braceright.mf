@@ -1,0 +1,64 @@
+% box dimension definition %
+beginadjchar(125,3.5,cap#,des#);
+
+% sidebearings %
+numeric l,r;
+normal_adjust_fit(space-0.5u#,space+0.25u#);
+
+% overshoot %
+top y3=top y6=1.1h+o;
+y3r=y6r=1.1h-px+o;
+bot y4=bot y5=-1.1d-o;
+y4r=y5r=px-1.1d-o;
+
+% construction %
+x1=x2=x9=x10=0.7w;;
+x1r=x2r=x9r=x10r=x1-(cont*px/2);
+x3r=x4r=0+incx*((cont*px/2)+x1r);
+x5=x6=0;
+x7=x8=w;
+y1r=y4r+0.2*(y3r-y4r)-0.2*incy*(y3r-y4r);
+y2r=y4r+0.8*(y3r-y4r)+0.2*incy*(y3r-y4r);
+y9r=y4r+0.35*(y3r-y4r)+0.15*incy*(y3r-y4r);
+y10r=y4r+0.65*(y3r-y4r)-0.15*incy*(y3r-y4r);
+y7=y8=0.5(1.1h-1.1d);
+y7r=y8l=y7+(cont*px/2);
+
+% penpositions %
+pos1(whatever,up,0);
+pos2(whatever,up,0);
+pos3(whatever,right,-90);
+pos4(whatever,right,-90);
+pos5(whatever,right,-90);
+pos6(whatever,right,-90);
+pos7(whatever,right,90);
+pos8(whatever,right,90);
+pos9(whatever,up,0);
+pos10(whatever,up,0);
+
+% draw %
+penstroke z1e--super_ql(9e,7e);
+penstroke z2e--super_ql(10e,8e);
+numeric t,u;
+path a,b;
+t:=ypart(((-infinity,-1.1d+.25*apert*.25(y3r-y4r))--(infinity,-1.1d+.25*apert*.25(y3r-y4r))) intersectiontimes (z9l--super_qlt(1l,4l,.95)--z5l));
+z100=point t of (z9l--super_qlt(1l,4l,.95)--z5l);
+z101=z100+whatever*(dir(angle(direction t of (z9l--super_qlt(1l,4l,.95)--z5l))+90));
+x101=0;
+a:=subpath (t,0) of (z9l--super_qlt(1l,4l,.95)--z5l);
+u:=ypart((z100--z101) intersectiontimes (super_qlt(1r,4r,.95)--z5r));
+b:=subpath (0,u) of (super_qlt(1r,4r,.95)--z5r);
+fill a--z9r--b--cycle;
+
+t:=ypart(((infinity,1.1h-.25*apert*.25(y3r-y4r))--(0,1.1h-.25*apert*.25(y3r-y4r))) intersectiontimes (z10l--super_qlt(2l,3l,.95)));
+z99=point t of (z1l--super_qlt(2l,3l,.95));	
+z98=z99+whatever*(dir(angle(direction t of (z10l--super_qlt(2l,3l,.95)--z6l))+90));
+x98=0;
+a:=subpath (t,0) of (z10l--super_qlt(2l,3l,.95)--z6l);
+u:=ypart((z99--z98) intersectiontimes (super_qlt(2r,3r,.95)--z6r));
+b:=subpath (0,u) of (super_qlt(2r,3r,.95)--z6r);
+fill a--z10r--b--cycle;
+
+penlabels(range 1 thru 150);
+
+endchar;

@@ -167,7 +167,7 @@ input glyphs/lc/z
 
 input glyphs/punct/braceleft
 input glyphs/punct/bar
-%input glyphs/punct/braceright
+input glyphs/punct/braceright
 input glyphs/punct/asciitilde
 input glyphs/punct/softhyphen
 

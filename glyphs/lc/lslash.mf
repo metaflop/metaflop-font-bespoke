@@ -3,7 +3,7 @@ beginadjchar(170,3,asc#,0);
 
 % sidebearings %
 numeric l,r;
-normal_adjust_fit(space-0.1u#,space-0.1u#);
+normal_adjust_fit(space-0.35u#,space-0.35u#);
 
 % construction %
 x1=x2=0.5w;

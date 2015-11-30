@@ -1,5 +1,5 @@
 % box dimension definition %
-beginadjchar(156,5.5,cap#,0);
+beginadjchar(156,5,cap#,0);
 
 % sidebearings %
 numeric l,r;

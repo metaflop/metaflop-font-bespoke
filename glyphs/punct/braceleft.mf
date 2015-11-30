@@ -3,7 +3,7 @@ beginadjchar(123,3.5,cap#,des#);
 
 % sidebearings %
 numeric l,r;
-normal_adjust_fit(space+0.25u#,space-0.5u#);
+normal_adjust_fit(space+0.45u#,space-0.9u#);
 
 % overshoot %
 top y3=top y6=1.1h+o;

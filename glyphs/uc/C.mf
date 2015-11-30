@@ -6,11 +6,9 @@ numeric l,r;
 normal_adjust_fit(space+0.25u#,space+0.0u#);
 
 % overshoot %
-top y3=h+o;
-top y4=h+o;
+top y3=top y4=h+o;
 y3r=y4r=h-px+o;
-bot y7=0-o;
-bot y8=0-o;
+bot y7=bot y8=0-o;
 y7r=y8r=px-o;
 
 % construction %

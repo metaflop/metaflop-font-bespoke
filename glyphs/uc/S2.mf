@@ -59,7 +59,7 @@ path ss; numeric t,u; (t,u)=((0,y8r+0.5*(y3r-y8r)-0.85*apert*0.5*(y3r-y8r))--(in
 ss = subpath (0,u) of (super_qr(8l,1l)--z2l);
 fill ss--r--z7r--z7l--cycle;
 
-penstroke super_qr(18e,10e)--z12e&super_ql(12e,13e);
+penstroke super_qr(18e,10e)--super_ql(12e,13e);
 z99=((0,y18r+0.5*(y13r-y18r)+0.85*apert*0.5*(y13r-y18r))--(infinity,y18r+0.5*(y13r-y18r)+0.85*apert*0.5*(y13r-y18r))) intersectionpoint (z13l--super_qr(14l,15l)--z16l);
 path x; numeric t,u; (t,u)=((0,y18r+0.5*(y13r-y18r)+0.85*apert*0.5*(y13r-y18r))--(infinity,y18r+0.5*(y13r-y18r)+0.85*apert*0.5*(y13r-y18r))) intersectiontimes (z13l--super_qr(14l,15l)--z16l);
 z98=z99+whatever*(dir(angle(direction u of (z13l--super_qr(14l,15l)--z16l))+90));

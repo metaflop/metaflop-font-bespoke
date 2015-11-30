@@ -17,7 +17,7 @@ x3=x4=w-x1;
 x3l=x4l=x3+(cont*px/2);
 x5r=x2l+corner;
 x6l=x3l-corner;
-x11=x12=0.4w;
+x11=x12=0.45w;
 x11r=x12r=x11+(cont*px/2);
 x16=w-x1;
 x16r=w-x1r;

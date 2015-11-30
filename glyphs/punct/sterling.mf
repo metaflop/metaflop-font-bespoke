@@ -1,9 +1,9 @@
 % box dimension definition %
-beginadjchar(191,4.5,asc#,0);
+beginadjchar(191,4.5,cap#,0);
 
 % sidebearings %
 numeric l,r;
-normal_adjust_fit(space+0.05u#,space+0.15u#);
+normal_adjust_fit(space+0.15u#,space+0.15u#);
 
 % overshoot %
 top y12=top y11=h+o;

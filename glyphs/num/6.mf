@@ -53,7 +53,7 @@ penstroke super_qr(8e,1e)--super_ql(2e,3e)--super_qr(4e,5e)--super_ql(6e,7e)--cy
 penstroke z1e--super_ql(10e,11e);
 numeric t,u;
 path a,b;
-t:=ypart(((infinity,y11r-0.5*(y11r-y3r+px)+0.9*apert*0.5*(y11r-y3r+px))--(0,y11r-0.5*(y11r-y3r+px)+0.9*apert*0.5*(y11r-y3r+px))) intersectiontimes (super_ql(13l,12l)--z11l));
+t:=ypart(((infinity,y11r-0.5*(y11r-y3r+px)+apert*0.5*(y11r-y3r+px))--(0,y11r-0.5*(y11r-y3r+px)+apert*0.5*(y11r-y3r+px))) intersectiontimes (super_ql(13l,12l)--z11l));
 z99=point t of (super_ql(13l,12l)--z11l);	
 z98=z99+whatever*(dir(angle(direction t of (super_ql(13l,12l)--z11l))+90));
 x98=0;

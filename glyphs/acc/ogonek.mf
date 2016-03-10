@@ -46,15 +46,16 @@ pos14(whatever,right,1.15*(angle -dz)-90);
 
 % draw %
 penstroke z13e--z14e..z5e{down}--z6e & super_ql(6e,8e)--z7e;
-z100=((-infinity,((-d+mean/2)-1.4apert*((-d+mean/2)-y7)))--(infinity,((-d+mean/2)-1.4apert*((-d+mean/2)-y7)))) intersectionpoint (super_qr(7l,2l)--z1l);
-path x; numeric t,u; (t,u)=((((-infinity,((-d+mean/2)-1.4apert*((-d+mean/2)-y8)))--(infinity,((-d+mean/2)-1.4apert*((-d+mean/2)-y7))))) intersectiontimes (super_qr(7l,2l)--z1l));
-z101=z100+whatever*(dir(angle(direction u of (super_qr(7l,2l)--z1l))+90));
+numeric t,u;
+path a,b;
+t:=ypart(((-infinity,-0.5d-1.4apert*0.5d)--(infinity,-0.5d-1.4apert*0.5d)) intersectiontimes (super_ql(2l,7l)--z8l));
+z100=point t of (super_ql(2l,7l)--z8l);
+z101=z100+whatever*(dir(angle(direction t of (super_ql(2l,7l)--z8l))+90));
 x101=0;
-path r; numeric t,u; (t,u)=((z100--z101) intersectiontimes (super_qr(7r,2r)--z1r));
-r = subpath (u,0) of (super_qr(7r,2r)--z1r);
-path ss; numeric t,u; (t,u)=(((0,((-d+mean/2)-1.4apert*((-d+mean/2)-y8)))--(infinity,((-d+mean/2)-1.4apert*((-d+mean/2)-y7)))) intersectiontimes (super_qr(7l,2l)--z1l));
-ss = subpath (0,u) of (super_qr(7l,2l)--z1l);
-fill ss--r--z7r--z7l--cycle;
+a:=subpath (t,infinity) of (super_ql(2l,7l)--z8l);
+u:=ypart((z100--z101) intersectiontimes (super_ql(2r,7r)--z8r));
+b:=subpath (infinity,u) of (super_ql(2r,7r)--z8r);
+fill a--z8r--b--cycle;
 
 % composite anchor %
 charanchorbots_[charcode]=(.5w,0);

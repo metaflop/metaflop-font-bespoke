@@ -58,9 +58,9 @@ pos17(whatever,right,-90);
 pos18(whatever,right,-90);
 
 % draw %
-penstroke super_qr(4e,5e)---super_ql(6e,7e)---super_qr(8e,1e)---super_ql(2e,3e)---cycle;
+penstroke super_qr(4e,5e)--super_ql(6e,7e)--super_qr(8e,1e)--super_ql(2e,3e)--cycle;
 penstroke z9e--z10e;
-penstroke super_qr(14e,15e)---super_ql(16e,17e)---super_qr(18e,11e)---super_ql(12e,13e)---cycle;
+penstroke super_qr(14e,15e)--super_ql(16e,17e)--super_qr(18e,11e)--super_ql(12e,13e)--cycle;
 
 penlabels(range 1 thru 150);
 

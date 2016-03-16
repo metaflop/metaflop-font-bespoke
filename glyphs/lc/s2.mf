@@ -60,17 +60,17 @@ a:=subpath (t,infinity) of (super_ql(1l,8l)--z7l);
 u:=ypart((z100--z101) intersectiontimes (super_ql(1r,8r)--z7r));
 b:=subpath (infinity,u) of (super_ql(1r,8r)--z7r);
 fill a--z7r--b--cycle;
-t:=ypart(((infinity,y18l+0.5*(y13l-y18l)+0.75*apert*0.5*(y13l-y18l))--(0,y18l+0.5*(y13l-y18l)+0.75*apert*0.5*(y13l-y18l))) intersectiontimes (super_ql(15r,14r)--z13r));
-z99=point t of (super_ql(15r,14r)--z13r);	
-z98=z99+whatever*(dir(angle(direction t of (super_ql(15r,14r)--z13r))+90));
+t:=ypart(((infinity,y18l+0.5*(y13l-y18l)+0.75*apert*0.5*(y13l-y18l))--(0,y18l+0.5*(y13l-y18l)+0.75*apert*0.5*(y13l-y18l))) intersectiontimes (super_ql(15l,14l)--z13l));
+z99=point t of (super_ql(15l,14l)--z13l);	
+z98=z99+whatever*(dir(angle(direction t of (super_ql(15l,14l)--z13l))+90));
 x98=0;
-a:=subpath (t,infinity) of (super_ql(15r,14r)--z13r);
-u:=ypart((z99--z98) intersectiontimes (super_ql(15l,14l)--z13l));
-b:=subpath (infinity,u) of (super_ql(15l,14l)--z13l);
+a:=subpath (t,infinity) of (super_ql(15l,14l)--z13l);
+u:=ypart((z99--z98) intersectiontimes (super_ql(15r,14r)--z13r));
+b:=subpath (infinity,u) of (super_ql(15r,14r)--z13r);
 fill a--z13l--b--cycle;
 
 % composite glyphs %
-charanchortops_[charcode]=(.5w,1.25h);
+charanchortops_[charcode]=(.5w,1.525h);
 charanchorbots_[charcode]=(.5w,0);
 
 penlabels(range 1 thru 150);

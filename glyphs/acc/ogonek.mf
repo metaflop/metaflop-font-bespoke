@@ -45,7 +45,7 @@ pos13(whatever,right,1.15*(angle -dz)-90);
 pos14(whatever,right,1.15*(angle -dz)-90);
 
 % draw %
-penstroke z13e--z14e..z5e{down}--z6e & super_ql(6e,8e)--z7e;
+penstroke z13e{-dz}--z14e{-dz}..z5e{down}--z6e & super_ql(6e,8e)--z7e;
 numeric t,u;
 path a,b;
 t:=ypart(((-infinity,-0.5d-1.4apert*0.5d)--(infinity,-0.5d-1.4apert*0.5d)) intersectiontimes (super_ql(2l,7l)--z8l));

@@ -111,10 +111,10 @@ pos36(whatever,up,180);
 penpos37(whatever,(angle dzS-90));
 
 % draw %
-penstroke super_qrt(13e,12e,1.02)..z10e{down}..z17e---z3e..z5e{down}..super_qlt(6e,7e,1.02);
+penstroke super_qrt(13e,12e,1.02)..z10e{down}..z17e{dzS}--z3e{dzS}..z5e{down}..super_qlt(6e,7e,1.02);
 numeric t,u;
 path a,b;
-t:=ypart(((-infinity,y8r+0.5*(y18r-y8r)-0.75*apert*0.5*(y18r-y8r))--(infinity,y8r+0.5*(y18r-y8r)-0.75*apert*0.5*(y18r-y8r))) intersectiontimes (super_ql(1l,8l)--z7l));
+t:=ypart(((-infinity,y8l+0.5*(y18r-y8r)-0.75*apert*0.5*(y18r-y8r))--(infinity,y8l+0.5*(y18r-y8r)-0.75*apert*0.5*(y18r-y8r))) intersectiontimes (super_ql(1l,8l)--z7l));
 z100=point t of (super_ql(1l,8l)--z7l);
 z101=z100+whatever*(dir(angle(direction t of (super_ql(1l,8l)--z7l))-90));
 x101=w;
@@ -131,8 +131,8 @@ u:=ypart((z99--z98) intersectiontimes (super_ql(15l,14l)--z13l));
 b:=subpath (infinity,u) of (super_ql(15l,14l)--z13l);
 fill a--z13l--b--cycle;
 
-penstroke super_qrt(33e,32e,1.02)..z30e{down}..z37e---z23e..z25e{down}..super_qlt(26e,27e,1.02);
-t:=ypart(((-infinity,y28r+0.5*(y38r-y28r)-0.75*apert*0.5*(y38r-y28r))--(infinity,y28r+0.5*(y38r-y28r)-0.75*apert*0.5*(y38r-y28r))) intersectiontimes (super_ql(21l,28l)--z27l));
+penstroke super_qrt(33e,32e,1.02)..z30e{down}..z37e{dzS}--z23e{dzS}..z25e{down}..super_qlt(26e,27e,1.02);
+t:=ypart(((-infinity,y28l+0.5*(y38r-y28r)-0.75*apert*0.5*(y38r-y28r))--(infinity,y28l+0.5*(y38r-y28r)-0.75*apert*0.5*(y38r-y28r))) intersectiontimes (super_ql(21l,28l)--z27l));
 z200=point t of (super_ql(21l,28l)--z27l);
 z201=z200+whatever*(dir(angle(direction t of (super_ql(21l,28l)--z27l))-90));
 x201=w;

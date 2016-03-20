@@ -30,7 +30,7 @@ x25r=x26r=x31r=x26-(cont*px/2);
 x30=x25l;
 x24r=x27r=x21r+0.5*(x26r-x21r)+0.5*incx*(x26r-x21r);
 x23r=x28r=x21r+0.5*(x26r-x21r)-0.5*incx*(x26r-x21r);
-y3=y4=0.6*mean;
+y3=y4=0.6*mean-0.35px;
 y3r=y4r=y3-px/2;
 y1r=y6r=y8r+0.5*(y3r-y8r)-0.5*incy*(y3r-y8r);
 y2r=y5r=y8r+0.5*(y3r-y8r)+0.5*incy*(y3r-y8r);

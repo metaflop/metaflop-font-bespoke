@@ -65,7 +65,7 @@ a:=subpath (t,infinity) of (super_ql(1l,8l)--z7l);
 u:=ypart((z100--z101) intersectiontimes (super_ql(1r,8r)--z7r));
 b:=subpath (infinity,u) of (super_ql(1r,8r)--z7r);
 fill a--z7r--b--cycle;
-t:=ypart(((infinity,y8r+0.5*(y3r-y8r)-apert*0.5*(y3r-y8r))--(0,y8r+0.5*(y3r-y8r)-apert*0.5*(y3r-y8r))) intersectiontimes (super_ql(10l,11l)--z12l));
+t:=ypart(((infinity,y15r+0.5*(y11r-y15r)+apert*0.5*(y11r-y15r))--(0,y15r+0.5*(y11r-y15r)+apert*0.5*(y11r-y15r))) intersectiontimes (super_ql(10l,11l)--z12l));
 z99=point t of (super_ql(10l,11l)--z12l);	
 z98=z99+whatever*(dir(angle(direction t of (super_ql(10l,11l)--z12l))+90));
 x98=w;

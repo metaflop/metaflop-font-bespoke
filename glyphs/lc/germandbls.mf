@@ -15,16 +15,17 @@ y12r=y11r=h-px+o;
 
 % construction %
 x9=x10=x20=leftstemloc;
-x1=x2=0.25w;
+x1=x2=0.275w;
 x9r=x10r=x20r=x9+(cont*px/2);
 x1r=x2r=x1+(cont*px/2);
 x5=x6=w-x9;
 x5r=x6r=x6-(cont*px/2);
-x13=x14=0.8w;
+x13=x14=0.75w;
 x13r=x14r=x13-(cont*px/2);
-x4r=x7r=x15r=x9r+0.5*(x6r-x9r)+0.5*incx*(x6r-x9r);
+x4r=x15r=x9r+0.5*(x6r-x9r)+0.5*incx*(x6r-x9r);
+x7r=x9r+0.65*(x6r-x9r)+0.35*incx*(x6r-x9r);
 x12r=x9r+0.5*(x13r-x9r)+0.5*incx*(x13r-x9r);
-x8r=x9r+0.5*(x6r-x9r)-0.5*incx*(x6r-x9r);
+x8r=x9r+0.65*(x6r-x9r)-0.65*incx*(x6r-x9r);
 x11r=x9r+0.5*(x13r-x9r)-0.5*incx*(x13r-x9r);
 x3r=x16r=x9r+0.5*(x6r-x9r)-0.35*incx*(x6r-x9r);
 x17=0.4w;

@@ -19,16 +19,16 @@ y8=y10=0.5h;
 
 
 % penpositions %
-pos1(cont*px,(x1-x2,.125h),90);
-pos2(cont*px,(x1-x2,.125h),90);
-pos3(cont*px,(x1-x2,.125h),90);
-pos4(cont*px,(x1-x2,.125h),90);
+pos1(cont*px,(x1-x2,.1h),90);
+pos2(cont*px,(x1-x2,.1h),90);
+pos3(cont*px,(x1-x2,.1h),90);
+pos4(cont*px,(x1-x2,.1h),90);
 pos5(whatever,up,0);
 pos6(whatever,up,0);
-pos7(cont*px,(x8l-x7,.3h),0);
-pos8(cont*px,(x8l-x7,.3h),0);
-pos9(cont*px,(x8l-x7,.3h),0);
-pos10(cont*px,(x8l-x7,.3h),0);
+pos7(cont*px,(x8l-x7,.35h),0);
+pos8(cont*px,(x8l-x7,.35h),0);
+pos9(cont*px,(x8l-x7,.35h),0);
+pos10(cont*px,(x8l-x7,.35h),0);
 
 % draw %
 penstroke z1e--z2e;

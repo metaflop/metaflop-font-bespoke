@@ -64,7 +64,7 @@ input glyphs/punct/visiblespace
 input glyphs/punct/exclam
 input glyphs/punct/quotedbl
 input glyphs/punct/numbersign
-if (incx>0.25) or (incy>0.25) or (superness>0.8): input glyphs/punct/dollar2;
+if (incx>0.35) or (incy>0.35) or (superness>0.8): input glyphs/punct/dollar2;
 else: input glyphs/punct/dollar1;
 fi 
 input glyphs/punct/percent 
@@ -81,7 +81,7 @@ input glyphs/punct/slash
 
 input glyphs/num/0
 input glyphs/num/1
-if (incx>0.25) or (incy>0.25) or (superness>0.8): input glyphs/num/22;
+if (incx>0.35) or (incy>0.35) or (superness>0.8): input glyphs/num/22;
 else: input glyphs/num/21;
 fi 
 input glyphs/num/3
@@ -118,7 +118,7 @@ input glyphs/uc/O
 input glyphs/uc/P
 input glyphs/uc/Q
 input glyphs/uc/R
-if (incx>0.25) or (incy>0.25) or (superness>0.8): input glyphs/uc/S2;
+if (incx>0.35) or (incy>0.35) or (superness>0.8): input glyphs/uc/S2;
 else: input glyphs/uc/S1;
 fi
 input glyphs/uc/T
@@ -154,7 +154,7 @@ input glyphs/lc/o
 input glyphs/lc/p
 input glyphs/lc/q
 input glyphs/lc/r
-if (incx>0.25) or (incy>0.25) or (superness>0.8): input glyphs/lc/s2;
+if (incx>0.35) or (incy>0.35) or (superness>0.8): input glyphs/lc/s2;
 else: input glyphs/lc/s1;
 fi
 input glyphs/lc/t
@@ -269,7 +269,7 @@ input glyphs/uc/Ucircumflex
 input glyphs/uc/Udieresis
 input glyphs/uc/Yacute
 input glyphs/uc/Thorn
-if (incx>0.25) or (incy>0.25) or (superness>0.8): input glyphs/uc/Germandbls2;
+if (incx>0.35) or (incy>0.35) or (superness>0.8): input glyphs/uc/Germandbls2;
 else: input glyphs/uc/Germandbls1;
 fi
 input glyphs/lc/agrave

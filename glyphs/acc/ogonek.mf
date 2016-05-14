@@ -11,14 +11,14 @@ bot y7r=-d;
 y8=y7=y8r-(px/2.5);
 
 % construction %
-x5=x6=leftstemloc;
+x5=x6=px/2;
 x5r=x6r=x5+(cont*px/2.5);
 x1=x2=w-x5;
 x1r=x2r=w-x5r;
 x3r=x7r=x6r+0.5*(x2r-x6r)+0.5*incx*(x2r-x6r);
 x8r=x6r+0.5*(x2r-x6r)-0.5*incx*(x2r-x6r);
 x13r=.675w;
-x14=.35w;
+x14r=.4w;
 y1=mean;
 y2r=y6r=y7r-0.5*(y7r-y3r)+0.5*incy*(y7r-y3r);
 y5=y7r-0.5*(y7r-y3r)-0.5*incy*(y7r-y3r);
@@ -26,10 +26,10 @@ y3=-.3d;
 y3r=y3-px/2.5;
 y13=px/2.5;
 y13r=y13-px/2.5;
-y14=-.25d;
-y14r=y14-px/2.5;
+y14=y14r+px/2.5;
+y14r=-.3d-px/5;
 path trial;
-trial=z5{up}..z14..z13r;
+trial=z5{up}..z14r--z13r;
 pair dz;
 dz=direction 1 of trial;
 
@@ -41,11 +41,11 @@ pos5(whatever,up,180);
 pos6(whatever,up,180);
 pos7(whatever,right,-90);
 pos8(whatever,right,-90);
-pos13(whatever,right,1.15*(angle -dz)-90);
-pos14(whatever,right,1.15*(angle -dz)-90);
+pos13(whatever,right,(angle -dz)-90);
+pos14(whatever,right,(angle -dz)-90);
 
 % draw %
-penstroke z13e{-dz}--z14e{-dz}..z5e{down}--z6e & super_ql(6e,8e)--z7e;
+penstroke z13e{-dz}--z14e{z5-z13}..z5e{down}--z6e & super_ql(6e,8e)--z7e;
 numeric t,u;
 path a,b;
 t:=ypart(((-infinity,-0.5d-1.4apert*0.5d)--(infinity,-0.5d-1.4apert*0.5d)) intersectiontimes (super_ql(2l,7l)--z8l));

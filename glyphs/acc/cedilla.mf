@@ -11,7 +11,7 @@ bot y7r=-d;
 y8=y7=y8r-(px/2.5);
 
 % construction %
-x1=x2=leftstemloc;
+x1=x2=px/2;
 x1r=x2r=x1+(cont*px/2.5);
 x5=x6=w-x1;
 x5r=x6r=w-x1r;

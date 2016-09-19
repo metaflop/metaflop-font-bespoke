@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                         %
 % MF Bespoke v1.9                                                         %
-% © 2015 by Marco Mueller and Simon Egli                                  %
+% © 2012-2016 by Marco Mueller and Simon Egli                             %
 % thanks to Linus Roemer, Alexis Reigel, Theofilo Furtado                 %
 % <http://www.metaflop.com>                                               %
 % licensed under gpl v3: www.gnu.org/licenses/                            %
